@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        .container {
+            border:2px solid black;
+            padding:16px;
+            width:300px;
+            margin:10px;
+            height:300px;
+            background-color:rgba(255, 0, 0, 0.5);
+            /* overflow:hidden; */
+            overflow-y:auto;
+        }
+        .overflow-scroll {
+            overflow:scroll;
+        }
+        .item {
+            background-color:blueviolet;
+            margin-bottom:10px;
+            padding:5px;
+            /* width:fit-content; */
+        }
+        .fit-content .item {
+            width:fit-content;
+        }
+        .min-content .item {
+            width:min-content;
+        }
+        .max-content .item {
+            width:max-content;
+        }
+    </style>
+</head>
+<body>
+    <div class="container fit-content over-flow-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, asperiores!</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis similique doloribus assumenda hic, totam temporibus modi, qui animi delectus error! Ipsum eius dicta laboriosam.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias odit voluptate ducimus obcaecati impedit accusamus ipsum quisquam doloribus repellat odio illum libero rerum dolores earum natus aperiam commodi repellendus, vel itaque. Fugit dolore aliquam natus cum sint doloribus, error, tempora odio ut incidunt tenetur illum animi excepturi minus repellendus minima dolorem aspernatur consectetur. Tenetur reiciendis, architecto repellendus quibusdam quo dignissimos illum quisquam quae. Nesciunt iste ex distinctio optio aperiam repellat, exercitationem error incidunt nam amet.</div>
+    </div>
+    <div class="container min-content overflow-scroll">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, asperiores!</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis similique doloribus assumenda hic, totam temporibus modi, qui animi delectus error! Ipsum eius dicta laboriosam.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias odit voluptate ducimus obcaecati impedit accusamus ipsum quisquam doloribus repellat odio illum libero rerum dolores earum natus aperiam commodi repellendus, vel itaque. Fugit dolore aliquam natus cum sint doloribus, error, tempora odio ut incidunt tenetur illum animi excepturi minus repellendus minima dolorem aspernatur consectetur. Tenetur reiciendis, architecto repellendus quibusdam quo dignissimos illum quisquam quae. Nesciunt iste ex distinctio optio aperiam repellat, exercitationem error incidunt nam amet.</div>
+    </div>
+    <div class="container max-content">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, asperiores!</div>
+        <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis similique doloribus assumenda hic, totam temporibus modi, qui animi delectus error! Ipsum eius dicta laboriosam.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias odit voluptate ducimus obcaecati impedit accusamus ipsum quisquam doloribus repellat odio illum libero rerum dolores earum natus aperiam commodi repellendus, vel itaque. Fugit dolore aliquam natus cum sint doloribus, error, tempora odio ut incidunt tenetur illum animi excepturi minus repellendus minima dolorem aspernatur consectetur. Tenetur reiciendis, architecto repellendus quibusdam quo dignissimos illum quisquam quae. Nesciunt iste ex distinctio optio aperiam repellat, exercitationem error incidunt nam amet.</div>
+    </div>
+</body>
+</html>

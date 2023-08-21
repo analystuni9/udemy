@@ -1,0 +1,32 @@
+body {
+    width: 80%;
+    margin: auto;
+    /*margin: auto centraliza na horizontal*/
+    font-family: verdana;
+    color:#
+}
+h1 {
+    color: orange;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgray;
+    font-size: 40px;
+    border-bottom: solid 3px black;
+    /*propriedade tipo, espeçura e a cor*/
+}
+h2{
+    color: orange;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: lightgray;
+    font-size: 40px;
+    border-bottom: solid 3px black;
+}
+
+body, p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: #
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margem em porcentagem</title>
+    <style>
+        html {
+            font-size:62.5%;
+            /* agora meu paragrafo com 1em vale 10px */
+        }
+        h1 {
+            font-size:2.4em;
+        }
+        b {
+            color:red;
+            font-size:1em;
+            /* 10px */
+            /* font-size:1rem */
+            /* 10px */
+            /* font-size:150%; */
+            /* font-size:30px; */
+        }
+        p {
+            font-size:3em;
+            width:10em;
+            /* border:1px solid black; */
+            background-color:#ccc;
+            /* font-size:10px;  */
+            /* 30px */
+            /* são os mesmos 16px */
+        }
+        /* a unidade de medida em é sempre relativa a font-size do elemento pai */
+        .porcentagem {
+            width:60%;
+            height:100px;
+            background-color:yellow;
+        }
+        .porcentagem p {
+            background-color:orange;
+            /* margin:50px; */
+            padding-top:10%;
+            width:50%;
+        }
+        .padding-em {
+            background-color:red;
+            padding:3em;
+        }
+        .padding-em p {
+            background-color:transparent;
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <h1>unidades de medidas</h1>
+    <p>Lorem, ipsum dolor <b>texto em negrito</b> sit amet consectetur adipisicing elit. Expedita sunt eius consectetur totam iusto officiis, consequatur odit repudiandae. Ab tenetur accusamus eaque fuga perferendis vitae voluptatem enim iure labore reiciendis!</p>
+    <div class="porcentagem"><p>unidade de medida porcentagem %</p></div>
+    <div class="padding-em"><p>padding com em</p></div>
+</body>
+</html>

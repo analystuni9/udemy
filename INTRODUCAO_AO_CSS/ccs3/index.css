@@ -1,0 +1,32 @@
+body {
+    font-family: tahoma;
+    margin:0;
+    background-color: gray;
+}
+
+.one {
+    background-image: url(../imagens2/bg-3.jpg);
+    height: 500px;
+    background-position: right;
+    background-size: cover;
+}
+.two {
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+}
+.two h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    text-shadow: 3px 3px 5px gray;
+}
+
+main { 
+    width: 80%;
+    margin: auto;
+ }
+ .three {
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+ }

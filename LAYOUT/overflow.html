@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fit content</title>
+    <style>
+        .overflow-auto {
+            overflow:auto;
+        }
+        body {
+            margin-bottom:500px;
+        }
+        .container {
+            border:2px solid black;
+            padding:16px;
+            width:300px; 
+            margin-bottom:16px;  
+            height:300px;
+            background-color:rgba(255, 0, 0, 0.5);
+            /* overflow:hidden; */
+        }
+        .item {
+            background-color:blueviolet;
+            margin-bottom:10px;
+            padding:5px;
+            /* width:fit-content; */
+        }
+        .fit-content .item {
+            width:fit-content;
+        }
+        .min-content .item {
+            width:min-content;
+        }
+        .max-content .item {
+            width:max-content;
+        }
+        .overflow-hidden {
+            overflow:hidden;
+        }
+        .overflow-scroll {
+            overflow:scroll;
+        }
+        .overflow-auto {
+            overflow:auto;
+        }
+        .overflow-x-hidden {
+            overflow-x:hidden;
+        }
+        .overflow-y-hidden {
+            overflow-y:hidden;
+        }
+        .overflow-visible {
+            overflow:visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="container fit-content overflow-hidden overflow-scroll">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, amet!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate doloribus minima qui, nesciunt odit pariatur! Iure obcaecati aspernatur laudantium voluptas a fugit rem cum.</div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ut veritatis eos iure eum soluta assumenda quisquam consectetur quasi inventore quam quas cum, quod aliquam reiciendis sed pariatur, eaque odit, perspiciatis ipsum. Distinctio ex, optio quasi totam magni impedit vero provident velit? Molestias tenetur, commodi molestiae iste exercitationem omnis nostrum! Sint ad est doloribus facere deserunt vitae laudantium delectus voluptate. Vero ipsa suscipit officia vitae ipsam quidem culpa id unde non? Eos dolores nemo molestias.</div>
+    </div>
+    <div class="container min-content overflow-auto">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, amet!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate doloribus minima qui, nesciunt odit pariatur! Iure obcaecati aspernatur laudantium voluptas a fugit rem cum.</div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ut veritatis eos iure eum soluta assumenda quisquam consectetur quasi inventore quam quas cum, quod aliquam reiciendis sed pariatur, eaque odit, perspiciatis ipsum. Distinctio ex, optio quasi totam magni impedit vero provident velit? Molestias tenetur, commodi molestiae iste exercitationem omnis nostrum! Sint ad est doloribus facere deserunt vitae laudantium delectus voluptate. Vero ipsa suscipit officia vitae ipsam quidem culpa id unde non? Eos dolores nemo molestias.</div>
+    </div>
+    <div class="container max-content">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, amet!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cupiditate doloribus minima qui, nesciunt odit pariatur! Iure obcaecati aspernatur laudantium voluptas a fugit rem cum.</div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae ut veritatis eos iure eum soluta assumenda quisquam consectetur quasi inventore quam quas cum, quod aliquam reiciendis sed pariatur, eaque odit, perspiciatis ipsum. Distinctio ex, optio quasi totam magni impedit vero provident velit? Molestias tenetur, commodi molestiae iste exercitationem omnis nostrum! Sint ad est doloribus facere deserunt vitae laudantium delectus voluptate. Vero ipsa suscipit officia vitae ipsam quidem culpa id unde non? Eos dolores nemo molestias.</div>
+    </div>
+</body>
+</html>

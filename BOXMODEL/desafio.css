@@ -1,0 +1,21 @@
+body {
+    font-family:verdana, geneva, tahoma, sans serif;
+    width:80%;
+    margin:0 auto;
+    background-color:rgb(221, 221, 218);
+    font-size:12px;
+}
+h1 {
+    font-size:18px;
+    background-color:rgb(182, 180, 180);
+    padding:5px;
+    border-bottom:1px solid rgb(0, 0, 88);
+    margin:25px 0;
+}
+
+.name {
+    background-color:rgb(139, 139, 214);
+    text-align:center;
+    border-bottom:none;
+    font-size:25px;
+}
