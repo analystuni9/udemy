@@ -71,10 +71,10 @@ h3 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow:2px 2px 2px black;
     text-transform:uppercase;
-    text-align:center;
-    margin:2rem 0 0 33rem ;
+    margin:2rem 0 2rem 33rem;
     font-weight:bold;
-    color:palevioletred
+    color:palevioletred;
+    text-align:center;
 }
 .header {
     display:flex;
@@ -87,6 +87,7 @@ h3 {
     padding:0.75em 1.15rem;
     /* outline:0.1rem solid rgb(255, 255, 0, 0.2); */
     text-decoration:none;
+    font-size:2rem;
 }
 .header_nav ul {
     display:flex;
@@ -159,6 +160,9 @@ h3 {
     text-shadow:2px 2px 2px black;
     text-transform:uppercase;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align:center;
+    margin:2rem 0 7rem 31rem;
+  
 }
 .school {
     display:flex;
@@ -167,14 +171,14 @@ h3 {
 }
 .school p {
     color:black;
-    font-size:2rem;
+    font-size:2.0rem;
     margin:0 0 0 4rem;
 }
 .school h2 {
     margin:0 0 3rem 4rem;
     color:black;
     text-shadow:1px 1px 1px white;
-    font-size:3.3rem;
+    font-size:3.7rem;
     font-weight:bolder
 }
 footer {
@@ -199,4 +203,21 @@ iframe {
 }
 address {
     font-size:2rem
+}
+.header_nav {
+    position:sticky;
+    top:0;
+}
+.wrappercontainer-fixed {
+    position:sticky;
+    width:100%;
+    top:0;
+    right:0;
+}
+.wrappercontanier-padding {
+    padding:16rem 0 5rem 0 ;
+}
+.school_content h2 {
+    font-size:4.5rem;
+
 }
