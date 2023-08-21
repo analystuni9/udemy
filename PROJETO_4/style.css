@@ -60,6 +60,7 @@ h3 {
     background-image:linear-gradient(pink, blue);
     color:#fafafa;
     margin:2rem 0;
+    padding: 3rem 0 0 0;
 }
 .container {
     max-width:127.6em;
@@ -215,7 +216,7 @@ address {
     right:0;
 }
 .wrappercontanier-padding {
-    padding:16rem 0 5rem 0 ;
+    padding:16rem 0 5rem ;
 }
 .school_content h2 {
     font-size:4.5rem;
