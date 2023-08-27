@@ -1,0 +1,12 @@
+git config --global user.name "" (vc vai dizer para o git quem é que
+ está dando os comandos)
+git config --global --list (vc vai ver a lista de configurações dentro do git)
+git config --global user.email (vc vai dizer o seu email para o git)
+touch (cria uma novo arquivo)
+rm (remove arquivo)
+rmdir (remove um ditorio)
+mkdir (cria uma nova pasta)
+ls (lista seus arquivos)
+cat (exibe o conteúdo na tela)
+nano (abre o arquivo)
+mv (arquivos e diretorios)
