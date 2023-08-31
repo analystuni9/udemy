@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <style>
+        #mini {
+            height:310px;
+        }
+        #mini img {
+            width:150px;
+            height:100px;
+            border:1px solid black;
+        }   
+        #layout {
+            display:flex;
+            justify-content:center;
+        }
+        #view img {
+            width:500px;
+            height:312px;
+            border:1px solid black;
+        }
+        #naruto:hover {
+            opacity:0.6;
+            cursor:pointer;
+
+        }
+        #goku:hover {
+            opacity:0.8;
+            cursor:pointer;
+        }
+        #luffy:hover {
+            opacity:0.8;
+            cursor:pointer;
+        }
+        #title {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow:1px 1px 1px black;
+            color:Orange;
+            text-transform:uppercase;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Animes</h1>
+    <div id="layout">
+        <div id="mini">
+            <div id="naruto" onmouseover="mostrarImagemNaruto('naruto3')">
+                    <img src="imagens/naruto_3.jpg" alt="Naruto">
+            </div>
+            <div id="goku" onmouseover="mostrarImagemGoku('goku2')">
+                    <img src="imagens/goku_2.jpg" alt="Goku">
+            </div>
+            <div id="luffy" onmouseover="mostrarImagemLuffy('luffy')">
+                    <img src="imagens/luffy.jpg" alt="Luffy">
+            </div>
+        </div>
+        <div id="view">
+        </div>
+    </div>
+</body>
+<script>
+    function mostrarImagemNaruto(naruto3) {
+        document.getElementById('view').innerHTML='<img src="imagens/naruto_3.jpg" alt="Naruto">'
+    } 
+    function mostrarImagemGoku(goku2) {
+        document.getElementById('view').innerHTML='<img src="imagens/goku_2.jpg" alt="Goku">'
+    } 
+    function mostrarImagemLuffy(luffy) {
+        document.getElementById('view').innerHTML='<img src="imagens/luffy.jpg" alt="Luffy">'
+    } 
+</script>
+</html>
