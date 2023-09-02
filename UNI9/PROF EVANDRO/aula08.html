@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uninove</title>
+    <style>
+        body {
+            font-family:verdana, geneva, tahoma, sans-serif;
+            border:1px solid black;
+        }
+        header {
+            width:100%;
+            margin:0 auto;
+            background-color:greenyellow;
+        }
+        header ul {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:100px;
+            list-style-type:none;
+            color:black;
+        }
+        header li {
+            padding:10px;
+        }
+        header li:hover {
+            text-decoration:underline;
+            color:blue;
+            cursor:pointer;
+        }
+        main {
+            width:100%;
+            height:500px;
+            margin:10px 0 0 0;
+            overflow:auto;
+        }
+        h1 {
+            text-align:center;
+            font-size:26px;
+            text-transform:uppercase;
+        }
+        h2 {
+            text-align:center;
+            text-transform:uppercase;
+        }
+        p {
+            margin:0 20px;
+            text-indent:15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li onclick="mostrarCurriculo('Profissão:', 'Evandro Teruel é professor...')">Evandro</li>
+                <li onclick="mostrarCurriculo('Profissão:', 'Ana Maria é Engenheira..')">Ana Maria</li>
+                <li onclick="mostrarCurriculo('Profissão: ', 'Isabela é Analista...')">Isabela</li>
+            </ul>
+        </nav>
+    </header>
+    <main id="curriculo">
+    </main>
+</body>
+<script>
+        function mostrarCurriculo(profissao, cur){
+      document.getElementById("curriculo").innerHTML = profissao + "<br>" + cur;
+    }
+</script>
+</html>

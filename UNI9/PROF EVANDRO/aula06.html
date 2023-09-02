@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uninove</title>
+    <style>
+        body {
+            font-family:verdana, geneva, tahoma, sans-serif;
+            border:1px solid black;
+        }
+        header {
+            width:100%;
+            margin:0 auto;
+            background-color:greenyellow;
+        }
+        header ul {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:100px;
+            list-style-type:none;
+            color:black;
+        }
+        header li {
+            padding:10px;
+        }
+        header li:hover {
+            text-decoration:underline;
+            color:blue;
+            cursor:pointer;
+        }
+        main {
+            width:100%;
+            height:500px;
+            margin:10px 0 0 0;
+            overflow:auto;
+        }
+        h1 {
+            text-align:center;
+            font-size:26px;
+            text-transform:uppercase;
+        }
+        h2 {
+            text-align:center;
+            text-transform:uppercase;
+        }
+        p {
+            margin:0 20px;
+            text-indent:15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li onclick="mostrarTexto(1)">Evandro</li>
+                <li onclick="mostrarTexto(2)">Maria</li>
+                <li onclick="mostrarTexto(3)">João</li>
+            </ul>
+        </nav>
+    </header>
+    <main id="curriculo">
+    </main>
+</body>
+<script>
+    function mostrarTexto(id) {
+        let texto
+        if (id == 1) {
+            texto = 'Professor Frontend Evandro'
+        } else if (id == 2) {
+            texto = 'Engenheira Maria'
+        } else {
+            texto = 'Arquiteto João'
+        }
+        document.getElementById('curriculo').innerHTML = texto
+    }
+</script>
+</html>
