@@ -15,8 +15,14 @@ function mostrarImagem(id) {
     else if (id == 5) {
         imagem = ' <img src="imagens/goku_3.jpg" alt="Goku3">'
     }
-    else {
+    else if (id == 6) {
         imagem = '<img src="imagens/naruto.jpg" alt="Naruto">'
+    }
+    else if (id == 7) {
+        imagem = '<img src="imagens/itachi.jpg" alt="Naruto">'
+    }
+    else {
+        imagem = '  <img src="imagens/itachi_2.jpg" alt="Itachi2">'
     }
     document.getElementById('view').innerHTML = imagem;
  }
