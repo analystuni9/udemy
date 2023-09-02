@@ -1,3 +1,107 @@
-p {
-    color:blueviolet;
+body {
+    border:1px solid black;
+    padding:5px;
+}
+.header {
+    background-image:url(imagens/banner_3.jpg);
+    height:320px;
+    background-position:center right;
+    background-size:cover;
+    background-repeat:no-repeat;
+    max-height:300px;
+    margin:5px 0 0 0;
+}
+.header ul {
+    list-style-type:none;
+    display:flex;
+    gap:15px;
+    justify-content:flex-end;
+    margin:0 10px 0 0;
+    color:orange;
+    text-shadow:1px 1px 0px black;
+    font-size:18px;
+}
+.header li {
+    padding:2px;
+    border:1px solid gray;
+}
+.header li:hover {
+    text-decoration:underline;
+    color:aqua;
+    cursor:pointer;
+}
+.animes nav {
+    display:flex;
+    justify-content:center;
+}
+.animes ul {
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    gap:20px;
+    flex-wrap:wrap;
+    list-style-type:none;
+    /* border:1px solid gray; */
+    width:635px;
+    height:100px;
+}
+.animes li:hover {
+    text-decoration:underline;
+    color:aqua;
+    cursor:pointer;
+}
+#mini {
+    overflow-y:scroll;
+    border:1px solid black;
+    height:313px;
+}
+#mini img {
+    width:135px;
+    height:87px;
+}   
+#layout {
+    display:flex;
+    justify-content:center;
+
+}
+#view img {
+    width:500px;
+    height:313px;
+    border:1px solid black;
+}
+#title2, #title3 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow:1px 1px 1px black;
+    color:Orange;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:30px;
+}
+#naruto {
+    margin:0;
+}
+#goku {
+    margin:0;
+}
+#luffy {
+    margin:0;
+}
+#naruto #goku #luffy, img:hover {
+    opacity:0.8;
+    cursor:pointer;
+}
+.box {
+    padding:6px;
+    margin:2px 0 0 0;
+}
+.footer {
+    display:flex;
+    align-items:flex-end;
+    flex-direction:column;
+    margin:0 15px 0 0;
+    text-transform:uppercase;
+
+}
+.footer p {
+    margin:0 0 10px 0;
 }
