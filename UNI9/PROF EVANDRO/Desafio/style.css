@@ -28,7 +28,7 @@ body {
 }
 .header li:hover {
     text-decoration:underline;
-    color:aqua;
+    color:red;
     text-shadow:1px 1px 1px black;
     cursor:pointer;
 }
@@ -49,9 +49,9 @@ body {
 }
 .animes li:hover {
     text-decoration:underline;
-    color:aqua;
-    cursor:pointer;
+    color:red;
     text-shadow:1px 1px 1px black;
+    cursor:pointer;
 }
 .menu {
     display:flex;
@@ -65,9 +65,11 @@ body {
 }
 #mini {
     overflow-y:scroll;
-    border:1px solid black;
+    border:1px solid rgba(128, 128, 128, 0.836);
     height:313px;
+    box-shadow:5px 5px 10px gray;
 }
+
 #mini img {
     width:135px;
     height:87px;
@@ -75,12 +77,13 @@ body {
 #layout {
     display:flex;
     justify-content:center;
-
+    
 }
 #view img {
     width:500px;
     height:313px;
-    border:1px solid black;
+    border:1px solid rgba(128, 128, 128, 0.836);
+    box-shadow:5px 5px 10px gray;
 }
 #title2, #title3 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -113,8 +116,10 @@ body {
     flex-direction:column;
     margin:0 15px 0 0;
     text-transform:uppercase;
-
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 .footer p {
     margin:0 0 10px 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
