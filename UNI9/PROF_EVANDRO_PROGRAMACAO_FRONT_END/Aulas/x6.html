@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family:verdana, geneva, tahoma, sans-serif;
+    }
+    header {
+        display:flex;
+        justify-content:center;
+        font-weight:bold;
+        gap:30px;
+        width:90%;
+        margin:20px auto;
+        border:1px solid black;
+    }
+    p {
+        cursor:pointer;
+    }
+    p:hover {
+        text-decoration:underline;
+    }
+    main {
+        text-align:left;
+        border:1px solid black;
+        margin:0 auto;
+        width:90%;
+        height:300px;
+    }
+</style>
+<body>
+    <header>
+        <p onclick="evandro()">Evandro Teruel</p>
+        <p onclick="ana()">Ana Maria</p>
+        <p onclick="isabela()">Isabela</p>
+    </header>
+    <main id="curriculo">
+
+    </main>
+</body>
+<script>
+    function evandro() {
+        document.getElementById('curriculo').innerHTML="Evandro Teruel é professor ..."
+    }
+    function ana() {
+        document.getElementById('curriculo').innerHTML="Ana Maria é engenheira"
+    }
+    function isabela() {
+        document.getElementById('curriculo').innerHTML='Isabela é analista de Sistemas'
+    }
+</script>
+</html>

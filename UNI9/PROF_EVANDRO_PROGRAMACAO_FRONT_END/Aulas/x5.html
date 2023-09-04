@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisão</title>
+    <style>
+        h1,h2 {
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cursos superiores presenciais</h1>
+    <h2>Acessibilidade</h2>
+    <h2 onclick="mostrarRedesSociais()">Redes Sociais</h2>
+    <p id="abacaxi"></p>
+    <p>A Uninove possui cursos de graduação em diversas áreas. Na área de Informática ...</p>
+    <p>Clique para saber mais sobre os cursos
+    </p>
+    <p>Clique para saber mais sobre os cursos
+   
+    </p>
+</body>
+<script>
+    function mostrarRedesSociais() {
+    var links;
+    links = "<a href='https://www.facebook.com/uninoveoficial' target='_blank'>Facebook</a>";
+    links += "<a href='https://twitter.com/uninoveoficial' target='_blank'>Twitter</a>";
+    links += "<a href='https://www.instagram.com/uninoveoficial/' target='_blank'>Instagram</a>";
+        document.getElementById("abacaxi").innerHTML=links;
+    }
+</script>
+</html>

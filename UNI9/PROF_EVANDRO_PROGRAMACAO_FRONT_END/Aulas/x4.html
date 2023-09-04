@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisão</title>
+    <style>
+        h1,h2 {
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="mudatexto()">Cursos superiores presenciais</h1>
+    <h2 onclick="mudatexto()" >Acessibilidade</h2>
+    <h2 onclick="mostrarRedesSociais()">Redes Sociais</h2>
+    <p id="abacaxi"></p>
+    <p>A Uninove possui cursos de graduação em diversas áreas. Na área de Informática ...</p>
+    <p>Clique para saber mais sobre os cursos
+        <p id="explica">Vai aparecer algo aqui ...</p>
+        <button onclick="alert('Boooo!')">Saber mais</button>
+    </p>
+    <p>Clique para saber mais sobre os cursos
+        <button onclick="exibir()">Saber mais</button>
+    </p>
+</body>
+<script>
+    function exibir() {
+        alert('Te peguei')
+        alert('Que susto!')
+    }
+    function mudatexto() {
+        window.open("https://www.significados.com.br/acessibilidade/");
+
+    }
+    function mostrarRedesSociais() {
+        document.getElementById("abacaxi").innerHTML="<a href='https://www.facebook.com/uninoveoficial' target='_blank'>Facebook</a> <a href='https://twitter.com/uninoveoficial' target='_blank'>Twitter</a> <a href='https://www.instagram.com/uninoveoficial/' target='_blank'>Instagram</a>";
+    }
+</script>
+</html>

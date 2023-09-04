@@ -33,15 +33,17 @@ body {
     align-items:center;
     margin:5px 10px 5px 0;
     color:black;
-    font-size:17px;
+    font-size:12px;
+    font-weight:bold;
 }
 .menu li {
     padding:2px;;
 }
 .menu li:hover {
-    text-decoration:underline;
-    text-shadow:1px 1px 1px orange;
+    text-decoration:underline black;
+    text-shadow:1px 1px 1px black;
     cursor:pointer;
+    color:white;
 }
 .animes nav {
     display:flex;
@@ -120,6 +122,7 @@ body {
 }
 .content p {
     text-indent:30px;
+    padding:0 16px;
 }
 .img_1 {
     float:left;

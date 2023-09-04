@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family:verdana, geneva, tahoma, sans-serif;
+    }
+    header {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-weight:bold;
+        gap:30px;
+        width:90%;
+        margin:20px auto;
+        border:1px solid black;
+    }
+    
+    div{
+        cursor:pointer;
+        width:90%;
+        text-align:center;
+        margin:0 auto;
+        padding:10px 0;
+        /* height:50px; */
+
+    }
+    div:hover {
+        text-decoration:underline;
+    }
+    main {
+        text-align:left;
+        border:1px solid black;
+        margin:0 auto;
+        width:90%;
+        height:300px;
+    }
+    a {
+        margin:0 10px;
+    }
+</style>
+<body>
+    <header>
+        <div>Inscreva-se</div>
+        <div>Acessibilidade</div>
+        <div onclick="mostrarRedesSociais()">Redes Sociais</div>
+    </header>
+    <main id="mostrar">
+    </main>
+</body>
+<script>
+    function mostrarRedesSociais() {
+        let links 
+        links = "<a href='https://www.facebook.com/uninoveoficial' target='_blank'>Facebook</a>" 
+        links += "<a href='https://twitter.com/uninoveoficial' target='_blank'>Twitter</a>" 
+        links += "<a href='https://www.instagram.com/uninoveoficial/' target='_blank'>Instagram</a>"
+        document.getElementById('mostrar').innerHTML=links
+    }
+</script>
+</html>
