@@ -75,7 +75,6 @@ body {
 }
 #mini {
     overflow-y:scroll;
-    /* border:1px solid rgba(128, 128, 128, 0.836); */
     height:313px;
     box-shadow:5px 5px 10px gray;
 }
