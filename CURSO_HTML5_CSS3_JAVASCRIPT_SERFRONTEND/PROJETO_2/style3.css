@@ -74,7 +74,6 @@ body {
     align-items:center;
     opacity:0;
 }
-.list-item:hover 
-.list-item__action {
+.list-item:hover .list-item__action {
     opacity:0.4;
 }

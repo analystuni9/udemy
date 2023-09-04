@@ -40,8 +40,7 @@ body {
 }
 .menu li:hover {
     text-decoration:underline;
-    color:red;
-    text-shadow:1px 1px 1px black;
+    text-shadow:1px 1px 1px orange;
     cursor:pointer;
 }
 .animes nav {
@@ -61,7 +60,7 @@ body {
 }
 .animes li:hover {
     text-decoration:underline;
-    color:red;
+    color:orange;
     text-shadow:1px 1px 1px black;
     cursor:pointer;
 }
@@ -97,18 +96,9 @@ body {
     text-align:center;
     font-size:30px;
 }
-#naruto {
-    margin:0;
-}
-#goku {
-    margin:0;
-}
-#luffy {
-    margin:0;
-}
-#naruto #goku #luffy, img:hover {
-    opacity:0.8;
+.box2:hover {
     cursor:pointer;
+    background-color:orange;
 }
 .box {
     background-color:white;
@@ -121,12 +111,15 @@ body {
     margin:2px 0 0 0;
 }
 .content {
-    width:70%;
+    max-width:800px;
     margin:0 auto;
 }
 .content img {
     width:250px;
     height:250px;
+}
+.content p {
+    text-indent:30px;
 }
 .img_1 {
     float:left;
@@ -141,4 +134,9 @@ body {
 }
 .end p {
     margin:0;
+}
+.copyright {
+    margin:20px 0;
+    text-align:center;
+    color:white;
 }
