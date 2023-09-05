@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>position</title>
+     <!-- A propriedade position possue 4 valores ela serve para posicionar os elementos na tela. 
+      Ela possue 4 valores possiveis, static(que é o padrão),
+     relative(ela trabalha de acordo com outras propriedades top, bottom, left e right ela vai alterar o posicionamento referente a ele mesmo. Meu container não vai levar em conta essa movimentação porque o espaço original fica preservado. Ele se posiona com o valor original dele mesmo.), 
+     absolute(ex positon absolute com os valores top:10px e right:10px vai sair do fluxo natural do documento e vai passar a se relacionar com o meu documento e o meu container passa a não enxergar mais minha div agora se eu coloco um position relative no meu container ele minha div passa se relacionar com meu container porque ele esta posicionado), 
+     fixed, sticky, elas funcionam em conjunto com outras propriedades top, bottom, left, right
+    As divs vão aparecer na mesma ordem que elas foram colocadas lá no meu codigo html div1, 2 e 3
+    a ordem que os elementos aparece no meu documento cai por terra com o position porque eu posso posicionar meu elemento em qualquer lugar do meu documento com a propriedade position esses elementos podem se sobrepor eu posso mudar que vai sobrepor quem com a propriedade z-index
+    z-index default 0 é o valor padrão  -->
     <style>
         #div1 {
             background-color:rgb(255, 0, 0, 0.5);
             padding:10px;
             width:90%;
             height:100px;
-            position:relative;
+            
         }
         #div2 {
             background-color:rgb(0, 255, 0, 0.5);
             padding:10px;
-            width:80%;
+            width:08%;
             height:50px;
-            position:relative;
-            left:20px;
-            
+     
         }
+        
         #div3 {
             background-color:rgb(0, 0, 255, 0.5);
             padding:10px;
             width:30px;
             height:30px;
             position:absolute;
-            bottom:0;
-            right:0;
+            bottom:10px;
+            right:20px;
+
         }
     </style>
 </head>
