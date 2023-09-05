@@ -9,14 +9,9 @@
             border:2px solid black;
             padding:16px;
             width:300px;
-            margin:10px;
             height:300px;
             background-color:rgba(255, 0, 0, 0.5);
-            /* overflow:hidden; */
-            overflow-y:auto;
-        }
-        .overflow-scroll {
-            overflow:scroll;
+            margin-bottom:16px;
         }
         .item {
             background-color:blueviolet;
@@ -33,10 +28,28 @@
         .max-content .item {
             width:max-content;
         }
+        .overflow-hidden {
+            overflow:hidden
+            /* esconde o elemento que exede ao tamanho da minha caixa */
+        }
+        .overflow-scroll {
+            overflow:scroll;
+            /* ele esconde o elemento que exede minha caixa porem ele coloca uma barra de scroll tanto na horizontal quanto na vertical para que eu consiga ver o restante do conteúdo
+            posso colocar tanto no eixo x (horizontal) quanto no meu eixo y (vertical) ex overflow-x, overflow-y */
+        }
+        .overflow-auto {
+            overflow:auto;
+            /* ele vai colocar scroll somente no eixo que é nescessário */
+
+        }
+        .overflow-visible {
+            overflow:visible
+            /* é o valor padrão ou seja não vai gerar barra de scroll */
+        }
     </style>
 </head>
 <body>
-    <div class="container fit-content over-flow-hidden">
+    <div class="container fit-content overflow-hidden">
         <div class="item">lorem</div>
         <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, asperiores!</div>
         <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis similique doloribus assumenda hic, totam temporibus modi, qui animi delectus error! Ipsum eius dicta laboriosam.</div>
@@ -48,7 +61,7 @@
         <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis similique doloribus assumenda hic, totam temporibus modi, qui animi delectus error! Ipsum eius dicta laboriosam.</div>
         <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias odit voluptate ducimus obcaecati impedit accusamus ipsum quisquam doloribus repellat odio illum libero rerum dolores earum natus aperiam commodi repellendus, vel itaque. Fugit dolore aliquam natus cum sint doloribus, error, tempora odio ut incidunt tenetur illum animi excepturi minus repellendus minima dolorem aspernatur consectetur. Tenetur reiciendis, architecto repellendus quibusdam quo dignissimos illum quisquam quae. Nesciunt iste ex distinctio optio aperiam repellat, exercitationem error incidunt nam amet.</div>
     </div>
-    <div class="container max-content">
+    <div class="container max-content overflow-auto">
         <div class="item">lorem</div>
         <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, asperiores!</div>
         <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos facilis similique doloribus assumenda hic, totam temporibus modi, qui animi delectus error! Ipsum eius dicta laboriosam.</div>
