@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Danilo">
+    <meta name="description" content="aplicando conceitos desenvolvimento para internet e programação front-end">
+    <meta name="keywords" content="html, css e javascript">
     <title>Desafio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="menu">
+    <section class="box">
         <nav>
-            <form action="https://www.google.com.br/search" method="get" >
+            <form action="https://www.google.com.br/search" method="get">
                 <input type="text" name="q">
                 <input type="submit" value="Buscar">
             </form>
@@ -22,111 +25,111 @@
                 <li>Mais</li>
             </ul>
         </nav>
-    </div>
-    <div class="header">
-    </div>
-        <div class="box">
-            <h1 class="title1">Animes</h1>
-            <div class="animes">
-                <nav>
-                    <ul>
-                        <li>A</li>
-                        <li>B</li>
-                        <li>C</li>
-                <li>D</li>
-                <li>E</li>
-                <li>F</li>
-                <li>H</li>
-                <li>I</li>
-                <li>J</li>
-                <li>K</li>
-                <li>L</li>
-                <li>M</li>
-                <li>N</li>
-                <li>O</li>
-                <li>P</li>
-                <li>Q</li>
-                <li>R</li>
-                <li>S</li>
-                <li>T</li>
-                <li>U</li>
-                <li>V</li>
-                <li>W</li>
-                <li>X</li>
-                <li>Y</li>
-                <li>Z</li>
-            </ul>
-        </nav>
-    </div>
-</div>
-<div class="box">
-    <h2 class="title2">Galeria</h2>
-    <div id="layout">
-        <div id="mini">
-            <div class="box2">
-                <div onclick="mostrarImagem(1)">
-                    <img src="imagens/naruto_3.jpg" alt="Naruto">
+    </section>
+    <header>
+    </header>
+    <main>
+        <section>
+            <article>
+                <div class="box2">
+                    <h1>animes</h1>
+                    <nav>
+                        <ul>
+                            <li>A</li>
+                            <li>B</li>
+                            <li>C</li>
+                            <li>D</li>
+                            <li>E</li>
+                            <li>F</li>
+                            <li>G</li>
+                            <li>H</li>
+                            <li>I</li>
+                            <li>J</li>
+                            <li>K</li>
+                            <li>L</li>
+                            <li>M</li>
+                            <li>N</li>
+                            <li>O</li>
+                            <li>P</li>
+                            <li>Q</li>
+                            <li>R</li>
+                            <li>S</li>
+                            <li>T</li>
+                            <li>U</li>
+                            <li>V</li>
+                            <li>W</li>
+                            <li>X</li>
+                            <li>Y</li>
+                            <li>Z</li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-            <div class="box2">
-                <div onclick="mostrarImagem(2)">
-                    <img src="imagens/goku_2.jpg" alt="Goku2">
+            </article>
+            <article>
+                <div class="box3">
+                    <h2>galeria</h2>
+                    <div class="layout">
+                        <div class="miniatura">
+                            <div class="action" onclick="visualizarImagem(1)">
+                                <img src="imagens/Dragonball.jpg" alt="Dragonball Super">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(2)">
+                                <img src="imagens/Dragonball2.jpg" alt="Dragonball Z">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(3)">
+                                <img src="imagens/Dragonball3.jpg" alt="Dragonball Super">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(4)">
+                                <img src="imagens/Naruto.jpg" alt="Naruto Shippunden">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(5)">
+                                <img src="imagens/Naruto2.jpg" alt="Naruto Shippuden">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(6)">
+                                <img src="imagens/Naruto3.jpg" alt="Naruto Shippuden">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(7)">
+                                <img src="imagens/Naruto4.jpg" alt="Naruto Shippuden">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(8)">
+                                <img src="imagens/Naruto5.jpg" alt="Naruto Shippuden">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(9)">
+                                <img src="imagens/Naruto6.jpg" alt="Naruto Shippuden">
+                            </div>
+                            <div class="action" onclick="visualizarImagem(10)">
+                                <img src="imagens/Luffy.jpg" alt="One Piece">
+                            </div>
+                        </div>
+                        <div id="view">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="box2">
-                <div onclick="mostrarImagem(3)">
-                    <img src="imagens/luffy.jpg" alt="Luffy">
+            </article>
+            <article>
+                <div class="box4">
+                    <h2>mangá</h2>
+                    <div class="content">
+                        <div class="action2">
+                            <img class="img" onclick="mudaTexto(1)" src="imagens/Naruto_Manga.jpg" alt="Naruto Classico">
+                        </div>
+                        <p id="view2">Um jovem aspirante a ninja de 12 anos, Naruto cresceu sob o desprezo dos moradores da Vila Oculta da Folha. Por este motivo, ele sonhava em crescer como ninja e em um dia se tornar Hokage, líder do local. Naruto entende que esse desafio será ainda maior do que esperava ao descobrir que é o hospedeiro de uma raposa demoníaca conhecida como Nove Caudas. Essa entidade devastou a Vila Oculta da Folha há 12 anos. Por este motivo, Naruto sempre foi tratado mal por sua aldeia.</p>
+                        <div class="action2">
+                            <img class="img2" onclick="mudaTexto(2)" src="imagens/Naruto_Manga2.jpg" alt="Naruto Classico">
+                        </div>
+                        <p id="view3">Em sua trajetória para se tornar ninja, Naruto conhece outros jovens guerreiros. Ele passa a integrar o chamado Time 7 sob a orientação do professor Hatake Kakashi. Seus colegas de time são Sasuke Uchiha, seu rival de longa data; e Sakura Haruno, amiga por quem tinha um interesse romântico, mas que tinha sentimentos por Sasuke.</p>
+                        <p id="view4">A temporada acompanha os diferentes desafios que o trio e outros estudantes precisam passar até encarar o exame chunin. Bem como o desenvolvimento da parceria ninja entre Naruto e Sasuke, que descobrem lutar bem em conjunto. Neste contexto, conhecemos os jovens Gaara do Deserto, Rock Lee, Hinata e Kabuto, este último tentando passar no exame já por diferentes vezes.</p>
+                    </div>
+                    <div class="end">
+                        <p>Desafio</p>
+                        <p>Prof.Evandro</p>
+                        <p>Dev. Danilo Uni9</p>
+                    </div>
                 </div>
-            </div>
-            <div class="box2">
-                <div onclick="mostrarImagem(4)">
-                    <img src="imagens/goku.jpg" alt="Goku">
-                </div>
-            </div>
-            <div class="box2">
-                <div onclick="mostrarImagem(5)">
-                    <img src="imagens/goku_3.jpg" alt="Goku3">
-                </div>
-            </div>
-            <div class="box2">
-                <div onclick="mostrarImagem(6)">
-                    <img src="imagens/naruto.jpg" alt="Naruto">
-                </div>
-            </div>
-            <div class="box2">
-                <div onclick="mostrarImagem(7)">
-                    <img src="imagens/itachi.jpg" alt="Itachi">
-                </div>
-            </div>
-            <div class="box2">
-                <div onclick="mostrarImagem(8)">
-                    <img src="imagens/itachi_2.jpg" alt="Itachi2">
-                </div>
-            </div>
-        </div>
-        <div id="view">
-        </div>
-    </div>
-</div>
-<div class="box">
-    <h2 class="title2">mangá</h2>
-    <div class="content">
-        <img class="img_1"src="imagens/manga_7.jpg" alt="Naruto e Gaara">
-        <p>Um jovem aspirante a ninja de 12 anos, Naruto cresceu sob o desprezo dos moradores da Vila Oculta da Folha. Por este motivo, ele sonhava em crescer como ninja e em um dia se tornar Hokage, líder do local. Naruto entende que esse desafio será ainda maior do que esperava ao descobrir que é o hospedeiro de uma raposa demoníaca conhecida como Nove Caudas. Essa entidade devastou a Vila Oculta da Folha há 12 anos. Por este motivo, Naruto sempre foi tratado mal por sua aldeia.</p>
-        <img class="img_2" src="imagens/manga_8.jpg" alt="Sasuke, Naruto e Orochimaru">
-        <p>Em sua trajetória para se tornar ninja, Naruto conhece outros jovens guerreiros. Ele passa a integrar o chamado Time 7 sob a orientação do professor Hatake Kakashi. Seus colegas de time são Sasuke Uchiha, seu rival de longa data; e Sakura Haruno, amiga por quem tinha um interesse romântico, mas que tinha sentimentos por Sasuke.</p>
-        <p>A temporada acompanha os diferentes desafios que o trio e outros estudantes precisam passar até encarar o exame chunin. Bem como o desenvolvimento da parceria ninja entre Naruto e Sasuke, que descobrem lutar bem em conjunto. Neste contexto, conhecemos os jovens Gaara do Deserto, Rock Lee, Hinata e Kabuto, este último tentando passar no exame já por diferentes vezes.</p>
-        <div class="end">
-            <p>Desafio</p>
-        <p>Prof. Evandro</p>
-        <p>Dev. Danilo Uni9</p>
-    </div>
-</div>
-</div>
-<div class="copyright">
-    Copyright © 2023
-</div>
+            </article>
+        </section>
+    </main>
+    <footer> Copyright © 2023</footer>
 </body>
-<script src="arquivo.js">
-</script>
+<script src="script.js"></script>
 </html>
