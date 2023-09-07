@@ -34,24 +34,27 @@
 </style>
 <body>
     <header>
-        <p onmouseover="mostrarCurriculo(1)">Evandro Teruel</p>
+        <p onclick="mostrarCurriculo(1)">Evandro Teruel</p>
         <p onclick="mostrarCurriculo(2)">Ana Maria</p>
         <p onclick="mostrarCurriculo(3)">Isabela</p>
     </header>
-    <main id="curriculo">
-    </main>
+    <div class="curriculo">
+    </div>
+    <div class="curriculo">
+    </div>
 </body>
 <script>
-    function mostrarCurriculo(id) {
+    function mostrarCurriculo(x) {
         let texto
-        if (id == 1) {
+        if (x == 1) {
             texto = 'Evandro Professor Programação Front-end'
-        } else if (id == 2) {
+        } else if (x == 2) {
             texto = 'Ana é Engenheira'
         } else {
             texto = 'Isabela é Analista'
         }
-        document.getElementById('curriculo').innerHTML= texto
+        document.getElementsByClassName('curriculo')[0].innerHTML= texto
+
     }
 </script>
 </html>
