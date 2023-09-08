@@ -10,7 +10,8 @@ header {
     background-image:url(imagens/Banner8.jpg);
     background-position:center;
     background-repeat:no-repeat;
-    background-size:100% 100%;
+    /* background-size:100% 100%; */
+    background-size:cover;
     /* box-sizing:border-box; */
 }
 h1, h2 {

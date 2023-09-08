@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        html {
+            background-color:#596464;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body {
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100%;
+            margin:0;
+            min-height:100vh;
+        }
+        form {
+            width:350px;
+            margin:0 auto;
+            background-color:#ecf0f1;
+            border-radius:5px;
+            box-shadow:3px 3px 5px rgba(0, 0, 0, 0.438);
+        }
+        input,
+        label {
+            display:block;
+            width:100%;
+            box-sizing:border-box;
+            /* box-shadow:3px 3px 10px #333; */
+        }
+        fieldset {
+            border:none;
+
+        }
+        label {
+            margin-bottom:0.25em;
+            text-transform:uppercase;
+            font-weight:bold;
+        }
+        input {
+            padding:0.75em;
+            border-radius:5px;
+            margin-bottom:1.5em;
+            border:1px solid #bbb;
+            font-size:1em;
+        }
+        legend {
+            padding:1em;
+            text-align:center;
+            font-weight:bold;
+            color:#997c1b;
+            font-size:1.2em;
+            text-transform:uppercase;
+        }
+        .botao {
+            font-weight:bold;
+            width:fit-content;
+            text-transform:uppercase;
+            margin-left:auto;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="#" method="get">
+        <fieldset>
+        <legend>access here</legend>
+        <label for="user">Username</label>
+        <input type="text" id="user" required autofocus>  
+        <label for="pass">Password</label>
+        <input type="password" id="pass" required>
+        <div>
+            <input type="submit" value="Ok" class="botao">
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>
+<!-- para criar um vinculo entro o texto e um input ultilizamos a tag label 
+para vincular meu label com meu input preciso criar um id no meu input e vicular com meu for 
+para dizer que meu input é obrigatorio ultilizamos o atributo required 
+autofocus assim que abrir a minha pagina ele já coloca meu cursor no input  -->
+<!-- min quantidade minima
+max quantidade maxima 
+label é o titulo do meu input vincula com meu input-->
