@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action=""><!--cria um formulário-->
+        <fieldset> <!--cria um grupo-->
+            <legend>Exercicio</legend><!--titulo do meu grupo-->
+            <label for="email">Digite seu email</label><!--texto que fica acima do input e cria um vinculo entre for do label com id do input-->
+            <br>
+            <input type="email" name="email" id="email" required><!--quando coloco type email required ele vai verificar os tipos dos meus dados antes de enviar só envia caso atenda todos os requisitos-->
+            <br>
+            <label for="filhos">Qual é a sua idade: </label>
+            <br>
+            <input type="number" id="filhos" min="0" max="1000"> <!--tipo number vai requerir um número--><!--min quantidade minima--><!--quantidade máxima-->
+            <br>
+            <label for="date">Data de nascimento</label>
+            <br>
+            <input type="date" min="2022-01-15" id="date"><!--vai pedir uma data para ser prenchida-->
+            <input type="submit" value="Enviar">
+            <br>
+            <label>Tem tatuagens <!--para melhor usabilidade do usuario agente evolve a tag input com a tag label-->
+                <input type="radio" name="tatu">Sim<!--radio significa quando vc tem que escolher 1 opção dentro de um grupo-->
+            </label>
+            <label>
+                <input type="radio" name="tatu">Não <!--atributo name com o mesmo valor para que funcione meu codigo-->
+            </label>
+                <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+</html>
