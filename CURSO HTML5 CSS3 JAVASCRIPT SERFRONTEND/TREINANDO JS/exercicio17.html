@@ -1,0 +1,37 @@
+<!-- REPETIÇÕES -->
+<!-- WHILE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = parseFloat(prompt("Digite um número: "))
+        document.write(`<h1>Tabuada</h1><br>`)
+        // document.write(`${numero} x 1 = ${(numero * 1)}<br>`)
+        // document.write(`${numero} x 2 = ${(numero * 2)}<br>`)
+        // document.write(`${numero} x 3 = ${(numero * 3)}<br>`)
+        // document.write(`${numero} x 4 = ${(numero * 4)}<br>`)
+        // document.write(`${numero} x 5 = ${(numero * 5)}<br>`)
+        // document.write(`${numero} x 6 = ${(numero * 6)}<br>`)
+        // document.write(`${numero} x 7 = ${(numero * 7)}<br>`)
+        // document.write(`${numero} x 8 = ${(numero * 8)}<br>`)
+        // document.write(`${numero} x 9 = ${(numero * 9)}<br>`)
+        // document.write(`${numero} x 10 = ${(numero * 10)}<br>`)
+        // let numero = parseFloat(prompt("Digite um núemero: "))
+        // document.write('<h1>Tabuada</h1>')
+        // indice = 0
+        // while (indice <= 10) {
+        //     document.write(`${numero} x ${indice} = ${(numero * indice)}<br>`)
+        //     indice += 2
+        // }
+        for (let j = 0; j <= 10; j += 1) {
+            document.write( `${numero} x ${j} = ${(numero * j)}<br>`)
+        }
+
+    </script>
+</body>
+</html>
