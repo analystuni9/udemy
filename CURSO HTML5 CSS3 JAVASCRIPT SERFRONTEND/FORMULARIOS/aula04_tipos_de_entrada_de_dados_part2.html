@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action=""><!--cria um formulário-->
+        <fieldset> <!--cria um grupo-->
+            <legend>Exercicio</legend><!--titulo do meu grupo-->
+            <label for="email">Digite seu email</label><!--texto que fica acima do input e cria um vinculo entre for do label com id do input-->
+            <br>
+            <input type="email" name="email" id="email" required><!--quando coloco type email required ele vai verificar os tipos dos meus dados antes de enviar só envia caso atenda todos os requisitos-->
+            <br>
+            <label for="filhos">Qual é a sua idade: </label>
+            <br>
+            <input type="number" id="filhos" min="0" max="1000"> <!--tipo number vai requerir um número--><!--min quantidade minima--><!--quantidade máxima-->
+            <br>
+            <label for="date">Data de nascimento</label>
+            <br>
+            <input type="date" min="2022-01-15" id="date"><!--vai pedir uma data para ser prenchida-->
+            <input type="submit" value="Enviar">
+            <br>
+            <label>Tem tatuagens <!--para melhor usabilidade do usuario agente evolve a tag input com a tag label-->
+                <input type="radio" name="tatu" value="s">Sim<!--radio significa quando vc tem que escolher 1 opção dentro de um grupo-->
+            </label>
+            <label>
+                <input type="radio" name="tatu" value="n">Não <!--atributo name com o mesmo valor para que funcione meu codigo-->
+            </label>
+                <input type="submit" value="Enviar">
+        </fieldset>
+        <fieldset>
+            <legend>Área de interesse</legend> 
+            <label>
+                <input type="checkbox" name="interesse" value="html">PYTHON 
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="js">JAVASCRIPT 
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="css">CSS 
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="html">HTML
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="java">JAVA 
+            </label>
+            <input type="submit" value="Enviar">
+            <br>
+        
+            <label for="">Selecione uma linguagem <br>
+            <select name="linguagem" id="" required multiple size="7"><!--select para criar uma lista de opções--><!--required é obrigatório--><!--multiple pode selecionar várias opções com clique do mouse + crl --><!--size a quantidade maxima que pode ser selecionada-->
+                <option>Selecione</option><!--sem value cria um item vazio-->
+                <optgroup label="frontend"><!--cria um grupo dentro das minha lista de opções-->
+                    <option value="html">HTML</option><!--cria um item opções importante não esquecer do value-->
+                    <option value="css">CSS</option>
+                    <option value="js">JAVASCRIPT</option>
+                </optgroup>
+                <optgroup label="backend">
+                    <option value="java">JAVA</option>
+                    <option value="python">PYTHON</option>
+                </optgroup>
+            </select>
+                <br>
+                <input type="text" list="linguagemlist">
+                <datalist id="linguagemlist">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JAVASCRIPT">
+                    <option value="PYTHON">
+                    <option value="JAVA">
+                    <option value="PHP">
+                </datalist>
+        </label>
+
+        </fieldset>
+    </form>
+</body>
+</html>
+<!-- atributo name envia os dados para o servidor -->
+<!-- value vai ser o valor que vai ser enviado para o servidor -->

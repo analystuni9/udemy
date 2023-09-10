@@ -67,24 +67,71 @@
 </head>
 <body>
     <h1>Login</h1>
-    <form action="#" method="get">
-        <fieldset>
-        <legend>access here</legend>
-        <label for="user">Username</label>
-        <input type="text" id="user" required autofocus>  
+    <form action="#" method="get"> <!--form cria um formulario atributo action é a página no servidor que vai receber esses dados metod="get"-->
+        <fieldset> <!--cria um grupo-->
+        <legend>access here</legend> <!--cria um titulo para meu grupo-->
+        <label for="user">Username</label> <!--texto que fica acima do input e cria um vinculo entre for do label com id do input-->
+        <input type="text" id="user" required autofocus><!--para dizer que meu input é obrigatório ultilizamos required--><!--autofocus assim que abrir minha página ele já coloca meu cursor no input-->  
         <label for="pass">Password</label>
         <input type="password" id="pass" required>
         <div>
-            <input type="submit" value="Ok" class="botao">
+            <input type="submit" value="Ok" class="botao"> <!--submit cria um botão value cria um texto para meu botão-->
         </div>
     </fieldset>
 </form>
 </body>
 </html>
-<!-- para criar um vinculo entro o texto e um input ultilizamos a tag label 
+<!-- <fieldset> cria um groupo
+    <legend> cria um titulo para meu grupo
+    para criar um vinculo entre o texto e um input ultilizamos a tag <label> 
 para vincular meu label com meu input preciso criar um id no meu input e vicular com meu for 
 para dizer que meu input é obrigatorio ultilizamos o atributo required 
 autofocus assim que abrir a minha pagina ele já coloca meu cursor no input  -->
 <!-- min quantidade minima
 max quantidade maxima 
 label é o titulo do meu input vincula com meu input-->
+
+<!-- Tipos de Entrada de dados
+<input> 
+password
+checkbox
+radio
+file
+hidden
+submit
+button
+reset
+
+input(HTML5)
+email 
+tel
+url
+search
+number
+range
+date
+time
+color
+textarea
+select, details
+option
+optgroup
+
+Visualização de dados
+progress
+meter
+output -->
+
+<!-- Alguns Atributos
+autofocus 
+chechked 
+required 
+maxlength
+multiple
+placeholder
+max
+min
+cols 
+rows
+size 
+step -->

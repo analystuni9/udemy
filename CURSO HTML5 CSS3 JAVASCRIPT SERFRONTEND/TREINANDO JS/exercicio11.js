@@ -37,9 +37,9 @@ console.log(i)
 // ++i pre decremento
 
 // OPERADORES DE COMPARAÇÃO
-// // igualdade de valor ==
+// igualdade de valor ==
 // igualdade de valor e tipo ===
-/* < menor */
+//  < menor 
 // > maior
 // <= menor ou igual
 // >= maior ou igual
