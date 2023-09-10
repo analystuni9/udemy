@@ -1,0 +1,42 @@
+<!-- FUNÇÕES QUE RECEBEM PAREMETROS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function ola () {
+        document.write("ola mundo")
+    }
+    ola ()
+    // expressao de funçao
+    const ola2 = function () {
+        console.log("ola mundo de function expression")
+    }
+    ola2 ()
+    // arrow function
+    const ola3 = () => {
+        console.log("ola mundo de function arrow function")
+    } 
+    ola3 ()
+    // retorno de valores
+    function obterdiasemana () {
+        return new Date().getDay()
+    }
+    let dia = obterdiasemana () 
+    console.log(dia)
+
+    function somar(n1, n2){
+        return n1 + n2
+    }
+    let soma = somar(3, 5)
+    console.log(soma)
+    console.log(soma(10, 5))
+    alert(somar(2, 3))
+</script>
+</html>

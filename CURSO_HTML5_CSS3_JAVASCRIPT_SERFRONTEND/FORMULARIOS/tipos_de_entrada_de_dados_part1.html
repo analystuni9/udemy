@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        input, label {
+            cursor: pointer;
+        }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
 </head>
 <body>
+    <h1>Exemple</h1>
     <form action="">
         <fieldset>
-            <legend>exemple</legend>
-            <input type="email" name="email" required>
-
+            <legend>Login</legend>
+            <label for="user">Username</label>
+            <input id="user" type="email" name="email" required value="exemple@hotmail.com" readonly>
+            <br>
+            <br>
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="password" required>
+            <input type="submit" value="OK">
+            <br>
+            <br>
+            <label for="filhos">Qual é sua idade</label>
+            <input id="filhos" type="number" min="0" max="100">
+            <input type="submit" value="OK" >
+            <br>
+            <br>
+            <label for="">Data:</label>
+            <input type="date" min="2020-05-15" max="2021-05-15">
+            <br>
+            <br>
+            <label for="">Possui renda extra</label>
+            <label>
+                <input type="radio" name="extra" value="sim">Sim
+            </label>
+            <label>
+                <input type="radio" name="extra" value="não">Não
+            </label>
+            <input type="submit" value="OK">
+        </fieldset>
+        <fieldset>
+            <legend>Área de interesse</legend>
+            <label>
+                <input type="checkbox" name="interesse" value="html">HTML
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="css">CSS
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="javascript">JAVASCRIPT
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="python">PYTHON
+            </label>
+            <label>
+                <input type="checkbox" name="interesse" value="java'">JAVA
+            </label>
+            <input type="submit" value="OK">
+            <br>
+            <label for="">Escolha uma liguagem</label>
+            <select name="linguagem" id="" required>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JAVASCRIPT</option>
+                <option value="python">PYTHON</option>
+                <option value="java">JAVA</option>
+                <input type="submit" value="OK">
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
         </fieldset>
     </form>
 </body>
