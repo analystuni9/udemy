@@ -1,0 +1,59 @@
+FLEXBOX
+JUSTIFY-CONTENT
+-----------------------------------------------------------------------------
+
+
+justify-content Define como o navegador distruibui o espaço entre e ao redor dos items horizontal.
+
+justify-content:center centraliza o items no centro do container
+
+justify-content:flex-start alinha os items no inicio do container
+
+justify-content:flex-end alinha os items no final do container
+
+justify-content:space around alinha os items uniformimente. Os items tem a metade do espaço em cada extremidade
+
+justify-content:space-evenly os items tem o espaço igual ao seu redor
+
+justify-content:space-between o espaço entre o primeiro e o ultimo ficara alinhado com a extremidade do container e todo espaço sera compartilhado igualmente entre os items
+
+
+
+ALIGN-ITEMS
+------------------------------------------------------------------------------
+
+align-items: define como o navegador distribui o espaço entre e ao redor dos itens verticalmente
+
+align-items: center centraliza os itens no centro
+
+align-items: flex-start alinha os items no inicio do container vertical
+
+align-items: flex-end alinha os items no final do container vertical
+
+align-items: baseline ele usa a base da fonte do flex items selecionado para a linha o restante dos flex items
+
+align-items: stretch vai esticar ate preencher o container
+
+flex-wrap: no-wrap valor padrão 
+
+flex-wrap: wrap quebra a linha quando não tiver mais espaço no container
+
+flex-flow: atalho para flex-direction e flex-wrap
+
+
+
+ALIGN-CONTENT
+--------------------------------------------------------------------------------
+align-content: serve para alinhar quando eu tenho mais de uma linha
+possui os mesmo valores do justify-content flex-start, flex-end, space-around, space-between, espace-evenly
+
+
+FLEX-GROW, SHRINK, BASIS
+-------------------------------------------------------------------------------
+flex-grow:1 ele aplica o espaço que sobra nos flex-items selecionados
+
+flex-shrink:1 vai distribuir o espaço nescessário para que ele precisa diminuir para que caiba no meu flex-container 
+
+flex-basis:100px será a largura dos flex-items selecionados ele vai prevalecer ao width. valor auto matem o valor do width quando ultilizo flex direction column ele não vai mais representar a largura e sim a altura
+
+Dev. Danilo Uni9
