@@ -45,5 +45,5 @@ function mudaTexto(id) {
     }
 }
 function visualizarImagem (x) {
-    document.getElementById('view').src = x;
+    document.getElementById('view2').src = x;
 }
