@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse:collapse;
+        }
+        td {
+            border:1px solid black;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+        <li>3</li>
+    </ul>
+    <dl>
+        <dt>html5</dt>
+        <dd>html é uma linguagem de marcação de texto para web</dd>
+        <dt>css3</dt>
+        <dd>css é um liguagem de criação de webdesign para web</dd>
+        <dt>javascript</dt>
+        <dd>javascript é liguagem de programação pra web</dd>
+    </dl>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2">1a</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">2a</td><td>2b</td>
+            </tr>
+            <tr>
+               <td rowspan="2">3b</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">4a</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,17 +1,28 @@
+LISTAS ANINHADAS
+-------------------------------------------------------------------------------
+
 Listas aninhadas - listas dentro de listas
+
+
+DEFINIÇÃO DE LISTAS
+--------------------------------------------------------------------------------
 <dl> - Definition List (Listas de definição)
 Agente vai usar uma lista de definição tem ex um dicionrio 
 tenho um termo e esse termo precisa uma definição para ele
 <dt> - Definition Term (Termo da lista de definição)
 <dd> - Detalhes da descrição
 
+
+TABELAS
+--------------------------------------------------------------------------------
 <table> - para mostrar dados tabulares
 <tr> - table row (representa uma linha na minha tabela)
 <td></td> table date (representa uma coluna na minha tabela)
 </table>
 atributos - mesclar linha e colunas
-colspan - cria coluna nos espaços vazios
-rowspan - cria linha nos espaços vazios
+colspan - faz com que a célula ocupe o lugar das próximas n células vizinhas à direita de sua coluna
+rowspan - faz com que a célula ocupe o lugar das próximas n células vizinhas abaixo de sua linha
+
 
 propriedade border-collapse Ela tem 2 valores possiveis
 separate valor padrão
