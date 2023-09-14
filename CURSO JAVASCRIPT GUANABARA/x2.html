@@ -4,22 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .icon {
+            font-size:30px;
+        }
+        .menu {
+            margin-top:20px;
+            margin-left:30px;
+        }
+        .menu a {
+            display:block;
+            text-decoration:none;
+            margin-left:10px;
+            margin-top:15px;
+            font-size:20px;
+        }
+        div a:hover {
+            text-decoration:underline;
+            transition:all ease 0.2s;
+        }
+        .menu  {
+            display:none;
+        }
+        main {
+            opacity:0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
+            <span class="icon" onclick="alternar()"> 
+                &#9776 
+            </span>
+            <div class="menu" id="btn">
+                <a href="#">Cursos</a>
+                <a href="#">Serviços</a>
+                <a href="#">Produtos</a>
+                <a href="#">Outras</a>
             </div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
         </nav>
-    </header>
+        <main id="qualquercoisa">
+            <p>texto aqui</p>
+        </main>
 </body>
+<script>
+    function alternar() {
+        let x = document.getElementById('btn')
+        if (x.style.display == 'block') { x.style.display = 'none'
+        } else { 
+            x.style.display = 'block'
+        }
+    }
+</script>
 </html>

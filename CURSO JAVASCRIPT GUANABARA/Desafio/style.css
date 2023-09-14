@@ -29,7 +29,7 @@ main {
     width:35px;
     height:5px;
     margin:0 0 10px 0;
-    background-color:#cdcdcd;
+    background-color:#1b0f0f;
     border-radius:5px;
     transition:all ease 0.2s;
 }
@@ -83,4 +83,5 @@ main {
 }
 .menu ul li a:hover {
     color:gray;
+    
 }
