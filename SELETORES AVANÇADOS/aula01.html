@@ -1,0 +1,95 @@
+SELETORES AVANÇADOS/ SELETORES COMPLEXOS
+--------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Avançados</title>
+    <style>
+    </style>
+</head>
+<body>
+    <article>
+        <h3></h3>
+        <p>
+            <a href="#">
+                <b></b>
+            </a>
+        </p>
+        <h3></h3>
+        <p>
+            <a href="#">
+                <b></b>
+            </a>
+        </p>
+        <p>
+            <a href="#">
+                <b></b>
+            </a>
+        </p>
+    </article>
+</body>
+</html>
+
+
+DESCENDENCIA 
+--------------------------------------------------------------------------------------------------------------
+Toda vez que olhar para esse codigo mentalmente precisa pensar na organização nesta hierarquia
+Eu tenho um article dentro do article um elemento h3 e 3 p.
+ Dentro de cada p eu tenho tag a e dentro da tag a eu tenho um elemento b
+ Toda vez que vizualizar um espaço significa descendencia.
+ No exemplo: 
+ article a {
+    background: red;
+}
+ O meu seletor do css está selecionando toda tag a que está contida numa tag article independente do seu grau de parentesco.
+     Ou seja este background red será aplicado em todas as tags a porque elas são descentes de article. A tag a não é filha da tag article ela é neta. A tag a ela é filha da tag p que é filha da tag article
+No exemplo:
+article p b {
+    background: red;
+}
+O meu browser vai selecionar toda tag b que esta dentro da tag p que esta dentro da tag article sempre se le da direita para esquerda
+
+
+
+
+FILHO DIRETO
+---------------------------------------------------------------------------------------------------------------
+No exemplo:
+article p > b {
+    background: red; 
+}
+Estou selecionando toda tag b que é filho direto da tag p que é descendente da tag article
+A tag b não é filho direto da tag p e sim da tag a. A tag a por sua vez é filho direto da tag p, mas eu não tenho nenhuma tag b que é filho direto da tag p. Portanto este seletor não vai selecionar nenhum elemento.
+No exemplo 2 
+article p > a {
+    background: red;
+}
+As tags a são filhos direto da tag p e isso sim é verdadeiro.
+Estou selecionando as 3 tags a que são filhos das tags p que sua vez é descente de article.
+
+
+
+IRMÃO ADJACENTE
+---------------------------------------------------------------------------------------------------------------
+No exemplo:
+article h3 + p {
+    background: red;
+}
+Estou selecionando a tag p que é irmão adjacente da tag h3. Na pratica vai selecionar a tag p que vem imediatamente após a tag h3. Lembrando que este parentesco é de irmão.
+Observação: Ele não vai selecionar o proximo irmão que é h3. Ele vai selecionar o proximo irmão do h3 se ele for um paragrafo. Estou selecionando meu paragrafo que vem imeditamente depois de h
+
+No exemplo 2:
+article p + p {
+    background: red;
+}
+Estou selecionando o elemento p que vem imediatamente apos um outro elemento p que por sua vez e descente de article.
+
+
+PROXIMOS IRMÃOS
+---------------------------------------------------------------------------------------------------------------No exemplo:
+article h3 ~ p {
+    background: red;
+}
+Este seletor vai selecionar todos os paragrafos que vem imediatamente após h3. O seletor ~ signigica proximos irmãos

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        width:90vw;
+        height:90vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    body {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        background-color:rgba(47, 110, 110, 0.788)
+
+    }
+    fieldset {
+        display: flex;
+        flex-direction:column;
+        width:500px;
+        padding:10px;
+        font-weight: bold;
+        background-color:rgba(220, 220, 220, 0.815);
+
+    }
+    input {
+        width:200px;
+        margin-bottom:5px;
+    }
+    button {
+        width:fit-content;
+    }
+    legend {
+        font-size:20px;
+        text-align:center;
+    }
+</style>
+<body>
+    <fieldset>
+        <legend>Login</legend>
+        <label for="username">Usuario</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password">
+        <button onclick="verificar()" id="verificar">Entrar</button>
+    </fieldset>
+</body>
+<script>
+    function verificar(){
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        if (username == 'admin' && password == 'admin123') {
+            window.location.href = 'restrito.html'
+        } else {
+            window.alert('Acesso Negado')
+        }
+    } 
+</script>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            list-style-type:none;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .menu {
+            display:flex;
+            gap:20px;
+            justify-content:flex-end;
+            margin-right:20px;
+            margin-top:20px;
+        }
+        .menu li {
+            padding:3px;
+        }
+        .menu li:hover {
+            text-decoration:underline blue;
+            cursor:pointer;
+            font-weight:bold;
+            transition:all ease 0.5s; 
+        }
+        .text {
+            margin-top:100px;
+            display:none;
+            border:1px solid black;
+            width:150px;
+            height:150px;
+            background-color:rgba(250, 30, 30, 0.342);
+            position:absolute;
+            top:0;
+            z-index:1;
+        }
+        .text p {
+            text-align:center;
+        }
+        .content {
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
+        }
+        .button {
+            width:fit-content;
+            position:absolute;
+            margin-top:260px;
+            margin-left:100px;
+            z-index:2;
+            top:0;
+        }
+        .button-2 {
+            width:fit-content;
+            position:absolute;
+            margin-top:290px;
+            margin-left:100px;
+            z-index:3;
+            top:0;
+            display:none;
+        }
+        .button-3 {
+            width:fit-content;
+            position:absolute;
+            margin-top:290px;
+            z-index:4;
+            top:0;
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li onclick="openlink(1)">google</li>
+            <li onclick="openlink(2)">uol</li>
+            <li onclick="openlink(3)">g1</li>
+            <li onclick="openlink(4)">cnn</li>
+        </ul>
+    </nav>
+    </header>
+    <nav>
+        <div class="content">
+            <div id="text" class="text">
+                <p id="text-2" class="text-2">Clique em Next para receber mais intruções</p>
+            </div>
+            <button onclick="opentext()" id="button" class="button">Open</button>
+            <button onclick="alternar()" id="button-2" class="button-2">Next</button>
+            <!-- <button onclick="previus()" id="button-3" class="button-3">Previus</button> -->
+        </div>
+</body>
+<script>
+    let text = 'Transforme as pessoas que encontram você na Busca Google e no Maps em novos clientes com um Perfil da Empresa gratuito para seu estabelecimento físico ou sua área de cobertura. Customize seu perfil adicionando fotos, ofertas, postagens e muito mais.'
+    let k = document.getElementById('text')
+    let i = document.getElementById('text-2')
+    let w = document.getElementById('button')
+    let j = document.getElementById('button-2')
+    let l = document.getElementById('button-3')
+    let google = 'https://www.google.com.br/'
+    let uol = 'https://www.uol.com.br/'
+    let g1 = 'https://g1.globo.com/'
+    let cnn = 'https://www.cnnbrasil.com.br/'
+    function openlink(x) {
+        if (x == 1) {
+            window.open(google, '_blanck')
+        } else if (x == 2) {
+            window.open(uol, '_blank')
+        } else if (x == 3) {
+            window.open(g1, '_blank')
+        } else {
+            window.open(cnn, '_blank')
+        } 
+    }
+    function opentext() {
+        if (k.style.display == 'none') {
+            k.style.display = 'block'
+            j.style.display = 'block'
+            w.textContent = 'Close'
+        } else {
+            k.style.display = 'none'
+            l.style.display = 'none'
+            j.style.display = 'none'
+            w.textContent = 'Open'
+        }
+    }
+    let texto = 0;
+    function alternar() {
+        if (texto == 0) {
+            i.innerHTML = 'Primeiro texto, clique em Next para ver outro texto'
+            texto = 1
+        } else if (texto == 1) {
+            i.innerHTML = 'Segundo texto, clique em Next pra ver o outro texto'
+            l.style.display = 'block'
+            texto = 2
+        } else if (texto == 2){
+            i.innerHTML = 'Terceiro texto, clique em Previous para volrar para o texto anterior'
+            texto = 0
+            
+        } 
+    } 
+</script>
+</html>
+
+
+
+
+
+

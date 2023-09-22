@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+</head>
+<style>
+    * {
+        list-style-type:none;
+        text-decoration:none;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin:0;
+        padding:0;
+    }
+    h1 {
+        text-align:center;
+        margin-top:30px;
+    }
+    .menu-list {
+        width:90%;
+        display:flex;
+        gap:20px;
+        justify-content:flex-end;
+        margin-right:20px;
+        margin-top:20px;
+        /* border:1px solid black; */
+    }
+    .menu-list li:hover {
+        text-decoration:underline;
+        font-weight:bold;
+        transition:all ease 0.3s;
+        cursor:pointer;
+    }
+    .caixa-2 {
+        margin-top:50px;
+        margin-left:20px;
+    }
+    .action-2 {
+        display:flex;
+        flex-direction:column;
+        width:fit-content;
+    }
+    .action-2 button {
+        margin-bottom:10px;
+    }
+    .action h2 {
+        font-size:20px;
+        font-weight:200;
+    }
+    .caixa-3 {
+        display:none;
+    }
+</style>
+<body>
+    <h1>Revisão Programação Front-end</h1>
+    <nav class="menu">
+        <ul class="menu-list">
+            <li onclick="AbrirLink(1)">google</li>
+            <li onclick="AbrirLink(2)">ig</li>
+            <li onclick="AbrirLink(3)">uol</li>
+            <li onclick="AbrirLink(4)">cnn</li>
+        </ul>
+    </nav>
+    <div id="caixa" class="caixa">
+        <p id="conteudo">Vai aparecer alguma coisa aqui</p>
+    </div>
+    <div id="action" class="action">
+        <h2 onclick="MostrarCurriculo('joao', 'professor')">João</h2>
+        <h2 onclick="MostrarCurriculo('pedro', 'engenheiro')">Pedro</h2>
+        <h2 onclick="MostrarCurriculo('maria', 'arquiteta')">Maria</h2>
+        <h2 onclick="MostrarCurriculo('tereza', 'advogada')">Tereza</h2>
+    </div>
+    <div id="caixa-2" class="caixa-2">
+        <p id="conteudo-2">Vai acontecer alguma coisa aqui ...</p>
+    </div>
+    <div class="action-2">
+        <button onclick="MudaTexto(1)">Muda Texto</button>
+        <button onclick="MudaTexto(2)">Muda Texto 2 </button>
+        <button onclick="MudaTexto(3)">Muda Texto 3</button>
+        <button onclick="MudaTexto(4)">Muda Texto 4</button>
+        <button onclick="MudaTexto(5)">Muda Texto 5</button>
+    </div> 
+    <div id="caixa-3" class="caixa-3">
+        <p>Alguma coisa</p>
+    </div>  
+    <button id="button" onclick="Alternar()">Mostrar</button> 
+</body>
+<script>
+    function AbrirLink(x) {
+        if (x == 1) {
+            window.open('http://google.com')
+        } else if (x == 2) {
+            window.open('http://ig.com.br')
+        } else if (x == 3) {
+          window.open('http://uol.com.br')
+        } else {
+            window.open('http://cnn.com.br')
+        }
+    } 
+    function MudaTexto(y) {
+        let texto;
+        if (y == 1) {
+            texto = 'texto 1'
+        } else if (y == 2) {
+            texto = 'texto 2'
+        } else if (y == 3) {
+            texto = 'texto 3'
+        } else if (y == 4) {
+            texto = 'texto 4'
+        } else {
+            texto = 'texto 5'
+        }
+        // document.getElementsByClassName('caixa-2')[0].innerHTML = texto
+        document.getElementById('caixa-2').innerHTML = texto
+    }
+    function MostrarCurriculo(nome) {
+        let curriculo;
+        if (nome == 'joao') {
+            curriculo = 'curriculo 1'
+        } else if (nome == 'pedro') {
+            curriculo = 'curriculo 2'
+        } else if (nome == 'maria') {
+            curriculo = 'curriculo 3' 
+        } else {
+            curriculo = 'curriculo 4'
+        }
+        document.getElementById('caixa').innerHTML = curriculo
+        // document.getElementsByClassName('caixa')[0].innerHTML = curriculo
+    }
+    function MostrarCurriculo(nome, curriculo) {
+        document.getElementById('caixa').innerHTML = nome + ' ' + curriculo
+        document.getElementsByClassName('caixa')[0].innerHTML = nome + ' ' + curriculo
+    }
+    function Alternar(){
+        k = document.getElementById('caixa-3')
+        i = document.getElementById('button')
+        if (k.style.display == 'none') {
+            k.style.display = 'block'
+            i.textContent = 'Ocultar'
+        } else {
+            k.style.display = 'none'
+            i.textContent = 'Mostrar'
+        }
+    }
+</script>
+</html>

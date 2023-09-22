@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <a>sem title</a>
+        <a title="">com title</a>
+    </article>
+    <article>
+        <img alt="texto">
+        <img alt="">
+    </article>
+    <article>
+        <a href="...">link interno</a>
+        <a href="http://">link externo</a>
+    </article>
+    <article>
+        <img src="...jpg">
+        <img src="...png">
+    </article>
+</body>
+</html>
+
+SELETORES DE ATRIBUTOS
+---------------------------------------------------------------------------------------------------------------
+[atributo]
+a[title] {
+    color:red;
+}
+Eu vou selecionar o atributo title 
+
+[atributo=""]
+img[alt=""] {
+    border-color:red;
+}
+Vou selecionar todo atributo alt exatamente com este valor um texto ou como no exemplo uma string vazia. Mas sempre que tiver um alt com uma string vazia ele vai colocar um border-color:red;
+
+
+[atributo^="valor"]
+a[href^=http] {
+    color:red;
+}
+Quando eu coloco o acento circonflexo que eu estou querendo dizer vai selecionar por esse atributo quando começar com este valor. Eu estou selecionando toda tag a que tenha o atributo href que inicia com http
+
+
+[atributo$=""]
+img[src$=".png"] {
+    border-color:red;
+}
+Estou selecionando toda tag img que possua o atributo src que termine com atributo png 
+$="" significa termina com
+
+No primeiro exemplo estou selecionando que não é a 
+observação não tem espaço
+:not() Agente vai ultilizar esta pseudo clase quando agente quer negar alguma coisa
+:not(a) {
+    ...;
+
+No exemplo 2 estou selecionando toda tag p que não é .destaque ou seja todo elemento paragrafo que não possue a classe destaque      
+}
+p:not (.destaque) {
+    ...;
+}
+No exemplo 3 nos temos toda seleção da tag img que não tenha o atributo alt
+img:not([alt]) {
+    display:none;
+}

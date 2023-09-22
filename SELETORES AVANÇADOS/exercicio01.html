@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Compostos</title>
+    <style>
+        /* filho direto */
+        article p > a {
+            /* background-color:red; */
+        }
+        /* irmão adjacente */
+        article h3 + p {
+            /* background-color:red; */
+        }
+        article p + p {
+            /* background-color:red; */
+        }
+        /* proximos irmãos */
+        article h3 ~ p { 
+                /* background-color:red; */
+        }
+        a[title] {
+            color:red;
+        }
+        img[alt=""] {
+            color:red;
+        }
+        p:not(.destaque) {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h3></h3>
+        <p>p1
+            <a href="">a1
+                <b>b1</b>
+            </a>
+        </p>
+        <p>p2
+            <a href="">a2
+                <b>b2</b>
+            </a>
+        </p>
+        <p>p3
+            <a href="">a3
+                <b>b3</b>
+            </a>
+        </p>
+    </article>
+    <article>
+        <a href="">sem title</a>
+        <a title="">com title</a>
+    </article>
+    <article>
+        <img src="" alt="texto">
+        <img src="" alt="">
+    </article>
+    <article>
+        <p class="destaque">Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+</body>
+</html>

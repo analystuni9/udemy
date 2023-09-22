@@ -67,4 +67,5 @@ body {
         text-decoration:underline brown;
         font-weight:bold;
         cursor:pointer;
+        transition:all ease 0.3s;
     }
