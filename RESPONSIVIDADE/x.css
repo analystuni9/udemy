@@ -1,0 +1,82 @@
+* {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing:border-box;
+}
+body {
+    overflow-x: hidden;
+}
+/* de 0 ate 700px aplique display none */
+@media screen and (max-width:800px) {
+    .menu {
+        display:none;
+    }
+} 
+/* de 700px ate enqunto tiver espaço aplique display none */
+@media screen and (min-width:800px) {
+    .icon-mobile, .menu-mobile {
+        display:none;
+    }
+}
+.hero {
+    width: 100%;
+    background-color:rgb(22, 81, 92);
+    padding:1.2rem;
+    position:absolute;
+    top:0;
+    z-index:3;
+}
+.nav-bar {
+    display:flex;
+    justify-content:space-between;
+    margin:15px;
+}
+.logo p {
+    font-size:1rem;
+    color:white;
+}
+.menu ul {
+    display:flex;
+    gap:20px;
+}
+.menu li {
+    color:white;
+    font-size:1rem;
+}
+.icon-mobile {
+    position:absolute;
+    right:0px;
+    z-index:2;
+    margin-right:20px;
+}
+.icon-mobile div {
+    width:35px;
+    height:5px;
+    margin-bottom:10px;
+    background-color:white;
+    border-radius:5px;
+    transition:all 0.6s ease;
+}
+.menu-mobile {
+    width:300px;
+    height:100vh;
+    position:absolute;
+    right:0;
+    z-index:1;
+    background-color:rgb(22, 81, 92);
+    transition:all 0.6s ease;
+    margin-right: -300px;
+}
+.menu-mobile ul {
+    padding-top:200px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+}
+.menu-mobile li {
+    color:white;
+}

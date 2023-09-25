@@ -18,7 +18,8 @@ body {
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        /* z-index:1; */
+        z-index:1;
+        gap:20px;
     }
     .icon .lines {
         position:absolute;

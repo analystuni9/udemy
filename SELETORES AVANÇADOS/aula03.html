@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSEUDO CLASSES CHILD</title>
+    <style>
+        /* primeiro filho */
+        p:first-child {
+            color:red;
+        }
+        /* segundo filho */
+        p:last-child {
+            color:green;
+        }
+        /* filho */
+        p:nth-child(2) {
+            background-color:blue;
+        }
+        /* ultimo tipo de filho */
+        p:nth-last-of-type(2) {
+            background-color:blueviolet;
+        }
+        p:nth-of-type(1) {
+            background-color:orange;
+        }
+        li:nth-child(4n) {
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>primeiro filho</p>
+        <p>segundo filho</p>
+        <p>terceiro filho</p>
+    </div>
+    <div>
+        <a href=""></a>
+        <p>segundo filho</p>
+        <p>terceiro filho</p>
+    </div>
+    <ul>
+        <li>item de lista</li>
+        <li>item de lista</li>
+        <li>item de lista</li>
+        <li>item de lista</li>
+        <li>item de lista</li>
+        <li>item de lista</li>
+        <li>item de lista</li>
+        <li>item de lista</li>
+        <li>item de lista</li>
+        <li>item de lista</li>
+    </ul>
+</body>
+</html>
+
+

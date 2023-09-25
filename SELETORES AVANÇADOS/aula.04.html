@@ -1,0 +1,32 @@
+<!-- ADICIONAR CONTEÚDO: ::AFTER ::BEFORE
+----------------------------------------------------------------------------------------
+Esses 2 pontos serve para diferenciar o que é pseudo classes e pseudo elementos na pratica não tem muita diferença.
+After e Before serve para incluir conteúdo ao meu elemento.
+sempre quando for usar esses pseudo elemento preciso do content mesmo que vazio.
+p::before {
+    content:">>>"
+} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After e Before</title>
+    <style>
+        p::before {
+            content:"<<< "
+        }
+        p::after {
+            content: " >>>"
+        }
+        div::before {
+            content:url(HTML5_Logo_256.png);
+        }
+    </style>
+</head>
+<body>
+    <p>Texto aqui ...</p>
+    <div>outro texto aqui ...</div>
+</body>
+</html>
