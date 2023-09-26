@@ -4,20 +4,10 @@
     list-style-type:none;
     box-sizing:border-box;
 }
-@media screen and (max-width:700px) {
-    .menu {
-        display:none;
-    }
-
-}
-@media screen and (min-width:700px) {
-    .icon-mobile {
-        display:none;
-    }
-}
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:white;
+    font-size:14px;
 }
 .logo {
     font-size:20px;
@@ -28,16 +18,18 @@ body {
     padding:20px 10px;
     display:flex;
     justify-content:space-between;
-    /* background-color:rgb(31, 31, 31); */
-    background-color:black;
+    background-color:rgb(31, 31, 31);
     position:absolute;
     top:0;
     right:0;
     z-index:2;
+    height:70px;
 }
 .menu ul {
     display:flex;
     gap:20px;
+    align-items:center;
+    
 }
 .icon-mobile {
     width:35px;
@@ -46,8 +38,8 @@ body {
     right:0;
     top:0;
     z-index:3;
-    margin-top:10px;
-    margin-right:10px;
+    padding-top:15px;
+    padding-right:15px;
     transition:all 0.5s ease;
 }
 .icon-mobile div {
@@ -56,23 +48,56 @@ body {
     border-radius:5px;
     background-color:white;
     margin-bottom:10px;
-    transition:all 1s ease;
+    transition:all 0.6s ease;
 }
 .menu-mobile {
     width:300px;
-    height:70vh;
+    /* height:33vh; */
     position:absolute;
     top:0;
     right:0;
     z-index:1;
-    background-color:black;
-    padding-top:100px;
+    background-color:rgb(31, 31, 31);
+    margin-top:80px;
     display:none;
+    padding:20px;
     /* transition:all 0.5s ease; */
+    border-radius:10px;
 }
 .menu-mobile ul {
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:40px;
+    gap:35px;
+}
+.botao-personalizado {
+    /* border:1px solid black; */
+    /* width:120px; */
+    text-align:center;
+    background-color:rgb(7, 173, 173);
+    font-weight:bold;
+    text-shadow:1px 1px 1px black;
+    border-radius:7px;
+    padding:10px 10px;
+}
+@media screen and (max-width:500px) {
+    .menu-mobile, .botao-personalizado {
+        width:100%;
+    }
+}
+@media screen and (min-width:500px) {
+    .botao-personalizado {
+        width:100%;
+    }
+}
+@media screen and (max-width:700px) {
+    .menu {
+        display:none;
+        height:33vh;
+    }
+}
+@media screen and (min-width:700px) {
+    .icon-mobile {
+        display:none;
+    }
 }
