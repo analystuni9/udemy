@@ -1,82 +1,78 @@
-* {
+*{
     margin:0;
     padding:0;
     list-style-type:none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing:border-box;
 }
-body {
-    overflow-x: hidden;
-}
-/* de 0 ate 700px aplique display none */
-@media screen and (max-width:800px) {
+@media screen and (max-width:700px) {
     .menu {
         display:none;
     }
-} 
-/* de 700px ate enqunto tiver espaço aplique display none */
-@media screen and (min-width:800px) {
-    .icon-mobile, .menu-mobile {
+
+}
+@media screen and (min-width:700px) {
+    .icon-mobile {
         display:none;
     }
 }
-.hero {
-    width: 100%;
-    background-color:rgb(22, 81, 92);
-    padding:1.2rem;
-    position:absolute;
-    top:0;
-    z-index:3;
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+}
+.logo {
+    font-size:20px;
+    font-weight:bold;
 }
 .nav-bar {
+    width:100%;
+    padding:20px 10px;
     display:flex;
     justify-content:space-between;
-    margin:15px;
-}
-.logo p {
-    font-size:1rem;
-    color:white;
+    /* background-color:rgb(31, 31, 31); */
+    background-color:black;
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:2;
 }
 .menu ul {
     display:flex;
     gap:20px;
 }
-.menu li {
-    color:white;
-    font-size:1rem;
-}
 .icon-mobile {
+    width:35px;
+    height:35px;
     position:absolute;
-    right:0px;
-    z-index:2;
-    margin-right:20px;
+    right:0;
+    top:0;
+    z-index:3;
+    margin-top:10px;
+    margin-right:10px;
+    transition:all 0.5s ease;
 }
 .icon-mobile div {
-    width:35px;
+    width:30px;
     height:5px;
-    margin-bottom:10px;
-    background-color:white;
     border-radius:5px;
-    transition:all 0.6s ease;
+    background-color:white;
+    margin-bottom:10px;
+    transition:all 1s ease;
 }
 .menu-mobile {
     width:300px;
-    height:100vh;
+    height:70vh;
     position:absolute;
+    top:0;
     right:0;
     z-index:1;
-    background-color:rgb(22, 81, 92);
-    transition:all 0.6s ease;
-    margin-right: -300px;
+    background-color:black;
+    padding-top:100px;
+    display:none;
+    /* transition:all 0.5s ease; */
 }
 .menu-mobile ul {
-    padding-top:200px;
     display:flex;
     flex-direction:column;
-    justify-content:center;
     align-items:center;
-    gap:50px;
-}
-.menu-mobile li {
-    color:white;
+    gap:40px;
 }
