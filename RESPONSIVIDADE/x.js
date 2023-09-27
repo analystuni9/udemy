@@ -15,3 +15,6 @@ function alternar () {
         i.querySelector('.icon-mobile div:nth-child(3)').style.transform = 'rotate(0) scaleX(1)'
     }
 }
+function acessar() {
+    window.open('y.html', '_blank')
+}
