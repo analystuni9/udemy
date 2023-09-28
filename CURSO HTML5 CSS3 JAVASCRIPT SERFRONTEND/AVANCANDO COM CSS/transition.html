@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        div {
+            background-color:orange;
+            width:200px;
+            height:150px;
+            margin:100px auto;
+            /* anima a propriedade */
+            /* valor all anima qualquer propriedade que eu colocar */
+            /* transition-property:all; */
+            transition-property:width, height, background-color;
+            /* anima a duração */
+            /* primeiro valor anima width e o segundo anima o height */
+            transition-duration:0.5s, 1s;
+            transition-timing-function:cubic-bezier(cubic-bezier(.17,.67,.83,.67));
+            /* ele atrasa um pouco a animação */
+            transition-delay:1s;
+            /* atalho para todas as propriedades */
+            /* valores padroes seu não colocar nada */
+            transition: property(all) duration(0s) function(ease) delay(0s)
+        }
+        div:hover {
+            width:300px;
+            height:250px;
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
