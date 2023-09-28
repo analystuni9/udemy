@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
+    width:100vw;
+    height:100vh;
+    margin:0 auto;
+}
+input[type="radio"] {
+    display:none;
+}
+.caixa2 {
+    position:absolute;
+    width:640px;
+    height:350px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-bottom:30px;
+    border:1px solid black;
+    overflow:hidden;
+}
+.caixa3 {
+    width:640px;
+    height:350px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+}
+.caixa3 img {
+    width:100%;
+}
+.btn {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border:1px solid rgb(255, 47, 92);
+    border-radius:50%;
+    cursor:pointer;
+    margin-right:25px;
+}
+.btn:hover {
+    background-color:rgba(255, 47, 92, 0.562);
+    transition:all 1s ease;
+}

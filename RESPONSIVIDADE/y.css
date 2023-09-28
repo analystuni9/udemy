@@ -11,7 +11,7 @@ body {
   justify-content:center;
   align-items:center;
   min-height:100vh;
-  background-color:seagreen;
+  /* background-color:seagreen; */
   background-image:url('drone.jpg');
   background-size:cover;
   background-position: center;
@@ -71,7 +71,7 @@ padding:10px;
   text-decoration:none;
 }
 .remember-forgot a:hover {
-  text-decoration:underline;
+  text-decoration:underline rgb(255, 47, 92);
 }
 .wrapper .btn {
   width:100%;
@@ -108,5 +108,5 @@ padding:10px;
   font-weight:600;
 }
 .register-link a:hover {
-  text-decoration:underline;
+  text-decoration:underline rgb(255, 47, 92);;
 }

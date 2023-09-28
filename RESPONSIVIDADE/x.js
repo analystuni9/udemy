@@ -18,3 +18,11 @@ function alternar () {
 function acessar() {
     window.open('y.html', '_blank')
 }
+function alternar3() {
+    let w = document.querySelector('.action')
+    if (w.style.display == 'none') {
+        w.style.display = 'block';
+    } else {
+        w.style.display = 'none';
+    }
+}

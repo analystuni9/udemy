@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 *{
     margin:0;
     padding:0;
@@ -7,11 +8,11 @@
 body {
     width:100vw;
     height:100vh;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
     color:white;
     font-size:14px;
-    background-image:url(drone.jpg);
-    background-position:right;
+    background-image:linear-gradient(gray,white);
+    background-position:top;
     background-repeat:no-repeat;
     background-size:cover;
 }
@@ -24,7 +25,7 @@ main {
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    color:rgba(0, 0, 0, 0.795)
+    color:rgba(70, 66, 66, 0.288)
 
 }
 .logo {
@@ -36,7 +37,7 @@ main {
     padding:20px 10px;
     display:flex;
     justify-content:space-between;
-    background-color:rgba(31, 31, 31, 0.514);
+    background-color:rgba(44, 42, 42, 0.514);
     position:absolute;
     top:0;
     right:0;
@@ -81,7 +82,7 @@ main {
     position:absolute;
     top:0;
     right:0;
-    z-index:1;
+    z-index:6;
     background-color:rgba(31, 31, 31, 0.288);
     margin-top:80px;
     display:none;
@@ -140,12 +141,12 @@ main {
     opacity:0.9;
 }
 @media screen and (max-width:600px) {
-    .menu-mobile, .botao-personalizado {
+    .menu-mobile, .btn-personalizado {
         width:100%;
     }
 }
 @media screen and (min-width:600px) {
-    .botao-personalizado {
+    .btn-personalizado {
         width:100%;
     }
 }
@@ -159,4 +160,106 @@ main {
     .icon-mobile {
         display:none;
     }
+}
+input[type="radio"] {
+    display:none;
+}
+.caixa1 {
+    width:100%;
+    height:50%;
+    position:absolute;
+    top:100px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-items: center;
+    box-sizing:border-box;
+    overflow: hidden;
+    /* border:1px solid black; */
+}
+input[type="radio"] {
+    display:none;
+}
+.caixa2 {
+    width:100%;
+    height:80%;
+    position:absolute;
+    z-index:4;
+    top:100px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items:center;
+    justify-content:center;
+    box-sizing:border-box;
+    overflow: hidden;
+    /* border:1px solid black; */
+}
+.caixa3 {
+    width:100%;
+    border-radius:10px;
+    height:50%;
+    position:absolute;
+    top:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    box-sizing:border-box;
+    overflow: hidden;
+    /* border:1px solid black; */
+}
+.caixa3 img {
+    width:100%;
+}
+.caixa4 {
+    width:100%;
+    height:40%;
+    position:absolute;
+    z-index:7;
+    color:white;
+    text-shadow:1px 1px 1px black;
+    font-size:16px;
+    top:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    box-sizing:border-box;
+    overflow: hidden;
+    border:1px solid black;
+}
+.btn {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border:1px solid rgb(255, 47, 92,0.8);
+    border-radius:50%;
+    cursor:pointer;
+    margin-right:25px;
+}
+.btn:hover {
+    background-color:rgba(255, 47, 92, 0.562);
+    transition:all 1s ease;
+}
+.btn-personalizado2 {
+    text-align:center;
+    background-color:rgb(255, 47, 92);
+    font-weight:bold;
+    color:white;
+    text-shadow:1px 1px 1px black;
+    border-radius:7px;
+    padding:10px 10px;
+    margin-top:20px;
+    border:none;
+}
+.btn-personalizado2:hover {
+    background-color:transparent;
+    outline: 1px solid rgb(255, 47, 92);
+    text-decoration:none;
+    text-shadow:1px 1px 1px black;
+    cursor:pointer;
+    transition:all 1s ease;
+}
+h1 {
+    text-align:center;
 }
