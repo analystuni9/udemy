@@ -1,10 +1,13 @@
+/* importei uma nova familia de fonte do google fontes */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-*{
+/* Aplique em todos elementos da página */
+* {
     margin:0;
     padding:0;
     list-style-type:none;
     box-sizing:border-box;
 }
+/* corpo da página todo elementos estão contidos aqui*/
 body {
     width:100vw;
     height:100vh;
@@ -16,22 +19,18 @@ body {
     background-repeat:no-repeat;
     background-size:cover;
 }
-main {
-    width:100%;
-    height:100vh;
-    position:absolute;
-    top:0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    color:rgba(70, 66, 66, 0.288)
-
-}
+/* div do logotipo do site */
 .logo {
-    font-size:20px;
-    font-weight:bold;
+    width:100px;
+    display:flex;
+    align-items:center;
 }
+/* imagem do logotipo */
+.logo img {
+    width:100%;
+    opacity:0.9;
+}
+/*contém logotipo + menu de navegação desktop */
 .nav-bar {
     width:100%;
     padding:20px 10px;
@@ -41,22 +40,25 @@ main {
     position:absolute;
     top:0;
     right:0;
-    z-index:2;
+    z-index:1;
     height:70px;
+    /* border:1px solid black; */
 }
+/* menu desktop */
 .menu ul {
     display:flex;
     gap:20px;
     align-items:center;
     
 }
+/* icone menu hamburguer mobile */
 .icon-mobile {
     width:35px;
     height:35px;
     position:absolute;
     right:0;
     top:0;
-    z-index:3;
+    z-index:2;
     transition:all 0.5s ease;
     /* border:1px solid black; */
     margin-top:10px;
@@ -64,6 +66,7 @@ main {
     box-sizing: content-box;
     padding:5px;
 }
+/* refere-se a cada linha */
 .icon-mobile div {
     width:30px;
     height:5px;
@@ -73,9 +76,11 @@ main {
     transition:all 0.6s ease;
     outline:1px solid rgba(255, 255, 255, 0.884);
 }
+/* Efeito ao passar por cima o cursor do mouse */
 .icon-mobile:hover {
     cursor:pointer;
 }
+/* menu para tablet e celular */
 .menu-mobile {
     width:300px;
     /* height:33vh; */
@@ -97,108 +102,117 @@ main {
     justify-content:center;
     gap:35px;
 }
+/* botão personalizado desktop, tablet e celular */
 .btn-personalizado {
     text-align:center;
     background-color:rgb(255, 47, 92);
+    color:white;
     font-weight:bold;
     text-shadow:1px 1px 1px black;
     border-radius:7px;
-    padding:10px 10px;
+    padding:10px 12px;
+    border:none;
 }
+/* Efeito ao passar por cima o cursor do mouse botão entrar desktop*/
 .menu .btn-personalizado:hover {
     background-color:transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration:none;
     text-shadow:1px 1px 1px black;
+    cursor:pointer;
+    transition:all 1s ease;
 }
+/* Efeito ao passar por cima o cursor do mouse botão entrar desktop*/
 .menu-mobile .btn-personalizado:hover {
     background-color:transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration:none; 
     text-shadow:1px 1px 1px black;
+    cursor:pointer;
+    transition:all 1s ease;
 }
+/* Efeito ao passar por cima o cursor do mouse item da lista do menu desktop*/
 .menu li:hover {
     text-decoration:underline rgb(255, 47, 92);
     font-weight:bold;
     transition:all 1s ease;
     cursor:pointer;
     text-shadow:1px 1px 1px black;
+    cursor:pointer;
+    transition:all 1s ease;
 }
+/* Efeito ao passar por cima o cursor do mouse item da lista do menu para tablete e celular*/
 .menu-mobile li:hover {
     text-decoration:underline rgb(255, 47, 92);
     font-weight:bold;
     cursor:pointer;
     transition:all 1s ease;
     text-shadow:1px 1px 1px black;
+    cursor:pointer;
+    transition:all 1s ease;
 }
-.logo {
-    width:100px;
-    display:flex;
-    align-items:center;
-}
-.logo img {
-    width:100%;
-    opacity:0.9;
-}
-@media screen and (max-width:600px) {
-    .menu-mobile, .btn-personalizado {
-        width:100%;
-    }
-}
-@media screen and (min-width:600px) {
-    .btn-personalizado {
-        width:100%;
-    }
-}
+/* Quero que quando chegue na largura máxima de 800px você esconda meu menu desktop*/
 @media screen and (max-width:800px) {
     .menu {
         display:none;
-        height:33vh;
     }
 }
+/* Quero que quando chegue na largura minima de 800px você esconda icone de menu mobile até o limite */
 @media screen and (min-width:800px) {
     .icon-mobile {
         display:none;
     }
 }
+/* Quero que quando chegue na largura máxima de 600px você aplique largura de 100% no menu mobile e botão personalizado */
+@media screen and (max-width:600px) {
+    .menu-mobile, .btn-personalizado {
+        width:100%;
+    }
+}
+/* Quero que quando chegue na largura minima de 600px voce aplique 100% de largura botão personalizado */
+@media screen and (min-width:600px) {
+    .btn-personalizado {
+        width:100%;
+    }
+}
 input[type="radio"] {
     display:none;
 }
+/* refere-se input /botões padrões*/
 .caixa1 {
     width:100%;
     height:50%;
     position:absolute;
-    top:100px;
+    top:90px;
     display: flex;
     flex-direction: column;
     align-items:center;
     align-items: center;
     box-sizing:border-box;
     overflow: hidden;
-    /* border:1px solid black; */
+    /* border:1px solid yellow; */
 }
-input[type="radio"] {
-    display:none;
-}
+/* refere-se label/ botão carrosel */
 .caixa2 {
     width:100%;
     height:80%;
     position:absolute;
     z-index:4;
-    top:100px;
+    top:130px;
     display: flex;
-    /* flex-direction: column; */
     align-items:center;
     justify-content:center;
     box-sizing:border-box;
     overflow: hidden;
     /* border:1px solid black; */
 }
+/* refere-se div que contem a imagem do carrosel */
 .caixa3 {
     width:100%;
     border-radius:10px;
     height:50%;
     position:absolute;
+    z-index:3;
     top:100px;
     display: flex;
     flex-direction: column;
@@ -206,42 +220,51 @@ input[type="radio"] {
     align-items:center;
     box-sizing:border-box;
     overflow: hidden;
-    /* border:1px solid black; */
+    /* border:1px solid blue; */
 }
+/* imagem do carrosel */
 .caixa3 img {
     width:100%;
 }
+/*div conteudo*/
 .caixa4 {
     width:100%;
     height:38%;
     position:absolute;
-    z-index: 5;
+    z-index: 4;
     color:white;
     text-shadow:1px 1px 1px black;
     font-size:16px;
-    top:100px;
+    top:130px;
     display: flex;
-    flex-direction: column;
+    flex-flow:column wrap;
+    text-indent:20px;
     justify-content:center;
     align-items:center;
     box-sizing:border-box;
     overflow: hidden;
-    /* border:1px solid black; */
+    /* border:1px solid red; */
 }
+/* botões carrosel */
 .btn {
     display:inline-block;
-    width:15px;
-    height:15px;
+    width:10px;
+    height:10px;
     border:2px solid rgb(255, 47, 92,0.8);
     border-radius:50%;
     cursor:pointer;
     margin-right:25px;
 }
+/* Efeito ao passar em cima o cursor do mouse */
 .btn:hover {
     background-color:rgba(255, 47, 92, 0.562);
     transition:all 1s ease;
 }
+/* botão saiba mais */
 .btn-personalizado2 {
+    position:absolute;
+    top:220px;
+    z-index:4;
     text-align:center;
     background-color:rgb(255, 47, 92);
     font-weight:bold;
@@ -249,7 +272,6 @@ input[type="radio"] {
     text-shadow:1px 1px 1px black;
     border-radius:7px;
     padding:10px 10px;
-    margin-top:20px;
     border:none;
 }
 .btn-personalizado2:hover {
@@ -260,6 +282,10 @@ input[type="radio"] {
     cursor:pointer;
     transition:all 1s ease;
 }
-h1 {
+/* div conteúdo escondido */
+.conteudo {
+    display:none;
+}
+.conteudo h1 {
     text-align:center;
 }
