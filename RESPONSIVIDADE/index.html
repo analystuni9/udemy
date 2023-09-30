@@ -9,6 +9,7 @@
     <title>Drone Drop</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icone-drone-3.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -44,6 +45,14 @@
                     <li>&#128712 Ajuda</li>
                     <button class="btn-personalizado" onclick="abrirlink()">Entrar</button>
                 </ul>
+            </div>
+            <div class="menu-setas">
+                <div onclick="irParaProximaImagem()" class="esquerda">
+                    <i class='bx bx-chevron-left'></i>
+                </div>
+                <div onclick="voltarParaImagemAnterior()" class="direita" >
+                    <i class='bx bx-chevron-right'></i>
+                </div>
             </div>
         </nav>
     </header>

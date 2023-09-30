@@ -1,5 +1,5 @@
+let menumobile = document.querySelector('.menu-mobile')
 function alternar () {
-    let menumobile = document.querySelector('.menu-mobile')
     if (menumobile.style.display == 'none') {
         menumobile.style.display = 'block'
         document.querySelector('.icon-mobile div:nth-child(1)').style.transformOrigin = '100% 0%';
@@ -17,8 +17,8 @@ function alternar () {
 function abrirlink() {
     window.open('y.html', '_blank')
 }
+let conteudo = document.querySelector('.conteudo')
 function alternar3() {
-    let conteudo = document.querySelector('.conteudo')
     if (conteudo.style.display == 'none') {
         conteudo.style.display = 'block';
     } else {
@@ -41,3 +41,33 @@ function alternar2(x) {
         visualizar.src = 'img6.jpg'
     }
 }
+// Primeiro, adicione estas variáveis globais no início do seu script.js para controlar o estado atual da imagem.
+let imagemAtual = 1;
+const totalImagens = 6; // Altere para o número total de imagens que você tem.
+
+// Função para avançar para a próxima imagem.
+function irParaProximaImagem() {
+    imagemAtual += 1;
+    if (imagemAtual > totalImagens) {
+        imagemAtual = 1; // Volta para a primeira imagem se estiver na última.
+    }
+    exibirImagemAtual();
+}
+
+// Função para voltar para a imagem anterior.
+function voltarParaImagemAnterior() {
+    imagemAtual -= 1;
+    if (imagemAtual < 1) {
+        imagemAtual = totalImagens; // Vai para a última imagem se estiver na primeira.
+    }
+    exibirImagemAtual();
+}
+
+// Função para exibir a imagem atual com base na variável imagemAtual.
+function exibirImagemAtual() {
+    const visualizarImagem = document.querySelector('.visualizar');
+    visualizarImagem.src = `img${imagemAtual}.jpg`; // Suponha que suas imagens tenham nomes como "img1.jpg", "img2.jpg", etc.
+}
+
+// Exibir a primeira imagem ao carregar a página.
+exibirImagemAtual();

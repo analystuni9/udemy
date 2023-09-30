@@ -168,11 +168,17 @@ body {
     .menu-mobile, .btn-personalizado {
         width:100%;
     }
+     .caixa2 label,  .btn-personalizado2 {
+        display:none;
+    }
 }
 /* Quero que quando chegue na largura minima de 600px voce aplique 100% de largura botão personalizado */
 @media screen and (min-width:600px) {
     .btn-personalizado {
         width:100%;
+    }
+    .menu-setas i {
+        display:none;
     }
 }
 input[type="radio"] {
@@ -208,9 +214,11 @@ input[type="radio"] {
 }
 /* refere-se div que contem a imagem do carrosel */
 .caixa3 {
-    width:100%;
+    /* margin-top:100px; */
+    width:100vw;
+    margin:0 auto;
     border-radius:10px;
-    height:50%;
+    height:auto;
     position:absolute;
     z-index:3;
     top:100px;
@@ -224,7 +232,8 @@ input[type="radio"] {
 }
 /* imagem do carrosel */
 .caixa3 img {
-    width:100%;
+    max-width:100%;
+    height:auto;
 }
 /*div conteudo*/
 .caixa4 {
@@ -250,7 +259,7 @@ input[type="radio"] {
     display:inline-block;
     width:10px;
     height:10px;
-    border:2px solid rgb(255, 47, 92,0.8);
+    border:1px solid rgb(255, 47, 92,0.8);
     border-radius:50%;
     cursor:pointer;
     margin-right:25px;
@@ -263,7 +272,7 @@ input[type="radio"] {
 /* botão saiba mais */
 .btn-personalizado2 {
     position:absolute;
-    top:220px;
+    top:200px;
     z-index:4;
     text-align:center;
     background-color:rgb(255, 47, 92);
@@ -288,4 +297,29 @@ input[type="radio"] {
 }
 .conteudo h1 {
     text-align:center;
+}
+.menu-setas {
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    /* border:1px solid black; */
+}
+.direita i {
+    position:absolute;
+    z-index:5;
+    top:250px;
+    right:0;
+    font-size:50px;
+    color:rgb(255, 47, 92);
+
+    /* border:1px solid black; */
+}
+.esquerda i {
+    position:absolute;
+    z-index:5;
+    top:250px;
+    left:0;
+    font-size:50px;
+    color:rgb(255, 47, 92);
+    /* border:1px solid black; */
 }
