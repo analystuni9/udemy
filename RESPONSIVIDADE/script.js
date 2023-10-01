@@ -26,19 +26,19 @@ function alternar3() {
     }
 }
 function alternar2(x) {
-    let visualizar = document.querySelector('.visualizar')
+    let visualizar = document.querySelector('.visualizar1')
     if (x == 1) {
-        visualizar.src = 'img1.jpg'
+        visualizar.src = 'img1/1.png'
     } else if (x == 2) {
-        visualizar.src = 'img2.jpg'
+        visualizar.src = 'img1/2.png'
     } else if (x == 3) {
-        visualizar.src = 'img3.jpg'
+        visualizar.src = 'img1/3.png'
     } else if (x == 4) {
-        visualizar.src = 'img4.jpg'
+        visualizar.src = 'img1/4.png'
     } else if (x == 5) {
-        visualizar.src = 'img5.jpg'
+        visualizar.src = 'img1/5.png'
     } else {
-        visualizar.src = 'img6.jpg'
+        visualizar.src = 'img1/6.png'
     }
 }
 // Primeiro, adicione estas variáveis globais no início do seu script.js para controlar o estado atual da imagem.
@@ -65,8 +65,8 @@ function voltarParaImagemAnterior() {
 
 // Função para exibir a imagem atual com base na variável imagemAtual.
 function exibirImagemAtual() {
-    const visualizarImagem = document.querySelector('.visualizar');
-    visualizarImagem.src = `img${imagemAtual}.jpg`; // Suponha que suas imagens tenham nomes como "img1.jpg", "img2.jpg", etc.
+    const visualizarImagem = document.querySelector('.visualizar1');
+    visualizarImagem.src = `img1/${imagemAtual}.png`; // Suponha que suas imagens tenham nomes como "img1.jpg", "img2.jpg", etc.
 }
 
 // Exibir a primeira imagem ao carregar a página.

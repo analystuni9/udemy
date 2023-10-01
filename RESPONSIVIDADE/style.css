@@ -105,7 +105,7 @@ body {
 /* botão personalizado desktop, tablet e celular */
 .btn-personalizado {
     text-align:center;
-    background-color:rgb(255, 47, 92);
+    background-color:#ff2f5c;
     color:white;
     font-weight:bold;
     text-shadow:1px 1px 1px black;
@@ -151,10 +151,25 @@ body {
     cursor:pointer;
     transition:all 1s ease;
 }
+.menu-setas i {
+    display:none;
+}
+.visualizar2 {
+    display:none;
+}
+.visualizar3 {
+    display:none;
+}
 /* Quero que quando chegue na largura máxima de 800px você esconda meu menu desktop*/
 @media screen and (max-width:800px) {
     .menu {
         display:none;
+    }
+    .visualizar1 {
+        display: none;
+    }
+    .visualizar2 {
+        display:block;
     }
 }
 /* Quero que quando chegue na largura minima de 800px você esconda icone de menu mobile até o limite */
@@ -168,8 +183,20 @@ body {
     .menu-mobile, .btn-personalizado {
         width:100%;
     }
-     .caixa2 label,  .btn-personalizado2 {
+    .btn-personalizado2 {
         display:none;
+    }
+    .visualizar2 {
+        display:none;
+    }
+    .visualizar3 {
+        display:block;
+    }
+    .caixa2 {
+        flex-direction:column;
+        justify-content: center;
+        margin-right:250px;
+        gap:20px;
     }
 }
 /* Quero que quando chegue na largura minima de 600px voce aplique 100% de largura botão personalizado */
@@ -177,10 +204,7 @@ body {
     .btn-personalizado {
         width:100%;
     }
-    .menu-setas i {
-        display:none;
     }
-}
 input[type="radio"] {
     display:none;
 }
@@ -189,7 +213,8 @@ input[type="radio"] {
     width:100%;
     height:50%;
     position:absolute;
-    top:90px;
+    top:0;
+    right:0;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -200,26 +225,37 @@ input[type="radio"] {
 }
 /* refere-se label/ botão carrosel */
 .caixa2 {
-    width:100%;
-    height:80%;
+    width:100vw;
+    height:160px;
     position:absolute;
     z-index:4;
-    top:130px;
-    display: flex;
+    top:250px;
+    right:0;
+    display:flex;
     align-items:center;
     justify-content:center;
     box-sizing:border-box;
     overflow: hidden;
     /* border:1px solid black; */
 }
+/* botões carrosel */
+.btn {
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border:1px solid ;
+    border-radius:50%;
+    cursor:pointer;
+    margin-right:25px;
+}
 /* refere-se div que contem a imagem do carrosel */
 .caixa3 {
     /* margin-top:100px; */
     width:100vw;
+    height:300px;
     margin:0 auto;
     border-radius:10px;
-    height:auto;
-    position:absolute;
+    position:relative;
     z-index:3;
     top:100px;
     display: flex;
@@ -228,12 +264,12 @@ input[type="radio"] {
     align-items:center;
     box-sizing:border-box;
     overflow: hidden;
-    /* border:1px solid blue; */
+    border:1px solid blue;
 }
 /* imagem do carrosel */
 .caixa3 img {
-    max-width:100%;
-    height:auto;
+    width:100%;
+    height:300px;
 }
 /*div conteudo*/
 .caixa4 {
@@ -244,7 +280,7 @@ input[type="radio"] {
     color:white;
     text-shadow:1px 1px 1px black;
     font-size:16px;
-    top:130px;
+    top:70px;
     display: flex;
     flex-flow:column wrap;
     text-indent:20px;
@@ -254,28 +290,18 @@ input[type="radio"] {
     overflow: hidden;
     /* border:1px solid red; */
 }
-/* botões carrosel */
-.btn {
-    display:inline-block;
-    width:10px;
-    height:10px;
-    border:1px solid rgb(255, 47, 92,0.8);
-    border-radius:50%;
-    cursor:pointer;
-    margin-right:25px;
-}
 /* Efeito ao passar em cima o cursor do mouse */
 .btn:hover {
-    background-color:rgba(255, 47, 92, 0.562);
+    background-color:rgba(255, 47, 92, 0.561);
     transition:all 1s ease;
 }
 /* botão saiba mais */
 .btn-personalizado2 {
     position:absolute;
-    top:200px;
+    top:250px;
     z-index:4;
     text-align:center;
-    background-color:rgb(255, 47, 92);
+    background-color:#ff2f5c;
     font-weight:bold;
     color:white;
     text-shadow:1px 1px 1px black;
