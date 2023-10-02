@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Primeiro, adicione estas variáveis globais no início do seu script.js para controlar o estado atual da imagem.
+let imagemAtual = 1;
+const totalImagens = 6; // Altere para o número total de imagens que você tem.
+
+// Função para avançar para a próxima imagem.
+function irParaProximaImagem() {
+    imagemAtual += 1;
+    if (imagemAtual > totalImagens) {
+        imagemAtual = 1; // Volta para a primeira imagem se estiver na última.
+    }
+    exibirImagemAtual();
+}
+
+// Função para voltar para a imagem anterior.
+function voltarParaImagemAnterior() {
+    imagemAtual -= 1;
+    if (imagemAtual < 1) {
+        imagemAtual = totalImagens; // Vai para a última imagem se estiver na primeira.
+    }
+    exibirImagemAtual();
+}
+
+// Função para exibir a imagem atual com base na variável imagemAtual.
+function exibirImagemAtual() {
+    const visualizarImagem = document.querySelector('.visualizar1');
+    visualizarImagem.src = `img1/${imagemAtual}.png`; // Suponha que suas imagens tenham nomes como "img1.jpg", "img2.jpg", etc.
+}
+
+// Exibir a primeira imagem ao carregar a página.
+exibirImagemAtual();
+</script>
+</html>

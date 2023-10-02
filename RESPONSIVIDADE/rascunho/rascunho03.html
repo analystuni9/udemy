@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Números com Botões</title> <!-- Define o título da página -->
+</head>
+<body>
+    <div id="numero-container"> <!-- Início de uma div com um ID para conter o número -->
+        <p id="numero">1</p> <!-- Parágrafo com um ID que contém o número inicial -->
+    </div>
+
+    <!-- Botão "Voltar" que chama a função JavaScript numeroAnterior() quando clicado -->
+    <button onclick="numeroAnterior()">Voltar</button>
+
+    <!-- Botão "Ir" que chama a função JavaScript proximoNumero() quando clicado -->
+    <button onclick="proximoNumero()">Ir</button>
+
+    <script>
+        let indiceAtual = 0; // Declaração de uma variável para controlar o índice do número atual
+        const numeros = [1, 2, 3]; // Declaração de um array que contém os números
+
+        // Obtendo o elemento de número pelo seu ID e armazenando-o em uma variável
+        const containerNumero = document.getElementById('numero');
+
+        // Definindo uma função chamada numeroAnterior()
+        function numeroAnterior() {
+            // Verificando se não estamos no primeiro número
+            if (indiceAtual > 0) {
+                // Reduzindo o índice para apontar para o número anterior
+                indiceAtual--;
+                // Atualizando o conteúdo do elemento de número com base no novo índice
+                containerNumero.textContent = numeros[indiceAtual];
+            }
+        }
+
+        // Definindo uma função chamada proximoNumero()
+        function proximoNumero() {
+            // Verificando se não estamos no último número
+            if (indiceAtual < numeros.length - 1) {
+                // Aumentando o índice para apontar para o próximo número
+                indiceAtual++;
+                // Atualizando o conteúdo do elemento de número com base no novo índice
+                containerNumero.textContent = numeros[indiceAtual];
+            }
+        }
+    </script> <!-- Fim da seção de script JavaScript -->
+
+</body> <!-- Fim do corpo da página -->
+
+</html> <!-- Fim do documento HTML -->

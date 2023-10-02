@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="numero">
+            1
+        </div>
+    </div>
+    <button onclick="voltar()">voltar</button>
+    <button onclick="proximo()">proximo</button>
+</body>
+<script>
+    let indiceatual = 0
+    const numeros = [1, 2, 3];
+    const containernumero = document.querySelector('.numero')
+    function voltar() {
+        if (indiceatual > 0) {
+            indiceatual--;
+            containernumero.textContent = numeros[indiceatual];
+        }
+    }
+    function proximo() {
+        if (indiceatual < numeros.length -1) {
+            indiceatual++;
+            containernumero.textContent = numeros[indiceatual]
+        };
+    }
+</script>
+</html>
