@@ -17,7 +17,7 @@ function alternar () {
 function abrirlink() {
     window.open('login/login.html', '_blank')
 }
-let conteudo = document.querySelector('.conteudo')
+let conteudo = document.querySelector('.conteudo1')
 let botao = document.querySelector('.btn-personalizado2')
 function alternar3() {
     if (conteudo.style.display == 'none') {
@@ -75,3 +75,18 @@ function alternar2(x) {
   
   // Define um intervalo de tempo para exibir as imagens automaticamente (a cada 5 segundos, por exemplo)
   setInterval(exibirProximaImagem, 5000); // 5000 milissegundos = 5 segundos
+
+  function adicionartexto() {
+    let adicionar = document.querySelector('.adicionar')
+    let lermais1 = document.querySelector('.btn-action')
+    if (adicionar.style.display == 'none') {
+        adicionar.style.display = 'block'
+        lermais1.textContent = 'Ler menos'
+        adicionar.innerHTML = '<p>Além disso, a Drone Drop está constantemente desenvolvendo parcerias estratégicas com empresas de diversos setores. Seja para entregas de alimentos frescos, medicamentos urgentes ou produtos de comércio eletrônico, a Drone Drop oferece soluções de entrega personalizadas para atender às necessidades específicas de seus clientes.<p/><p>Outro aspecto notável da empresa é seu compromisso com a inovação contínua. A equipe de engenheiros e cientistas da Drone Drop está constantemente trabalhando no aprimoramento de suas tecnologias, tornando seus drones mais eficientes, autônomos e capazes de operar em diversas condições climáticas.<p/><p>À medida que a Drone Drop continua a expandir sua presença global, seu impacto na economia e no meio ambiente se torna cada vez mais evidente. A empresa não apenas está transformando a maneira como as entregas são feitas, mas também está abrindo novas possibilidades de negócios em setores que antes eram limitados pela logística tradicional.<p/><p>Em resumo, a Drone Drop é uma empresa que está na vanguarda da inovação tecnológica e da sustentabilidade. Com seu compromisso com a segurança, parcerias estratégicas e busca incessante pela excelência, a empresa está moldando o futuro das entregas e demonstrando que é possível alcançar a eficiência empresarial sem comprometer o meio ambiente. À medida que a Drone Drop continua sua jornada, podemos esperar que mais marcos revolucionários sejam alcançados na indústria de entrega por drones.</p>'
+  } else {
+    adicionar.style.display = 'none'
+    lermais1.textContent = 'Ler mais'
+  }
+        
+    }
+    
