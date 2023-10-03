@@ -14,15 +14,22 @@ img {
 /* corpo da página todo elementos estão contidos aqui*/
 body {
     width:100vw;
-    height:100vh;
+    height:auto;
     margin:0 auto;
     font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
     color:white;
     font-size:14px;
-    background-image:linear-gradient(gray,white);
-    background-position:top;
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-image:linear-gradient(white, gray);
+    /* border:1px solid black; */
+}
+header {
+    position:relative;
+    margin:0 auto;
+    top:0;
+    max-width:1080px;
+    height:480px;
+    /* border:1px solid black; */
+
 }
 /* div do logotipo do site */
 .logo {
@@ -165,7 +172,7 @@ input[type="radio"] {
 }
 /* refere-se input /botões padrões*/
 .caixa1 {
-    width:100%;
+    width:1080px;
     height:auto;
     position:absolute;
     top:0;
@@ -174,11 +181,10 @@ input[type="radio"] {
 }
 /* refere-se label/ botão carrosel */
 .caixa2 {
-    width:100vw;
+    width:100%;
     position:absolute;
     z-index:4;
-    top:400px;
-    right:0;
+    top:350px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -199,25 +205,16 @@ input[type="radio"] {
 /* refere-se div que contem a imagem do carrosel */
 .caixa3 {
     /* margin-top:100px; */
-    width:100%;
-    height:350px;
-    margin:0 auto;
-    border-radius:10px;
     position:absolute;
-    z-index:0;
-    top:90px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    box-sizing:border-box;
-    overflow:hidden;
+    top:100px;
+    width:100%;
+    margin:0 auto;
     /* border:1px solid blue; */
 }
 /* imagem do carrosel */
 .caixa3 img {
     width:100%;
-    height:350px;
+    height:300px;
 
 }
 /*div conteudo*/
@@ -225,7 +222,7 @@ input[type="radio"] {
     width:100%;
     height:200px;
     position:absolute;
-    top:130px;
+    top:100px;
     z-index:2;
     color:white;
     text-shadow:2px 1px 1px black;
@@ -255,7 +252,7 @@ input[type="radio"] {
     display:flex;
     justify-content:center;
     position:absolute;
-    top:320px;
+    top:280px;
     z-index:3;
 
 
@@ -298,10 +295,19 @@ input[type="radio"] {
     padding-bottom:5px;
 }
 main {
-    width:100%;
+    max-width:1080px;
+    position:relative;
+    top:0;
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
     height:auto;
-    margin-top:500px;
     /* border:1px solid black; */
+}
+section {
+    width:100%;
+    margin:0 auto;
+    /* border:1px solid pink; */
 }
 article:nth-child(1) {
     width:90%;
@@ -312,8 +318,6 @@ article:nth-child(1) {
     float:left;
     border-radius:10px;
     margin:20px 20px 0 20px;
-}
-.conteudo2 {
 }
 article:nth-child(1) h2 {
     text-align:center;
@@ -327,7 +331,7 @@ article:nth-child(1) h2 {
 }
 .action {
     width:100%;
-    text-align:center;
+    text-align:left;
     margin-top:20px;
     /* border:1px solid black; */
 }
@@ -435,7 +439,7 @@ article:nth-child(2) {
 
 }
 @media screen and (max-width:811px) {
-    .card, .btn-action {
+    .card {
         margin:0 auto;
         width:600px;
     }
@@ -446,10 +450,11 @@ article:nth-child(2) {
         height:300px;
     }
 }
-@media screen and (max-width:811px) {
-    .btn-action {
+@media screen and (max-width:700px) {
+    .btn-action, .action {
         margin:0 auto;
         width:90%;
+        text-align: center;
     }
 }
 
