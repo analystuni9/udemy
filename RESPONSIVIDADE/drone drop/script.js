@@ -17,15 +17,15 @@ function alternar () {
 function abrirlink() {
     window.open('login/login.html', '_blank')
 }
-let conteudo = document.querySelector('.conteudo1')
-let botao = document.querySelector('.btn-personalizado2')
+let conteudo = document.querySelector('.conteudo-1')
+let botao = document.querySelector('.btn-personalizado-2')
 function alternar3() {
     if (conteudo.style.display == 'none') {
         conteudo.style.display = 'block';
-        botao.textContent = 'MOSTRAR MENOS'
+        botao.textContent = 'Mostrar menos'
     } else {
         conteudo.style.display = 'none';
-        botao.textContent = 'SAIBA MAIS'
+        botao.textContent = 'Saiba mais'
     }
 }
 function alternar2(x) {
