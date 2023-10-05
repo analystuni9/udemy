@@ -13,7 +13,7 @@ img {
 }
 /* corpo da página todo elementos estão contidos aqui*/
 body {
-    width:100vw;
+    max-width:1080px;
     height:auto;
     margin:0 auto;
     font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
@@ -123,7 +123,6 @@ header {
     text-align:center;
     background-color:#ff2f5c;
     color:white;
-    font-weight:bold;
     text-shadow:1px 1px 1px black;
     border-radius:7px;
     padding:10px 12px;
@@ -150,7 +149,6 @@ header {
 /* Efeito ao passar por cima o cursor do mouse item da lista do menu desktop*/
 .menu li:hover {
     text-decoration:underline rgb(255, 47, 92);
-    font-weight:bold;
     transition:all 1s ease;
     cursor:pointer;
     text-shadow:1px 1px 1px black;
@@ -160,7 +158,6 @@ header {
 /* Efeito ao passar por cima o cursor do mouse item da lista do menu para tablete e celular*/
 .menu-mobile li:hover {
     text-decoration:underline rgb(255, 47, 92);
-    font-weight:bold;
     cursor:pointer;
     transition:all 1s ease;
     text-shadow:1px 1px 1px black;
@@ -287,8 +284,9 @@ input[type="radio"] {
     font-size:14px;
     border-radius:5px;
 }
-.conteudo-1 h2 {
+.conteudo-1 h1 {
     text-align:center;
+    font-size:20px;
 }
 .menu-mobile i {
     display:flex;
@@ -315,11 +313,13 @@ section {
     margin:0 auto;
     /* border:1px solid pink; */
 }
+/* primeiro filho */
 article:nth-child(1) {
     width:90%;
     margin:0 auto;
     margin-bottom:100px;
 }
+/* imagem da empresa */
 .imagem-1 img {
     float:left;
     border-radius:10px;
@@ -331,16 +331,19 @@ article:nth-child(1) h2 {
     font-size:25px;
     margin-bottom:10px;
 }
+/* conteudo empresa */
 .conteudo-2 p {
     text-indent:30px;
     color:black;
 }
+/* caixa com o botao ler mais */
 .action {
     width:100%;
     text-align:left;
     margin-top:20px;
     /* border:1px solid black; */
 }
+/* botão ler mais */
 .btn-action {
     width:fit-content;
     text-align:center;
@@ -360,9 +363,11 @@ article:nth-child(1) h2 {
     cursor:pointer;
     transition:all 1s ease;
 }
+/* conteudo oculto empresa */
 .adicionar {
     display:none;
 }
+/* contem todos os cards */
 .cards {
         max-width:93%;
         margin:0 auto;
@@ -371,6 +376,7 @@ article:nth-child(1) h2 {
         align-items:center;
         gap:20px;
 }
+/* contem todos os elementos do card */
 .card {
     display:flex;
     flex-direction:column;
@@ -380,6 +386,7 @@ article:nth-child(1) h2 {
     background-color:rgb(17, 17, 17);
     border-radius:10px;
 }
+/* imagem icone que aparece no card */
 .imagem-card {
     width:100%;
     display:flex;
@@ -388,6 +395,7 @@ article:nth-child(1) h2 {
     text-align:center;
     padding:5px;
 }
+/* titulo do card */
 .imagem-card h3 {
     width:fit-content;
     text-align:center;
@@ -395,11 +403,22 @@ article:nth-child(1) h2 {
     font-size:19px;
     /* border:1px solid white; */
 }
+/* conteudo do card */
 .conteudo-card {
     width:95%;
     margin:0 auto;
     text-align:center;
     padding:0 15px;
+}
+/* segundo filho */
+article:nth-child(2) {
+    width:98%;
+    margin:0 auto 50px auto;
+    /* border:1px solid black; */
+}
+/* terceiro filho */
+article:nth-child(3) {
+    margin-bottom:50px;
 }
 article:nth-child(2) h2 {
     padding:30px 0;
@@ -407,11 +426,6 @@ article:nth-child(2) h2 {
     font-size:25px;
     text-align: center;
     text-shadow:1px 1px 1px  rgb(230, 226, 226);;
-}
-article:nth-child(2) {
-    width:98%;
-    margin:0 auto 50px auto;
-    /* border:1px solid black; */
 }
 article:nth-child(3) h2 {
     padding:30px 0;
@@ -423,9 +437,7 @@ article:nth-child(3) h2 {
 article:nth-child(3) p {
     color:black;
 }
-article:nth-child(3) {
-    margin-bottom:50px;
-}
+/* caixa que contem a imagem iot */
 .imagem-2 {
     width:95%;
     margin:0 auto;
@@ -435,6 +447,7 @@ article:nth-child(3) {
     height:200px;
     border-radius:10px;
 }
+/* conteudo iot */
 .conteudo-3 {
     width:90%;
     margin:0 auto;
@@ -442,7 +455,17 @@ article:nth-child(3) {
 .conteudo-3 p {
     text-indent:20px;
 }
-
+/* quarto filho */
+article:nth-child(4) h2 {
+    text-align:center;
+    padding:30px 0;
+    color:black;
+    font-size:25px;
+    text-shadow:1px 1px 1px rgb(204, 201, 201);
+}
+article:nth-child(4) {
+    margin-bottom:50px;
+}
 .card-equipe-1, 
 .card-equipe-2, 
 .card-equipe-3, 
@@ -482,41 +505,38 @@ article:nth-child(3) {
     width:80px;
     border-radius:50%;
 }
+/* card com o conteudo equipe */
 .conteudo-equipe {
-    width:97%;
+    width:95%;
     height:190px;
     color:black;
     text-align:center;
-    padding:0 10px;
+    padding:0 5px;
     /* border:1px solid black; */
     
-}
-article:nth-child(4) h2 {
-    text-align:center;
-    padding:30px 0;
-    color:black;
-    font-size:25px;
-    text-shadow:1px 1px 1px rgb(204, 201, 201);
-}
-article:nth-child(4) {
-    margin-bottom:50px;
 }
 .conteudo-equipe h3 {
     color:rgb(255, 47, 92);
     font-size:22px;
     text-shadow:1px 1px 1px black;
 }
+/* contem todos os cards-equipe */
 .caixa-5 {
     width:100%;
     display:flex;
     flex-wrap:wrap;
 }
+/* caixa que contem os botoes dos links */
 .action-equipe {
-    width:90%;
+    width:95%;
     display:flex;
     justify-content:center;
+    margin:0 auto;
+    padding-left:30px;
     /* border:1px solid black; */
+    opacity:0;
 }
+/* botoes dos cards */
 .action-equipe i {
     width:100%;
     font-size:20px;
@@ -524,11 +544,52 @@ article:nth-child(4) {
     color:black;
     padding:3px;
 }
+.action-equipe:hover {
+    opacity:1;
+}
+/* efeito ao levar o mause por cima dos botoes */
 .action-equipe i:hover {
     color:#ff2f5c;
     text-decoration:underline gray;
     transition:all 1s ease;
     cursor:pointer;
+    transition:all 1s ease;
+}
+footer {
+    width:100%;
+    background-color:rgba(55, 53, 53, 0.77);
+}
+footer p {
+    text-align:center;
+    padding:7px 0;
+}
+.icones-rodape ul {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-flow:row wrap;
+    gap:30px;
+    padding:7px 0;
+}
+.icones-rodape i:hover {
+    text-decoration: underline #ff2f5c;
+    cursor:pointer;
+    transition:all 1s ease;
+}
+.links-rodape ul {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-flow:row wrap;
+    gap:50px;
+    padding:7px 0;
+}
+.links-rodape li:hover{
+    text-decoration:underline #ff2f5c;
+    cursor:pointer;
+}
+.icones-rodape i {
+    font-size:20px;
 }
 /* Quero que quando chegue na largura máxima de 800px você esconda meu menu desktop*/
 @media screen and (max-width:900px) {
