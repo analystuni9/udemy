@@ -22,6 +22,7 @@ body {
     background-image:linear-gradient(white, gray);
     /* border:1px solid black; */
 }
+
 header {
     position:relative;
     margin:0 auto;
@@ -284,6 +285,7 @@ input[type="radio"] {
     margin:0 auto;
     padding:20px;
     font-size:14px;
+    border-radius:5px;
 }
 .conteudo-1 h2 {
     text-align:center;
@@ -364,17 +366,17 @@ article:nth-child(1) h2 {
 .cards {
         max-width:93%;
         margin:0 auto;
-        flex-flow:row wrap;
         display:flex;
+        flex-flow:row wrap;
         align-items:center;
-        gap:30px;
+        gap:20px;
 }
 .card {
     display:flex;
     flex-direction:column;
     align-items:center;
     width:300px;
-    height:200px;
+    height:175px;
     background-color:rgb(17, 17, 17);
     border-radius:10px;
 }
@@ -404,6 +406,7 @@ article:nth-child(2) h2 {
     color:black;
     font-size:25px;
     text-align: center;
+    text-shadow:1px 1px 1px  rgb(230, 226, 226);;
 }
 article:nth-child(2) {
     width:98%;
@@ -415,9 +418,13 @@ article:nth-child(3) h2 {
     color:black;
     font-size:25px;
     text-align: center;  
+    text-shadow:1px 1px 1px rgb(230, 226, 226);
 }
 article:nth-child(3) p {
     color:black;
+}
+article:nth-child(3) {
+    margin-bottom:50px;
 }
 .imagem-2 {
     width:95%;
@@ -436,18 +443,24 @@ article:nth-child(3) p {
     text-indent:20px;
 }
 
-.card-equipe-1, .card-equipe-2, .card-equipe-3 {
-    width:278px;
-    height:350px;
+.card-equipe-1, 
+.card-equipe-2, 
+.card-equipe-3, 
+.card-equipe-4,
+.card-equipe-5, 
+.card-equipe-6  {
+    width:300px;
+    height:400px;
     background-repeat:no-repeat;
     background-image:url(img/background-01.png);
     padding-top:120px;
     display:flex;
-    flex-direction:column;
+    flex-flow:column;
     align-items:center;
     border-radius:10px;
-    margin:0 auto;
+    margin:0 auto 50px auto;
     background-color:white;
+    box-shadow:5px 5px 10px black;
 }
 .card-equipe-2 {
     background-image:url(img/background-02.png);
@@ -455,27 +468,67 @@ article:nth-child(3) p {
 }
 .card-equipe-3 {
     background-image:url(img/background-03.png);
-
+}
+.card-equipe-4 {
+    background-image:url(img/background-04.png);
+}
+.card-equipe-5 {
+    background-image:url(img/background-05.png);
+}
+.card-equipe-6 {
+    background-image:url(img/background-06.png);
 }
 .imagem-perfil img{
     width:80px;
     border-radius:50%;
+}
+.conteudo-equipe {
+    width:97%;
+    height:190px;
+    color:black;
+    text-align:center;
+    padding:0 10px;
+    /* border:1px solid black; */
+    
+}
+article:nth-child(4) h2 {
+    text-align:center;
+    padding:30px 0;
+    color:black;
+    font-size:25px;
+    text-shadow:1px 1px 1px rgb(204, 201, 201);
+}
+article:nth-child(4) {
+    margin-bottom:50px;
 }
 .conteudo-equipe h3 {
     color:rgb(255, 47, 92);
     font-size:22px;
     text-shadow:1px 1px 1px black;
 }
-.conteudo-equipe {
-    color:black;
-    text-align:center;
-
-}
-article:nth-child(4) {
+.caixa-5 {
     width:100%;
     display:flex;
-    flex-direction:row;
-    border:1px solid black;
+    flex-wrap:wrap;
+}
+.action-equipe {
+    width:90%;
+    display:flex;
+    justify-content:center;
+    /* border:1px solid black; */
+}
+.action-equipe i {
+    width:100%;
+    font-size:20px;
+    height:auto;
+    color:black;
+    padding:3px;
+}
+.action-equipe i:hover {
+    color:#ff2f5c;
+    text-decoration:underline gray;
+    transition:all 1s ease;
+    cursor:pointer;
 }
 /* Quero que quando chegue na largura máxima de 800px você esconda meu menu desktop*/
 @media screen and (max-width:900px) {
