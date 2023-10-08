@@ -27,6 +27,7 @@ header {
     position:relative;
     margin:0 auto;
     top:0;
+    z-index:0;
     max-width:1080px;
     height:480px;
     /* border:1px solid black; */
@@ -52,7 +53,7 @@ header {
     background-color:rgba(55, 53, 53, 0.77);
     position:absolute;
     top:0;
-    right:0;
+    /* right:0; */
     z-index:1;
     height:70px;
     /* border:1px solid black; */
@@ -596,6 +597,9 @@ footer p {
     .menu {
         display:none;
     }
+    .btn-action {
+        width:350px;
+    }
 }
 /* Quero que quando chegue na largura minima de 800px você esconda icone de menu mobile até o limite */
 @media screen and (min-width:900px) {
@@ -617,7 +621,7 @@ footer p {
     }
 }
 @media screen and (max-width:1075px) {
-    .card, .btn-action {
+    .card {
         margin:0 auto;
         width:350px;
     }
@@ -636,9 +640,9 @@ footer p {
     }
 }
 @media screen and (max-width:700px) {
-    .btn-action, .action {
+    .btn-action {
         margin:0 auto;
-        width:90%;
+        width:95%;
         text-align: center;
     }
 }
