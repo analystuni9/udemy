@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    </script>
+</head>
+<style>
+    css do cardapio
+    body details{
+        padding:10px;
+        width:100vw;
+        height:100vh;
+        background-image:linear-gradient(blue, blueviolet);
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        display:flex;
+        align-items:center;
+        
+    }
+    ol {
+        width:400px;
+        list-style-type:katakana;
+        border-radius:10px;
+        padding:30px;
+        
+    }
+    ol li {
+        font-weight:bold;
+    }
+    ul {
+        list-style-type:disc;
+    }
+    ul, ol {
+        background-color:white;
+    }
+    summary {
+        list-style-image:url();
+    }
+</style>
+<body>
+    <h1>texto</h1>
+    <!-- <h2>Cardapio</h2>
+        <ol>
+            <li>Entradas</li>
+            <ul>
+            <li>Coxinha</li>
+            <li>Bolinho de Bacalhau</li>
+            <li>Pastel</li>
+        </ul>
+        <li>Prato principal</li>
+            <ul>
+                <li>Feijoada</li>
+                <li>Churrasco</li>
+                <li>Bobó de Camarão</li>
+            </ul>
+            <li>Sobremesa</li>
+            <ul>
+                <li>Brigadeiro</li>
+                <li>Quindim</li>
+                <li>Pudim de Leite Condensado</li>
+            </ul>
+    </ol> -->
+
+    <div>
+        <h2>Cardapio</h2>
+        <details>
+            <summary>Entradas</summary>
+            <ul>
+                <li>Coxinha</li>
+                <li>Bolinho de Bacalhau</li>
+                <li>Pastel</li>
+            </ul>
+        </details>
+        <details>
+            <summary>
+                Prato principal
+            </summary>
+            <ul>
+                <li>Feijoada</li>
+                <li>Churrasco</li>
+                <li>Bobó de Camarão</li>
+            </ul>
+        </details>
+        <details>
+            <summary>
+                Sobremesa
+            </summary>
+            <ul>
+                <li>Brigadeiro</li>
+                <li>Quindim</li>
+                <li>Pudim de Leite Condensado</li>
+            </ul>
+        </details>
+    </div>
+</body>
+</html>
