@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<style>
+    .color {
+        background:black;
+    }
+    .color {
+        background-color:black;
+    }
+    button {
+        border:none;
+        background-color:rgb(201, 21, 81);
+        color:white;
+        font-size:20px;
+        border-radius:20px;
+        padding:5px 20px;
+    }
+    button i {
+        padding-right:5px;
+    }
+    button:hover {
+        border:none;
+        background:transparent;
+        font-size:20px;
+        outline:1px solid rgb(201, 21, 81);
+        color:rgb(201, 21, 81);
+        border-radius:20px;
+        padding:5px 20px;
+        cursor:pointer;
+        transition:all 0.5s ease;
+    }
+    button i {
+        padding-right:10px;
+    }
+</style>
+<body>
+    <button onclick="alternar()">Dark</button>
+</body>
+<script>
+    function alternar() {
+        let body = document.querySelector('body')
+        let button = document.querySelector('button')
+        if (body.classList == 'color') {
+            body.classList.remove('color')
+            button.innerHTML = 'Dark'
+        } else {
+            body.classList.add('color')
+            button.innerHTML = 'Light'
+        }
+    }
+</script>
+</html>

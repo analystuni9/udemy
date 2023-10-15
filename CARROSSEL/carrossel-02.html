@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrosel</title>
+    <style>
+        .caixa-1 {
+            width:500px;
+            height:300px;
+        }
+        .caixa-1 img {
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div caixa-1>
+            <img src="img/paisagem-01.jpg" alt="" class="visualizar">
+        </div>
+    </div>
+</body>
+<script>
+     // Array de nomes de imagens
+     const imagens = [
+        "img/paisagem-01.jpg",
+        "img/paisagem-02.jpg",
+        "img/paisagem-03.jpg",
+        "img/paisagem-04.jpg",
+    // Adicione mais nomes de imagens conforme necessário
+  ];
+  
+  let indiceatual = 0; // Índice da imagem atual
+  
+  // Função para exibir a próxima imagem na caixa3
+  function exibirProximaImagem() {
+    const visualizar = document.querySelector(".visualizar");
+    visualizar.src = imagens[indiceatual];
+    indiceatual = (indiceatual + 1) % imagens.length; // Avança para a próxima imagem circularmente
+  }
+  
+  // Define um intervalo de tempo para exibir as imagens automaticamente (a cada 5 segundos, por exemplo)
+  setInterval(exibirProximaImagem, 5000); // 5000 milissegundos = 5 segundos
+</script>
+</html>

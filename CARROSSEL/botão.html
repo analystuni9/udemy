@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema Dark/Light</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .dark {
+            background-color:black;
+        }
+        .btn1 {
+            background:transparent;
+            background-color:black;
+            color:white;
+            border-radius:20px;
+            padding:5px 20px;
+            font-size:20px;
+        }
+        .btn1:hover {
+            background:transparent;
+            border:1px solid black;
+            color:black;
+            transition:all 0.5s ease;
+            cursor:pointer;
+        }
+        .btn2 {
+            background-color:white;
+            color:black;
+            border-radius:20px;
+            padding:5px 20px;
+        }
+        .btn2:hover {
+            background:transparent;
+            border:1px solid white;
+            color:white;
+            transition:all 0.5s ease;
+        }
+        button i {
+         padding-right:10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="alternar()" class="btn1"><i class='bx bx-moon'></i>Dark</button>
+</body>
+<script>
+    let body = document.querySelector('body')
+    let button = document.querySelector('button')
+    function alternar () {
+        if (body.classList.contains('dark')) {
+            body.classList.remove('dark')
+            button.classList.remove('btn2')
+            button.innerHTML = "<i class='bx bx-moon'></i>Dark"
+        } else {
+            body.classList.add('dark')
+            button.classList.add('btn2')
+            button.innerHTML = "<i class='bx bx-sun'></i>Light"
+        }
+    }
+</script>
+</html>

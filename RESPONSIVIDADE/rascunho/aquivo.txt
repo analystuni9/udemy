@@ -1,0 +1,9 @@
+<dl> definition list
+<dt> definition term
+<dd> detalhes da descrição
+<table>
+<tr>table row linha
+<td>table data coluna
+<table>
+<tr>table row, linha na minha tabela
+caption titulo
