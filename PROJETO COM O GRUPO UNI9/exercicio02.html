@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel automatico</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Carrosel automatico</h1>
+    <div>
+        <img class="exibir" src="img2/1.jpg" alt="">
+    </div>
+    <script>
+        let exibir = document.querySelector('.exibir')
+        let indiceatual = 0
+        const imagens = ['img2/1.jpg',
+        'img2/2.jpg',
+        'img2/3.jpg', 
+        'img2/4.jpg', 
+        'img2/5.jpg']
+        function ExibirProximaImagem () {
+            exibir.src = imagens[indiceatual]
+            indiceatual = (indiceatual +1) % imagens.length
+        }
+        setInterval(ExibirProximaImagem, 2000)
+    </script>
+</body>
+</html>

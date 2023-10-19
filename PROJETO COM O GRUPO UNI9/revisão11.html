@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Imagens</title>
+</head>
+<body>
+    <h1>Seleção de Imagens</h1>
+
+    <!-- Botões de rádio para seleção de imagens com labels -->
+    <input type="radio" name="image" id="radio1" value="img/1.jpg">
+    <label for="radio1"><img src="img/1.jpg" alt="Imagem 1"></label>
+
+    <input type="radio" name="image" id="radio2" value="img/2.jpg">
+    <label for="radio2"><img src="img/2.jpg" alt="Imagem 2"></label>
+
+    <input type="radio" name="image" id="radio3" value="img/3.jpg">
+    <label for="radio3"><img src="img/3.jpg" alt="Imagem 3"></label>
+
+    <!-- Área de exibição -->
+    <div id="display">
+        <h2>Imagem Selecionada:</h2>
+        <img id="selectedImage" src="img/1.jpg" alt="Imagem Selecionada">
+    </div>
+
+    <script>
+        // Seleciona todos os botões de rádio para imagens
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        // Seleciona a área de exibição
+        const selectedImage = document.getElementById('selectedImage');
+
+        // Função para atualizar a área de exibição com a imagem selecionada
+        function atualizarImagem() {
+            radioButtons.forEach(function(radio) {
+                if (radio.checked) {
+                    const selectedImageUrl = radio.value;
+                    selectedImage.src = selectedImageUrl;
+                }
+            });
+        }
+
+        // Adiciona um ouvinte de eventos "change" a cada botão de rádio
+        radioButtons.forEach(function(radio) {
+            radio.addEventListener('change', atualizarImagem);
+        });
+
+        // Chama a função para exibir a imagem inicialmente selecionada (a primeira)
+        atualizarImagem();
+    </script>
+</body>
+</html>

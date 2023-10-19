@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Tradicional com Evento de Clique</title>
+</head>
+<body>
+    <h1>Clique no Botão</h1>
+
+    <!-- Botão HTML que dispara a função ao ser clicado -->
+    <button id="meuBotao">Clique aqui</button>
+
+    <p id="resultado">Nenhum clique ainda.</p>
+
+    <script>
+        // Função tradicional que será chamada quando o botão for clicado
+        function minhaFuncao() {
+            const resultado = document.getElementById("resultado");
+            resultado.textContent = "Botão clicado!";
+        }
+
+        // Seleciona o botão pelo ID e adiciona um ouvinte de eventos de clique
+        const botao = document.getElementById("meuBotao");
+        botao.addEventListener("click", minhaFuncao);
+    </script>
+</body>
+</html>

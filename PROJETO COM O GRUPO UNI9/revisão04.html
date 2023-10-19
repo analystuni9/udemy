@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Número</title>
+</head>
+<body>
+    <h1>Seleção de Número</h1>
+
+    <!-- Botões de rádio para números -->
+    <input type="radio" name="number" id="radio1" value="1">
+    <label for="radio1">1</label>
+
+    <input type="radio" name="number" id="radio2" value="2">
+    <label for="radio2">2</label>
+
+    <input type="radio" name="number" id="radio3" value="3">
+    <label for="radio3">3</label>
+
+    <!-- Área de exibição -->
+    <div id="display">Número Selecionado: </div>
+
+    <script>
+        // Seleciona todos os botões de rádio
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        // Seleciona a área de exibição
+        const display = document.getElementById('display');
+
+        // Função tradicional para atualizar a área de exibição
+        function atualizarNumero() {
+            // Itera sobre os botões de rádio
+            radioButtons.forEach(function(radio) {
+                // Verifica se um botão de rádio está marcado
+                if (radio.checked) {
+                    // Obtém o valor do botão de rádio (número)
+                    const selectedNumber = radio.value;
+                    // Atualiza a área de exibição com o número selecionado
+                    display.textContent = `Número Selecionado: ${selectedNumber}`;
+                }
+            });
+        }
+        // Adiciona um ouvinte de eventos "change" a cada botão de rádio
+        radioButtons.forEach(function(radio) {
+            radio.addEventListener('change', atualizarNumero);
+        });
+
+        // Chama a função para exibir o número inicialmente selecionado (caso haja algum)
+        atualizarNumero();
+    </script>
+</body>
+</html>

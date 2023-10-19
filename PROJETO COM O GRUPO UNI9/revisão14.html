@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão 14</title>
+</head>
+<body>
+    <div id="exibir">texto 1</div>
+    <button>muda texto</button>
+</body>
+<script>
+    let exibir = document.getElementById('exibir')
+    botao = document.querySelector('button')
+    let mudatexto = () => exibir.innerHTML = 'mudou o texto?'
+    botao.addEventListener('click', mudatexto) 
+</script>
+</html>

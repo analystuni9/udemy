@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel Manual</title>
+    <style>
+        /* Estilos para a exibição da imagem */
+        .carousel-container {
+            text-align: center;
+        }
+
+        .carousel-image {
+            max-width: 100%;
+        }
+
+        /* Estilos para os botões de rádio */
+        .radio-buttons {
+            text-align: center;
+        }
+
+        .radio-button {
+            display: none; /* Oculta os botões de rádio */
+        }
+
+        .radio-label {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            border-radius: 50%;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .radio-button:checked + .radio-label {
+            background-color: #009688; /* Cor de destaque para o botão selecionado */
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrossel Manual</h1>
+
+    <!-- Container do carrossel -->
+    <div class="carousel-container">
+        <img class="carousel-image" src="img/1.jpg" alt="Imagem 1">
+    </div>
+
+    <!-- Botões de rádio para navegar entre as imagens -->
+    <div class="radio-buttons">
+        <input type="radio" class="radio-button" name="carousel" id="radio1" checked>
+        <label class="radio-label" for="radio1"></label>
+
+        <input type="radio" class="radio-button" name="carousel" id="radio2">
+        <label class="radio-label" for="radio2"></label>
+
+        <input type="radio" class="radio-button" name="carousel" id="radio3">
+        <label class="radio-label" for="radio3"></label>
+
+        <input type="radio" class="radio-button" name="carousel" id="radio4">
+        <label class="radio-label" for="radio4"></label>
+    </div>
+
+    <script>
+        // Obtém os elementos dos botões de rádio
+        const radioButtons = document.querySelectorAll('.radio-button');
+        // Obtém o elemento da imagem
+        const carouselImage = document.querySelector('.carousel-image');
+
+        // Adiciona um ouvinte de eventos para os botões de rádio
+        radioButtons.forEach((radio, index) => {
+            radio.addEventListener('change', () => {
+                if (radio.checked) {
+                    // Atualiza a imagem de acordo com o botão de rádio selecionado
+                    carouselImage.src = `img/${index + 1}.jpg`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

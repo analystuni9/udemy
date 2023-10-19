@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <!-- ----------------------------------------------------------------------------------------------->
+    <!-- css -->
+    <style>
+        /* Aplique em todas as minhas divs */
+        div {
+            /* Aplique uma largura de 100px */
+            width:100px;
+            /* Aplique uma altura de 100px */
+            height:100px;
+            /* Aplique uma borda com 1px de espeçura tipo solida cor preto */
+            border:1px solid black;
+            /* Aplique uma cor preto no meu texto */
+            color:black;
+        }
+        /* Aplique somente na classe div1 */
+        .div1 {
+            /* aplique cor de fundo vermelha  */
+            background-color:red;
+            /* posição absoluta  */
+            position:absolute;
+            /* coloque um espaço externo de 10px cima */
+            margin-top:10px;
+            /* coloque um espaço externo de 20px esquerda */
+            margin-left:20px;
+            /* valor que trabalha em conjunto com o position para pocionar na minha tela cima */
+            top:0;
+            /* ordem que vai aparecer no meu html */
+            z-index:2;
+        }
+        /* Aplique somente na classe div2 */
+        .div2 {
+             /* aplique cor de fundo verde  */
+            background-color:green;
+            /* posição absoluta  */
+            position:absolute;
+            /* coloque um espaço externo de 10px cima */
+            margin-top:30px;
+            /* coloque um espaço externo de 20px esquerda */
+            margin-left:40px;
+            top:0;
+            /* ordem que vai aparecer no meu html */
+            z-index:3;
+        }
+        /* Aplique somente na classe div3 */
+        .div3 {
+             /* aplique cor de fundo azul */
+            background-color:blue;
+            /* posição absoluta  */
+            position:absolute;
+            /* coloque um espaço externo de 10px cima */
+            margin-top:50px;
+            /* coloque um espaço externo de 20px esquerda */
+            margin-left:60px;
+            /* valor que trabalha em conjunto com o position para pocionar na minha tela cima */
+            top:0;
+            z-index:1;
+        }
+    </style>
+</head>
+<!-- ------------------------------------------------------------------------------------------------ -->
+<!-- html -->
+<body>
+    <!-- div cria um bloco no meu html -->
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+</body>
+</html>
+<!-- Regra: Position absolute trabalha em conjunto com os valores:top, right, bottom e left ele vai se relacionar com primeiro pai posicionado se não tem nenhum pai posicionado ele vai passar a se relacionar com o body -->
+<!-- Regra: z-index vai trocar a ordem dos meus elementos posicionados sendo que o maior valor vai aparecer em primeiro -->
+<!-- No exemplo acima no meu html div1 em primeiro div2 em segundo div3 em terceiro consigo mudar essa ordem com css posicionando meus elementos e ultizando z-index -->
+<!-- Exemplo: No seu codigo troque z-index do div1 para o valor 1 e o z-index da div3 para o valor 3 para ver o que acontence -->

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            width:100vw;
+            height:100vh;
+            font-size:20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            display:flex;
+            justify-content: center;
+            flex-flow:column nowrap;
+            align-items:center;
+            background-image:linear-gradient(white, gray)
+        }
+        fieldset {
+            width:700px;
+        }
+        h1 {
+            color:red;
+            text-shadow:1px 1px 1px black;
+        }
+        legend {
+            color:blue;
+            font-weight:bold;
+        }
+        #button {
+            border:none;
+            background:transparent;
+            font-size:18px;
+            color:black;
+            border:1px solid black;
+            border-radius:20px;
+            padding:5px 20px;
+            margin-top:10px;
+
+        }
+        #button:hover {
+            color:red;
+            border:1px solid red;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prova de conhecimentos sobre:</h1>
+    <form name="prova">
+        <div>
+            <fieldset>
+                <legend>1. Qual comando JavaScript captura um elemento da página HTML de id "dados"?</legend>
+                <div>
+                    <input type="radio" name="q1" value="a">
+                    <label for="q1a">document.getElementById("dados")</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="b">
+                    <label for="q1b">application.getId("dados")</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="c">
+                    <label for="q1c">document.getName("dados")</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="d">
+                    <label for="q1d">document.getTagById("dados")</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>2. O que faz o comando alert?</legend>
+                <div>
+                    <input type="radio" name="q2" value="a">
+                    <label for="q2a">Para exibir algum conteúdo em uma janela pop-up.</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="b">
+                    <label for="q2b">Para exibir erros automaticamente.</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="c">
+                    <label for="q2c">Para solicitar um valor ao usuário.</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="d">
+                    <label for="q2d">Para criar animações.</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>3. O que é CSS?</legend>
+                <div>
+                    <input type="radio" name="q3" value="a">
+                    <label for="q3a">Uma linguagem de estilo usada para estilizar páginas da web.</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="b">
+                    <label for="q3b">Uma linguagem de programação para criar aplicativos móveis.</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="c">
+                    <label for="q3c">Uma linguagem de script para interações do lado do servidor.</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="d">
+                    <label for="q3d">Um formato de arquivo de imagem.</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div>
+            <div>
+                <input type="button" value="Corrigir" onclick="corrigir()" id="button">
+            </div>
+            <div>
+                <p id="exibir"></p>
+        </div>
+    </form>
+
+    <script>
+        function corrigir() {
+            var pontos = 0;
+            var mensagem;
+            if (document.prova.q1.value == "a") {
+                pontos += 3;
+            }
+            if (document.prova.q2.value == "a") {
+                pontos += 3;
+            }
+            if (document.prova.q3.value == "a") {
+                pontos += 4;
+            }
+            if (pontos <= 6) {
+                mensagem = "Você foi reprovado"
+            } else {
+                mensagem = " Você foi aprovado"
+            }
+            exibir.innerHTML = `${mensagem}! Sua foi ${pontos}.`
+            alert('Você tirou nota ' + pontos);
+        }
+    </script>
+</body>
+</html>

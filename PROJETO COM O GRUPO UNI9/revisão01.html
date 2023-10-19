@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisão</title>
+    <!-- preciso deste endereço para que apareçam os icones no meu html -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!---------------------------------------------------------------------------------------------->
+    <!-- css -->
+    <style>
+        /* essa clase não existe só vai passar exister ao chamar com a função alternar*/
+        .dark {
+            background-color:black;
+        }
+        .btn1 {
+            /* remove a borda padrão do button */
+            border:none;
+            /* troque a cor de fundo para transparente */
+            background:transparent;
+            /* troque a cor do texto para branco */
+            color:white;
+            /* troque a cor do fundo para preto */
+            background-color:black;
+            /* coloque espaço interno 5px cima e baixo 20px direita e esquerda */
+            padding:5px 20px;
+            /* arredondamento de borda 20px */
+            border-radius:20px;
+        }
+        /* Efeito ao passar em cima o mouse */
+        .btn1:hover {
+            /* troque a cor de fundo para transparente */
+            background:transparent;
+            /* aplique um borda com 1px de espeçura tipo solida cor preta */
+            border:1px solid black;
+            /* aplique a cor preta no meu texto */
+            color:black;
+            /* troque o meu cursor por uma maozinha */
+            cursor:pointer;
+            /* diminui efeito hover em 5 segundos */
+            transition:all 0.5s ease;
+            /* aplique efeito negrito no meu texto */
+            font-weight:bold;
+
+        }
+        .btn2 {
+            /* remove a borda padrão do button */
+            border:none;
+            /* troque a cor de fundo para transparente */
+            background:transparent;
+            /* troque a cor do texto para preto */
+            color:black;
+            /* troque a cor de fundo para branco */
+            background-color:white;
+             /* coloque espaço interno 5px cima e baixo 20px direita e esquerda */
+            padding:5px 20px;
+            /* arredondamento de borda 20px */
+            border-radius:20px;
+        }
+        .btn2:hover {
+             /* troque a cor de fundo para transparente */
+            background:transparent;
+            /* troque a cor do texto para branco */
+            color:white;
+            /* aplique um borda com 1px de espeçura tipo solida cor branca */
+            border:1px solid white;
+            /* troque o meu cursor por uma maozinha */
+            cursor:pointer;
+             /* diminui efeito hover em 5 segundos */
+            transition:all 0.5s ease;
+            /* aplique efeito negrito no meu texto */
+            font-weight:bold;
+        }
+        button i {
+            padding-right:10px;
+        }
+    </style>
+</head>
+
+
+
+<!-------------------------------------------------------------------------------------------------->
+<!-- html -->
+<body>
+    <!-- Criei um botão com a classe btn1 com uma função ao clicar quero que faça alguma coisa -->
+    <button class="btn1" onclick="alternar()"><i class='bx bx-moon' ></i>Dark</button>
+</body>
+
+
+
+<!-------------------------------------------------------------------------------------------------->
+<!-- js -->
+<script>
+function alternar () {
+    // criei uma variavel que manipula button
+    let button = document.querySelector('button')
+    // criei uma variavel que manipula body
+    let body = document.querySelector('body')
+    // Se o body contem a classe dark eu quero que vc 
+    if (body.classList.contains('dark')) {
+        // remove a classe dark
+        body.classList.remove('dark')
+        // remove a classe btn2
+        button.classList.remove('btn2')
+        // troque o texto do button para Dark
+        button.innerHTML = "<i class='bx bx-moon' ></i>Dark"
+        // Se não tem a classe dark
+    } else {
+        // adicione a classe dark no body
+        body.classList.add('dark')
+        // adicione a classe btn2 no button
+        button.classList.add('btn2')
+        // troque o texto do button para Light
+        button.innerHTML = "<i class='bx bx-sun' ></i>Light"
+    }
+}
+</script>
+</html>

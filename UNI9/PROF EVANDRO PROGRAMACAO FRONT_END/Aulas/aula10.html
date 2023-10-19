@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+        .exibir {
+            width:90vw;
+            height:90vh;
+            background-image:url(img/imagem01.jpg);
+            background-size:cover;
+            transform:translateX(-2000px);
+            transition:all ease 1s;
+        }
+        button {
+            margin:10px 20px;
+            padding:10px 30px;
+            cursor:pointer;
+            background-color:black;
+            color:white;
+            border-radius:20px;
+
+        }
+        .mostrar {
+            transform:translateX(0)
+        }
+        .esconder {
+            transform:translateX(-2000px)
+        }
+    </style>
+</head>
+<body>
+    <div class="exibir"></div>
+    <button id="botao">Mostrar</button>
+</body>
+<script>
+    let mostrar = () => {
+        let exibir = document.querySelector(".exibir")
+        let botao = document.getElementById("botao")
+        if (exibir.classList.contains("mostrar")) {
+            exibir.classList.remove("mostrar")
+            exibir.classList.add("esconder")
+            // exibir.style.transform = "translateX(0)"
+            botao.innerHTML = "Mostrar"
+        } else {
+            exibir.classList.remove("esconder")
+            exibir.classList.add("mostrar")
+            // exibir.style.transform = "translateX(-2000px)"
+            botao.innerHTML = "Esconder"
+        }
+    }
+    botao.addEventListener("click", mostrar);
+</script>
+</html>

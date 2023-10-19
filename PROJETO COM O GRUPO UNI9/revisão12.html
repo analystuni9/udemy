@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel Manual</title>
+</head>
+<body>
+    <input type="radio" name="imagem" id="radio1" value="img2/1.jpg">
+    <label for="radio1"></label>
+
+    <input type="radio" name="imagem" id="radio2" value="img2/2.jpg">
+    <label for="radio2"></label>
+
+    <input type="radio" name="imagem" id="radio3" value="img2/3.jpg">
+    <label for="radio3"></label>
+
+    <input type="radio" name="imagem" id="radio4" value="img2/4.jpg">
+    <label for="radio4"></label>
+
+    <input type="radio" name="imagem" id="radio5" value="img2/5.jpg">
+    <label for="radio5"></label>
+
+    <div>
+        <img id="exibir" src="img2/1.jpg" alt="">
+    </div>
+
+    <script>
+        let botoesradio = document.querySelectorAll("input[type='radio']")
+        let exibir = document.getElementById('exibir')
+        function AtualizarImagem() {
+            botoesradio.forEach(function(radio){
+                if(radio.checked) {
+                    let selecioneimagem = radio.value;
+                    exibir.src = selecioneimagem
+                }
+            })
+        }
+        botoesradio.forEach(function(radio){
+            radio.addEventListener('click', AtualizarImagem)
+        })
+        AtualizarImagem()
+    </script>
+</body>
+</html>

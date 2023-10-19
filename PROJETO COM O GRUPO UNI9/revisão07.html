@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Revisão</h1>
+<div>
+    <p id="texto">Texto aqui ...</p>
+</div>
+<button id="botao">clique aqui</button>
+</body>
+<script>
+    let texto = document.getElementById('texto')
+    let botao = document.getElementById('botao')
+    const mudatexto = () => {
+        texto.innerHTML = 'Mudou alguma coisa aqui ... ?'
+    }
+    botao.addEventListener("click", mudatexto)
+</script>
+</html>
