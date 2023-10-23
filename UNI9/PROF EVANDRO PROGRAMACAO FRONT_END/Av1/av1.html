@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Mario Bros</title>
+    <!-- --------------------------------------------- -->
+    <!-- css -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
         * {
@@ -61,13 +63,17 @@
             position:absolute;
             top:0;
             transform:translateY(-1000px);
-            transition:all ease 1s;
-            width:100%;
-            height:100vh;
-            border:1px solid white;
+            transition:all ease 1.5s;
+            width:50vw;
+            height:50vh;
             padding-top:100px;
             text-transform:uppercase;
-            background:transparent;
+            /* background-image:linear-gradient(rgba(31, 31, 164, 0.459), rgba(0, 0, 255, 0.453)); */
+            border-radius:20px;
+            margin-top:10px;
+            box-shadow:2px 2px 5px black;
+            backdrop-filter:blur(10px);
+            /* border:1px solid white; */
         }
         .nav-links1 ul {
             display:flex;
@@ -79,21 +85,38 @@
         }
         .nav-links1 li {
             font-size:18px;
-            text-shadow:1px 1px 1px black;
+            text-shadow:1px 1px 2px black;
         }
         .nav-links1 li:hover {
             text-decoration:underline red;
             transition:all ease 1s;
             cursor:pointer;
-            transform:translateX(8px)
 
         }
         .nav-links2 {
             transform:translateY(0);
-            transition:all ease 1s;
+            transition:all ease 1.5s;
+        }
+        main {
+            width:100vw;
+            height:50vh;
+            display:flex;
+            justify-content:center;
+            align-items:flex-end;
+            margin-top:200px;
+            /* border:1px solid white; */
+        }
+        .mario-bros {
+            width:200px;
+            height:190px;
+        }
+        .mario-bros img {
+            width:100%;
         }
     </style>
 </head>
+<!-- ------------------------------------------------- -->
+<!-- html -->
 <body>
     <header>
         <div class="btn-mobile">
@@ -110,9 +133,16 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="mario-bros">
+            <img src="imagens/super-mario (1).png" alt="">
+        </div>
+    </main>
     <video autoplay loop muted poster="" controls>
         <source src="video/Universal Pictures Brasil.mp4">
     </video>
+    <!-- --------------------------------------------- -->
+    <!-- js -->
     <script>
         let btnmobile = document.querySelector('.btn-mobile')
         let navlinks = document.querySelector('.nav-links1')
