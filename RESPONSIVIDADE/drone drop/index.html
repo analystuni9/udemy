@@ -15,7 +15,7 @@
     <header>
         <nav class="nav-bar">
             <div class="logo">
-                <img src="logo.png" alt="Drone">
+                <img src="logo.png" alt="Logo Drone Drop">
             </div>
             <div class="menu">
                 <ul>
@@ -25,7 +25,7 @@
                     <li>Sustentabilidade</li>
                     <li>Configurações</li>
                     <li>Ajuda</li>
-                    <button class="btn-personalizado-1" onclick="abrirlink()">Entrar</button>
+                    <button class="btn-entrar" onclick="abrirlink()">Entrar</button>
                 </ul>
             </div>
         </nav>
@@ -43,156 +43,148 @@
                     <li><i class='bx bx-leaf' >Sustentabilidade</i></li>
                     <li><i class='bx bx-cog' >Configurações</i></li>
                     <li><i class='bx bx-info-circle' >Ajuda</i></li>
-                    <button class="btn-personalizado-1" onclick="abrirlink()">Entrar</button>
+                    <button class="btn-entrar" onclick="abrirlink()">Entrar</button>
                 </ul>
             </div>
         </nav>
-        <div class="caixa-1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <input type="radio" name="radio-btn" id="radio5">
-            <input type="radio" name="radio-btn" id="radio6">
-            <input type="radio" name="radio-btn" id="radio7">
-            <input type="radio" name="radio-btn" id="radio8">
-            <input type="radio" name="radio-btn" id="radio9">
+        <div class="imagem-carrosel">
+            <img class="exibir" src="img/1.png" alt="">
         </div>
-        <div class="caixa-2">
-        <label onclick="alternar2(1)" for="radio1" class="btn"></label>
-        <label onclick="alternar2(2)" for="radio2" class="btn"></label>
-        <label onclick="alternar2(3)" for="radio3" class="btn"></label>
-        <label onclick="alternar2(4)" for="radio4" class="btn"></label>
-        <label onclick="alternar2(5)" for="radio5" class="btn"></label>
-        <label onclick="alternar2(6)" for="radio6" class="btn"></label>
-        <label onclick="alternar2(7)" for="radio7" class="btn"></label>
-        <label onclick="alternar2(8)" for="radio8" class="btn"></label>
-        <label onclick="alternar2(9)" for="radio9" class="btn"></label>
-    </div>
-    <div class="caixa-3">
-        <img src="img/1.png" alt="" class="visualizar">
-    </div>
-    <div class="caixa-4">
-        <div class="conteudo-1">
-            <h1>A revolução das entregas está no ar com Drone Drop!</h1>
-            <p>"Inovando a entrega de produtos com tecnologia"</p>
-            <p>"Transformando o futuro das entregas com a tecnologia de drones."</p>        
+        <div class="carrosel-manual">
+            <input type="radio" name="imagem" id="radio1" value="img/1.png">
+            <label for="radio1"></label>
+
+            <input type="radio" name="imagem" id="radio2" value="img/2.png">
+            <label for="radio2"></label>
+
+            <input type="radio" name="imagem" id="radio3" value="img/3.png">
+            <label for="radio3"></label>
+
+            <input type="radio" name="imagem" id="radio4" value="img/4.png">
+            <label for="radio4"></label>
+            
+            <input type="radio" name="imagem" id="radio5" value="img/5.png">
+            <label for="radio5"></label>
+           
+            <input type="radio" name="imagem" id="radio6" value="img/6.png">
+            <label for="radio6"></label>
+           
+            <input type="radio" name="imagem" id="radio7" value="img/7.png">
+            <label for="radio7"></label>
+
+            <input type="radio" name="imagem" id="radio8" value="img/8.png">
+            <label for="radio8"></label>
+
+            <input type="radio" name="imagem" id="radio9" value="img/9.png">
+            <label for="radio9"></label>
         </div>
-    </div>
-    <div class="btn-1">
-        <button onclick="alternar3()" class="btn-personalizado-2">Saiba mais</button>     
-    </div>
-</header>
+    </header>
     <main>
         <section>
             <article>
                 <h2>Empresa Drone Drop</h2>
-                <div class="imagem-1">
-                    <img src="img/empresa.png" alt="" >
+                <div class="imagem-empresa">
+                    <img src="img/empresa.png" alt="">
                 </div>
-                <div class="conteudo-2">
+                <div class="conteudo-empresa">
                     <p>A Drone Drop é uma empresa que tem conquistado o cenário tecnológico e empresarial com sua abordagem inovadora e visão audaciosa no mundo dos drones e da logística. Fundada em [ano de fundação], a empresa rapidamente se destacou como líder no mercado de entrega por drones, proporcionando soluções de transporte revolucionárias que estão moldando o futuro do comércio e da logística.</p>
                     <p>O que torna a Drone Drop única é sua missão de tornar a entrega mais eficiente, rápida e ecologicamente correta. Com a crescente demanda por entregas rápidas e seguras, a Drone Drop entendeu que os drones poderiam ser uma solução perfeita para atender a essa demanda de forma sustentável. Ao eliminar a necessidade de veículos terrestres, a empresa reduz significativamente a pegada de carbono das entregas, contribuindo para um ambiente mais limpo.</p>
                     <p>Um dos principais diferenciais da Drone Drop é seu compromisso com a segurança. A empresa investe pesadamente em tecnologia avançada de prevenção de colisões, sistemas de navegação precisa e treinamento rigoroso para seus operadores de drones. Isso garante que suas operações sejam seguras tanto para os drones quanto para o público em geral.</p>
-                    <div class="adicionar"></div>
+                    <p class="adicionar"></p>
+
                 </div>
-                <div class="action">
-                    <button class="btn-action" onclick="adicionartexto()">Ler mais</button>
+                <div class="lermais">
+                    <button class="btn-lermais" onclick="adicionartexto()">Ler mais</button>
                 </div>
             </article>
             <article>
-                <h2>Os drones possuem sistemas tecnológicos avançados</h2>
-                <div class="cards">
-                    <div class="card">
-                        <div class="imagem-card">
-                            <img src="img/card01.png" alt=""><h3>Wifi</h3>
-                        </div>
-                        <div class="conteudo-card">
-                            <p>Sistemas de Comunicação: Para receber comandos do operador e transmitir dados de volta, que podem ser feitos por rádio, Wi-Fi, 4G/5G ou até mesmo satélites.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="imagem-card">
-                            <img src="img/card02.png" alt=""><h3>GPS</h3>
-                        </div>
-                        <div class="conteudo-card">
-                            <p>GPS para localização precisa e sensores inerciais para controle de posição e altitude.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="imagem-card">
-                            <img src="img/card03.png" alt=""><h3>Armazenamento</h3>
-                        </div>
-                        <div class="conteudo-card">
-                            <p>Memória interna ou cartões de memória para armazenar imagens e vídeos capturados.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="imagem-card">
-                            <img src="img/card04.png" alt=""><h3>Sistemas de Automação</h3>
-                        </div>
-                        <div class="conteudo-card">
-                            <p>Algoritmos e sistemas de inteligência artificial que permitem que o drone voe de forma autônoma, siga trajetórias pré-programadas ou evite obstáculos.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="imagem-card">
-                            <img src="img/card05.png" alt=""><h3>Sistemas de Segurança </h3>
-                        </div>
-                        <div class="conteudo-card">
-                            <p>Parar quedas de emergência, sistemas de paraquedas, entre outros, para garantir a segurança em situações críticas.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="imagem-card">
-                            <img src="img/card06.png" alt=""><h3>Baterias</h3>
-                        </div>
-                        <div class="conteudo-card">
-                            <p>Baterias de lítio-polímero ou outras fontes de energia para alimentar o drone durante o voo.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="imagem-card">
-                            <img src="img/card07.png" alt=""><h3>Sistemas de Propulsão</h3>
-                        </div>
-                        <div class="conteudo-card">
-                            <p>Motores e hélices elétricos, motores a jato ou até mesmo sistemas de asas fixas para propulsão.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="imagem-card">
-                            <img src="img/card08.png" alt=""><h3>Câmeras e Sensores</h3>
-                        </div>
-                        <div class="conteudo-card">
-                            <p>Câmeras de alta resolução para captura de imagens e vídeos, bem como sensores como LIDAR, sonares, infravermelho, entre outros, para mapeamento e detecção de obstáculos.</p>
-                        </div>
-                    </div>
+                <h2>Os drones estão equipados com sistemas tecnológicos inovadores.</h2>
+                <div class="imagem-tecnologias">
+                    <img src="img/iot-17.png" alt="">
+                </div>
+                <div class="conteudo-tecnologias">
+                    <p>Os drones, ou veículos aéreos não tripulados (VANTs), utilizam uma variedade de tecnologias para operar de forma autônoma ou serem controlados remotamente. Abaixo estão algumas das principais tecnologias presentes nos drones:</p>
+                    <h3>Propulsão:</h3>
+                    <ul>
+                        <li>Motores elétricos ou a combustão interna: A maioria dos drones utiliza motores elétricos devido à eficiência e facilidade de controle.</li>
+                        <li>Hélices: As hélices geram sustentação e propulsão. Drones podem ter hélices quadcopter, hexacopter, octocopter, etc.</li>
+                    </ul>
+                    <h3>Sistema de Navegação:</h3>
+                    <ul>
+                        <li>GPS (Global Positioning System): O GPS é usado para determinar a posição e altitude do drone.</li>
+                        <li>Sensores inerciais: Acelerômetros e giroscópios ajudam a manter a estabilidade e controlar o movimento.</li>
+                        <li>Barômetros: Medem a pressão atmosférica para calcular a altitude.</li>
+                    </ul>
+                    <h3>Comunicação:</h3>
+                    <ul>
+                        <li>Rádio controle: Transmissores de rádio são usados para controlar drones manualmente.</li>
+                        <li>Comunicação de dados: Drones podem enviar dados, vídeo e telemetria para o operador por meio de conexões Wi-Fi, 4G/5G, ou outras tecnologias.</li>
+                    </ul>
+                    <h3>Sensores:</h3>
+                    <ul>
+                        <li>Câmeras: Drones podem ser equipados com câmeras para capturar imagens e vídeos.</li>
+                        <li>Sensores de obstáculos: Ultrassom, lidar, câmeras e sensores infravermelhos ajudam a evitar colisões.</li>
+                        <li>Sensores de temperatura: Podem ser usados em drones para fins como inspeção térmica.</li>
+                        <li>Sensores de carga útil: Drones usados para fins específicos, como mapeamento ou agricultura, podem ter sensores personalizados.</li>
+                    </ul>
+                    <h3>Software:</h3>
+                    <ul>
+                        <li>Controladores de voo: Programas embutidos controlam a estabilidade e os movimentos do drone.</li>
+                        <li>Planejamento de trajetória: Software de planejamento permite a criação de trajetórias de voo específicas.</li>
+                        <li>Processamento de imagem: Para processar dados de câmeras e realizar análise de imagens.</li>
+                        <li>Automação: Algoritmos autônomos podem permitir que drones tomem decisões com base em dados de sensores.</li>
+                    </ul>
+                    <h3>Baterias:</h3>
+                    <ul>
+                        <li>Baterias de íon-lítio: São usadas para alimentar os motores e eletrônicos do drone.</li>
+                    </ul>
+                    <h3>Estrutura:</h3>
+                    <li>Quadro: A estrutura do drone é geralmente feita de materiais leves e resistentes, como plástico reforçado ou fibra de carbono.</li>
+                    <h3>Armazenamento e Transmissão de Dados:</h3>
+                    <li>Cartões de memória: Para armazenar dados de vídeo e imagem.</li>
+                    <li>Tecnologia de transmissão de vídeo: Permite o envio de vídeo ao vivo para o operador.</li>
+                    <h3>Segurança:</h3>
+                    <li>Sistemas de proteção contra queda: Para evitar quedas em caso de falha.</li>
+                    <li>Proteção contra hacking: Medidas de segurança para evitar ataques de hackers.</li>
                 </div>
             </article>
             <article>
                 <h2>Conheça nossos projetos IOT</h2>
-                <div class="imagem-2">
-                    <img src="img/iot.png" alt="">
+                <div class="imagem-iot">
+                        <img src="img/iot-13.png" alt="">
                 </div>
-                <div class="conteudo-3">
-                    <p>
-                        A nossa empresa utiliza a Internet das Coisas (IoT) para automatizar drones de entrega. Os clientes escolhem produtos e um provedor de entrega em um site parceiro, e se escolherem nossos serviços, o satélite conectado ao drone determina a melhor rota. Fornecemos dados ao satélite, usamos análises para otimizar a rota e monitoramos o drone do nosso centro de comando. Temos centros de distribuição com bases de carregamento para os drones, que se carregam automaticamente em cerca de 40 minutos, permitindo entregas em até 245 quilômetros. Implementamos sensores nas estações de carregamento para automatizar o processo, aumentando nossa eficiência.
-                    </p>
+                <div class="conteudo-iot">
+                    <h3>Seleção de produtos e provedor de entrega:</h3>
+                    <p>Os clientes têm a flexibilidade de escolher produtos e provedores de entrega em um site parceiro, o que lhes dá opções e conveniência.</p>
+                    <h3>Rota otimizada por satélite: </h3>
+                    <p>A utilização de satélites para determinar a melhor rota para os drones é uma excelente maneira de otimizar a entrega e economizar tempo.</p>
+                    <h3>Análises para otimização de rotas:</h3>
+                    <p>O uso de análises para otimizar as rotas demonstra um compromisso com a eficiência e a redução de custos.</p>
+                    <h3>Monitoramento centralizado:</h3>
+                    <p>O centro de comando é crucial para o monitoramento e a gestão eficaz dos drones durante o processo de entrega.</p>
+                    <h3>Estações de carregamento automatizado: </h3>
+                    <p>A automatização das estações de carregamento, juntamente com sensores, ajuda a manter a eficiência e a disponibilidade dos drones.</p>
+                    <h3>Recarga rápida e alcance significativo:</h3>
+                    <p>O fato de que os drones podem ser carregados em apenas 40 minutos e alcançar distâncias de até 245 quilômetros é impressionante, tornando as entregas rápidas e versáteis.</p>
+                    <h3>Sustentabilidade:</h3>
+                    <p> A utilização de drones pode ter benefícios ambientais, uma vez que reduz a necessidade de veículos terrestres movidos a combustíveis fósseis para a entrega.</p>
+                    <h3>Eficiência operacional:</h3>
+                    <p>Ao automatizar muitos aspectos do processo de entrega, a empresa está demonstrando um foco na eficiência operacional, o que pode levar a custos mais baixos e a uma melhor experiência para os clientes.</p>
                 </div>
             </article>
             <article>
                 <h2>Equipe de Desenvolvedores</h2>
-                <div class="caixa-5">
+                <div class="all-cards">
                     <div class="card-equipe-1">
                         <div class="imagem-perfil">
-                            <img src="img/Danilo.png" alt="">
+                            <img src="img/Danilo.png" alt="imagem danilo">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Danilo Brito</h3>
                             <ul>
-                                <li>Área de Especialização: Desenvolvimento Front-end</li>
-                                <li>Tecnologias Dominantes: HTML5, CSS3 e JavaScript</li>
-                                <li>Contato: danilo.brito@uni9.edu.br</li>
+                                <li>Área de Especialização: <i> Desenvolvimento Front-end</i>
+                                <li>Tecnologias Dominantes: <i>HTML5, CSS3 e JavaScript</i></li>
+                                <li>Contato: <i>danilo.brito@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
@@ -205,14 +197,14 @@
                     </div>
                     <div class="card-equipe-2">
                         <div class="imagem-perfil">
-                            <img src="img/Karoline.png" alt="">
+                            <img src="img/Karoline.png" alt="imagem karoline">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Ana Karoline</h3>
                             <ul>
-                                <li>Área de Especialização: Desenvolvimento Backend</li>
-                                <li>Tecnologias Dominantes: MySQL, Python e Java</li>
-                                <li>Contato: ana.karoline@uni9.edu.br</li>
+                                <li>Área de Especialização: <i>Desenvolvimento Backend</i></li>
+                                <li>Tecnologias Dominantes: <i>MySQL, Python e Java</i></li>
+                                <li>Contato: <i>ana.karoline@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
@@ -225,15 +217,15 @@
                     </div>
                     <div class="card-equipe-3">
                         <div class="imagem-perfil">
-                            <img src="img/Gabriel.png" alt="">
+                            <img src="img/Gabriel.png" alt="imagem gabriel">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Gabriel Salve</h3>
                             <ul>
-                                <li>Área de Especialização: Iot</li>
-                                <li>Tecnologias Dominantes: Arquitetura de IoT</li>
-                                    <li>Redes de Comunicação para IoT</li>
-                                <li>Contato: gabriel.salve@uni9.edu.br</li>
+                                <li>Área de Especialização: <i>Desenvolvimento de Dispositivos IoT</i></li>
+                                <li>Tecnologias Dominantes: <i>Design de Placas de Circuito Impresso (PCBs)</i></li>
+                                    <li><i>Seleção de Sensores e Atuadores</i></li>
+                                <li>Contato: <i>gabriel.salve@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
@@ -246,15 +238,15 @@
                     </div>
                     <div class="card-equipe-4">
                         <div class="imagem-perfil">
-                            <img src="img/Pedro.png" alt="">
+                            <img src="img/Pedro.png" alt="imagem pedro">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Pedro Saquetti</h3>
                             <ul>
-                                <li>Área de Especialização: Design Gráfico</li>
-                                <li>Tecnologias Dominantes: Design de Interface do Usuário (UI)</li>
-                                    <li>Design de Experiência do Usuário (UX)</li>
-                                <li>Contato: pedro.saquetti@uni9.edu.br</li>
+                                <li>Área de Especialização: <i>Design Gráfico</i></li>
+                                <li>Tecnologias Dominantes: <i>Design de Interface do Usuário (UI)</i></li>
+                                    <li><i>Design de Experiência do Usuário (UX)</i></li>
+                                <li>Contato: <i>pedro.saquetti@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
@@ -267,15 +259,15 @@
                     </div>
                     <div class="card-equipe-5">
                         <div class="imagem-perfil">
-                            <img src="img/Victor.png" alt="">
+                            <img src="img/Victor.png" alt="imagem victor">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Victor Hugo</h3>
                             <ul>
-                                <li>Área de Especialização: Engenharia da Computação</li>
-                                <li>Tecnologias Dominantes: Matemática e Fundamentos de Ciência da Computação.</li>
+                                <li>Área de Especialização: <i>Engenharia da Computação</i></li>
+                                <li>Tecnologias Dominantes: <i>Matemática e Fundamentos de Ciência da Computação.</i></li>
                                     <!-- <li></li> -->
-                                <li>Contato: victor.hugo@uni9.edu.br</li>
+                                <li>Contato: <i>victor.hugo@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
@@ -288,15 +280,78 @@
                     </div>
                     <div class="card-equipe-6">
                         <div class="imagem-perfil">
-                            <img src="img/Lucas.png" alt="">
+                            <img src="img/Lucas.png" alt="imagem lucas">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Lucas Eduardo</h3>
                             <ul>
-                                <li>Área de Especialização: Desenvolvimento de Jogos</li>
-                                <li>Tecnologias Dominantes: Design de Jogos</li>
-                                    <li>Programação de Jogos</li>
-                                <li>Contato: lucas.eduardo@uni9.edu.br</li>
+                                <li>Área de Especialização: <i>Desenvolvimento de Jogos</i></li>
+                                <li>Tecnologias Dominantes: <i>Design de Jogos</i></li>
+                                    <li> <i>Programação de Jogos</i></li>
+                                <li>Contato: <i>lucas.eduardo@uni9.edu.br</i></li>
+                            </ul>
+                        </div>
+                        <div class="action-equipe">
+                            <i class='bx bxl-facebook-square'></i>
+                            <i class='bx bxl-instagram' ></i>
+                            <i class='bx bxl-github'></i>
+                            <i class='bx bxl-git' ></i>
+                            <i class='bx bxl-linkedin'></i>
+                        </div>
+                    </div>
+                    <div class="card-equipe-7">
+                        <div class="imagem-perfil">
+                            <img src="img/Neto.png" alt="imagem leôncio">
+                        </div>
+                        <div class="conteudo-equipe">
+                            <h3>José Leôncio</h3>
+                            <ul>
+                                <li>Área de Especialização: <i>Arquiteto de Soluções em Nuvem</i></li>
+                                <li>Tecnologias Dominantes: <i>Plataformas em Nuvem</i></li>
+                                    <li> <i>Virtualização e Contêineres</i></li>
+                                <li>Contato: <i>jose.leoncio@uni9.edu.br</i></li>
+                            </ul>
+                        </div>
+                        <div class="action-equipe">
+                            <i class='bx bxl-facebook-square'></i>
+                            <i class='bx bxl-instagram' ></i>
+                            <i class='bx bxl-github'></i>
+                            <i class='bx bxl-git' ></i>
+                            <i class='bx bxl-linkedin'></i>
+                        </div>
+                    </div>
+                    <div class="card-equipe-8">
+                        <div class="imagem-perfil">
+                            <img src="img/Lincon.png" alt="imagem lincon">
+                        </div>
+                        <div class="conteudo-equipe">
+                            <h3>Lincoln Genaro</h3>
+                            <ul>
+                                <li>Área de Especialização: <i>Segurança Cibernética</i></li>
+                                <li>Tecnologias Dominantes: <i>Análise de Ameaças Cibernéticas</i></li>
+                                    <li> <i>Segurança de Aplicativos</i></li>
+                                <li>Contato: <i>lincoln.genaro@uni9.edu.br</i></li>
+                            </ul>
+                        </div>
+                        <div class="action-equipe">
+                            <i class='bx bxl-facebook-square'></i>
+                            <i class='bx bxl-instagram' ></i>
+                            <i class='bx bxl-github'></i>
+                            <i class='bx bxl-git' ></i>
+                            <i class='bx bxl-linkedin'></i>
+                        </div>
+                    </div>
+                    <div class="card-equipe-9">
+                        <div class="imagem-perfil">
+                            <img src="img/Thiago.png" alt="imagem thiago">
+                        </div>
+                        <div class="conteudo-equipe">
+                            <h3>Thiago Oliveira</h3>
+                            <ul>
+                                <li>Área de Especialização: <i>Robótica Inteligente</i></li>
+                                <li>Tecnologias Dominantes: <i>Visão Computacional para Robótica</i></li>
+                                    <li><i>Navegação Autônoma</i></li>
+                                <li>Contato: <i>thiago.oliveira@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">

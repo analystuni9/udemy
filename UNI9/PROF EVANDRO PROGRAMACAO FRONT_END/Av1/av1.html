@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario Bros</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body {
+            font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
+            background-color:black;
+            color:white;
+        }
+        video {
+            top:0;
+            left:0;
+            position:fixed;
+            width:100%;
+            height:100%;
+            z-index:-1;
+        }
+        .btn-mobile {
+            position:absolute;
+            top:20px;
+            left:10px;
+            z-index:1;
+            width:fit-content;
+            background:transparent;
+            margin-top:10px;
+            padding:10px;
+            border-radius:50%;
+            border:1px solid white;
+            background-color:red;
+        }
+        .btn-mobile span {
+            display:block;
+            width:30px;
+            height:5px;
+            border-radius:10px;
+            transform: rotate(0deg);
+            transition:all ease 0.5s;
+            margin:5px;
+            background-color:white;
+            border:1px solid white;
+        }
+        .rotacionar span:nth-child(1) {
+            transform:translateY(13px) rotate(-45deg);
+        }
+        .rotacionar span:nth-child(2) {
+            opacity:0;
+        }
+        .rotacionar span:nth-child(3) {
+            transform:translateY(-7px) rotate(45deg)
+        }
+        .nav-links1 {
+            position:absolute;
+            top:0;
+            transform:translateY(-1000px);
+            transition:all ease 1s;
+            width:100%;
+            height:100vh;
+            border:1px solid white;
+            padding-top:100px;
+            text-transform:uppercase;
+            background:transparent;
+        }
+        .nav-links1 ul {
+            display:flex;
+            flex-flow:column nowrap;
+            gap:30px;
+            justify-content:center;
+            align-items:center;
+            list-style-type:none;
+        }
+        .nav-links1 li {
+            font-size:18px;
+            text-shadow:1px 1px 1px black;
+        }
+        .nav-links1 li:hover {
+            text-decoration:underline red;
+            transition:all ease 1s;
+            cursor:pointer;
+            transform:translateX(8px)
+
+        }
+        .nav-links2 {
+            transform:translateY(0);
+            transition:all ease 1s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="btn-mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links1"> 
+            <ul>
+                <li>Últimos lançamentos</li>
+                <li>Trailers</li>
+                <li>Garanta Ingressos</li>
+                <li>Catálogo</li>
+            </ul>
+        </nav>
+    </header>
+    <video autoplay loop muted poster="" controls>
+        <source src="video/Universal Pictures Brasil.mp4">
+    </video>
+    <script>
+        let btnmobile = document.querySelector('.btn-mobile')
+        let navlinks = document.querySelector('.nav-links1')
+        let animação = () => {
+            if (btnmobile.classList.contains('rotacionar')) {
+                btnmobile.classList.remove('rotacionar')
+                navlinks.classList.remove('nav-links2')
+            } else {
+                btnmobile.classList.add('rotacionar')
+                navlinks.classList.add('nav-links2')
+            }
+        }
+        btnmobile.addEventListener('click', animação)
+    </script>
+</body>
+</html>

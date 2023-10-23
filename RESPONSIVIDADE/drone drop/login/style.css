@@ -9,12 +9,14 @@
 body {
   display:flex;
   justify-content:center;
+  width:90vw;
   align-items:center;
-  min-height:100vh;
+  height:100vh;
   /* background-color:seagreen; */
-  background-image:url('drone.jpg');
+  background-image:linear-gradient(black, gray);
   background-size:cover;
-  background-position: center;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 /* todas as divs estão contidas aqui */
 .container {
@@ -24,6 +26,7 @@ width:420px;
 background:transparent;
 color:white;
 padding:10px;
+/* border:1px solid black; */
 }
 .container h1 {
   font-size:36px;

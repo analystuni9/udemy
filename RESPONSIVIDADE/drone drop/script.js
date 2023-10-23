@@ -28,28 +28,7 @@ function alternar3() {
         botao.textContent = 'Saiba mais'
     }
 }
-function alternar2(x) {
-    let visualizar = document.querySelector('.visualizar')
-    if (x == 1) {
-        visualizar.src = 'img/1.png'
-    } else if (x == 2) {
-        visualizar.src = 'img/2.png'
-    } else if (x == 3) {
-        visualizar.src = 'img/3.png'
-    } else if (x == 4) {
-        visualizar.src = 'img/4.png'
-    } else if (x == 5) {
-        visualizar.src = 'img/5.png'
-    } else if (x == 6) {
-        visualizar.src = 'img/6.png' 
-    } else if (x == 7) {
-        visualizar.src = 'img/7.png' 
-    } else if (x == 8) {
-        visualizar.src = 'img/8.png' 
-    } else {
-        visualizar.src = 'img/9.png'
-    }
-    }
+
     // Array de nomes de imagens
     const imagens = [
         "img/1.png",
@@ -60,25 +39,25 @@ function alternar2(x) {
         "img/6.png",
         "img/7.png",
         "img/8.png",
-        "img/9.png",
+        "img/9.png"
     // Adicione mais nomes de imagens conforme necessário
   ];
   
   let index = 0; // Índice da imagem atual
   
   // Função para exibir a próxima imagem na caixa3
-  function exibirProximaImagem() {
-    const visualizar = document.querySelector(".visualizar");
+  function carroselautomatico() {
+    const visualizar = document.querySelector(".exibir");
     visualizar.src = imagens[index];
     index = (index + 1) % imagens.length; // Avança para a próxima imagem circularmente
   }
   
   // Define um intervalo de tempo para exibir as imagens automaticamente (a cada 5 segundos, por exemplo)
-  setInterval(exibirProximaImagem, 5000); // 5000 milissegundos = 5 segundos
+  setInterval(carroselautomatico, 2000); // 5000 milissegundos = 5 segundos
 
   function adicionartexto() {
     let adicionar = document.querySelector('.adicionar')
-    let lermais1 = document.querySelector('.btn-action')
+    let lermais1 = document.querySelector('.btn-lermais')
     if (adicionar.style.display == 'none') {
         adicionar.style.display = 'block'
         lermais1.textContent = 'Ler menos'
@@ -89,4 +68,17 @@ function alternar2(x) {
   }
         
     }
-    
+
+    let botoes = document.querySelectorAll("input[type='radio']")
+    let exibir = document.querySelector(".exibir")
+function carroselmanual () {
+    botoes.forEach(function(radio){
+        if (radio.checked) {
+            let selecioneimagem = radio.value
+            exibir.src = selecioneimagem
+        }
+    })
+}
+botoes.forEach(function(radio){
+    radio.addEventListener("change", carroselmanual)
+})

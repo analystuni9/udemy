@@ -8,10 +8,6 @@
     box-sizing:border-box;
     
 }
-img {
-    max-width:100%;
-}
-/* corpo da página todo elementos estão contidos aqui*/
 body {
     max-width:1080px;
     height:auto;
@@ -20,7 +16,6 @@ body {
     color:white;
     font-size:14px;
     background-image:linear-gradient(white, gray);
-    /* border:1px solid black; */
 }
 
 header {
@@ -28,23 +23,20 @@ header {
     margin:0 auto;
     top:0;
     z-index:0;
-    max-width:1080px;
+    /* max-width:1080px; */
     height:480px;
     /* border:1px solid black; */
 
 }
-/* div do logotipo do site */
 .logo {
     width:100px;
     display:flex;
     align-items:center;
 }
-/* imagem do logotipo */
 .logo img {
     width:100%;
     opacity:0.9;
 }
-/*contém logotipo + menu de navegação desktop */
 .nav-bar {
     width:100%;
     padding:20px 10px;
@@ -58,14 +50,12 @@ header {
     height:70px;
     /* border:1px solid black; */
 }
-/* menu desktop */
 .menu ul {
     display:flex;
     gap:20px;
     align-items:center;
     
 }
-/* icone menu hamburguer mobile */
 .icon-mobile {
     width:35px;
     height:35px;
@@ -80,7 +70,6 @@ header {
     box-sizing: content-box;
     padding:5px;
 }
-/* refere-se a cada linha */
 .icon-mobile div {
     width:30px;
     height:5px;
@@ -90,11 +79,9 @@ header {
     transition:all 0.6s ease;
     outline:1px solid rgba(255, 255, 255, 0.884);
 }
-/* Efeito ao passar por cima o cursor do mouse */
 .icon-mobile:hover {
     cursor:pointer;
 }
-/* menu para tablet e celular */
 .menu-mobile {
     width:300px;
     /* height:33vh; */
@@ -102,12 +89,14 @@ header {
     top:0;
     right:0;
     z-index:5;
-    background-color:rgba(55, 53, 53, 0.77);
+    background-color:rgba(128, 128, 128, 0.356);
     margin-top:80px;
     display:none;
     padding:20px;
     transition:all 0.5s ease;
     border-radius:10px;
+    color:white;
+    text-shadow:1px 1px 1px black;
 }
 .menu-mobile ul {
     margin:0 auto;
@@ -119,18 +108,17 @@ header {
     gap:35px;
 
 }
-/* botão personalizado desktop, tablet e celular */
-.btn-personalizado-1 {
+
+.btn-entrar {
     text-align:center;
     background-color:#ff2f5c;
     color:white;
-    text-shadow:1px 1px 1px black;
+    text-shadow:2px 2px 2px black;
     border-radius:7px;
     padding:10px 12px;
     border:none;
 }
-/* Efeito ao passar por cima o cursor do mouse botão entrar desktop*/
-.menu .btn-personalizado-1:hover {
+.menu .btn-entrar:hover {
     background-color:transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration:none;
@@ -138,30 +126,26 @@ header {
     cursor:pointer;
     transition:all 1s ease;
 }
-/* Efeito ao passar por cima o cursor do mouse botão entrar desktop*/
-.menu-mobile .btn-personalizado-1:hover {
+.menu-mobile .btn-entrar:hover {
     background-color:transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration:none; 
-    text-shadow:1px 1px 1px black;
     cursor:pointer;
     transition:all 1s ease;
 }
-/* Efeito ao passar por cima o cursor do mouse item da lista do menu desktop*/
 .menu li:hover {
     text-decoration:underline rgb(255, 47, 92);
     transition:all 1s ease;
     cursor:pointer;
-    text-shadow:1px 1px 1px black;
-    cursor:pointer;
     transition:all 1s ease;
 }
-/* Efeito ao passar por cima o cursor do mouse item da lista do menu para tablete e celular*/
+.menu-mobile li {
+    width:100%;
+    border-bottom:1px solid rgba(128, 128, 128, 0.205);
+    padding-bottom:5px;
+}
 .menu-mobile li:hover {
     text-decoration:underline rgb(255, 47, 92);
-    cursor:pointer;
-    transition:all 1s ease;
-    text-shadow:1px 1px 1px black;
     cursor:pointer;
     transition:all 1s ease;
 }
@@ -170,29 +154,27 @@ input[type="radio"] {
     display:none;
 }
 /* refere-se input /botões padrões*/
-.caixa-1 {
-    width:1080px;
-    height:auto;
-    position:absolute;
-    top:0;
-    text-align:center;
-    /* border:1px solid yellow; */
-}
-/* refere-se label/ botão carrosel */
-.caixa-2 {
+.imagem-carrosel {
     width:100%;
     position:absolute;
-    z-index:4;
-    top:350px;
+    z-index:2;
+    top:80px;
     display:flex;
     align-items:center;
     justify-content:center;
-    box-sizing:border-box;
     overflow: hidden;
     /* border:1px solid black; */
 }
-/* botões carrosel */
-.btn {
+.carrosel-manual {
+    width:100%;
+    height:auto;
+    position:absolute;
+    top:380px;
+    z-index:2;
+    text-align:center;
+    /* border:1px solid yellow; */
+}
+label {
     display:inline-block;
     width:10px;
     height:10px;
@@ -201,72 +183,11 @@ input[type="radio"] {
     cursor:pointer;
     margin-right:25px;
 }
-/* refere-se div que contem a imagem do carrosel */
-.caixa-3 {
-    /* margin-top:100px; */
-    position:absolute;
-    top:100px;
-    width:100%;
-    margin:0 auto;
-    /* border:1px solid blue; */
-}
-/* imagem do carrosel */
-.caixa-3 img {
-    width:100%;
-    height:300px;
-
-}
-/*div conteudo*/
-.caixa-4 {
-    width:100%;
-    height:200px;
-    position:absolute;
-    top:100px;
-    z-index:2;
-    color:white;
-    text-shadow:2px 1px 1px black;
-    font-size:16px;
-    display:flex;
-    flex-flow:column wrap;
-    text-indent:20px;
-    justify-content:center;
-    align-items:center;
-    box-sizing:border-box;
-    margin:0 auto;
-    /* border:1px solid red; */
-}
-.caixa-4 p {
-    text-align:center;
-    width:90%;
-    margin:0 auto;
-}
-/* Efeito ao passar em cima o cursor do mouse */
 .btn:hover {
     background-color:rgba(255, 47, 92, 0.561);
     transition:all 1s ease;
 }
-/* botão saiba mais */
-.btn-1{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    position:absolute;
-    top:280px;
-    z-index:3;
 
-
-}
-/* botão saiba mais */
-.btn-personalizado-2 {
-    text-align:center;
-    background-color:#ff2f5c;
-    font-weight:bold;
-    color:white;
-    text-shadow:1px 1px 1px black;
-    border-radius:7px;
-    padding:10px;
-    border:none;
-}
 .btn-personalizado-2:hover {
     background-color:transparent;
     outline: 1px solid rgb(255, 47, 92);
@@ -275,32 +196,13 @@ input[type="radio"] {
     cursor:pointer;
     transition:all 1s ease;
 }
-/* div conteúdo escondido */
-.conteudo-1 {
-    width:fit-content;
-    display:none;
-    background-color:rgba(0, 0, 0, 0.5);
-    margin:0 auto;
-    padding:20px;
-    font-size:14px;
-    border-radius:5px;
-}
-.conteudo-1 h1 {
-    text-align:center;
-    font-size:20px;
-}
 .menu-mobile i {
     display:flex;
     justify-content: center;
     gap:10px;
 }
-.menu-mobile li {
-    width:100%;
-    border-bottom:1px solid rgba(128, 128, 128, 0.123);
-    padding-bottom:5px;
-}
 main {
-    max-width:1080px;
+    /* max-width:1080px; */
     position:relative;
     top:0;
     display:flex;
@@ -318,10 +220,10 @@ section {
 article:nth-child(1) {
     width:90%;
     margin:0 auto;
-    margin-bottom:100px;
+    margin-bottom:200px;
 }
 /* imagem da empresa */
-.imagem-1 img {
+.imagem-empresa img {
     float:left;
     border-radius:10px;
     margin:20px 20px 0 20px;
@@ -333,19 +235,19 @@ article:nth-child(1) h2 {
     margin-bottom:10px;
 }
 /* conteudo empresa */
-.conteudo-2 p {
+.conteudo-empresa p {
     text-indent:30px;
     color:black;
 }
 /* caixa com o botao ler mais */
-.action {
+.lermais {
     width:100%;
     text-align:left;
     margin-top:20px;
     /* border:1px solid black; */
 }
 /* botão ler mais */
-.btn-action {
+.btn-lermais {
     width:fit-content;
     text-align:center;
     background-color:#ff2f5c;
@@ -356,7 +258,7 @@ article:nth-child(1) h2 {
     padding:10px;
     border:none;
 }
-.btn-action:hover {
+.btn-lermais:hover {
     background-color:transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration:none;
@@ -369,49 +271,21 @@ article:nth-child(1) h2 {
     display:none;
 }
 /* contem todos os cards */
-.cards {
-        max-width:93%;
-        margin:0 auto;
-        display:flex;
-        flex-flow:row wrap;
-        align-items:center;
-        gap:20px;
+.imagem-tecnologias,
+.imagem-iot {
+        width:95%;
+        height:auto;
+        overflow: hidden;
+        margin:30px auto;
+        color:black;
+
 }
-/* contem todos os elementos do card */
-.card {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    width:300px;
-    height:175px;
-    background-color:rgb(17, 17, 17);
-    border-radius:10px;
+.conteudo-iot, .conteudo-tecnologias {
+    width:90%;
+    color:black;
+    margin:30px auto;
 }
-/* imagem icone que aparece no card */
-.imagem-card {
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:5px;
-}
-/* titulo do card */
-.imagem-card h3 {
-    width:fit-content;
-    text-align:center;
-    text-shadow:1px 1px 1px black;
-    font-size:19px;
-    /* border:1px solid white; */
-}
-/* conteudo do card */
-.conteudo-card {
-    width:95%;
-    margin:0 auto;
-    text-align:center;
-    padding:0 15px;
-}
-/* segundo filho */
+  
 article:nth-child(2) {
     width:98%;
     margin:0 auto 50px auto;
@@ -422,11 +296,11 @@ article:nth-child(3) {
     margin-bottom:50px;
 }
 article:nth-child(2) h2 {
-    padding:30px 0;
     color:black;
     font-size:25px;
     text-align: center;
-    text-shadow:1px 1px 1px  rgb(230, 226, 226);;
+    text-shadow:1px 1px 1px  rgb(230, 226, 226);
+    margin-bottom:30px;
 }
 article:nth-child(3) h2 {
     padding:30px 0;
@@ -439,15 +313,14 @@ article:nth-child(3) p {
     color:black;
 }
 /* caixa que contem a imagem iot */
-.imagem-2 {
-    width:95%;
+.imagem-iot {
+    width:98%;
     margin:0 auto;
+    overflow:hidden;
 }
-.imagem-2 img {
-    width:100%;
-    height:200px;
-    border-radius:10px;
-}
+/* .caixa-6 img {
+    border-radius:20px;
+} */
 /* conteudo iot */
 .conteudo-3 {
     width:90%;
@@ -472,7 +345,11 @@ article:nth-child(4) {
 .card-equipe-3, 
 .card-equipe-4,
 .card-equipe-5, 
-.card-equipe-6  {
+.card-equipe-6,
+.card-equipe-7,
+.card-equipe-8,
+.card-equipe-9
+{
     width:300px;
     height:400px;
     background-repeat:no-repeat;
@@ -483,7 +360,7 @@ article:nth-child(4) {
     align-items:center;
     border-radius:10px;
     margin:0 auto 50px auto;
-    background-color:white;
+    background-color:rgb(255, 255, 255);
     box-shadow:5px 5px 10px black;
 }
 .card-equipe-2 {
@@ -502,13 +379,22 @@ article:nth-child(4) {
 .card-equipe-6 {
     background-image:url(img/background-06.png);
 }
-.imagem-perfil img{
+.card-equipe-7 {
+    background-image:url(img/background-07.png);
+}
+.card-equipe-8 {
+    background-image:url(img/background-08.png);
+}
+.card-equipe-9 {
+    background-image:url(img/background-09.png);
+}
+.imagem-perfil img {
     width:80px;
     border-radius:50%;
 }
 /* card com o conteudo equipe */
 .conteudo-equipe {
-    width:95%;
+    width:300px;
     height:190px;
     color:black;
     text-align:center;
@@ -522,10 +408,15 @@ article:nth-child(4) {
     text-shadow:1px 1px 1px black;
 }
 /* contem todos os cards-equipe */
-.caixa-5 {
-    width:100%;
+.all-cards {
+    width:95%;
+    margin:0 auto;
+    height:470px;
     display:flex;
-    flex-wrap:wrap;
+    gap:40px;
+    /* border:1px solid black; */
+    overflow-x:scroll;
+    /* flex-wrap:wrap; */
 }
 /* caixa que contem os botoes dos links */
 .action-equipe {
@@ -582,7 +473,7 @@ footer p {
     align-items:center;
     justify-content:center;
     flex-flow:row wrap;
-    gap:50px;
+    gap:30px;
     padding:7px 0;
 }
 .links-rodape li:hover{
@@ -596,9 +487,6 @@ footer p {
 @media screen and (max-width:900px) {
     .menu {
         display:none;
-    }
-    .btn-action {
-        width:350px;
     }
 }
 /* Quero que quando chegue na largura minima de 800px você esconda icone de menu mobile até o limite */
@@ -639,11 +527,11 @@ footer p {
         height:300px;
     }
 }
-@media screen and (max-width:700px) {
-    .btn-action {
-        margin:0 auto;
-        width:95%;
-        text-align: center;
-    }
+::-webkit-scrollbar {
+    width:1px;
+    height:7px;
 }
-
+::-webkit-scrollbar-thumb {
+    background-color:gray;
+    border-radius:20px;
+}
