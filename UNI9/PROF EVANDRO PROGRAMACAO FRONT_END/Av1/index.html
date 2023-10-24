@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6b0363880a.js" crossorigin="anonymous"></script>
     <title>Super Mario Bros</title>
     <!-- --------------------------------------------- -->
     <!-- css -->
@@ -13,56 +14,60 @@
             padding:0;
             box-sizing:border-box;
         }
+        :root {
+            --supermariobros: linear-gradient(white, blue)
+        }
         body {
             font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
             background-color:black;
             color:white;
         }
         video {
+            position:fixed;
             top:0;
             left:0;
-            position:fixed;
-            width:100%;
+            width:100vw;
             height:90vh;
             z-index:-1;
         }
         .btn-mobile {
             position:absolute;
-            top:20px;
-            left:10px;
+            top:0;
+            left:0;
             z-index:1;
             width:fit-content;
             background:transparent;
-            margin-top:10px;
+            margin-top:20px;
+            margin-left:20px;
             padding:10px;
-            border-radius:50%;
-            border:1px solid white;
-            background-color:red;
         }
         .btn-mobile span {
             display:block;
             width:30px;
-            height:5px;
+            height:2px;
             border-radius:10px;
             transform: rotate(0deg);
             transition:all ease 0.5s;
             margin:5px;
             background-color:white;
-            border:1px solid white;
+            border:2px solid white;
         }
         .btn-mobile:hover {
             cursor:pointer;
+            border-radius:50%;
+            background-color:red;
+            opacity:0.8;
         }
-        .rotacionar span:nth-child(1) {
-            transform:translateY(13px) rotate(-45deg);
+        .animationx span:nth-child(1) {
+            transform:translateY(9px) rotate(-45deg);
         }
-        .rotacionar span:nth-child(2) {
+        .animationx span:nth-child(2) {
             opacity:0;
         }
-        .rotacionar span:nth-child(3) {
+        .animationx span:nth-child(3) {
             transform:translateY(-7px) rotate(45deg)
         }
-        .nav-links1 {
+        .nav-links {
             position:absolute;
             top:0;
             transform:translateY(-1000px);
@@ -70,7 +75,6 @@
             width:500px;
             height:45vh;
             text-transform:uppercase;
-            /* background-image:linear-gradient(rgba(31, 31, 164, 0.459), rgba(0, 0, 255, 0.453)); */
             border-radius:20px;
             margin-top:180px;
             margin-left:10px;
@@ -81,8 +85,9 @@
             flex-flow:column nowrap;
             justify-content:center;
             align-items:center;
+            font-weight:bold;
         }
-        .nav-links1 ul {
+        .nav-links ul {
             width:100%;
             display:flex;
             flex-flow:column nowrap;
@@ -91,22 +96,23 @@
             list-style-type:none;
             padding-bottom:20px;
         }
-        .nav-links1 li {
+        .nav-links li {
             /* font-weight:bold; */
             text-align:center;
             border-bottom:1px solid rgba(128, 128, 128, 0.116);
             text-shadow:1px 1px 1px black;
             /* font-weight:bold; */
         }
-        .nav-links1 li:hover {
+        .nav-links li:hover {
+            background-color:transparent;
             text-decoration:underline red;
-            color:rgba(26, 26, 221, 0.973);
+            color:var(--supermariobros);
             transition:all ease 1s;
             cursor:pointer;
             text-shadow:1px 1px 1px black;
 
         }
-        .nav-links2 {
+        .visualizar {
             transform:translateY(0);
             transition:all ease 1.5s;
         }
@@ -119,9 +125,30 @@
             margin-top:200px;
             /* border:1px solid white; */
         }
-        .icon-supermariobros {
+        .img-super_mario_bros {
             width:200px;
             height:190px;
+        }
+        .btn-redes_sociais {
+            position:absolute;
+            margin-top:100px;
+            top:0;
+            right:0;
+            margin-top:30px;
+            margin-right:20px;
+            display:flex;
+            gap:30px;
+                
+        }
+        .btn-redes_sociais i {
+            font-size:25px;
+        }
+        .btn-redes_sociais i:hover {
+            background-color:transparent;
+            /* color:red; */
+            text-decoration:underline red;
+            cursor:pointer;
+            transition:all ease 1s;
         }
     </style>
 </head>
@@ -134,15 +161,16 @@
             <span></span>
             <span></span>
         </div>
-        <div class="btn-redes-sociais">
-            <i class='bx bxl-youtube'></i>
-            <i class='bx bxl-tiktok' ></i>
-
+        <div class="btn-redes_sociais">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
         </div>
 
-        <nav class="nav-links1"> 
+        <nav class="nav-links"> 
             <div>
-                <img src="imagens/supermariobros.png" alt="">
+                <img src="imagens/super-mario (5).png" alt="">
             </div>
             <ul>
                 <li>Últimos lançamentos</li>
@@ -153,7 +181,7 @@
         </nav>
     </header>
     <main>
-        <div class="mario-bros">
+        <div class="img-super_mario_bros">
             <img src="imagens/super-mario (1).png" alt="">
         </div>
     </main>
@@ -164,17 +192,18 @@
     <!-- js -->
     <script>
         let btnmobile = document.querySelector('.btn-mobile')
-        let navlinks = document.querySelector('.nav-links1')
-        let animação = () => {
-            if (btnmobile.classList.contains('rotacionar')) {
-                btnmobile.classList.remove('rotacionar')
-                navlinks.classList.remove('nav-links2')
+        let navlinks = document.querySelector('.nav-links')
+        let animation = () => {
+            if (btnmobile.classList.contains('animationx')) 
+            {
+                btnmobile.classList.remove('animationx')
+                navlinks.classList.remove('visualizar')
             } else {
-                btnmobile.classList.add('rotacionar')
-                navlinks.classList.add('nav-links2')
+                btnmobile.classList.add('animationx')
+                navlinks.classList.add('visualizar')
             }
         }
-        btnmobile.addEventListener('click', animação)
+        btnmobile.addEventListener('click', animation)
     </script>
 </body>
 </html>
