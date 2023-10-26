@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel Manual</title>
+    <style>
+        .exibir {
+            font-size: 24px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="radio" name="numero" id="radio1" value="1">
+            <label for="radio1"></label>
+
+            <input type="radio" name="numero" id="radio2" value="2">
+            <label for="radio2"></label>
+
+            <input type="radio" name="numero" id="radio3" value="3">
+            <label for="radio3"></label>
+
+            <input type="radio" name="numero" id="radio4" value="4">
+            <label for="radio4"></label>
+
+            <input type="radio" name="numero" id="radio5" value="5">
+            <label for="radio5"></label>
+        </div>
+        <div>
+            <p class="exibir">1</p>
+        </div>
+    </form>
+    <script>
+        let indiceatual = 0;
+        let botoesinput = document.querySelectorAll("input[type='radio']");
+        let exibir = document.querySelector('.exibir');
+
+        function carrosselmanual() {
+            botoesinput.forEach(function (radio) {
+                if (radio.checked) {
+                    let selecionenumero = radio.value;
+                    exibir.innerHTML = selecionenumero;
+                }
+            });
+        }
+
+        botoesinput.forEach(function (radio) {
+            radio.addEventListener('change', carrosselmanual);
+        });
+
+        function carrosselautomatico() {
+            let indiceatual = -1;
+
+            botoesinput.forEach(function (radio, i) {
+                if (radio.checked) {
+                    indiceatual = i;
+                }
+            });
+
+            if (indiceatual >= 0) {
+                let proximoindice = (indiceatual +1) % botoesinput.length;
+                botoesinput[proximoindice].checked = true;
+                carrosselmanual();
+            }
+        }
+
+        setInterval(carrosselautomatico, 2000);
+    </script>
+</body>
+</html>

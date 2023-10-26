@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        width:90vw;
+        height:90vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    body {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        background-color:rgba(47, 110, 110, 0.788)
+
+    }
+    fieldset {
+        display: flex;
+        flex-direction:column;
+        width:500px;
+        padding:10px;
+        font-weight: bold;
+        background-color:rgba(220, 220, 220, 0.815);
+        margin-bottom:10px;
+
+    }
+    input {
+        width:200px;
+        margin-bottom:5px;
+    }
+    button {
+        width:fit-content;
+        margin-bottom:10px;
+    }
+    legend {
+        font-size:20px;
+        text-align:center;
+    }
+    main {
+        width:100%;
+        /* border:1px solid black; */
+        margin-bottom:10px;
+    }
+    .content {
+        text-align:center;
+        padding:5px;
+        display:none;
+    }
+</style>
+<body>
+    <fieldset>
+        <legend onclick="exibir()">Login</legend>
+        <label for="username">Usuario</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password">
+        <button onclick="verificar()" id="verificar">Entrar</button>
+        <button onclick="alternar()" class="mostrar">mostrar</button>
+    </fieldset>
+    <main>
+        <div class="content">Vai aparecer algo aqui ...</div>
+    </main>
+</body>
+<script>
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    let x = document.querySelector('.content')
+    let y = document.querySelector('.mostrar')
+    function verificar(){
+        if (username == 'admin' && password == 'admin123') {
+            window.location.href = 'restrito.html'
+        } else {
+            window.alert('Acesso Negado')
+        }
+    } 
+    function exibir() {
+        x.innerHTML = 'texto 1'
+    }
+    function alternar () {
+        if (x.style.display == 'none') {
+            x.style.display = 'block'
+            y.textContent = 'ocultar'
+        } else {
+            x.style.display = 'none'
+            y.textContent = 'mostrar'
+        }
+    }
+</script>
+</html>

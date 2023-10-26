@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrosel manual</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Carrossel Manual</legend>
+            <input type="radio" name="numero" id="radio1" value="1">
+            <label for="radio1"></label>
+
+            <input type="radio" name="numero" id="radio2" value="2">
+            <label for="radio2"></label>
+
+            <input type="radio" name="numero" id="radio3" value="3">
+            <label for="radio3"></label>
+
+            <input type="radio" name="numero" id="radio4" value="4">
+            <label for="radio4"></label>
+
+            <input type="radio" name="numero" id="radio5" value="5">
+            <label for="radio5"></label>
+        </fieldset>
+        <div>
+            <p class="exibir">1</p>
+        </div>
+    </form>
+    <script>
+        let indiceatual = 0
+        let botoesinput = document.querySelectorAll("input[type='radio']")
+        let exibir = document.querySelector('.exibir')
+        function carrosselmanual () {
+            botoesinput.forEach(function(radio){
+                if (radio.checked) {
+                    let selecionenumero = radio.value;
+                    exibir.innerHTML = selecionenumero
+                }
+            })
+        }
+        botoesinput.forEach(function(radio){
+            radio.addEventListener('change', carrosselmanual)
+        })
+        function carrosselautomatico () {
+            botoesinput.forEach(function(radio){
+                selecione = radio.value
+                exibir.innerHTML = selecione
+                radio.value = (++radio.value) % botoesinput.length
+
+            })
+        }
+        setInterval(carrosselautomatico, 2000)
+    </script>
+</body>
+</html>
