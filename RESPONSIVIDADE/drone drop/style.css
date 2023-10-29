@@ -1,537 +1,616 @@
 /* importei uma nova familia de fonte do google fontes */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 /* Aplique em todos elementos da página */
 * {
-    margin:0;
-    padding:0;
-    list-style-type:none;
-    box-sizing:border-box;
-    
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+
 }
+
 body {
-    max-width:1080px;
-    height:auto;
-    margin:0 auto;
-    font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
-    color:white;
-    font-size:14px;
-    background-image:linear-gradient(white, gray);
+    max-width: 1080px;
+    height: auto;
+    margin: 0 auto;
+    font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 14px;
 }
 
 header {
-    position:relative;
-    margin:0 auto;
-    top:0;
-    z-index:0;
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+    z-index: 0;
     /* max-width:1080px; */
-    height:480px;
+    height: 480px;
+    font-size:15px;
     /* border:1px solid black; */
 
 }
+
 .logo {
-    width:100px;
-    display:flex;
-    align-items:center;
+    width: 100px;
+    display: flex;
+    align-items: center;
 }
+
 .logo img {
-    width:100%;
-    opacity:0.9;
+    width: 100%;
+    opacity: 0.9;
 }
+
 .nav-bar {
-    width:100%;
-    padding:20px 10px;
-    display:flex;
-    justify-content:space-between;
-    background-color:rgba(55, 53, 53, 0.77);
-    position:absolute;
-    top:0;
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(55, 53, 53, 0.77);
+    position: absolute;
+    top: 0;
     /* right:0; */
-    z-index:1;
-    height:70px;
+    z-index: 1;
+    height: 70px;
     /* border:1px solid black; */
 }
+
 .menu ul {
-    display:flex;
-    gap:20px;
-    align-items:center;
-    
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
 }
+
 .icon-mobile {
-    width:35px;
-    height:35px;
-    position:absolute;
-    right:0;
-    top:0;
-    z-index:6;
-    transition:all 0.5s ease;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 6;
+    transition: all 0.5s ease;
     /* border:1px solid black; */
-    margin-top:10px;
-    margin-right:5px;
+    margin-top: 10px;
+    margin-right: 5px;
     box-sizing: content-box;
-    padding:5px;
+    padding: 5px;
 }
+
 .icon-mobile div {
-    width:30px;
-    height:5px;
-    border-radius:5px;
-    background-color:white;
-    margin-bottom:10px;
-    transition:all 0.6s ease;
-    outline:1px solid rgba(255, 255, 255, 0.884);
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+    transition: all 0.6s ease;
+    outline: 1px solid rgba(255, 255, 255, 0.884);
 }
+
 .icon-mobile:hover {
-    cursor:pointer;
+    cursor: pointer;
 }
+
 .menu-mobile {
-    width:300px;
+    width: 300px;
     /* height:33vh; */
-    position:absolute;
-    top:0;
-    right:0;
-    z-index:5;
-    background-color:rgba(128, 128, 128, 0.356);
-    margin-top:80px;
-    display:none;
-    padding:20px;
-    transition:all 0.5s ease;
-    border-radius:10px;
-    color:white;
-    text-shadow:1px 1px 1px black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background-color: rgba(128, 128, 128, 0.356);
+    margin-top: 80px;
+    display: none;
+    padding: 20px;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    text-shadow: 1px 1px 1px black;
 }
+
 .menu-mobile ul {
-    margin:0 auto;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:35px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
 
 }
 
 .btn-entrar {
-    text-align:center;
-    background-color:#ff2f5c;
-    color:white;
-    text-shadow:2px 2px 2px black;
-    border-radius:7px;
-    padding:10px 12px;
-    border:none;
+    text-align: center;
+    background-color: #ff2f5c;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-radius: 7px;
+    padding: 10px 12px;
+    border: none;
+    font-weight:bold;
 }
+
 .menu .btn-entrar:hover {
-    background-color:transparent;
+    background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
-    text-decoration:none;
-    text-shadow:1px 1px 1px black;
-    cursor:pointer;
-    transition:all 1s ease;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    transition: all 1s ease;
 }
+
 .menu-mobile .btn-entrar:hover {
-    background-color:transparent;
+    background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
-    text-decoration:none; 
-    cursor:pointer;
-    transition:all 1s ease;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1s ease;
 }
+
 .menu li:hover {
-    text-decoration:underline rgb(255, 47, 92);
-    transition:all 1s ease;
-    cursor:pointer;
-    transition:all 1s ease;
+    text-decoration: underline rgb(255, 47, 92);
+    transition: all 1s ease;
+    cursor: pointer;
+    transition: all 1s ease;
 }
+
 .menu-mobile li {
-    width:100%;
-    border-bottom:1px solid rgba(128, 128, 128, 0.205);
-    padding-bottom:5px;
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.205);
+    padding-bottom: 5px;
 }
+
 .menu-mobile li:hover {
-    text-decoration:underline rgb(255, 47, 92);
-    cursor:pointer;
-    transition:all 1s ease;
+    text-decoration: underline rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
 }
 
 input[type="radio"] {
-    display:none;
+    display: none;
 }
+
 /* refere-se input /botões padrões*/
 .imagem-carrosel {
-    width:100%;
-    position:absolute;
-    z-index:2;
-    top:80px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     /* border:1px solid black; */
 }
+
 .carrosel-manual {
-    width:100%;
-    height:auto;
-    position:absolute;
-    top:380px;
-    z-index:2;
-    text-align:center;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 380px;
+    z-index: 2;
+    text-align: center;
     /* border:1px solid yellow; */
 }
+
 label {
-    display:inline-block;
-    width:10px;
-    height:10px;
-    border:1px solid ;
-    border-radius:50%;
-    cursor:pointer;
-    margin-right:25px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 25px;
 }
+
 .btn:hover {
-    background-color:rgba(255, 47, 92, 0.561);
-    transition:all 1s ease;
+    background-color: rgba(255, 47, 92, 0.561);
+    transition: all 1s ease;
 }
 
 .btn-personalizado-2:hover {
-    background-color:transparent;
+    background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
-    text-decoration:none;
-    text-shadow:1px 1px 1px black;
-    cursor:pointer;
-    transition:all 1s ease;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    transition: all 1s ease;
 }
+
 .menu-mobile i {
-    display:flex;
+    display: flex;
     justify-content: center;
-    gap:10px;
+    gap: 10px;
 }
+
 main {
     /* max-width:1080px; */
-    position:relative;
-    top:0;
-    display:flex;
-    justify-content:center;
-    margin:0 auto;
-    height:auto;
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: auto;
+    background-image: linear-gradient(white, gray);
     /* border:1px solid black; */
 }
+
 section {
-    width:100%;
-    margin:0 auto;
+    width: 100%;
+    margin: 0 auto;
     /* border:1px solid pink; */
 }
+
 /* primeiro filho */
 article:nth-child(1) {
-    width:90%;
-    margin:0 auto;
-    margin-bottom:200px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 200px;
 }
+
 /* imagem da empresa */
 .imagem-empresa img {
-    float:left;
-    border-radius:10px;
-    margin:20px 20px 0 20px;
+    float: left;
+    border-radius: 10px;
+    margin: 20px 20px 0 20px;
 }
+
 article:nth-child(1) h2 {
-    text-align:center;
-    color:black;
-    font-size:25px;
-    margin-bottom:10px;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
+
 /* conteudo empresa */
 .conteudo-empresa p {
-    text-indent:30px;
-    color:black;
+    text-indent: 30px;
+    color: black;
 }
+
 /* caixa com o botao ler mais */
 .lermais {
-    width:100%;
-    text-align:left;
-    margin-top:20px;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
     /* border:1px solid black; */
 }
+
 /* botão ler mais */
 .btn-lermais {
-    width:fit-content;
-    text-align:center;
-    background-color:#ff2f5c;
-    font-weight:bold;
-    color:white;
-    text-shadow:1px 1px 1px black;
-    border-radius:7px;
-    padding:10px;
-    border:none;
+    width: fit-content;
+    text-align: center;
+    background-color: #ff2f5c;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    border-radius: 7px;
+    padding: 10px;
+    border: none;
 }
+
 .btn-lermais:hover {
-    background-color:transparent;
+    background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
-    text-decoration:none;
-    text-shadow:1px 1px 1px black;
-    cursor:pointer;
-    transition:all 1s ease;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    transition: all 1s ease;
 }
+
 /* conteudo oculto empresa */
 .adicionar {
-    display:none;
+    display: none;
 }
+
 /* contem todos os cards */
 .imagem-tecnologias,
 .imagem-iot {
-        width:95%;
-        height:auto;
-        overflow: hidden;
-        margin:30px auto;
-        color:black;
+    width: 95%;
+    height: auto;
+    overflow: hidden;
+    margin: 30px auto;
+    color: black;
 
 }
-.conteudo-iot, .conteudo-tecnologias {
-    width:90%;
-    color:black;
-    margin:30px auto;
+
+.conteudo-iot,
+.conteudo-tecnologias {
+    width: 90%;
+    color: black;
+    margin: 30px auto;
 }
-  
+
 article:nth-child(2) {
-    width:98%;
-    margin:0 auto 50px auto;
+    width: 98%;
+    margin: 0 auto 50px auto;
     /* border:1px solid black; */
 }
+
 /* terceiro filho */
 article:nth-child(3) {
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
+
 article:nth-child(2) h2 {
-    color:black;
-    font-size:25px;
+    color: black;
+    font-size: 25px;
     text-align: center;
-    text-shadow:1px 1px 1px  rgb(230, 226, 226);
-    margin-bottom:30px;
+    text-shadow: 1px 1px 1px rgb(230, 226, 226);
+    margin-bottom: 30px;
 }
+
 article:nth-child(3) h2 {
-    padding:30px 0;
-    color:black;
-    font-size:25px;
-    text-align: center;  
-    text-shadow:1px 1px 1px rgb(230, 226, 226);
+    padding: 30px 0;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(230, 226, 226);
 }
+
 article:nth-child(3) p {
-    color:black;
+    color: black;
 }
+
 /* caixa que contem a imagem iot */
 .imagem-iot {
-    width:98%;
-    margin:0 auto;
-    overflow:hidden;
+    width: 98%;
+    margin: 0 auto;
+    overflow: hidden;
 }
+
 /* .caixa-6 img {
     border-radius:20px;
 } */
 /* conteudo iot */
 .conteudo-3 {
-    width:90%;
-    margin:0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
+
 .conteudo-3 p {
-    text-indent:20px;
+    text-indent: 20px;
 }
+
 /* quarto filho */
 article:nth-child(4) h2 {
-    text-align:center;
-    padding:30px 0;
-    color:black;
-    font-size:25px;
-    text-shadow:1px 1px 1px rgb(204, 201, 201);
+    text-align: center;
+    padding: 30px 0;
+    color: black;
+    font-size: 25px;
+    text-shadow: 1px 1px 1px rgb(204, 201, 201);
 }
+
 article:nth-child(4) {
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
-.card-equipe-1, 
-.card-equipe-2, 
-.card-equipe-3, 
+
+.card-equipe-1,
+.card-equipe-2,
+.card-equipe-3,
 .card-equipe-4,
-.card-equipe-5, 
+.card-equipe-5,
 .card-equipe-6,
 .card-equipe-7,
 .card-equipe-8,
-.card-equipe-9
-{
-    width:300px;
-    height:400px;
-    background-repeat:no-repeat;
-    background-image:url(img/background-01.png);
-    padding-top:120px;
-    display:flex;
-    flex-flow:column;
-    align-items:center;
-    border-radius:10px;
-    margin:0 auto 50px auto;
-    background-color:rgb(255, 255, 255);
-    box-shadow:5px 5px 10px black;
+.card-equipe-9 {
+    width: 300px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-image: url(img/background-01.png);
+    padding-top: 120px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto 50px auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px black;
 }
+
 .card-equipe-2 {
-    background-image:url(img/background-02.png);
+    background-image: url(img/background-02.png);
 
 }
+
 .card-equipe-3 {
-    background-image:url(img/background-03.png);
+    background-image: url(img/background-03.png);
 }
+
 .card-equipe-4 {
-    background-image:url(img/background-04.png);
+    background-image: url(img/background-04.png);
 }
+
 .card-equipe-5 {
-    background-image:url(img/background-05.png);
+    background-image: url(img/background-05.png);
 }
+
 .card-equipe-6 {
-    background-image:url(img/background-06.png);
+    background-image: url(img/background-06.png);
 }
+
 .card-equipe-7 {
-    background-image:url(img/background-07.png);
+    background-image: url(img/background-07.png);
 }
+
 .card-equipe-8 {
-    background-image:url(img/background-08.png);
+    background-image: url(img/background-08.png);
 }
+
 .card-equipe-9 {
-    background-image:url(img/background-09.png);
+    background-image: url(img/background-09.png);
 }
+
 .imagem-perfil img {
-    width:80px;
-    border-radius:50%;
+    width: 80px;
+    border-radius: 50%;
 }
+
 /* card com o conteudo equipe */
 .conteudo-equipe {
-    width:300px;
-    height:190px;
-    color:black;
-    text-align:center;
-    padding:0 5px;
+    width: 300px;
+    height: 190px;
+    color: black;
+    text-align: center;
+    padding: 0 5px;
     /* border:1px solid black; */
-    
+
 }
+
 .conteudo-equipe h3 {
-    color:rgb(255, 47, 92);
-    font-size:22px;
-    text-shadow:1px 1px 1px black;
+    color: rgb(255, 47, 92);
+    font-size: 22px;
+    text-shadow: 1px 1px 1px black;
 }
+
 /* contem todos os cards-equipe */
 .all-cards {
-    width:95%;
-    margin:0 auto;
-    height:470px;
-    display:flex;
-    gap:40px;
+    width: 95%;
+    margin: 0 auto;
+    height: 470px;
+    display: flex;
+    gap: 40px;
     /* border:1px solid black; */
-    overflow-x:scroll;
+    overflow-x: scroll;
     /* flex-wrap:wrap; */
 }
+
 /* caixa que contem os botoes dos links */
 .action-equipe {
-    width:95%;
-    display:flex;
-    justify-content:center;
-    margin:0 auto;
-    padding-left:30px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding-left: 30px;
     /* border:1px solid black; */
-    opacity:0;
+    opacity: 0;
 }
+
 /* botoes dos cards */
 .action-equipe i {
-    width:100%;
-    font-size:20px;
-    height:auto;
-    color:black;
-    padding:3px;
+    width: 100%;
+    font-size: 20px;
+    height: auto;
+    color: black;
+    padding: 3px;
 }
+
 .action-equipe:hover {
-    opacity:1;
+    opacity: 1;
 }
+
 /* efeito ao levar o mause por cima dos botoes */
 .action-equipe i:hover {
-    color:#ff2f5c;
-    text-decoration:underline gray;
-    transition:all 1s ease;
-    cursor:pointer;
-    transition:all 1s ease;
+    color: #ff2f5c;
+    text-decoration: underline gray;
+    transition: all 1s ease;
+    cursor: pointer;
+    transition: all 1s ease;
 }
+
 footer {
-    width:100%;
-    background-color:rgba(55, 53, 53, 0.77);
+    width: 100%;
+    background-color: rgba(55, 53, 53, 0.77);
+    font-size:15px;
 }
+
 footer p {
-    text-align:center;
-    padding:7px 0;
+    text-align: center;
+    padding: 7px 0;
 }
 .icones-rodape ul {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-flow:row wrap;
-    gap:30px;
-    padding:7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 30px;
+    padding: 7px 0;
 }
+
 .icones-rodape i:hover {
     text-decoration: underline #ff2f5c;
-    cursor:pointer;
-    transition:all 1s ease;
+    cursor: pointer;
+    transition: all 1s ease;
 }
+
 .links-rodape ul {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-flow:row wrap;
-    gap:30px;
-    padding:7px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 30px;
+    padding: 7px 0;
 }
-.links-rodape li:hover{
-    text-decoration:underline #ff2f5c;
-    cursor:pointer;
+
+.links-rodape li:hover {
+    text-decoration: underline #ff2f5c;
+    cursor: pointer;
 }
+
 .icones-rodape i {
-    font-size:20px;
+    font-size: 22px;
 }
+
 /* Quero que quando chegue na largura máxima de 800px você esconda meu menu desktop*/
 @media screen and (max-width:900px) {
     .menu {
-        display:none;
+        display: none;
     }
 }
+
 /* Quero que quando chegue na largura minima de 800px você esconda icone de menu mobile até o limite */
 @media screen and (min-width:900px) {
     .icon-mobile {
-        display:none;
+        display: none;
     }
 }
+
 /* Quero que quando chegue na largura máxima de 600px você aplique largura de 100% no menu mobile e botão personalizado */
 @media screen and (max-width:700px) {
-    .menu-mobile, .btn-personalizado-1 {
-        width:100%;
-        margin:0 auto;
+
+    .menu-mobile,
+    .btn-personalizado-1 {
+        width: 100%;
+        margin: 0 auto;
     }
 }
+
 /* Quero que quando chegue na largura minima de 600px voce aplique 100% de largura botão personalizado */
 @media screen and (min-width:700px) {
     .btn-personalizado-1 {
-        width:100%;
+        width: 100%;
     }
 }
+
 @media screen and (max-width:1075px) {
     .card {
-        margin:0 auto;
-        width:350px;
+        margin: 0 auto;
+        width: 350px;
     }
 
 }
+
 @media screen and (max-width:811px) {
     .card {
-        margin:0 auto;
-        width:600px;
+        margin: 0 auto;
+        width: 600px;
     }
 }
+
 @media screen and (max-width:1075px) {
     .imagem img {
-        width:250px;
-        height:300px;
+        width: 250px;
+        height: 300px;
     }
 }
+
 ::-webkit-scrollbar {
-    width:1px;
-    height:7px;
+    width: 1px;
+    height: 7px;
 }
+
 ::-webkit-scrollbar-thumb {
-    background-color:gray;
-    border-radius:20px;
+    background-color: gray;
+    border-radius: 20px;
 }

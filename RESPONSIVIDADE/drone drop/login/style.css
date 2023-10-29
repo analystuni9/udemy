@@ -12,11 +12,13 @@ body {
   width:90vw;
   align-items:center;
   height:100vh;
-  /* background-color:seagreen; */
-  background-image:linear-gradient(black, gray);
+  background-image:url(background-drone.png);
+  /* background-image:linear-gradient(black, gray); */
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
+  background-color:rgb(29, 30, 31);
+  background-blend-mode:overlay;
 }
 /* todas as divs estão contidas aqui */
 .container {
