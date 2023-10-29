@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 1080px;
+            width: 90%;
+            height: 90vh;
+            margin: 0 auto;
+            font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .box h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            width: 90vw;
+            height: 90vh;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid black; */
+        }
+
+        .box {
+            width: 700px;
+            height: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid black; */
+            /* background-color:blueviolet; */
+        }
+
+        .box input {
+            border: none;
+            outline: none;
+            /* background-color:blue; */
+            border: 2px solid gray;
+            border-radius: 30px;
+            padding: 15px 100px 15px 20px;
+
+        }
+
+        .box label {
+            margin-left: 25px;
+            font-size: 18px;
+        }
+
+        .box input::placeholder {
+            font-size: 20px;
+        }
+
+        .box-username {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            margin-bottom: 20px;
+            /* border:1px solid black; */
+        }
+
+        .bxs-user {
+            position: absolute;
+            top: 0;
+            margin-top: 42px;
+            margin-left: 370px
+        }
+
+        .box-password {
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            /* border:1px solid black; */
+        }
+
+        .bxs-lock-alt {
+            position: absolute;
+            top: 0;
+            margin-top: 42px;
+            margin-left: 370px;
+        }
+
+        .lembrar {
+            display: flex;
+            gap: 100px;
+        }
+
+        .lembrar a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .lembrar a:hover {
+            text-decoration: underline blue;
+        }
+
+        .box-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 50px;
+            background: transparent;
+            border: 2px solid gray;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            width: 100%;
+            background-color: rgba(55, 53, 53, 0.77);
+        }
+
+        footer p {
+            text-align: center;
+            padding: 7px 0;
+        }
+
+        .icones-rodape ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+            gap: 30px;
+            padding: 7px 0;
+        }
+
+        .icones-rodape i:hover {
+            text-decoration: underline #ff2f5c;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        .links-rodape ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+            gap: 30px;
+            padding: 7px 0;
+        }
+
+        .links-rodape li:hover {
+            text-decoration: underline #ff2f5c;
+            cursor: pointer;
+        }
+
+        .icones-rodape i {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <form action="#">
+                <h1>Login</h1>
+                <div class="box-username">
+                    <label for="email">Usuário</label>
+                    <input type="email" name="usuario" id="email" value="" placeholder="Digite seu email">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="box-password">
+                    <label for="password">Senha</label>
+                    <input type="password" name="senha" id="password" value="" placeholder="Digite sua senha">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="lembrar">
+                    <label for="lembrar">
+                        <input type="checkbox" name="lembrar" id="lembrar">Lembre-me
+                    </label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <div class="box-btn">
+                    <button class="btn">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

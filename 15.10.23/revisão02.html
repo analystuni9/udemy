@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel manual</title>
+</head>
+<body>
+    <!-- ------------------------------------------------------------------------- -->
+    <!-- html -->
+    <h1>carrossel manual</h1>
+    <!-- botoes manuais do carrosel -->
+    <input type="radio" name="imagem" id="radio1" value="img2/1.jpg">
+    <label for="radio1"></label>
+
+    <input type="radio" name="imagem" id="radio2" value="img2/2.jpg">
+    <label for="radio2"></label>
+
+    <input type="radio" name="imagem" id="radio3" value="img2/3.jpg">
+    <label for="radio3"></label>
+
+    <input type="radio" name="imagem" id="radio4" value="img2/4.jpg">
+    <label for="radio4"></label>
+
+    <input type="radio" name="imagem" id="radio5" value="img2/5.jpg">
+    <label for="radio5"></label>
+    
+    <!-- caixa de exibição na minha tela -->
+    <div>
+        <img id="exibir" src="img2/1.jpg" alt="">
+    </div>
+
+    <!-- ----------------------------------------------------------------- -->
+    <!-- js -->
+    <script>
+        // criei uma variavel que manipula tag img 
+        let exibir = document.getElementById('exibir')
+        // criei uma variavel que manipula todos meus inputs
+        let botoes = document.querySelectorAll("input[type='radio']")
+        // função que atualiza a imagem quando botao for clicado
+        function atualizarimagem() {
+            // percorre minha variavel por todos meus inputs
+            // para cada item dentro da minha variavel os "inputs" eu chamei de radio como argumento
+            botoes.forEach(function(radio){
+                // se input estiver checked quero que vc
+                if(radio.checked) {
+                    // criei uma variavel que retorna o valor de cada input
+                    let selecioneimagem = radio.value
+                    // localiza minha dentro da variavel
+                    exibir.src = selecioneimagem
+                }
+            })
+        }
+        // percorre os itens do meu botao 
+        botoes.forEach(function(radio){
+            // se tiver evento de click quero que execute a função atualizar imagem
+            radio.addEventListener("click", atualizarimagem)
+        })
+        // atualiza minha imagem quando a pagina é carregada
+        atualizarimagem()
+    </script>
+</body>
+</html>

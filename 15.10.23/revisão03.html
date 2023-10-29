@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+    <style>
+        div {
+            width:100vw;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        p {
+            width:100px;
+            height:100px;
+            background-color:gray;
+            border:1px solid black;
+            box-sizing:border-box;
+            padding-top:40px;
+            padding-left:50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p id="exibir">1</p>
+    </div>
+    <script>
+        let indiceatual = 0
+        let numeros = [1, 2, 3, 4, 5]
+        let exibir = document.getElementById('exibir')
+        function atualizarnumero () {
+            exibir.innerHTML = numeros[indiceatual]
+            indiceatual = (indiceatual +1) % numeros.length
+        }
+        setInterval(atualizarnumero, 2000)
+    </script>
+</body>
+</html>

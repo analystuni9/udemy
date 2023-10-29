@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrosel automatico</title>
+</head>
+<body>
+
+    <!-- -------------------------------------------------------------------------- -->
+    <!-- html -->
+    <h1>Carrosel automatico</h1>
+    <!-- tela de exibição -->
+    <div>
+        <img id="exibir" src="img2/1.jpg" alt="">
+    </div>
+    
+
+    <!-- --------------------------------------------------------------------------- -->
+    <!-- js -->
+    <script>
+        // rastreia a imagem atual
+        let indiceatual = 0
+        // criei um variavel que manipula minha tag img
+        let exibir = document.getElementById('exibir')
+        // criei uma variavel para guardar todas as minhas imagens
+        let imagens = ['img2/1.jpg',
+        'img2/2.jpg',
+        'img2/3.jpg',
+        'img2/4.jpg',
+        'img2/5.jpg',
+    ]
+    // função para exibir a proxima imagem
+    function atualizarimagem () {
+        // exibe minha imagem diacordo com meu indice atual
+        exibir.src = imagens[indiceatual]
+        indiceatual = (indiceatual +1) % imagens.length
+    } 
+    // função que dispara minha função de 2 em 2s
+    setInterval(atualizarimagem, 2000)
+    </script>
+</body>
+</html>

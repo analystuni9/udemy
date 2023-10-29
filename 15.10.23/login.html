@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            font-family: "Poppins", verdana, geneva, tahoma, sans-serif;
+        }
+        body {
+            max-width: 1080px;
+            font-family: "Poppins", verdana, geneva, tahoma, sans-serif;
+            margin: 0 auto;
+            font-size: 14px;
+            color: white;
+        }
+
+        main {
+            max-width: 1080px;
+            background-image: url(background-drone.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(12, 11, 11, 0.705);
+            background-blend-mode: overlay;
+            padding: 1px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(55, 53, 53, 0.77);
+            height: 70px;
+            font-size:16px;
+        }
+
+        .menu-bar {
+            margin: 20px;
+            display: none;
+            color: white;
+            /* border:1px solid black; */
+
+        }
+
+        .menu-bar ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .menu-bar li:hover {
+            text-decoration: underline rgb(255, 47, 92);
+            cursor: pointer;
+        }
+
+        .btn-enter {
+            /* border:1px solid black; */
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(255, 47, 92);
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .esp.btn-enter:hover {
+            background: transparent;
+            border: 1px solid rgb(255, 47, 92);
+            text-decoration: none;
+        }
+
+        .menu-mobile {
+            width: 350px;
+            height: 50vh;
+            color: white;
+            border: 1px solid white;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: 100px;
+            transition: all ease 0.5s;
+            display: none;
+        }
+
+        .menu-mobile ul {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            list-style-type: none;
+            padding: 20px;
+        }
+
+        .menu-mobile li {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.171);
+            padding: 5px;
+        }
+
+        .menu-mobile i {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .menu-mobile li:hover {
+            text-decoration: underline rgb(255, 47, 92);
+            cursor: pointer;
+        }
+        .menu-mobile a {
+            text-decoration:none;
+            color:white;
+        }
+        .menu-mobile a:hover {
+            text-decoration: underline rgb(255, 47, 92);
+            cursor: pointer;
+        }
+        .icon-menu {
+            width: 50px;
+            height: 50px;
+            padding-top: 5px;
+            /* display:none; */
+            /* border: 1px solid black; */
+        }
+
+        .icon-menu span {
+            display: block;
+            width: 35px;
+            height: 7px;
+            margin-bottom: 7px;
+            background-color: white;
+            border: 1px solid white;
+            transition: all ease 0.5s;
+            border-radius: 30px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 50px;
+            margin-left: 10px;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+
+        .animation_x span:nth-child(1) {
+            transform: translateY(15px) rotate(-45deg);
+        }
+
+        .animation_x span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .animation_x span:nth-child(3) {
+            transform: translateY(-13px) rotate(45deg)
+        }
+
+        .exibir {
+            display: block;
+        }
+
+        @media screen and (max-width:850px) {
+            .menu-bar {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:850px) {
+            .menu-bar {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width:850px) {
+
+            .icon-menu,
+            .menu-mobile {
+                display: none;
+            }
+        }
+
+        .container {
+            max-width: 1080px;
+            width: 90vw;
+            height: 90vh;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            /* border:1px solid black; */
+        }
+
+        .box {
+            width: 700px;
+            height: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 1px 1px 1px black;
+            /* border:1px solid black; */
+            /* background-color:blueviolet; */
+        }
+
+        .box h1 {
+            width: 100%;
+            text-align: center;
+            font-size:35px;
+            margin-bottom:30px;
+        }
+
+        .box input {
+            border: none;
+            outline: none;
+            background: transparent;
+            /* background-color:blue; */
+            border: 2px solid rgba(190, 185, 185, 0.438);
+            border-radius: 30px;
+            padding: 15px 100px 15px 20px;
+            color: white;
+            caret-color: white;
+
+        }
+
+        .box label {
+            margin-left: 25px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .box input::placeholder {
+            font-size: 20px;
+            color:rgba(190, 185, 185, 0.616);
+        }
+
+        .box-username {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            margin-bottom: 20px;
+            /* border:1px solid black; */
+        }
+
+        .bxs-user {
+            position: absolute;
+            top: 0;
+            margin-top: 48px;
+            margin-left: 350px;
+            font-size:17px;
+        }
+
+        .box-password {
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            /* border:1px solid black; */
+        }
+        
+        .bxs-lock-alt {
+            position: absolute;
+            top: 0;
+            margin-top: 48px;
+            margin-left: 350px;
+            font-size:17px;
+        }
+        
+        .lembrar {
+            display: flex;
+            gap: 100px;
+        }
+
+        .lembrar a {
+            text-decoration: none;
+            color: white;
+            font-size:15px;
+        }
+
+        .lembrar a:hover {
+            text-decoration: underline rgb(255, 47, 92);
+        }
+        .lembrar label {
+            font-size:16px;
+        }
+        .box-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            padding: 10px 50px;
+            background: transparent;
+            /* border: 2px solid gray; */
+            background-color: rgb(255, 47, 92);
+            border-radius: 20px;
+            font-size: 17px;
+            color: white;
+        }
+
+        .btn:hover {
+            background: transparent;
+            border: 1px solid rgb(255, 47, 92);
+            cursor: pointer;
+        }
+
+        footer {
+            width: 100%;
+            background-color: rgba(55, 53, 53, 0.77);
+            color: white;
+        }
+
+        footer p {
+            text-align: center;
+            padding: 7px 0;
+        }
+
+        .icones-rodape ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+            gap: 30px;
+            padding: 7px 0;
+        }
+
+        .icones-rodape i:hover {
+            text-decoration: underline #ff2f5c;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        .links-rodape ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: row wrap;
+            gap: 30px;
+            padding: 7px 0;
+        }
+
+        .links-rodape li:hover {
+            text-decoration: underline #ff2f5c;
+            cursor: pointer;
+        }
+
+        .icones-rodape i {
+            font-size: 20px;
+        }
+        @media screen and (max-width:850px) {
+            .btn-enter.esp {
+                width:80px;
+                padding:10px 10px;
+                border-radius: 10px;
+                background-color: rgb(255, 47, 92);
+                text-shadow: 1px 1px 1px black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="icon-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu-bar">
+            <ul>
+                <li>início</li>
+                <li>blog</li>
+                <li>planos</li>
+                <li>sustentabilidade</li>
+                <li>configurações</li>
+                <li>ajuda</li>
+                <li class="esp btn-enter">entrar</li>
+            </ul>
+        </nav>
+        <nav class="menu-mobile">
+            <ul>
+                <li><i class='bx bx-home'><a href="">Inicio</a></i></li>
+                <li><i class='bx bx-spreadsheet'><a href="">Blog</a></i></li>
+                <li><i class='bx bx-store'><a href="">Planos</a></i></li>
+                <li><i class='bx bx-leaf'><a href="">Sustentabilidade</a></i></li>
+                <li><i class='bx bx-cog'><a href="">Configurações</a></i></li>
+                <li><i class='bx bx-info-circle'><a href="">Ajuda</a></i></li>
+                <li class="esp btn-enter" onclick="abrirlink()">Entrar</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="box">
+                <form action="#">
+                    <h1>Login</h1>
+                    <div class="box-username">
+                        <label for="email">Usuário</label>
+                        <input type="email" name="usuario" id="email" value="" placeholder="Digite seu email">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="box-password">
+                        <label for="password">Senha</label>
+                        <input type="password" name="senha" id="password" value="" placeholder="Digite sua senha">
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                    <div class="lembrar">
+                        <label for="lembrar">
+                            <input type="checkbox" name="lembrar" id="lembrar">Lembre-me
+                        </label>
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                    <div class="box-btn">
+                        <button class="btn">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="icones-rodape">
+            <ul>
+                <li><i class='bx bxl-facebook-square'></i></li>
+                <li><i class='bx bxl-whatsapp'></i></li>
+                <li><i class='bx bxl-instagram'></i></li>
+                <li><i class='bx bxl-twitter'></i></li>
+                <li><i class='bx bxl-youtube'></i></li>
+            </ul>
+        </div>
+        <div class="links-rodape">
+            <ul>
+                <li>Inicio</li>
+                <li>Sobre</li>
+                <li>Serviços</li>
+                <li>Time</li>
+                <li>Contatos</li>
+            </ul>
+        </div>
+        <p>
+            copyright &copy; 2023 Drone Drop. Todos os direitos reservados.
+        </p>
+    </footer>
+    <script>
+        let iconmenu = document.querySelector('.icon-menu')
+        let menumobile = document.querySelector('.menu-mobile')
+        let animation = () => {
+            if (iconmenu.classList.contains('animation_x')) {
+                iconmenu.classList.remove('animation_x')
+                menumobile.classList.remove('exibir')
+
+            } else {
+                iconmenu.classList.add('animation_x')
+                menumobile.classList.add('exibir')
+            }
+        }
+        iconmenu.addEventListener('click', animation)
+    </script>
+</body>
+</html>
