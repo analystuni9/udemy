@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrossel alternado</title>
+    <style>
+        input {
+            display:none;
+        }
+        label {
+            display:inline-block;
+            border:1px solid blue;
+            padding:5px;
+            border-radius:50%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="radio" name="imagem" id="radio1" value="imagem/1.jpg">
+        <label for="radio1"></label>
+
+        <input type="radio" name="imagem" id="radio2" value="imagem/2.jpg">
+        <label for="radio2"></label>
+
+        <input type="radio" name="imagem" id="radio3" value="imagem/3.jpg">
+        <label for="radio3"></label>
+
+        <input type="radio" name="imagem" id="radio4" value="imagem/4.jpg">
+        <label for="radio4"></label>
+
+        <input type="radio" name="imagem" id="radio5" value="imagem/5.jpg">
+        <label for="radio5"></label>
+    </div>
+    <div>
+        <img class="exibir" src="imagem/1.jpg" alt="">
+    </div>
+</body>
+<script>
+    let btninput = document.querySelectorAll("input[type='radio']")
+    let exibir = document.querySelector(".exibir")
+    let index1 = 0
+    let carrosselalternado = () => {
+        index1 = (++index1) % btninput.length
+        btninput[index1].checked = true
+        exibir.src = btninput[index1].value
+    }
+    btninput.forEach((radio, index2) => {
+        radio.addEventListener('change', () =>{
+            index1 = index2
+        })
+    })
+    setInterval(carrosselalternado, 2000)
+    let stylelabel = () => {
+
+    }
+</script>
+</html>

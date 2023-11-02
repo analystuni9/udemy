@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARROSSEL ALTERNADO</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 30px;
+            height: 5px;
+            border-radius:20px;
+            border: 3px solid black;
+        }
+
+        input[type='radio']:checked+label {
+            background-color: rgb(77, 77, 241);
+        }
+        body {
+            font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Carrossel Alternado</h1>
+    <div>
+        <input type="radio" name="numero" id="radio1" value="imagem2/1.jpg">
+        <label for="radio1"></label>
+
+        <input type="radio" name="numero" id="radio2" value="imagem2/2.jpg">
+        <label for="radio2"></label>
+
+        <input type="radio" name="numero" id="radio3" value="imagem2/3.jpg">
+        <label for="radio3"></label>
+
+        <input type="radio" name="numero" id="radio4" value="imagem2/4.jpg">
+        <label for="radio4"></label>
+
+        <input type="radio" name="numero" id="radio5" value="imagem2/5.jpg">
+        <label for="radio5"></label>
+    </div>
+    <div>
+        <img class="exibir" src="imagem2/1.png" alt="">
+    </div>
+</body>
+<script>
+    let btninput = document.querySelectorAll("input[type='radio']")
+    let exibir = document.querySelector(".exibir")
+    let index = 0
+    let carrosselautomatico = () => {
+        index = (++index) % btninput.length
+        btninput[index].checked = true
+        exibir.src = btninput[index].value
+    }
+    setInterval(carrosselautomatico, 2000)
+    let carrosselmanual = () => {
+        btninput.forEach((radio) => {
+            if (radio.checked) {
+                let selecione = radio.value
+                exibir.src = selecione
+            }
+        })
+    }
+    btninput.forEach((radio) => {
+        radio.addEventListener("click", carrosselmanual)
+    })
+</script>
+
+</html>

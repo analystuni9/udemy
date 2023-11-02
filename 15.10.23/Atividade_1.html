@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação 1</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image:url(goku_2.jpg);
+            background-size:cover;
+            background-position:top center;
+            background-repeat:no-repeat;
+            font-family:"Poppins", Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        /* nav com os links */
+        .nav-links {
+            transform: translateY(-1000px);
+            transition: all ease 1s; 
+            width:300px;
+            height:250px;
+            color:white;
+            background-color:black;
+        }
+        nav ul {
+            list-style-type: none; 
+        }
+        /* Ícone de fechar (X) */
+        .icon-x {
+            position: absolute;
+            top: 0;
+            opacity: 0; 
+        }
+        .nav-links ul {
+            display:flex;
+            flex-flow:column wrap;
+            gap:30px;
+            justify-content:center;
+            align-items:center;
+            padding:25px 10px;
+            text-align:center;
+        }
+        .nav-links li {
+            width: 100%;
+            border-bottom:1px solid rgba(128, 128, 128, 0.212);
+        }
+        .nav-links li:hover {
+            text-decoration:underline red;
+            transition:all ease 1s;
+            cursor:pointer;
+        }
+        .icon-hamb, .icon-x i {
+            font-size: 50px;
+            color:white;
+        }
+        .icon-hamb, .icon-x i:hover {
+            cursor:pointer;
+        }
+        </style>
+</head>
+<!-- html -->
+<body>
+    <div class="icon-hamb" onclick="alternar()">
+        <i class='bx bx-menu'></i> 
+    </div>
+    <div class="icon-x" onclick="alternar()">
+        <i><i class='bx bx-x'></i></i> 
+    </div>
+    <nav class="nav-links">
+        <ul>
+            <li>inicio</li>
+            <li>blog</li>
+            <li>configurações</li>
+            <li>sair</li>
+        </ul>
+    </nav>
+</body>
+<!-- js -->
+<script>
+    // Seleciona o elemento HTML com a classe 'nav-links' e o armazena na variável 'navlinks'
+    let navlinks = document.querySelector('.nav-links');
+    // Seleciona o elemento HTML com a classe 'icon-hamb' e o armazena na variável 'iconhamb'
+    let iconhamb = document.querySelector('.icon-hamb');
+    // Seleciona o elemento HTML com a classe 'icon-x' e o armazena na variável 'iconx'
+    let iconx = document.querySelector('.icon-x');
+    // Função para alternar a visibilidade da navegação
+    function alternar() {
+        // Verifica se a propriedade 'transform' da navegação está definida como 'translateY(-1000px)'
+        if (navlinks.style.transform == 'translateY(-1000px)') {
+            // Se a navegação estiver escondida, mostra a navegação deslizando-a para baixo
+            navlinks.style.transform = 'translateY(0)';
+            // Torna o ícone do menu (hambúrguer) invisível
+            iconhamb.style.opacity = '0';
+            // Torna o ícone de fechar (X) visível
+            iconx.style.opacity = '1';
+        } else {
+            // Se a navegação estiver visível, esconde a navegação deslizando-a para cima
+            navlinks.style.transform = 'translateY(-1000px)';
+            // Torna o ícone do menu (hambúrguer) visível
+            iconhamb.style.opacity = '1';
+            // Torna o ícone de fechar (X) invisível
+            iconx.style.opacity = '0';
+        }
+    }
+</script>
+</html>

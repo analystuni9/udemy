@@ -22,12 +22,12 @@ body {
 
 header {
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     top: 0;
     z-index: 0;
     /* max-width:1080px; */
     height: 480px;
-    font-size:15px;
+    font-size: 15px;
     /* border:1px solid black; */
 
 }
@@ -57,7 +57,7 @@ header {
     /* border:1px solid black; */
 }
 
-.menu ul {
+.menu-bar ul {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -94,19 +94,20 @@ header {
 }
 
 .menu-mobile {
-    width: 300px;
+    width: 400px;
     /* height:33vh; */
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 5;
-    background-color: rgba(128, 128, 128, 0.356);
+    z-index: 4;
+    color: black;
+    background-color: white;
     margin-top: 80px;
     display: none;
     padding: 20px;
     transition: all 0.5s ease;
-    border-radius: 10px;
-    text-shadow: 1px 1px 1px black;
+    font-weight: 700;
+    box-shadow: 1px 1px 3px black;
 }
 
 .menu-mobile ul {
@@ -120,6 +121,23 @@ header {
 
 }
 
+.menu-mobile a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-mobile li {
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.205);
+    padding-bottom: 5px;
+}
+
+.menu-mobile li:hover {
+    text-decoration: underline rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
 .btn-entrar {
     text-align: center;
     background-color: #ff2f5c;
@@ -128,10 +146,10 @@ header {
     border-radius: 7px;
     padding: 10px 12px;
     border: none;
-    font-weight:bold;
+    font-weight: bold;
 }
 
-.menu .btn-entrar:hover {
+.menu-bar .btn-entrar:hover {
     background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration: none;
@@ -148,24 +166,13 @@ header {
     transition: all 1s ease;
 }
 
-.menu li:hover {
+.menu-bar li:hover {
     text-decoration: underline rgb(255, 47, 92);
     transition: all 1s ease;
     cursor: pointer;
     transition: all 1s ease;
 }
 
-.menu-mobile li {
-    width: 100%;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.205);
-    padding-bottom: 5px;
-}
-
-.menu-mobile li:hover {
-    text-decoration: underline rgb(255, 47, 92);
-    cursor: pointer;
-    transition: all 1s ease;
-}
 
 input[type="radio"] {
     display: none;
@@ -253,7 +260,7 @@ article:nth-child(1) {
 .imagem-empresa img {
     float: left;
     border-radius: 10px;
-    margin: 20px 20px 0 20px;
+    margin: 20px;
 }
 
 article:nth-child(1) h2 {
@@ -261,6 +268,10 @@ article:nth-child(1) h2 {
     color: black;
     font-size: 25px;
     margin-bottom: 10px;
+}
+.conteudo-empresa {
+    padding:20px 10px;
+
 }
 
 /* conteudo empresa */
@@ -512,13 +523,14 @@ article:nth-child(4) {
 footer {
     width: 100%;
     background-color: rgba(55, 53, 53, 0.77);
-    font-size:15px;
+    font-size: 15px;
 }
 
 footer p {
     text-align: center;
     padding: 7px 0;
 }
+
 .icones-rodape ul {
     display: flex;
     align-items: center;
@@ -553,58 +565,24 @@ footer p {
 }
 
 /* Quero que quando chegue na largura máxima de 800px você esconda meu menu desktop*/
-@media screen and (max-width:900px) {
-    .menu {
+@media screen and (max-width:850px) {
+    .menu-bar {
         display: none;
     }
 }
 
 /* Quero que quando chegue na largura minima de 800px você esconda icone de menu mobile até o limite */
-@media screen and (min-width:900px) {
-    .icon-mobile {
+@media screen and (min-width: 850px) {
+    .icon-mobile, 
+    .nav-mobile {
         display: none;
     }
 }
-
-/* Quero que quando chegue na largura máxima de 600px você aplique largura de 100% no menu mobile e botão personalizado */
-@media screen and (max-width:700px) {
-
-    .menu-mobile,
-    .btn-personalizado-1 {
-        width: 100%;
-        margin: 0 auto;
+@media screen and (max-width:400px) {
+    .menu-mobile {
+        width:100%;
     }
 }
-
-/* Quero que quando chegue na largura minima de 600px voce aplique 100% de largura botão personalizado */
-@media screen and (min-width:700px) {
-    .btn-personalizado-1 {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:1075px) {
-    .card {
-        margin: 0 auto;
-        width: 350px;
-    }
-
-}
-
-@media screen and (max-width:811px) {
-    .card {
-        margin: 0 auto;
-        width: 600px;
-    }
-}
-
-@media screen and (max-width:1075px) {
-    .imagem img {
-        width: 250px;
-        height: 300px;
-    }
-}
-
 ::-webkit-scrollbar {
     width: 1px;
     height: 7px;

@@ -79,19 +79,19 @@
         .menu-mobile {
             position: absolute;
             z-index:3;
-            width: 350px;
-            height: 50vh;
+            width: 400px;
+            /* height: 50vh; */
             color: black;
             position: absolute;
+            background-color:white;
             right: 0;
             top: 0;
-            margin-top: 100px;
+            margin-top: 83px;
             transition: all ease 0.5s;
             display: none;
-            font-weight:bold;
             /* border: 1px solid white; */
         }
-
+        
         .menu-mobile ul {
             display: flex;
             flex-flow: column wrap;
@@ -113,8 +113,9 @@
             display: flex;
             justify-content: center;
             gap: 10px;
+            font-weight:700;
         }
-
+        
         .menu-mobile li:hover {
             text-decoration: underline rgb(255, 47, 92);
             cursor: pointer;
@@ -123,6 +124,7 @@
         .menu-mobile a {
             text-decoration: none;
             color: black;
+            font-weight:700;
         }
         
         .menu-mobile a:hover {
@@ -280,9 +282,10 @@
             flex-flow: column nowrap;
             align-items: center;
             justify-content: center;
+            color:white;
             /* background-color: #1f262c; */
-            background-color: white;
-            border-radius: 20px;
+            background-color: #1f262c;
+            /* border-radius: 20px; */
             box-shadow: 5px 5px 5px rgb(49, 48, 48);
             /* border: 1px solid black; */
         }
@@ -295,9 +298,9 @@
             justify-content: center;
             flex-grow: 1;
             /* background-color:#1f262c; */
-            background-color: white;
+            background-color: #1f262c;
             /* color: white; */
-            color: black;
+            color: white;
             text-align: left;
             /* border: 1px solid red; */
         }
@@ -317,10 +320,10 @@
             padding: 5px;
             height: 100px;
             text-align: center;
-            background-color: white;
+            background-color: #1f262c;
             /* background-color: #1f262c; */
             /* color: white; */
-            color: black;
+            color: white;
             /* border: 1px solid black; */
             
         }
@@ -355,12 +358,11 @@
         }
         .card_preco_2 {
             font-size:55px;
-            color:rgb(73, 73, 236);
+            color:rgb(26, 75, 235);
             text-shadow:1px 1px 1px black;
         }
         .x2 {
-            border-bottom:4px solid rgb(73, 73, 236);
-
+            border-bottom:4px solid rgb(26, 75, 235);
         }
         .card_preco_3 {
             font-size:55px;
@@ -380,11 +382,11 @@
         }
         .card_preco_5 {
             font-size:55px;
-            color:rgb(168, 51, 223);
+            color:rgb(140, 58, 207);
             text-shadow:1px 1px 1px black;
         }
         .x5 {
-            border-bottom:4px solid rgb(168, 51, 223);
+            border-bottom:4px solid rgb(140, 58, 207);
             
         }
         
@@ -402,7 +404,7 @@
             color:rgb(255, 165, 0);
         }
         .y2 li::marker {
-            color:rgb(73, 73, 236);
+            color:rgb(26, 75, 235);
         }
         .y3 li::marker {
             color:rgb(247, 0, 255);
@@ -411,7 +413,7 @@
             color:rgb(0, 128, 0);
         }
         .y5 li::marker {
-            color:rgb(168, 51, 223);
+            color:rgb(140, 58, 207);
         }
         .y6 li::marker {
             color:rgb(255, 0, 0);
@@ -560,7 +562,7 @@
                 <li>sustentabilidade</li>
                 <li>configurações</li>
                 <li>ajuda</li>
-                <li class="esp btn-enter">entrar</li>
+                <li class="esp btn-enter">Entrar</li>
             </ul>
         </nav>
     </header>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrossel alternado</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        body {
+            font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            margin-left: 10px;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-left: 10px;
+
+        }
+
+        div {
+            margin-left: 10px;
+        }
+
+        /* Estilo para labels quando marcados (selecionados) */
+        input[type="radio"]:checked+label {
+            background-color: rgb(123, 116, 219);
+            /* Altere para a cor desejada */
+        }
+
+        input[type="radio"]:checked+label {
+            background-color: aqua;
+        }
+   
+    </style>
+</head>
+
+<body>
+    <h1>Carrossel Alternado</h1>
+    <div>
+        <input type="radio" name="imagem" id="radio1" value="imagem/1.jpg">
+        <label for="radio1"></label>
+
+        <input type="radio" name="imagem" id="radio2" value="imagem/2.jpg">
+        <label for="radio2"></label>
+
+        <input type="radio" name="imagem" id="radio3" value="imagem/3.jpg">
+        <label for="radio3"></label>
+
+        <input type="radio" name="imagem" id="radio4" value="imagem/4.jpg">
+        <label for="radio4"></label>
+
+        <input type="radio" name="imagem" id="radio5" value="imagem/5.jpg">
+        <label for="radio5"></label>
+    </div>
+    <div>
+        <img class="exibir" src="imagem/1.jpg" alt="">
+    </div>
+</body>
+<script>
+    let btninput = document.querySelectorAll("input[type='radio']")
+    let exibir = document.querySelector(".exibir")
+    let index = 0
+    let carrosselautomatico = () => {
+        index = (++index) % btninput.length
+        btninput[index].checked = true
+        exibir.src = btninput[index].value
+    }
+    setInterval(carrosselautomatico, 2000)
+    let carrosselmanual = () => {
+        btninput.forEach((radio) => {
+            if (radio.checked) {
+                let selecione = radio.value
+                exibir.src = selecione
+            }
+        })
+    }
+    btninput.forEach((radio) => {
+        radio.addEventListener('click', carrosselmanual)
+    })
+</script>
+
+</html>

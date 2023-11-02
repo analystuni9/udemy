@@ -67,32 +67,39 @@
         }
 
         .btn-enter {
-            /* border:1px solid black; */
-            padding: 10px;
+            text-align:center;
+            border:none;
+            width:70px;
+            padding:10px;
+            color:white;
             border-radius: 10px;
             background-color: rgb(255, 47, 92);
             text-shadow: 1px 1px 1px black;
+            font-weight:bold;
+            /* border:1px solid black; */
         }
 
-        .esp.btn-enter:hover {
+        .btn-enter:hover {
             background: transparent;
             border: 1px solid rgb(255, 47, 92);
             text-decoration: none;
         }
 
         .menu-mobile {
-            width: 350px;
-            height: 50vh;
-            color: white;
+            width: 400px;
+            height: 450px;
+            color: black;
+            background-color:white;
             border: 1px solid white;
             position: absolute;
             right: 0;
             top: 0;
+            z-index:3;
             margin-top: 100px;
             transition: all ease 0.5s;
             display: none;
         }
-
+        
         .menu-mobile ul {
             display: flex;
             flex-flow: column wrap;
@@ -109,20 +116,23 @@
             border-bottom: 1px solid rgba(128, 128, 128, 0.171);
             padding: 5px;
         }
-
+        
         .menu-mobile i {
             display: flex;
             justify-content: center;
             gap: 10px;
+            font-weight:bold;
         }
-
+        
         .menu-mobile li:hover {
             text-decoration: underline rgb(255, 47, 92);
             cursor: pointer;
         }
         .menu-mobile a {
             text-decoration:none;
-            color:white;
+            font-weight:bold;
+            color:black;
+            font-size:14px;
         }
         .menu-mobile a:hover {
             text-decoration: underline rgb(255, 47, 92);
@@ -365,15 +375,6 @@
         .icones-rodape i {
             font-size: 20px;
         }
-        @media screen and (max-width:850px) {
-            .btn-enter.esp {
-                width:80px;
-                padding:10px 10px;
-                border-radius: 10px;
-                background-color: rgb(255, 47, 92);
-                text-shadow: 1px 1px 1px black;
-            }
-        }
     </style>
 </head>
 
@@ -395,7 +396,7 @@
                 <li>sustentabilidade</li>
                 <li>configurações</li>
                 <li>ajuda</li>
-                <li class="esp btn-enter">entrar</li>
+                <li class="btn-enter">Entrar</li>
             </ul>
         </nav>
         <nav class="menu-mobile">
@@ -406,7 +407,7 @@
                 <li><i class='bx bx-leaf'><a href="">Sustentabilidade</a></i></li>
                 <li><i class='bx bx-cog'><a href="">Configurações</a></i></li>
                 <li><i class='bx bx-info-circle'><a href="">Ajuda</a></i></li>
-                <li class="esp btn-enter" onclick="abrirlink()">Entrar</li>
+                <button class="btn-enter" onclick="abrirlink()">Entrar</button>
             </ul>
         </nav>
     </header>
