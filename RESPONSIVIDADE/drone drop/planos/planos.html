@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>planos</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="icon-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu-bar">
+            <ul>
+                <li>início</li>
+                <li>blog</li>
+                <li>planos</li>
+                <li>sustentabilidade</li>
+                <li>configurações</li>
+                <li>ajuda</li>
+                <li class="btn-enter">Entrar</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav class="menu-mobile">
+            <ul>
+                <li><i class='bx bx-home'><a href="">Inicio</a></i></li>
+                <li><i class='bx bx-spreadsheet'><a href="">Blog</a></i></li>
+                <li><i class='bx bx-store'><a href="">Planos</a></i></li>
+                <li><i class='bx bx-leaf'><a href="">Sustentabilidade</a></i></li>
+                <li><i class='bx bx-cog'><a href="">Configurações</a></i></li>
+                <li><i class='bx bx-info-circle'><a href="">Ajuda</a></i></li>
+                <li class="esp btn-enter" onclick="abrirlink()">Entrar</li>
+            </ul>
+        </nav>
+        <nav>
+            <div class="imagem-carrossel">
+                <img class="exibir" src="imagens/1.png" alt="">
+            </div>
+            <div class="carrossel-manual">
+                <input type="radio" name="imagem" id="radio1" value="imagens/1.png">
+                <label for="radio1"></label>
+
+                <input type="radio" name="imagem" id="radio2" value="imagens/2.png">
+                <label for="radio2"></label>
+
+                <input type="radio" name="imagem" id="radio3" value="imagens/3.png">
+                <label for="radio3"></label>
+
+                <input type="radio" name="imagem" id="radio4" value="imagens/4.png">
+                <label for="radio4"></label>
+
+                <input type="radio" name="imagem" id="radio5" value="imagens/5.png">
+                <label for="radio5"></label>
+
+                <input type="radio" name="imagem" id="radio6" value="imagens/6.png">
+                <label for="radio6"></label>
+            </div>
+        </nav>
+        <section>
+            <h1>Escolha seu plano</h1>
+            <div class="box">
+                <div class="box-cards">
+                    <div class="card">
+                        <div class="card_title k1">
+                            <h2>Plano Básico:</h2>
+                            <h2>Sky Express</h2>
+                            <p></p>
+                        </div>
+                        <div class="card_mensal x1">
+                            <h3><span class="card_preco_1">R$50</span> por mês</h3>
+                        </div>
+                        <ul class="y1">
+                            <h4>Descrição:</h4>
+                            <li>Este plano é ideal para clientes que buscam uma entrega rápida e econômica.</li>
+                            <li>Entrega rápida dentro de uma determinada área designada.</li>
+                            <li>Prazo de entrega: 1-2 horas após a confirmação do pedido.</li>
+                            <h4>Cobertura:</h4>
+                            <li>Área urbana central da cidade ou região especificada.</li>
+                        </ul>
+                        <div class="btn">
+                            <a href="#">Assinar</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card_title k2">
+                            <h2>Plano Padrão:</h2>
+                            <h2>Prime Air</h2>
+                            <p></p>
+                        </div>
+                        <div class="card_mensal x2">
+                            <h3><span class="card_preco_2">R$100</span> por mês</h3>
+                        </div>
+                        <ul class="y2">
+                            <h4>Descrição:</h4>
+                            <li>Este plano oferece um equilíbrio entre velocidade, cobertura e custo.</li>
+                            <li>Entrega dentro de uma área mais ampla, incluindo subúrbios e áreas urbanas.</li>
+                            <li>Prazo de entrega: 2-4 horas após a confirmação do pedido.</li>
+                            <h4>Cobertura:</h4>
+                            <li>Cobertura estendida abrangendo a cidade e arredores.</li>
+                        </ul>
+                        <div class="btn">
+                            <a href="#">Assinar</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card_title k3">
+                            <h2>Plano Premium:</h2>
+                            <h2>UltraFly</h2>
+                            <p></p>
+                        </div>
+                        <div class="card_mensal x3">
+                            <h3><span class="card_preco_3">R$70</span> por mês
+                        </div>
+                        <ul class="y3">
+                            <h4>Descrição:</h4>
+                            <li>Este plano oferece entrega rápida, ampla cobertura e atendimento personalizado.</li>
+                            <li>Entrega rápida em qualquer lugar da região atendida.</li>
+                            <li>Prazo de entrega: 1-2 horas após a confirmação do pedido.</li>
+                            <h4>Cobertura:</h4>
+                            <li>Cobertura regional extensa, incluindo cidades, subúrbios e áreas rurais.</li>
+                        </ul>
+                        <div class="btn">
+                            <a href="#">Assinar</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card_title k4">
+                            <h2>Plano Ecológico:</h2>
+                            <h2>Green Skies</h2>
+                            <p></p>
+                        </div>
+                        <div class="card_mensal x4">
+                            <h3><span class="card_preco_4">R$70</span> por mês</h3>
+                        </div>
+                        <ul class="y4">
+                            <h4>Descrição:</h4>
+                            <li>Entrega sustentável utilizando drones movidos a energia solar.</li>
+                            <li>Entrega rápida dentro de uma determinada área designada.</li>
+                            <li>Prazo de entrega: 2-4 horas após a confirmação do pedido.</li>
+                            <h4>Cobertura:</h4>
+                            <li>Cobertura limitada a áreas urbanas e arredores próximos.</li>
+                        </ul>
+                        <div class="btn">
+                            <a href="#">Assinar</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card_title">
+                            <h2>Plano Noturno: Moonlight Express</h2>
+                            <p></p>
+                        </div>
+                        <div class="card_mensal x5">
+                            <h3><span class="card_preco_5">R$90</span> por mês</h3>
+                        </div>
+                        <ul class="y5">
+                            <h4>Descrição:</h4>
+                            <li>Este plano atende a clientes que precisam de entregas durante a noite ou em horários
+                                específicos.</li>
+                            <li>Entregas durante a noite ou em horários específicos agendados.</li>
+                            <li>Prazo de entrega: Conforme a solicitação do cliente, dentro dos horários noturnos.</li>
+                            <h4>Cobertura:</h4>
+                            <li>Disponível em áreas urbanas e algumas áreas suburbanas com restrições de horário.</li>
+                        </ul>
+                        <div class="btn">
+                            <a href="#">Assinar</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card_title">
+                            <h2>Plano Empresarial: Corporate Airway</h2>
+                            <p>
+                            </p>
+                        </div>
+                        <div class="card_mensal x6">
+                            <h3 class="card_preco_6">Personalizado</h3>
+                        </div>
+                        <ul class="y6">
+                            <h4>Descrição:</h4>
+                            <li>Este plano é projetado para atender às necessidades de empresas que fazem entregas
+                                frequentes.</li>
+                            <li>Contrato de serviço de entrega de longo prazo.</li>
+                            <li>Entrega rápida e flexível de acordo com as necessidades da empresa.</li>
+                            <h4>Cobertura:</h4>
+                            <li>Cobertura ampla, personalizada com base nas necessidades da empresa.</li>
+                        </ul>
+                        <div class="btn">
+                            <a href="#">Assinar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="icones-rodape">
+            <ul>
+                <li><i class='bx bxl-facebook-square'></i></li>
+                <li><i class='bx bxl-whatsapp'></i></li>
+                <li><i class='bx bxl-instagram'></i></li>
+                <li><i class='bx bxl-twitter'></i></li>
+                <li><i class='bx bxl-youtube'></i></li>
+            </ul>
+        </div>
+        <div class="links-rodape">
+            <ul>
+                <li>Inicio</li>
+                <li>Sobre</li>
+                <li>Serviços</li>
+                <li>Time</li>
+                <li>Contatos</li>
+            </ul>
+        </div>
+        <p>
+            copyright &copy; 2023 Drone Drop. Todos os direitos reservados.
+        </p>
+    </footer>
+</body>
+
+</html>

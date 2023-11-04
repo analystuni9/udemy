@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrossel Alternado</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+        body {
+            width:90%;
+            max-width:1080px;
+            margin: 0 auto; 
+        }
+        input[type='radio'] {
+            display: none;
+        }
+        input[type='radio']:checked+label {
+            background-color: red;
+        }
+        label {
+            display: inline-block;
+            width: 30px;
+            height: 5px;
+            border: 3px solid black;
+            margin-right:10px;
+            border-radius: 10px;
+            cursor:pointer;
+        }
+        h1 {
+            max-width:1080px;
+            font-family: "Poppins";
+            text-align:center;
+        }
+        .box {
+            width:100%;
+            max-width:1080px;
+            position:absolute;
+            top:0;
+            margin-top:510px;
+            display:flex;
+            justify-content:center;
+            z-index:1;
+            /* border:1px solid black; */
+        }
+        .box-2 {
+            width:100%;
+            max-width:1080px;
+            position:absolute;
+            top:0;
+            display:flex;
+            justify-content:center;
+            margin-top:100px;
+
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>Carrossel Alternado</h1>
+    <div class="box">
+        <input type="radio" name="imagem" id="radio1" value="Naruto/1.jpg">
+        <label for="radio1"></label>
+
+        <input type="radio" name="imagem" id="radio2" value="Naruto/2.jpg">
+        <label for="radio2"></label>
+
+        <input type="radio" name="imagem" id="radio3" value="Naruto/3.jpg">
+        <label for="radio3"></label>
+
+        <input type="radio" name="imagem" id="radio4" value="Naruto/4.jpg">
+        <label for="radio4"></label>
+
+        <input type="radio" name="imagem" id="radio5" value="Naruto/5.jpg">
+        <label for="radio5"></label>
+
+        <input type="radio" name="imagem" id="radio6" value="Naruto/6.jpg">
+        <label for="radio6"></label>
+    </div>
+    <div class="box-2">
+        <img class="exibir" src="Naruto/1.jpg" alt="">
+    </div>
+    <script>
+        let btninput = document.querySelectorAll("input[type='radio']")
+        let exibir = document.querySelector(".exibir")
+        let i = 0
+        let k = 0
+        let carrosselautomatico = () => {
+            k = (++k) % btninput.length
+            btninput[k].checked = true
+            exibir.src = btninput[k].value
+        }
+        setInterval(carrosselautomatico, 2000)
+        let carrosselmanual = () => {
+            for (i = 0; i < btninput.length; i++) {
+                if (btninput[i].checked) {
+                    let selecione = btninput[i].value
+                    exibir.src = selecione
+                }
+            }
+        }
+        for (i = 0; i < btninput.length; i++) {
+            btninput[i].addEventListener("click", carrosselmanual)
+        }
+    </script>
 </body>
+
 </html>
