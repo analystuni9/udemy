@@ -63,7 +63,7 @@ input[type='radio']:checked + label {
 }
 
 
-.esp.btn-enter:hover {
+li.btn-enter:hover {
     background: transparent;
     border: 1px solid rgb(255, 47, 92);
     text-decoration: none;

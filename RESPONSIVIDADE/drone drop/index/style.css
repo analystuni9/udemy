@@ -435,7 +435,7 @@ article:nth-child(4) {
     width: 300px;
     height: 400px;
     background-repeat: no-repeat;
-    background-image: url(img/background-01.png);
+    background-image: url(imagens/background-01.png);
     padding-top: 120px;
     display: flex;
     flex-flow: column;
@@ -447,36 +447,36 @@ article:nth-child(4) {
 }
 
 .card-equipe-2 {
-    background-image: url(img/background-02.png);
+    background-image: url(imagens/background-02.png);
 
 }
 
 .card-equipe-3 {
-    background-image: url(img/background-03.png);
+    background-image: url(imagens/background-03.png);
 }
 
 .card-equipe-4 {
-    background-image: url(img/background-04.png);
+    background-image: url(imagens/background-04.png);
 }
 
 .card-equipe-5 {
-    background-image: url(img/background-05.png);
+    background-image: url(imagens/background-05.png);
 }
 
 .card-equipe-6 {
-    background-image: url(img/background-06.png);
+    background-image: url(imagens/background-06.png);
 }
 
 .card-equipe-7 {
-    background-image: url(img/background-07.png);
+    background-image: url(imagens/background-07.png);
 }
 
 .card-equipe-8 {
-    background-image: url(img/background-08.png);
+    background-image: url(imagens/background-08.png);
 }
 
 .card-equipe-9 {
-    background-image: url(img/background-09.png);
+    background-image: url(imagens/background-09.png);
 }
 
 .imagem-perfil img {
@@ -618,6 +618,6 @@ footer p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: gray;
+    background-color: rgb(107, 106, 106);
     border-radius: 20px;
 }

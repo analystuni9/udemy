@@ -1,35 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>login</title>
 </head>
+
 <body>
-    <div class="container">
-        <form action="">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Usuário" required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Senha" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-            <div class="lembrar">
-                <label for="lembrar">
-                    <input type="checkbox" id="lembrar">Lembre-me
-                </label>
-                <a href="#">Esqueceu a senha?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <div class="register-link">
-                <p>Não tem uma conta?</p><a href="#">Registrar</a>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <div class="icon-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu-bar">
+            <ul>
+                <li>início</li>
+                <li>blog</li>
+                <li>planos</li>
+                <li>sustentabilidade</li>
+                <li>configurações</li>
+                <li>ajuda</li>
+                <li class="btn-enter">Entrar</li>
+            </ul>
+        </nav>
+        <nav class="menu-mobile">
+            <ul>
+                <li><i class='bx bx-home'><a href="">Inicio</a></i></li>
+                <li><i class='bx bx-spreadsheet'><a href="">Blog</a></i></li>
+                <li><i class='bx bx-store'><a href="">Planos</a></i></li>
+                <li><i class='bx bx-leaf'><a href="">Sustentabilidade</a></i></li>
+                <li><i class='bx bx-cog'><a href="">Configurações</a></i></li>
+                <li><i class='bx bx-info-circle'><a href="">Ajuda</a></i></li>
+                <button class="btn-enter" onclick="abrirlink()">Entrar</button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="box">
+                <form action="#">
+                    <h1>Login</h1>
+                    <div class="box-username">
+                        <label for="email">Usuário</label>
+                        <input type="email" name="usuario" id="email" value="" placeholder="Digite seu email">
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="box-password">
+                        <label for="password">Senha</label>
+                        <input type="password" name="senha" id="password" value="" placeholder="Digite sua senha">
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                    <div class="lembrar">
+                        <label for="lembrar">
+                            <input type="checkbox" name="lembrar" id="lembrar">Lembre-me
+                        </label>
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                    <div class="box-btn">
+                        <button class="btn">Login</button>
+                    </div>
+                </form>
             </div>
         </div>
-        </form>
+    </main>
+    <footer>
+        <div class="icones-rodape">
+            <ul>
+                <li><i class='bx bxl-facebook-square'></i></li>
+                <li><i class='bx bxl-whatsapp'></i></li>
+                <li><i class='bx bxl-instagram'></i></li>
+                <li><i class='bx bxl-twitter'></i></li>
+                <li><i class='bx bxl-youtube'></i></li>
+            </ul>
+        </div>
+        <div class="links-rodape">
+            <ul>
+                <li>Inicio</li>
+                <li>Sobre</li>
+                <li>Serviços</li>
+                <li>Time</li>
+                <li>Contatos</li>
+            </ul>
+        </div>
+        <p>
+            copyright &copy; 2023 Drone Drop. Todos os direitos reservados.
+        </p>
+    </footer>
+    <script>
+       
+    </script>
 </body>
 </html>
