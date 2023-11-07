@@ -1,16 +1,16 @@
-/* importei uma nova familia de fonte do google fontes */
+/* Importei uma nova família de fontes do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-/* Aplique em todos elementos da página */
+/* Estilos gerais para todos os elementos da página */
 * {
     margin: 0;
     padding: 0;
     list-style-type: none;
     box-sizing: border-box;
     font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
+/* Estilos para o corpo da página */
 body {
     max-width: 1080px;
     height: auto;
@@ -20,26 +20,26 @@ body {
     font-size: 14px;
 }
 
+/* Estilos para o cabeçalho (header) */
 header {
     position: relative;
     margin: 0 auto 20px;
     top: 0;
     z-index: 0;
-    /* max-width:1080px; */
     height: 480px;
     font-size: 15px;
-    /* border:1px solid black; */
-
 }
 
+/* Estilos para o logotipo */
 .logo {
     width: 100px;
     display: flex;
     align-items: center;
 }
 
+/* Animação para o logotipo */
 .animation_x span:nth-child(1) {
-    transform: translateY(15px) rotate(-45deg);
+    transform: translateY(15px) rotate(-45deg) scaleX(1.1);
 }
 
 .animation_x span:nth-child(2) {
@@ -47,14 +47,16 @@ header {
 }
 
 .animation_x span:nth-child(3) {
-    transform: translateY(-15px) rotate(45deg)
+    transform: translateY(-15px) rotate(45deg) scaleX(1.1);
 }
 
+/* Estilos para a imagem do logotipo */
 .logo img {
     width: 100%;
     opacity: 0.9;
 }
 
+/* Estilos para a barra de navegação (menu bar) */
 .nav-bar {
     width: 100%;
     padding: 20px 10px;
@@ -63,19 +65,18 @@ header {
     background-color: rgba(55, 53, 53, 0.77);
     position: absolute;
     top: 0;
-    /* right:0; */
     z-index: 1;
     height: 70px;
-    /* border:1px solid black; */
 }
 
+/* Estilos para a lista de itens do menu */
 .menu-bar ul {
     display: flex;
     gap: 20px;
     align-items: center;
-
 }
 
+/* Estilos para o ícone de menu mobile */
 .icon-mobile {
     width: 35px;
     height: 35px;
@@ -84,7 +85,6 @@ header {
     top: 0;
     z-index: 6;
     transition: all 0.5s ease;
-    /* border:1px solid black; */
     margin-top: 10px;
     margin-right: 5px;
     box-sizing: content-box;
@@ -92,6 +92,7 @@ header {
     cursor: pointer;
 }
 
+/* Estilos para as barras do ícone de menu mobile */
 .icon-mobile span {
     display: block;
     width: 30px;
@@ -103,9 +104,9 @@ header {
     outline: 1px solid rgba(255, 255, 255, 0.884);
 }
 
+/* Estilos para o menu mobile */
 .menu-mobile {
     width: 400px;
-    /* height:33vh; */
     position: absolute;
     top: 0;
     right: 0;
@@ -120,10 +121,12 @@ header {
     box-shadow: 1px 1px 3px black;
 }
 
+/* Classe de exibição para o menu mobile */
 .exibir {
     display: block;
 }
 
+/* Estilos para a lista de itens do menu mobile */
 .menu-mobile ul {
     margin: 0 auto;
     width: 100%;
@@ -132,26 +135,22 @@ header {
     align-items: center;
     justify-content: center;
     gap: 35px;
-
 }
 
+/* Estilos para os links do menu mobile */
 .menu-mobile a {
     text-decoration: none;
     color: black;
 }
 
+/* Estilos para os itens da lista no menu mobile */
 .menu-mobile li {
     width: 100%;
     border-bottom: 1px solid rgba(128, 128, 128, 0.205);
     padding-bottom: 5px;
 }
 
-.menu-mobile li:hover {
-    text-decoration: underline rgb(255, 47, 92);
-    cursor: pointer;
-    transition: all 1s ease;
-}
-
+/* Estilos para o botão "Entrar" no menu */
 .btn-entrar {
     text-align: center;
     background-color: #ff2f5c;
@@ -163,6 +162,7 @@ header {
     font-weight: bold;
 }
 
+/* Efeito ao passar o mouse sobre o botão "Entrar" no menu */
 .menu-bar .btn-entrar:hover {
     background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
@@ -172,6 +172,7 @@ header {
     transition: all 1s ease;
 }
 
+/* Efeito ao passar o mouse sobre o botão "Entrar" no menu mobile */
 .menu-mobile .btn-entrar:hover {
     background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
@@ -180,17 +181,19 @@ header {
     transition: all 1s ease;
 }
 
+/* Efeito ao passar o mouse sobre os itens do menu no menu bar */
 .menu-bar li:hover {
     text-decoration: underline rgb(255, 47, 92);
-    transition: all 1s ease;
     cursor: pointer;
     transition: all 1s ease;
 }
 
+/* Estilos para a classe "adicionar" */
 .adicionar {
-    display: none
+    display: none;
 }
 
+/* Estilos para os botões de rádio e rótulos (labels) */
 input[type='radio'] {
     display: none;
 }
@@ -198,8 +201,7 @@ input[type='radio'] {
 input[type='radio']:checked+label {
     background-color: rgb(255, 47, 92);
 }
-
-/* refere-se input /botões padrões*/
+/* Estilos para a seção de imagens do carrossel */
 .imagem-carrosel {
     width: 100%;
     position: absolute;
@@ -209,9 +211,11 @@ input[type='radio']:checked+label {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* border:1px solid black; */
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
 }
 
+/* Estilos para a seção do carrossel manual */
 .carrosel-manual {
     width: 100%;
     height: auto;
@@ -219,9 +223,11 @@ input[type='radio']:checked+label {
     top: 380px;
     z-index: 2;
     text-align: center;
-    /* border:1px solid yellow; */
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid yellow; */
 }
 
+/* Estilos para os rótulos do carrossel */
 label {
     display: inline-block;
     width: 10px;
@@ -232,11 +238,13 @@ label {
     margin-right: 25px;
 }
 
+/* Efeito ao passar o mouse sobre os botões do carrossel */
 .btn:hover {
     background-color: rgba(255, 47, 92, 0.561);
     transition: all 1s ease;
 }
 
+/* Efeito ao passar o mouse sobre o botão personalizado 2 */
 .btn-personalizado-2:hover {
     background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
@@ -246,14 +254,15 @@ label {
     transition: all 1s ease;
 }
 
+/* Estilos para a classe "menu-mobile" */
 .menu-mobile i {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
+/* Estilos para a seção principal (main) */
 main {
-    /* max-width:1080px; */
     position: relative;
     top: 0;
     display: flex;
@@ -261,29 +270,33 @@ main {
     margin: 0 auto;
     height: auto;
     background-image: linear-gradient(white, gray);
-    /* border:1px solid black; */
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
 }
 
+/* Estilos para as seções da página */
 section {
     width: 100%;
     margin: 0 auto;
-    /* border:1px solid pink; */
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid pink; */
 }
 
-/* primeiro filho */
+/* Estilos para o primeiro filho da seção */
 article:nth-child(1) {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 200px;
 }
 
-/* imagem da empresa */
+/* Estilos para a imagem da empresa */
 .imagem-empresa img {
     float: left;
     border-radius: 10px;
     margin: 20px;
 }
 
+/* Estilos para o título do primeiro filho da seção */
 article:nth-child(1) h2 {
     text-align: center;
     color: black;
@@ -291,26 +304,27 @@ article:nth-child(1) h2 {
     margin-bottom: 10px;
 }
 
+/* Estilos para o conteúdo da empresa */
 .conteudo-empresa {
     padding: 20px 10px;
-
 }
 
-/* conteudo empresa */
+/* Estilos para os parágrafos do conteúdo da empresa */
 .conteudo-empresa p {
     text-indent: 30px;
     color: black;
 }
 
-/* caixa com o botao ler mais */
+/* Estilos para a caixa "Ler Mais" */
 .lermais {
     width: 100%;
     text-align: left;
-    margin-top:5px;
-    /* border:1px solid black; */
+    margin-top: 5px;
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
 }
 
-/* botão ler mais */
+/* Estilos para o botão "Ler Mais" */
 .btn-lermais {
     width: fit-content;
     text-align: center;
@@ -323,6 +337,7 @@ article:nth-child(1) h2 {
     border: none;
 }
 
+/* Efeito ao passar o mouse sobre o botão "Ler Mais" */
 .btn-lermais:hover {
     background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
@@ -332,16 +347,17 @@ article:nth-child(1) h2 {
     transition: all 1s ease;
 }
 
-/* conteudo oculto empresa */
+/* Estilos para a classe "texto" */
 .texto {
     display: none;
 }
 
+/* Estilos para a classe "adicionar" */
 .adicionar {
     display: block;
 }
 
-/* contem todos os cards */
+/* Estilos para as seções de imagens de tecnologias e IoT */
 .imagem-tecnologias,
 .imagem-iot {
     width: 95%;
@@ -349,9 +365,9 @@ article:nth-child(1) h2 {
     overflow: hidden;
     margin: 30px auto;
     color: black;
-
 }
 
+/* Estilos para as seções de conteúdo de IoT e tecnologias */
 .conteudo-iot,
 .conteudo-tecnologias {
     width: 90%;
@@ -359,17 +375,20 @@ article:nth-child(1) h2 {
     margin: 30px auto;
 }
 
+/* Estilos para o segundo filho (article:nth-child(2)) */
 article:nth-child(2) {
     width: 98%;
     margin: 0 auto 50px auto;
-    /* border:1px solid black; */
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
 }
 
-/* terceiro filho */
+/* Estilos para o terceiro filho (article:nth-child(3)) */
 article:nth-child(3) {
     margin-bottom: 50px;
 }
 
+/* Estilos para o título do segundo filho */
 article:nth-child(2) h2 {
     color: black;
     font-size: 25px;
@@ -378,6 +397,7 @@ article:nth-child(2) h2 {
     margin-bottom: 30px;
 }
 
+/* Estilos para o título do terceiro filho */
 article:nth-child(3) h2 {
     padding: 30px 0;
     color: black;
@@ -386,31 +406,29 @@ article:nth-child(3) h2 {
     text-shadow: 1px 1px 1px rgb(230, 226, 226);
 }
 
+/* Estilos para os parágrafos do terceiro filho */
 article:nth-child(3) p {
     color: black;
 }
 
-/* caixa que contem a imagem iot */
+/* Estilos para a seção de imagens IoT */
 .imagem-iot {
     width: 98%;
     margin: 0 auto;
     overflow: hidden;
 }
 
-/* .caixa-6 img {
-    border-radius:20px;
-} */
-/* conteudo iot */
+/* Estilos para o conteúdo da seção IoT */
 .conteudo-3 {
     width: 90%;
     margin: 0 auto;
 }
-
+/* Estilos para os parágrafos dentro da classe .conteudo-3 */
 .conteudo-3 p {
     text-indent: 20px;
 }
 
-/* quarto filho */
+/* Estilos para o quarto filho (article:nth-child(4)) */
 article:nth-child(4) h2 {
     text-align: center;
     padding: 30px 0;
@@ -419,10 +437,12 @@ article:nth-child(4) h2 {
     text-shadow: 1px 1px 1px rgb(204, 201, 201);
 }
 
+/* Estilos para o quarto filho da seção */
 article:nth-child(4) {
     margin-bottom: 50px;
 }
 
+/* Estilos para os cards de equipe (card-equipe-1 a card-equipe-9) */
 .card-equipe-1,
 .card-equipe-2,
 .card-equipe-3,
@@ -446,9 +466,9 @@ article:nth-child(4) {
     box-shadow: 5px 5px 10px black;
 }
 
+/* Estilos para cards de equipe individuais */
 .card-equipe-2 {
     background-image: url(imagens/background-02.png);
-
 }
 
 .card-equipe-3 {
@@ -479,52 +499,56 @@ article:nth-child(4) {
     background-image: url(imagens/background-09.png);
 }
 
+/* Estilos para a imagem do perfil */
 .imagem-perfil img {
     width: 80px;
     border-radius: 50%;
 }
 
-/* card com o conteudo equipe */
+/* Estilos para o conteúdo dos cards de equipe */
 .conteudo-equipe {
     width: 300px;
     height: 190px;
     color: black;
     text-align: center;
     padding: 0 5px;
-    /* border:1px solid black; */
-
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
 }
 
+/* Estilos para o título do conteúdo de equipe */
 .conteudo-equipe h3 {
     color: rgb(255, 47, 92);
     font-size: 22px;
     text-shadow: 1px 1px 1px black;
 }
 
-/* contem todos os cards-equipe */
+/* Estilos para o contêiner que envolve todos os cards de equipe */
 .all-cards {
     width: 95%;
     margin: 0 auto;
     height: 470px;
     display: flex;
     gap: 40px;
-    /* border:1px solid black; */
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
     overflow-x: scroll;
     /* flex-wrap:wrap; */
 }
 
-/* caixa que contem os botoes dos links */
+/* Estilos para o contêiner que envolve os botões dos links */
 .action-equipe {
     width: 95%;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     padding-left: 30px;
-    /* border:1px solid black; */
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
     opacity: 0;
 }
 
-/* botoes dos cards */
+/* Estilos para os botões dos cards de equipe */
 .action-equipe i {
     width: 100%;
     font-size: 20px;
@@ -533,11 +557,12 @@ article:nth-child(4) {
     padding: 3px;
 }
 
+/* Efeito ao passar o mouse sobre a área de ação */
 .action-equipe:hover {
     opacity: 1;
 }
 
-/* efeito ao levar o mause por cima dos botoes */
+/* Efeito ao passar o mouse sobre os botões de ação */
 .action-equipe i:hover {
     color: #ff2f5c;
     text-decoration: underline gray;
@@ -546,17 +571,20 @@ article:nth-child(4) {
     transition: all 1s ease;
 }
 
+/* Estilos para o rodapé (footer) */
 footer {
     width: 100%;
     background-color: rgba(55, 53, 53, 0.77);
     font-size: 15px;
 }
 
+/* Estilos para os parágrafos dentro do rodapé */
 footer p {
     text-align: center;
     padding: 7px 0;
 }
 
+/* Estilos para a lista de ícones no rodapé (icones-rodape) */
 .icones-rodape ul {
     display: flex;
     align-items: center;
@@ -566,12 +594,14 @@ footer p {
     padding: 7px 0;
 }
 
+/* Efeito ao passar o mouse sobre os ícones no rodapé */
 .icones-rodape i:hover {
     text-decoration: underline #ff2f5c;
     cursor: pointer;
     transition: all 1s ease;
 }
 
+/* Estilos para a lista de links no rodapé (links-rodape) */
 .links-rodape ul {
     display: flex;
     align-items: center;
@@ -581,42 +611,45 @@ footer p {
     padding: 7px 0;
 }
 
+/* Efeito ao passar o mouse sobre os links no rodapé */
 .links-rodape li:hover {
     text-decoration: underline #ff2f5c;
     cursor: pointer;
 }
 
+/* Estilos para os ícones no rodapé */
 .icones-rodape i {
     font-size: 22px;
 }
 
-/* Quero que quando chegue na largura máxima de 800px você esconda meu menu desktop*/
-@media screen and (max-width:850px) {
+/* Estilos para a ocultação do menu desktop em telas menores que 850px de largura */
+@media screen and (max-width: 850px) {
     .menu-bar {
         display: none;
     }
 }
 
-/* Quero que quando chegue na largura minima de 800px você esconda icone de menu mobile até o limite */
+/* Estilos para a ocultação do ícone de menu mobile em telas maiores que 850px de largura */
 @media screen and (min-width: 850px) {
-
-    .icon-mobile,
-    .nav-mobile {
+    .icon-mobile, .nav-mobile {
         display: none;
     }
 }
 
-@media screen and (max-width:400px) {
+/* Estilos para telas menores que 400px de largura */
+@media screen and (max-width: 400px) {
     .menu-mobile {
         width: 100%;
     }
 }
 
+/* Estilos para a barra de rolagem personalizada do navegador Chrome */
 ::-webkit-scrollbar {
     width: 1px;
     height: 7px;
 }
 
+/* Estilos para o polegar (thumb) da barra de rolagem personalizada do navegador Chrome */
 ::-webkit-scrollbar-thumb {
     background-color: rgb(107, 106, 106);
     border-radius: 20px;
