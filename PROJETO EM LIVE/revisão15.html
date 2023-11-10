@@ -9,26 +9,27 @@
         body {
             font-family:"Poppins";
         }
-    </style>
+        </style>
 </head>
 <body>
     <h1>Carrossel Alternado</h1>
     <div class="box">
         <input type="radio" name="imagem" id="radio1" value="Naruto/1.jpg">
         <label for="radio1"></label>
-
+        
         <input type="radio" name="imagem" id="radio2" value="Naruto/2.jpg">
         <label for="radio2"></label>
-
+        
         <input type="radio" name="imagem" id="radio3" value="Naruto/3.jpg">
         <label for="radio3"></label>
 
         <input type="radio" name="imagem" id="radio4" value="Naruto/4.jpg">
         <label for="radio4"></label>
-
+        
         <input type="radio" name="imagem" id="radio5" value="Naruto/5.jpg">
         <label for="radio5"></label>
 
+    </div>
         <div class="box-2">
             <img class="exibir" src="Naruto/1.jpg" alt="">
         </div>
@@ -56,10 +57,9 @@
             j = 0
             while (j < btnradio.length) {
                 btnradio[j].addEventListener("click", carrosselmanual)
-                j++
+                ++j
             }
             setInterval(carrosselautomatico, 2000)
         </script>
-    </div>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box">
+            <button onclick="megasena(60, 6)">
+                Palpite Mega Sena
+            </button>
+            <button onclick="lotomania(100, 25)">
+                Palpite Lotomania
+            </button>
+            <p id="mostrarResultado">
+            </p>
+        </div>
+    </div>
+    <script>
+        let paragrafo = document.getElementById("mostrarResultado");
+        
+        function megasena(totalnumeros, quantidade) {
+            paragrafo.innerHTML = ''; 
+            for (let i = 0; i <  100; i++) {
+                let numerosorteado = Math.ceil(Math.random() * totalnumeros);
+                paragrafo.innerHTML += numerosorteado + ' ';
+            }
+        }
+
+        function lotomania(totalnumeros) {
+            paragrafo.innerHTML = ''; 
+            for (let i = 0; i < 25; i++) {
+                let numerosorteado = Math.ceil(Math.random() * totalnumeros);
+                paragrafo.innerHTML += numerosorteado + ' ';
+            }
+        }
+    </script>
+</body>
+</html>

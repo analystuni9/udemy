@@ -1,20 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrossel Alternado</title>
+    <style>
+        body {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight:bold;
+        }
+        input[type='radio'] {
+            display:none;
+        }
+        input[type='radio']:checked + label {
+            background:blueviolet;
+ 
+
+        }
+        label {
+            display:inline-block;
+            width:13px;
+            height:13px;
+            border-radius:50%;
+            border:3px solid black;
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
-    
-</body>
-<script>
-    var nome = "João"
-    var idade = 25
-    var cidade = "São Paulo"
+    <div class="box">
+        <h1>Carrossel Alternado</h1>
+        <input type="radio" name="imagem" id="radio1" value="Naruto/1.jpg">
+        <label for="radio1"></label>
 
-    console.log("Nome: " +  nome);
-    console.log("Idade: " + idade);
-    console.log("Cidade: " + cidade)
-</script>
+        <input type="radio" name="imagem" id="radio2" value="Naruto/2.jpg">
+        <label for="radio2"></label>
+
+        <input type="radio" name="imagem" id="radio3" value="Naruto/3.jpg">
+        <label for="radio3"></label>
+
+        <input type="radio" name="imagem" id="radio4" value="Naruto/4.jpg">
+        <label for="radio4"></label>
+
+        <input type="radio" name="imagem" id="radio5" value="Naruto/5.jpg">
+        <label for="radio5"></label>
+    </div>
+    <div class="box-2">
+        <img class="exibir" src="Naruto/1.jpg" alt="Imagem Anime Naruto">
+    </div>
+    <script>
+        let btnradio = document.querySelectorAll("input[type='radio']")
+        let exibir = document.querySelector(".exibir")
+        let i = 0
+        let k = 0
+        function carrosselautomatico () {
+            i = (++i) % btnradio.length
+            btnradio[i].checked = true
+            exibir.src = btnradio[i].value
+        }
+        function carrosselmanual () {
+            for (k = 0; k < btnradio.length; k++) {
+                if (btnradio[k].checked) {
+                    let selecione = btnradio[k].value
+                    exibir.src = selecione
+                }       
+            }
+        }
+        for (k = 0; k < btnradio.length; k++) {
+            btnradio[k].addEventListener("click", carrosselmanual)
+        }
+        setInterval(carrosselautomatico, 2000)
+    </script>
+</body>
 </html>

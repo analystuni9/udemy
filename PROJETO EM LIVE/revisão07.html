@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Seletores complexos</title>
 </head>
+<style>
+    body {
+        font-size: 25px;
+    }
+
+    a[href=""] {
+        color: red;
+    }
+
+    article p>b {
+        color: blue;
+    }
+
+    article h3+p {
+        color: green;
+    }
+
+    article p+P {
+        color: orange;
+    }
+
+    article h3~p {
+        color: blueviolet;
+    }
+</style>
+
 <body>
-    
+    <article>
+        <h3>h3</h3>
+        <p> p
+            <a href=""> a
+                <b>b</b>
+            </a>
+        </p>
+        <p> p
+            <a href=""> a
+                <b>b</b>
+            </a>
+        </p>
+        <p> p
+            <a href=""> a
+                <b>b</b>
+            </a>
+        </p>
+    </article>
 </body>
+
 </html>

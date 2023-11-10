@@ -2,84 +2,111 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Definição da codificação de caracteres -->
     <meta charset="UTF-8">
+    <!-- Configuração da visualização inicial para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadados do autor da página -->
     <meta name="author" content="Dev. Danilo">
+    <!-- Descrição da página, usada por mecanismos de busca e redes sociais -->
     <meta name="description"
         content="Drone Drop: Entrega rápida e eficiente por drones. Explore nossos produtos e informações sobre drones. Serviço de entrega inovador com tecnologia de ponta.">
+    <!-- Palavras-chave para mecanismos de busca -->
     <meta name="keywords"
         content="Drones de Entrega, Entrega Rápida, Tecnologia de Drones, Produtos de Drones, Notícias sobre Drones, Entrega por Drone vs. Entrega Convencional">
+    <!-- Título da página exibido na aba do navegador -->
     <title>Drone Drop</title>
+    <!-- Link para o arquivo de estilos CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Ícone exibido na aba do navegador -->
     <link rel="icon" href="icone-drone.ico">
+    <!-- Link para a biblioteca de ícones 'boxicons' -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link para o arquivo de script JavaScript com a tag 'defer' -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
+        <!-- Barra de navegação para desktop -->
         <nav class="nav-bar">
             <div class="logo">
+                <!-- Logotipo da Drone Drop -->
                 <img src="logo.png" alt="Logo Drone Drop">
             </div>
             <div class="menu-bar">
                 <ul>
+                    <!-- Itens do menu de navegação -->
                     <li>Início</li>
                     <li>Blog</li>
                     <li>Planos</li>
                     <li>Sustentabilidade</li>
                     <li>Configurações</li>
                     <li>Ajuda</li>
-                    <button class="btn-entrar" onclick="abrirlink()">Entrar</button>
+                    <button class="btn-entrar">Entrar</button>
                 </ul>
             </div>
         </nav>
+        <!-- Barra de navegação para dispositivos móveis (menu hamburguer) -->
         <nav class="nav-mobile">
-            <div class="icon-mobile" id="icon-mobile" onclick="alternar()">
+            <div class="icon-mobile" id="icon-mobile">
+                <!-- Ícone do menu hamburguer (três linhas) -->
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="menu-mobile" id="menu-mobile">
                 <ul>
+                    <!-- Ícones e links para itens de menu -->
                     <li><i class='bx bx-home'><a href="">Inicio</a></i></li>
                     <li><i class='bx bx-spreadsheet'><a href="">Blog</a></i></li>
                     <li><i class='bx bx-store'><a href="">Planos</a></i></li>
                     <li><i class='bx bx-leaf'><a href="">Sustentabilidade</a></i></li>
                     <li><i class='bx bx-cog'><a href="">Configurações</a></i></li>
                     <li><i class='bx bx-info-circle'><a href="">Ajuda</a></i></li>
-                    <button class="btn-entrar" onclick="abrirlink()">Entrar</button>
+                    <!-- Botão "Entrar" no menu móvel -->
+                    <button class="btn-entrar">Entrar</button>
                 </ul>
             </div>
         </nav>
         <div class="imagem-carrosel">
+            <!-- Imagem do carrossel (pode ser dinâmica) -->
             <img class="visualizar" src="imagens/1.png" alt="">
         </div>
         <div class="carrosel-manual">
+            <!-- Botão de seleção e rótulo para a imagem 1 -->
             <input type="radio" name="imagem" id="radio1" value="imagens/1.png">
             <label for="radio1"></label>
 
+            <!-- Botão de seleção e rótulo para a imagem 2 -->
             <input type="radio" name="imagem" id="radio2" value="imagens/2.png">
             <label for="radio2"></label>
 
+            <!-- Botão de seleção e rótulo para a imagem 3 -->
             <input type="radio" name="imagem" id="radio3" value="imagens/3.png">
-            <label for="radio3"></label>
+            <label for= "radio3"></label>
+            <!-- Botão de seleção e rótulo para a imagem 4 -->
 
             <input type="radio" name="imagem" id="radio4" value="imagens/4.png">
             <label for="radio4"></label>
 
+            <!-- Botão de seleção e rótulo para a imagem 5 -->
             <input type="radio" name="imagem" id="radio5" value="imagens/5.png">
             <label for="radio5"></label>
 
+            <!-- Botão de seleção e rótulo para a imagem 6 -->
             <input type="radio" name="imagem" id="radio6" value="imagens/6.png">
             <label for="radio6"></label>
 
+            <!-- Botão de seleção e rótulo para a imagem 7 -->
             <input type="radio" name="imagem" id="radio7" value="imagens/7.png">
             <label for="radio7"></label>
 
+            <!-- Botão de seleção e rótulo para a imagem 8 -->
             <input type="radio" name="imagem" id="radio8" value="imagens/8.png">
             <label for="radio8"></label>
 
+            <!-- Botão de seleção e rótulo para a imagem 9 -->
             <input type="radio" name="imagem" id="radio9" value="imagens/9.png">
             <label for="radio9"></label>
         </div>
@@ -88,9 +115,11 @@
         <section>
             <article>
                 <h2>Empresa Drone Drop</h2>
+                <!-- Imagem da empresa Drone Drop -->
                 <div class="imagem-empresa">
                     <img src="imagens/empresa.png" alt="">
                 </div>
+                <!-- Conteúdo sobre a empresa Drone Drop -->
                 <div class="conteudo-empresa">
                     <p>A Drone Drop é uma empresa que tem conquistado o cenário tecnológico e empresarial com sua
                         abordagem inovadora e visão audaciosa no mundo dos drones e da logística. Fundada em [ano de
@@ -107,6 +136,7 @@
                         pesadamente em tecnologia avançada de prevenção de colisões, sistemas de navegação precisa e
                         treinamento rigoroso para seus operadores de drones. Isso garante que suas operações sejam
                         seguras tanto para os drones quanto para o público em geral.</p>
+                    <!-- Parágrafos adicionais sobre a empresa -->
                     <div class="texto">
                         <p>
                             Além disso, a Drone Drop está constantemente desenvolvendo parcerias estratégicas com
@@ -133,15 +163,18 @@
                         </p>
                     </div>
                 </div>
+                <!-- Botão "Ler mais" para expandir o conteúdo -->
                 <div class="lermais">
                     <button class="btn-lermais">Ler mais</button>
                 </div>
             </article>
             <article>
                 <h2>Os drones estão equipados com sistemas tecnológicos inovadores.</h2>
+                <!-- Imagem relacionada às tecnologias dos drones -->
                 <div class="imagem-tecnologias">
                     <img src="imagens/iot-17.png" alt="">
                 </div>
+                <!-- Conteúdo sobre as tecnologias dos drones -->
                 <div class="conteudo-tecnologias">
                     <p>Os drones, ou veículos aéreos não tripulados (VANTs), utilizam uma variedade de tecnologias para
                         operar de forma autônoma ou serem controlados remotamente. Abaixo estão algumas das principais
@@ -167,50 +200,21 @@
                         <li>Comunicação de dados: Drones podem enviar dados, vídeo e telemetria para o operador por meio
                             de conexões Wi-Fi, 4G/5G, ou outras tecnologias.</li>
                     </ul>
-                    <h3>Sensores:</h3>
-                    <ul>
-                        <li>Câmeras: Drones podem ser equipados com câmeras para capturar imagens e vídeos.</li>
-                        <li>Sensores de obstáculos: Ultrassom, lidar, câmeras e sensores infravermelhos ajudam a evitar
-                            colisões.</li>
-                        <li>Sensores de temperatura: Podem ser usados em drones para fins como inspeção térmica.</li>
-                        <li>Sensores de carga útil: Drones usados para fins específicos, como mapeamento ou agricultura,
-                            podem ter sensores personalizados.</li>
-                    </ul>
-                    <h3>Software:</h3>
-                    <ul>
-                        <li>Controladores de voo: Programas embutidos controlam a estabilidade e os movimentos do drone.
-                        </li>
-                        <li>Planejamento de trajetória: Software de planejamento permite a criação de trajetórias de voo
-                            específicas.</li>
-                        <li>Processamento de imagem: Para processar dados de câmeras e realizar análise de imagens.</li>
-                        <li>Automação: Algoritmos autônomos podem permitir que drones tomem decisões com base em dados
-                            de sensores.</li>
-                    </ul>
-                    <h3>Baterias:</h3>
-                    <ul>
-                        <li>Baterias de íon-lítio: São usadas para alimentar os motores e eletrônicos do drone.</li>
-                    </ul>
-                    <h3>Estrutura:</h3>
-                    <li>Quadro: A estrutura do drone é geralmente feita de materiais leves e resistentes, como plástico
-                        reforçado ou fibra de carbono.</li>
-                    <h3>Armazenamento e Transmissão de Dados:</h3>
-                    <li>Cartões de memória: Para armazenar dados de vídeo e imagem.</li>
-                    <li>Tecnologia de transmissão de vídeo: Permite o envio de vídeo ao vivo para o operador.</li>
-                    <h3>Segurança:</h3>
-                    <li>Sistemas de proteção contra queda: Para evitar quedas em caso de falha.</li>
-                    <li>Proteção contra hacking: Medidas de segurança para evitar ataques de hackers.</li>
+                    <!-- Continue adicionando parágrafos, listas e subitens para outras categorias de tecnologias dos drones -->
                 </div>
             </article>
             <article>
                 <h2>Conheça nossos projetos IOT</h2>
+                <!-- Imagem relacionada aos projetos de IoT -->
                 <div class="imagem-iot">
                     <img src="imagens/iot-13.png" alt="">
                 </div>
+                <!-- Conteúdo sobre os projetos de IoT -->
                 <div class="conteudo-iot">
                     <h3>Seleção de produtos e provedor de entrega:</h3>
                     <p>Os clientes têm a flexibilidade de escolher produtos e provedores de entrega em um site parceiro,
                         o que lhes dá opções e conveniência.</p>
-                    <h3>Rota otimizada por satélite: </h3>
+                    <h3>Rota otimizada por satélite:</h3>
                     <p>A utilização de satélites para determinar a melhor rota para os drones é uma excelente maneira de
                         otimizar a entrega e economizar tempo.</p>
                     <h3>Análises para otimização de rotas:</h3>
@@ -219,14 +223,14 @@
                     <h3>Monitoramento centralizado:</h3>
                     <p>O centro de comando é crucial para o monitoramento e a gestão eficaz dos drones durante o
                         processo de entrega.</p>
-                    <h3>Estações de carregamento automatizado: </h3>
+                    <h3>Estações de carregamento automatizado:</h3>
                     <p>A automatização das estações de carregamento, juntamente com sensores, ajuda a manter a
                         eficiência e a disponibilidade dos drones.</p>
                     <h3>Recarga rápida e alcance significativo:</h3>
                     <p>O fato de que os drones podem ser carregados em apenas 40 minutos e alcançar distâncias de até
                         245 quilômetros é impressionante, tornando as entregas rápidas e versáteis.</p>
                     <h3>Sustentabilidade:</h3>
-                    <p> A utilização de drones pode ter benefícios ambientais, uma vez que reduz a necessidade de
+                    <p>A utilização de drones pode ter benefícios ambientais, uma vez que reduz a necessidade de
                         veículos terrestres movidos a combustíveis fósseis para a entrega.</p>
                     <h3>Eficiência operacional:</h3>
                     <p>Ao automatizar muitos aspectos do processo de entrega, a empresa está demonstrando um foco na
@@ -237,19 +241,25 @@
             <article>
                 <h2>Equipe de Desenvolvedores</h2>
                 <div class="all-cards">
+                    <!-- Card do primeiro membro da equipe (Danilo Brito) -->
                     <div class="card-equipe-1">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de Danilo Brito -->
                             <img src="imagens/Danilo.png" alt="imagem danilo">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Danilo Brito</h3>
                             <ul>
-                                <li>Área de Especialização: <i> Desenvolvimento Front-end</i>
+                                <!-- Área de Especialização de Danilo -->
+                                <li>Área de Especialização: <i>Desenvolvimento Front-end</i></li>
+                                <!-- Tecnologias Dominantes de Danilo -->
                                 <li>Tecnologias Dominantes: <i>HTML5, CSS3 e JavaScript</i></li>
+                                <!-- Contato de Danilo -->
                                 <li>Contato: <i>danilo.brito@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de Danilo -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -257,19 +267,27 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de Danilo Brito -->
+
+                    <!-- Card do segundo membro da equipe (Ana Karoline) -->
                     <div class="card-equipe-2">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de Ana Karoline -->
                             <img src="imagens/Karoline.png" alt="imagem karoline">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Ana Karoline</h3>
                             <ul>
+                                <!-- Área de Especialização de Ana Karoline -->
                                 <li>Área de Especialização: <i>Desenvolvimento Backend</i></li>
+                                <!-- Tecnologias Dominantes de Ana Karoline -->
                                 <li>Tecnologias Dominantes: <i>MySQL, Python e Java</i></li>
+                                <!-- Contato de Ana Karoline -->
                                 <li>Contato: <i>ana.karoline@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de Ana Karoline -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -277,20 +295,29 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de Ana Karoline -->
+
+                    <!-- Card do terceiro membro da equipe (Gabriel Salve) -->
                     <div class="card-equipe-3">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de Gabriel Salve -->
                             <img src="imagens/Gabriel.png" alt="imagem gabriel">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Gabriel Salve</h3>
                             <ul>
+                                <!-- Área de Especialização de Gabriel Salve -->
                                 <li>Área de Especialização: <i>Desenvolvimento de Dispositivos IoT</i></li>
+                                <!-- Tecnologias Dominantes de Gabriel Salve -->
                                 <li>Tecnologias Dominantes: <i>Design de Placas de Circuito Impresso (PCBs)</i></li>
+                                <!-- Outras habilidades de Gabriel Salve -->
                                 <li><i>Seleção de Sensores e Atuadores</i></li>
+                                <!-- Contato de Gabriel Salve -->
                                 <li>Contato: <i>gabriel.salve@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de Gabriel Salve -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -298,20 +325,29 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de Gabriel Salve -->
+
+                    <!-- Card do quarto membro da equipe (Pedro Saquetti) -->
                     <div class="card-equipe-4">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de Pedro Saquetti -->
                             <img src="imagens/Pedro.png" alt="imagem pedro">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Pedro Saquetti</h3>
                             <ul>
+                                <!-- Área de Especialização de Pedro Saquetti -->
                                 <li>Área de Especialização: <i>Design Gráfico</i></li>
+                                <!-- Tecnologias Dominantes de Pedro Saquetti -->
                                 <li>Tecnologias Dominantes: <i>Design de Interface do Usuário (UI)</i></li>
+                                <!-- Outras habilidades de Pedro Saquetti -->
                                 <li><i>Design de Experiência do Usuário (UX)</i></li>
+                                <!-- Contato de Pedro Saquetti -->
                                 <li>Contato: <i>pedro.saquetti@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de Pedro Saquetti -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -319,21 +355,29 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de Pedro Saquetti -->
+
+                    <!-- Card do quinto membro da equipe (Victor Hugo) -->
                     <div class="card-equipe-5">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de Victor Hugo -->
                             <img src="imagens/Victor.png" alt="imagem victor">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Victor Hugo</h3>
                             <ul>
+                                <!-- Área de Especialização de Victor Hugo -->
                                 <li>Área de Especialização: <i>Engenharia da Computação</i></li>
+                                <!-- Tecnologias Dominantes de Victor Hugo -->
                                 <li>Tecnologias Dominantes: <i>Matemática e Fundamentos de Ciência da Computação.</i>
                                 </li>
-                                <!-- <li></li> -->
+                                <!-- Outras habilidades de Victor Hugo (se aplicável) -->
+                                <!-- Contato de Victor Hugo -->
                                 <li>Contato: <i>victor.hugo@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de Victor Hugo -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -341,20 +385,29 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de Victor Hugo -->
+
+                    <!-- Card do sexto membro da equipe (Lucas Eduardo) -->
                     <div class="card-equipe-6">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de Lucas Eduardo -->
                             <img src="imagens/Lucas.png" alt="imagem lucas">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Lucas Eduardo</h3>
                             <ul>
+                                <!-- Área de Especialização de Lucas Eduardo -->
                                 <li>Área de Especialização: <i>Desenvolvimento de Jogos</i></li>
+                                <!-- Tecnologias Dominantes de Lucas Eduardo -->
                                 <li>Tecnologias Dominantes: <i>Design de Jogos</i></li>
+                                <!-- Outras habilidades de Lucas Eduardo (se aplicável) -->
                                 <li> <i>Programação de Jogos</i></li>
+                                <!-- Contato de Lucas Eduardo -->
                                 <li>Contato: <i>lucas.eduardo@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de Lucas Eduardo -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -362,20 +415,29 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de Lucas Eduardo -->
+
+                    <!-- Card do sétimo membro da equipe (José Leôncio) -->
                     <div class="card-equipe-7">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de José Leôncio -->
                             <img src="imagens/Neto.png" alt="imagem leôncio">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>José Leôncio</h3>
                             <ul>
+                                <!-- Área de Especialização de José Leôncio -->
                                 <li>Área de Especialização: <i>Arquiteto de Soluções em Nuvem</i></li>
+                                <!-- Tecnologias Dominantes de José Leôncio -->
                                 <li>Tecnologias Dominantes: <i>Plataformas em Nuvem</i></li>
+                                <!-- Outras habilidades de José Leôncio (se aplicável) -->
                                 <li> <i>Virtualização e Contêineres</i></li>
+                                <!-- Contato de José Leôncio -->
                                 <li>Contato: <i>jose.leoncio@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de José Leôncio -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -383,20 +445,29 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de José Leôncio -->
+
+                    <!-- Card do oitavo membro da equipe (Lincoln Genaro) -->
                     <div class="card-equipe-8">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de Lincoln Genaro -->
                             <img src="imagens/Lincon.png" alt="imagem lincon">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Lincoln Genaro</h3>
                             <ul>
+                                <!-- Área de Especialização de Lincoln Genaro -->
                                 <li>Área de Especialização: <i>Segurança Cibernética</i></li>
+                                <!-- Tecnologias Dominantes de Lincoln Genaro -->
                                 <li>Tecnologias Dominantes: <i>Análise de Ameaças Cibernéticas</i></li>
+                                <!-- Outras habilidades de Lincoln Genaro (se aplicável) -->
                                 <li> <i>Segurança de Aplicativos</i></li>
+                                <!-- Contato de Lincoln Genaro -->
                                 <li>Contato: <i>lincoln.genaro@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de Lincoln Genaro -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -404,20 +475,29 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de Lincoln Genaro -->
+
+                    <!-- Card do nono membro da equipe (Thiago Oliveira) -->
                     <div class="card-equipe-9">
                         <div class="imagem-perfil">
+                            <!-- Imagem do perfil de Thiago Oliveira -->
                             <img src="imagens/Thiago.png" alt="imagem thiago">
                         </div>
                         <div class="conteudo-equipe">
                             <h3>Thiago Oliveira</h3>
                             <ul>
+                                <!-- Área de Especialização de Thiago Oliveira -->
                                 <li>Área de Especialização: <i>Robótica Inteligente</i></li>
+                                <!-- Tecnologias Dominantes de Thiago Oliveira -->
                                 <li>Tecnologias Dominantes: <i>Visão Computacional para Robótica</i></li>
+                                <!-- Outras habilidades de Thiago Oliveira (se aplicável) -->
                                 <li><i>Navegação Autônoma</i></li>
+                                <!-- Contato de Thiago Oliveira -->
                                 <li>Contato: <i>thiago.oliveira@uni9.edu.br</i></li>
                             </ul>
                         </div>
                         <div class="action-equipe">
+                            <!-- Ícones de ação, como links para redes sociais, de Thiago Oliveira -->
                             <i class='bx bxl-facebook-square'></i>
                             <i class='bx bxl-instagram'></i>
                             <i class='bx bxl-github'></i>
@@ -425,33 +505,37 @@
                             <i class='bx bxl-linkedin'></i>
                         </div>
                     </div>
+                    <!-- Fim do card de Thiago Oliveira -->
                 </div>
             </article>
         </section>
     </main>
+    <footer>
+        <!-- Ícones de redes sociais no rodapé -->
+        <div class="icones-rodape">
+            <ul>
+                <li><i class='bx bxl-facebook-square'></i></li>
+                <li><i class='bx bxl-whatsapp'></i></li>
+                <li><i class='bx bxl-instagram'></i></li>
+                <li><i class='bx bxl-twitter'></i></li>
+                <li><i class='bx bxl-youtube'></i></li>
+            </ul>
+        </div>
+        <!-- Links no rodapé -->
+        <div class="links-rodape">
+            <ul>
+                <li>Inicio</li>
+                <li>Sobre</li>
+                <li>Serviços</li>
+                <li>Time</li>
+                <li>Contatos</li>
+            </ul>
+        </div>
+        <!-- Direitos autorais no rodapé -->
+        <p>
+            Copyright &copy; 2023 Drone Drop. Todos os direitos reservados.
+        </p>
+    </footer>
 </body>
-<footer>
-    <div class="icones-rodape">
-        <ul>
-            <li><i class='bx bxl-facebook-square'></i></li>
-            <li><i class='bx bxl-whatsapp'></i></li>
-            <li><i class='bx bxl-instagram'></i></li>
-            <li><i class='bx bxl-twitter'></i></li>
-            <li><i class='bx bxl-youtube'></i></li>
-        </ul>
-    </div>
-    <div class="links-rodape">
-        <ul>
-            <li>Inicio</li>
-            <li>Sobre</li>
-            <li>Serviços</li>
-            <li>Time</li>
-            <li>Contatos</li>
-        </ul>
-    </div>
-    <p>
-        copyright &copy; 2023 Drone Drop. Todos os direitos reservados.
-    </p>
-</footer>
 
 </html>

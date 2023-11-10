@@ -4,13 +4,18 @@
 // <!-- var -> ES5 - cross-browser -->
 // <!-- let e const -> ES2015 -->
 
-// Babel vai transformar uma codigo mais novo em mais antigo
+// Babel vai transformar uma codigo novo em antigo
 
 // var eu posso declarar a mesma variavel varias vezes 
-// Ex:
+
+Ex:
 var test = 10;
 var test = 11;
 test = 12
+console.log(test);
+
+let test = "minha string";
+test = 10;
 console.log(test);
 
 // let eu só posso declarar a variavel uma unica vez 
@@ -23,6 +28,6 @@ console.log(test2);
 // const só consigo declarar uma variavel uma unica vez e um unico valor
 // Ex:
 const test3 = 15
-// test3 = 16
+test3 = 16
 console.log(test3)
 

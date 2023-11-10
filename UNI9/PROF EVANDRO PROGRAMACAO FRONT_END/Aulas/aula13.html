@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sortear(60, 6)">
+        Palpite Mega Sena
+    </button>
+    <button onclick="sortear(100, 25)">
+        Palpite Loto Fácil
+    </button>
+    <p id="mostrarResultado">
+    </p>
+    <script>
+        function sortear(totalNumeros, quantidade) {
+            var paragrafo = document.getElementById("mostrarResultado");
+            paragrafo.innerHTML = " ";
+            for(cont = 1 ; cont <= quantidade ; cont++) {
+              var numeroSorteado = Math.ceil(Math.random() * totalNumeros);
+              paragrafo.innerHTML += " " + numeroSorteado;
+            }        
+        }
+    </script>
+
+</body>
+</html>

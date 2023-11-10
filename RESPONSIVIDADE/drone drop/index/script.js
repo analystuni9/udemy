@@ -1,5 +1,5 @@
 // Seleciona o elemento HTML com a classe "icon-mobile" e armazena-o na variável iconmenu
-let iconmenu = document.querySelector(".icon-mobile")
+let iconmobile = document.querySelector(".icon-mobile")
 
 // Seleciona o elemento HTML com a classe "menu-mobile" e armazena-o na variável menumobile
 let menumobile = document.querySelector(".menu-mobile")
@@ -23,14 +23,14 @@ let k = 0
 // Define uma função chamada "animation" que é acionada quando o elemento com a classe "icon-mobile" é clicado
 let animation = () => {
     // Verifica se o elemento iconmenu possui a classe "animation_x"
-    if (iconmenu.classList.contains("animation_x")) {
+    if (iconmobile.classList.contains("animation_x")) {
         // Remove a classe "animation_x" do elemento iconmenu
-        iconmenu.classList.remove("animation_x")
+        iconmobile.classList.remove("animation_x")
         // Remove a classe "exibir" do elemento menumobile
         menumobile.classList.remove("exibir")
     } else {
         // Adiciona a classe "animation_x" ao elemento iconmenu
-        iconmenu.classList.add("animation_x")
+        iconmobile.classList.add("animation_x")
         // Adiciona a classe "exibir" ao elemento menumobile
         menumobile.classList.add("exibir")
     }
@@ -66,7 +66,7 @@ for (k = 0; k < btnradio.length; k++) {
 }
 
 // Adiciona um ouvinte de evento de clique ao elemento com a classe "icon-mobile" para chamar a função "animation"
-iconmenu.addEventListener("click", animation)
+iconmobile.addEventListener("click", animation)
 
 // Configura um intervalo para chamar a função "carrosselautomatico" a cada 2000 milissegundos (2 segundos)
 setInterval(carrosselautomatico, 2000)
