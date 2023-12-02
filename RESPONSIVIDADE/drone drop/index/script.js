@@ -23,7 +23,11 @@ let k = 0
 // Define uma função chamada "animation" que é acionada quando o elemento com a classe "icon-mobile" é clicado
 let animation = () => {
     // Verifica se o elemento iconmenu possui a classe "animation_x"
+<<<<<<< HEAD
     if (iconmobile.classList.contains("animation_x")) {
+=======
+    if (iconmenu.classList.contains("animation_x")) { 
+>>>>>>> ccab0356d771c064745243afb00fffc72c67d283
         // Remove a classe "animation_x" do elemento iconmenu
         iconmobile.classList.remove("animation_x")
         // Remove a classe "exibir" do elemento menumobile

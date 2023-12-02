@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+        body {
+            font-family: "Poppins"
+        }
+        .texto {
+            font-size:50px;
+            font-weight:800;
+            text-transform:uppercase;
+            background:linear-gradient(45deg, red, blue, green,red);
+            background-size:400% 100%;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+            animation:degrade 7s linear infinite alternate;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color:transparent;
+
+        }
+        @keyframes degrade {
+            0% {
+                background-position-x: 0%;
+            }
+            100% {
+                background-position: 200%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="texto">
+        intelogia
+    </div>
+</body>
+</html>

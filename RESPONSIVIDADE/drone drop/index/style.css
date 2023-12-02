@@ -66,6 +66,10 @@ header {
     position: absolute;
     top: 0;
     z-index: 1;
+<<<<<<< HEAD
+=======
+    height: 70px;
+>>>>>>> ccab0356d771c064745243afb00fffc72c67d283
 }
 
 /* Estilos para a lista de itens do menu */
@@ -74,6 +78,7 @@ header {
     list-style-type: none;
     gap: 20px ;
     align-items: center;
+<<<<<<< HEAD
     margin: 0 auto;
 }
 .menu-bar a {
@@ -99,6 +104,10 @@ header {
     cursor: pointer;
     transition: all 1s ease;
 }
+=======
+}
+
+>>>>>>> ccab0356d771c064745243afb00fffc72c67d283
 /* Estilos para o ícone de menu mobile */
 .icon-mobile {
     width: 35px;
@@ -129,7 +138,11 @@ header {
 
 /* Estilos para o menu mobile */
 .menu-mobile {
+<<<<<<< HEAD
     width: 40vw;
+=======
+    width: 400px;
+>>>>>>> ccab0356d771c064745243afb00fffc72c67d283
     position: absolute;
     top: 0;
     right: 0;
@@ -165,17 +178,22 @@ header {
     text-decoration: none;
     color: black;
 }
+<<<<<<< HEAD
 .menu-mobile a:hover {
     text-decoration: underline rgb(255, 47, 92);
     cursor: pointer;
     transition: all 1s ease;
 }
+=======
+
+>>>>>>> ccab0356d771c064745243afb00fffc72c67d283
 /* Estilos para os itens da lista no menu mobile */
 .menu-mobile li {
     width: 100%;
     border-bottom: 1px solid rgba(128, 128, 128, 0.205);
     padding-bottom: 5px;
 }
+<<<<<<< HEAD
 button {
     border:none;
     background:transparent;
@@ -183,6 +201,11 @@ button {
 
 /* Estilos para o botão "Entrar" no menu */
 .btn-enter a {
+=======
+
+/* Estilos para o botão "Entrar" no menu */
+.btn-entrar {
+>>>>>>> ccab0356d771c064745243afb00fffc72c67d283
     text-align: center;
     background-color: #ff2f5c;
     color: white;
@@ -192,7 +215,13 @@ button {
     border: none;
     font-weight: bold;
 }
+<<<<<<< HEAD
 .btn-enter a:hover {
+=======
+
+/* Efeito ao passar o mouse sobre o botão "Entrar" no menu */
+.menu-bar .btn-entrar:hover {
+>>>>>>> ccab0356d771c064745243afb00fffc72c67d283
     background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration: none;
@@ -200,6 +229,26 @@ button {
     cursor: pointer;
     transition: all 1s ease;
 }
+<<<<<<< HEAD
+=======
+
+/* Efeito ao passar o mouse sobre o botão "Entrar" no menu mobile */
+.menu-mobile .btn-entrar:hover {
+    background-color: transparent;
+    outline: 1px solid rgb(255, 47, 92);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+/* Efeito ao passar o mouse sobre os itens do menu no menu bar */
+.menu-bar li:hover {
+    text-decoration: underline rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+>>>>>>> ccab0356d771c064745243afb00fffc72c67d283
 /* Estilos para a classe "adicionar" */
 .adicionar {
     display: none;
