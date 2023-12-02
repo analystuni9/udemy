@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrosel Alternado</title>
+    <title>animação</title>
+    <style>
+        @keyframes mover {
+            0% {
+                transform: translateX(-50px);
+                background-color:red;
+            } 
+            50% {
+                background-color:green;
+            }
+            100% {
+                transform: translateX(50px);
+                background-color:blue;
+            }
+        }
+        .box {
+            outline:3px solid red;
+            width:400px;
+            overflow:hidden;
+        }
+        .box div {
+            width:100px;
+            height:50px;
+            background-color:#ccc;
+            animation-name:mover;
+            animation-duration:3s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+            animation-direction:alternate-reverse;
+        }
+    </style>
 </head>
 <body>
     <div class="box">
-        <input type="radio" name="imagem" id="radio1" value="Naruto/1.jpg">
-        <label for="radio1"></label>
-
-        <input type="radio" name="imagem" id="radio2" value="Naruto/2.jpg">
-        <label for="radio2"></label>
-
-        <input type="radio" name="imagem" id="radio3" value="Naruto/3.jpg">
-        <label for="radio3"></label>
-
-        <input type="radio" name="imagem" id="radio4" value="Naruto/4.jpg">
-        <label for="radio4"></label>
-
-        <input type="radio" >
+        <div>1</div>
     </div>
 </body>
 </html>

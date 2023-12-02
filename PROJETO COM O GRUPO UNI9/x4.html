@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quiz Simples</h1>
+
+<form id="quizForm">
+    <!-- Perguntas e Respostas -->
+    <fieldset>
+        <legend>1. Qual é a capital do Brasil?</legend>
+        <label>
+            <input type="radio" name="q1" value="a"> Rio de Janeiro
+        </label>
+        <label>
+            <input type="radio" name="q1" value="b"> Brasília
+        </label>
+        <label>
+            <input type="radio" name="q1" value="c"> São Paulo
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>2. Qual é a linguagem de programação deste quiz?</legend>
+        <label>
+            <input type="radio" name="q2" value="a"> Java
+        </label>
+        <label>
+            <input type="radio" name="q2" value="b"> JavaScript
+        </label>
+        <label>
+            <input type="radio" name="q2" value="c"> Python
+        </label>
+    </fieldset>
+
+    <!-- Botão de enviar respostas -->
+    <button type="button" onclick="verificarRespostas()">Enviar Respostas</button>
+</form>
+
+<script>
+    function verificarRespostas() {
+        var pontuacao = 0;
+
+        // Array com as respostas corretas
+        var respostasCorretas = ['b', 'b'];
+
+        // Iterar sobre as perguntas
+        for (var i = 0; i < respostasCorretas.length; i++) {
+            var respostaSelecionada = document.querySelector('input[name="q' + (i + 1) + '"]:checked');
+
+            // Verificar se uma resposta foi selecionada
+            if (respostaSelecionada) {
+                // Verificar se a resposta está correta
+                if (respostaSelecionada.value === respostasCorretas[i]) {
+                    pontuacao += 1;
+                }
+            }
+        }
+
+        // Exibir pontuação final
+        alert("Pontuação final: " + pontuacao + "/2");
+    }
+</script>
+
+</body>
+</html>

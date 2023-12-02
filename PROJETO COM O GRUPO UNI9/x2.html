@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" size="32x32" href="GalleryFavicon.png" />
+    <style>
+        /* Importa a fonte Poppins com pesos 600 e 700 do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+        /* Estilos base */
+        body {
+            /* Configurações gerais para o corpo do documento */
+            font-family: "Poppins";
+            margin: 0;
+            padding: 0;
+            /* Substitua pelo caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('Minimalist Nawpic.png');
+        }
+        
+        /* Estilos para o tema Dark */
+        .dark {
+            background-color: black;
+            /* Cor de fundo para o tema Dark */
+            /* Imagem de fundo para o tema Dark */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('Taiga Light Mode.jpg');
+            /* Estilos específicos para o tema Dark */
+        }
+
+        /* Estilos para o tema Light */
+        .light {
+            background-color: white;
+            /* Cor de fundo para o tema Light */
+            color: black;
+            /* Cor do texto para o tema Light */
+            /* background-image: url('Taiga Light Mode.jpg'); */
+            /* Imagem de fundo para o tema Light */
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* Estilos específicos para o tema Light */
+        }
+
+        /* Estilos para os botões */
+        .btn-container {
+            /* Estilos para o container dos botões */
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .btn1 {
+            color: white;
+            background-color: black;
+            border: none;
+            padding: 10px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+            /* Adiciona margem à direita para separar os botões */
+        }
+
+        .btn1:hover {
+            outline: 1px solid black;
+            color: black;
+            background-color: transparent;
+        }
+
+        /* Estilos base do botão */
+        .btn3 {
+            color: white;
+            background-color: black;
+            border: none;
+            padding: 10px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn3:hover {
+            background-color: transparent;
+            outline: 1px solid black;
+            color: black;
+        }
+
+        .btn2 {
+            color:black;
+            background-color: white;
+            border: none;
+            padding: 10px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+            /* Adiciona margem à direita para separar os botões */
+        }
+
+        .btn2:hover {
+            outline: 1px solid white;
+            color: white;
+            background-color: transparent;
+        }
+
+        /* Estilos para a galeria de imagens */
+        #gallery {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            position:absolute;
+            top:0;
+            margin-top:500px;
+            /* border:1px solid black; */
+        }
+
+        #gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 10px;
+            /* Adiciona margem à direita para separar as imagens */
+        }
+
+        .bx-camera {
+            margin-right: 7px;
+        }
+
+        .bx-moon {
+            margin-right: 7px;
+        }
+
+        .bx-sun {
+            margin-right: 7px;
+        }
+
+        .btn-container {
+            width:150px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            margin-top: 350px;
+            /* border:1px solid black; */
+        }
+
+        .title {
+            font-family: "Poppins";
+            font-weight: 700;
+            position: absolute;
+            top: 0;
+            margin-top: 200px;
+            color:white;
+        }
+
+        .title2 {
+            font-family: "Poppins";
+            font-weight: 700;
+            position: absolute;
+            top: 0;
+            margin-top: 200px;
+            color:black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Título da Página -->
+    <h1 class="title">Galeria de Imagens</h1>
+
+    <!-- Container dos Botões -->
+    <div class="btn-container">
+        <!-- Botão para Exibir ou Ocultar Fotos -->
+        <button class="btn3" onclick="exibirOuOcultarFotos()"><i class='bx bx-camera'></i>Fotos</button>
+        <!-- Botão para Alternar entre os Temas Dark e Light -->
+        <button class="btn1" onclick="alternar()"><i class='bx bx-moon'></i>Dark</button>
+    </div>
+    <!-- Container da Galeria de Imagens -->
+    <div id="gallery"></div>
+
+    <script>
+        // Variável para controlar a visibilidade da galeria de imagens
+        let galleryVisible = false;
+
+        // Seleciona o elemento 'body' uma vez para reutilização
+        let body = document.querySelector('body');
+
+        // Seleciona o elemento da galeria uma vez para reutilização
+        let galleryDiv = document.getElementById("gallery");
+
+        // Seleciona o botão btn3 uma vez para reutilização
+        let btn3 = document.querySelector('.btn3');
+
+        // Seleciona o elemento do título uma vez para reutilização
+        let title = document.querySelector('.title');
+
+        // Função para exibir as fotos na galeria
+        function exibirFotos() {
+            // Limpa o conteúdo atual da galeria
+            galleryDiv.innerHTML = "";
+
+            // Adiciona 5 imagens à galeria
+            var i = 1;
+            while (i <= 5) {
+                var imgElement = document.createElement("img");
+
+                // Define os URLs das imagens com base no tema claro ou escuro
+                if (body.classList.contains('dark')) {
+                    imgElement.src = "https://source.unsplash.com/200x200/?games background" + i + ".jpg";
+                } else {
+                    imgElement.src = "https://source.unsplash.com/200x200/?carros background" + i + ".jpg";
+                }
+
+                // Estiliza as imagens
+                imgElement.style.width = "200px";
+                imgElement.style.height = "200px";
+                imgElement.style.margin = "5px";
+                imgElement.style.objectFit = "cover";
+
+                // Adiciona a imagem à galeria
+                galleryDiv.appendChild(imgElement);
+                i++;
+            }
+
+            // Atualiza a variável de visibilidade da galeria
+            galleryVisible = true;
+        }
+
+        // Função para alternar entre temas claro e escuro
+        function alternar() {
+            // Seleciona os elementos necessários para a alternância
+            let btn1 = document.querySelector('.btn1');
+
+            // Verifica se o corpo possui a classe 'Dark'
+            if (body.classList.contains('dark')) {
+                // Altera para tema claro
+                body.classList.add('light');
+                body.classList.remove('dark');
+                btn1.classList.remove('btn2');
+                btn3.classList.remove('btn2');
+                title.classList.remove('title2');
+                btn1.innerHTML = "<i class='bx bx-moon'></i>Dark";
+                ocultarFotos();
+            } else {
+                // Altera para tema escuro
+                body.classList.remove('light');
+                body.classList.add('dark');
+                btn1.classList.add('btn2');
+                btn3.classList.add('btn2');
+                title.classList.add('title2');
+                btn1.innerHTML = "<i class='bx bx-sun'></i>Light";
+
+                // Oculta as fotos quando altera para o tema claro
+                ocultarFotos();
+            }
+        }
+
+        // Função para ocultar as fotos na galeria
+        function ocultarFotos() {
+            galleryDiv.innerHTML = "";
+            galleryVisible = false;
+        }
+
+        // Função para exibir ou ocultar as fotos no clique do botão btn3
+        function exibirOuOcultarFotos() {
+            if (galleryVisible) {
+                ocultarFotos();
+            } else {
+                exibirFotos();
+            }
+        }
+
+    </script>
+</body>
+
+</html>

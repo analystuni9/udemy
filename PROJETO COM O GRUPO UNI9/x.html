@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Vocacional de TI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(131, 156, 180);
+            border: 1px solid rgb(105, 104, 104);
+            border-radius: 5px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        h1 {
+            color:white;
+            text-shadow:1px 1px 1px black;
+        }
+        legend {
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Teste Vocacional de TI</h1>
+        <form name="exame">
+            <div class="question">
+                <legend>1. O que te atrai mais na área de TI?</legend>
+                <div>
+                    <input type="radio" name="q1" value="redes" id="q1a">
+                    <label for="q1a">Trabalhar com redes</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="programacao" id="q1b">
+                    <label for="q1b">Programação</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="design" id="q1c">
+                    <label for="q1c">Design</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="seguranca" id="q1d">
+                    <label for="q1d">Segurança da Informação</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <legend>2. Qual dessas atividades você acha mais interessante?</legend>
+                <div>
+                    <input type="radio" name="q2" value="redes" id="q2a">
+                    <label for="q2a">Configurar e gerenciar redes</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="programacao" id="q2b">
+                    <label for="q2b">Programar aplicativos</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="design" id="q2c">
+                    <label for="q2c">Design de interfaces</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="seguranca" id="q2d">
+                    <label for="q2d">Proteger sistemas contra ameaças</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <legend>3. Qual destas áreas você acharia mais desafiadora?</legend>
+                <div>
+                    <input type="radio" name="q3" value="redes" id="q3a">
+                    <label for="q3a">Redes e protocolos</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="programacao" id="q3b">
+                    <label for="q3b">Desenvolvimento de software</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="design" id="q3c">
+                    <label for="q3c">Design de interfaces e experiência do usuário</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="seguranca" id="q3d">
+                    <label for="q3d">Segurança de informações e cibersegurança</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <legend>4. Qual destes campos você gostaria de explorar mais?</legend>
+                <div>
+                    <input type="radio" name="q4" value="redes" id="q4a">
+                    <label for="q4a">Administração de servidores</label>
+                </div>
+                <div>
+                    <input type="radio" name="q4" value="programacao" id="q4b">
+                    <label for="q4b">Desenvolvimento web ou de aplicativos</label>
+                </div>
+                <div>
+                    <input type="radio" name="q4" value="design" id="q4c">
+                    <label for="q4c">Design gráfico e de interfaces</label>
+                </div>
+                <div>
+                    <input type="radio" name="q4" value="seguranca" id="q4d">
+                    <label for="q4d">Análise de vulnerabilidades e proteção de dados</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <legend>5. O que você gostaria de aprender a fazer melhor?</legend>
+                <div>
+                    <input type="radio" name="q5" value="redes" id="q5a">
+                    <label for="q5a">Configurar redes complexas</label>
+                </div>
+                <div>
+                    <input type="radio" name="q5" value="programacao" id="q5b">
+                    <label for="q5b">Programar aplicativos avançados</label>
+                </div>
+                <div>
+                    <input type="radio" name="q5" value="design" id="q5c">
+                    <label for="q5c">Criar designs inovadores e intuitivos</label>
+                </div>
+                <div>
+                    <input type="radio" name="q5" value="seguranca" id="q5d">
+                    <label for="q5d">Proteger sistemas contra ameaças sofisticadas</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="calculateVocationalArea()">Descobrir minha vocação</button>
+
+            <p class="result" id="vocational-result"></p>
+        </form>
+    </div>
+
+    <script>
+    // Função para calcular a área vocacional
+    function calculateVocationalArea() {
+        // Obtém o elemento onde o resultado será exibido
+        const result = document.getElementById('vocational-result');
+
+        // Obtém todas as opções de resposta do formulário
+        const respostas = document.exame.elements;
+
+        // Objeto para armazenar as contagens de cada categoria
+        const contagemCategorias = {
+            redes: 0,
+            programacao: 0,
+            design: 0,
+            seguranca: 0
+        };
+
+        // Loop para contar as respostas em cada categoria
+        for (const resposta of respostas) {
+            if (resposta.type === 'radio' && resposta.checked) {
+                // Incrementa a contagem da categoria correspondente
+                contagemCategorias[resposta.value]++;
+            }
+        }
+
+        // Inicializa a vocação como "indefinida"
+        let vocacao = "indefinida";
+        let maiorContagem = 0;
+
+        // Encontra a categoria com a maior contagem (a maior afinidade)
+        for (const categoria in contagemCategorias) {
+            if (contagemCategorias[categoria] > maiorContagem) {
+                maiorContagem = contagemCategorias[categoria];
+                vocacao = categoria;
+            }
+        }
+
+        // Mapeamento das categorias para nomes mais descritivos em português
+        const nomesCategorias = {
+            redes: "Redes",
+            programacao: "Programação",
+            design: "Design",
+            seguranca: "Segurança da Informação"
+        };
+        // Exibe o resultado no elemento HTML
+        result.textContent = `Sua vocação na área de TI é: ${nomesCategorias[vocacao]}`;
+    }
+    </script>
+</body>
+</html>
