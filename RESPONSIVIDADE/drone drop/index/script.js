@@ -16,6 +16,9 @@ let texto = document.querySelector(".texto")
 // Seleciona o elemento HTML com a classe "btn-lermais" e armazena-o na variável btnlermais
 let btnlermais = document.querySelector(".btn-lermais")
 
+let texto_2 = document.querySelector(".texto_2")
+
+let btnlermais_2 = document.querySelector(".btn-lermais_2")
 // Inicializa variáveis i e k com valor zero
 let i = 0
 let k = 0
@@ -23,11 +26,7 @@ let k = 0
 // Define uma função chamada "animation" que é acionada quando o elemento com a classe "icon-mobile" é clicado
 let animation = () => {
     // Verifica se o elemento iconmenu possui a classe "animation_x"
-<<<<<<< HEAD
     if (iconmobile.classList.contains("animation_x")) {
-=======
-    if (iconmenu.classList.contains("animation_x")) { 
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
         // Remove a classe "animation_x" do elemento iconmenu
         iconmobile.classList.remove("animation_x")
         // Remove a classe "exibir" do elemento menumobile
@@ -88,8 +87,18 @@ let adicionartexto = () => {
         texto.classList.add("adicionar")
         // Atualiza o texto do botão
         btnlermais.innerHTML = "Ler menos"
-    }
+    } 
 }
-
 // Adiciona um ouvinte de evento de clique ao elemento com a classe "btn-lermais" para chamar a função "adicionartexto"
 btnlermais.addEventListener("click", adicionartexto)
+
+let adicionartexto_2 = () => {
+    if (texto_2.classList.contains("adicionar_2")) {
+        texto_2.classList.remove("adicionar_2")
+        btnlermais_2.innerHTML = "Ler mais"
+    } else {
+        texto_2.classList.add("adicionar_2")
+        btnlermais_2.innerHTML = "Ler menos"
+    }
+}
+btnlermais_2.addEventListener("click", adicionartexto_2)

@@ -28,6 +28,7 @@ header {
     z-index: 0;
     height: 480px;
     font-size: 15px;
+    /* border: 1px solid black; */
 }
 
 /* Estilos para o logotipo */
@@ -62,14 +63,12 @@ header {
     padding: 20px 10px;
     display: flex;
     justify-content: space-between;
+    align-items:center;
     background-color: rgba(55, 53, 53, 0.77);
     position: absolute;
     top: 0;
     z-index: 1;
-<<<<<<< HEAD
-=======
-    height: 70px;
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
+    /* border:1px solid red; */
 }
 
 /* Estilos para a lista de itens do menu */
@@ -78,7 +77,6 @@ header {
     list-style-type: none;
     gap: 20px ;
     align-items: center;
-<<<<<<< HEAD
     margin: 0 auto;
 }
 .menu-bar a {
@@ -91,23 +89,9 @@ header {
     transition: all 1s ease;
 }
 .btn-entrar {
-    border:none;
-    background:transparent;
-}
-/* Efeito ao passar o mouse sobre o botão "Entrar" no menu */
-.menu-bar
-.btn-entrar a:hover {
-    background-color: transparent;
-    outline: 1px solid rgb(255, 47, 92);
-    text-decoration: none;
-    text-shadow: 1px 1px 1px black;
-    cursor: pointer;
-    transition: all 1s ease;
-}
-=======
-}
+    width:90%;
 
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
+}
 /* Estilos para o ícone de menu mobile */
 .icon-mobile {
     width: 35px;
@@ -138,11 +122,7 @@ header {
 
 /* Estilos para o menu mobile */
 .menu-mobile {
-<<<<<<< HEAD
     width: 40vw;
-=======
-    width: 400px;
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
     position: absolute;
     top: 0;
     right: 0;
@@ -178,82 +158,42 @@ header {
     text-decoration: none;
     color: black;
 }
-<<<<<<< HEAD
 .menu-mobile a:hover {
     text-decoration: underline rgb(255, 47, 92);
     cursor: pointer;
     transition: all 1s ease;
 }
-=======
-
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
 /* Estilos para os itens da lista no menu mobile */
 .menu-mobile li {
     width: 100%;
     border-bottom: 1px solid rgba(128, 128, 128, 0.205);
     padding-bottom: 5px;
 }
-<<<<<<< HEAD
-button {
-    border:none;
-    background:transparent;
+.btn-enter {
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 /* Estilos para o botão "Entrar" no menu */
 .btn-enter a {
-=======
-
-/* Estilos para o botão "Entrar" no menu */
-.btn-entrar {
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
     text-align: center;
     background-color: #ff2f5c;
     color: white;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 1px 1px 1px black;
     border-radius: 7px;
     padding: 10px 12px;
-    border: none;
     font-weight: bold;
 }
-<<<<<<< HEAD
 .btn-enter a:hover {
-=======
-
-/* Efeito ao passar o mouse sobre o botão "Entrar" no menu */
-.menu-bar .btn-entrar:hover {
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
     background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration: none;
-    text-shadow:2px 2px 2px black;
+    text-shadow:none;
+    color:rgb(255, 47, 92);
     cursor: pointer;
     transition: all 1s ease;
 }
-<<<<<<< HEAD
-=======
-
-/* Efeito ao passar o mouse sobre o botão "Entrar" no menu mobile */
-.menu-mobile .btn-entrar:hover {
-    background-color: transparent;
-    outline: 1px solid rgb(255, 47, 92);
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 1s ease;
-}
-
-/* Efeito ao passar o mouse sobre os itens do menu no menu bar */
-.menu-bar li:hover {
-    text-decoration: underline rgb(255, 47, 92);
-    cursor: pointer;
-    transition: all 1s ease;
-}
-
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
-/* Estilos para a classe "adicionar" */
-.adicionar {
-    display: none;
-}
-
 /* Estilos para os botões de rádio e rótulos (labels) */
 input[type='radio'] {
     display: none;
@@ -299,12 +239,6 @@ label {
     margin-right: 25px;
 }
 
-/* Efeito ao passar o mouse sobre os botões do carrossel */
-.btn:hover {
-    background-color: rgba(255, 47, 92, 0.561);
-    transition: all 1s ease;
-}
-
 /* Efeito ao passar o mouse sobre o botão personalizado 2 */
 .btn-personalizado-2:hover {
     background-color: transparent;
@@ -347,7 +281,7 @@ section {
 article:nth-child(1) {
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 200px;
+    margin-bottom:90px;
 }
 
 /* Estilos para a imagem da empresa */
@@ -392,7 +326,7 @@ article:nth-child(1) h2 {
     background-color: #ff2f5c;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 1px 1px 1px black;
     border-radius: 7px;
     padding: 10px;
     border: none;
@@ -403,7 +337,8 @@ article:nth-child(1) h2 {
     background-color: transparent;
     outline: 1px solid rgb(255, 47, 92);
     text-decoration: none;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px white;
+    color:rgb(255, 47, 92);
     cursor: pointer;
     transition: all 1s ease;
 }
@@ -714,4 +649,34 @@ footer p {
 ::-webkit-scrollbar-thumb {
     background-color: rgb(107, 106, 106);
     border-radius: 20px;
+}
+.texto_2 {
+    display:none;
+}
+.adicionar_2 {
+    display:block;
+}
+/* Estilos para o botão "Ler Mais" */
+.btn-lermais_2 {
+    width: fit-content;
+    text-align: center;
+    background-color: #ff2f5c;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 7px;
+    padding: 10px;
+    border: none;
+    margin-top:25px;
+}
+
+/* Efeito ao passar o mouse sobre o botão "Ler Mais" */
+.btn-lermais_2:hover {
+    background-color: transparent;
+    outline: 1px solid rgb(255, 47, 92);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px white;
+    color:rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
 }

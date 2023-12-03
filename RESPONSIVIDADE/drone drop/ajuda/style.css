@@ -18,12 +18,13 @@ body {
     font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     font-size: 14px;
+    color:black;
+   
 }
 
 /* Estilos para o cabeçalho (header) */
 header {
     max-width: 1080px;
-    /* position: relative; */
     margin: 0 auto 20px;
     top: 0;
     z-index: 0;
@@ -153,12 +154,6 @@ header {
     justify-content: center;
     gap: 35px;
 }
-.menu-mobile li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 /* Estilos para os links do menu mobile */
 .menu-mobile a {
@@ -201,172 +196,13 @@ header {
     cursor: pointer;
     transition: all 1s ease;
 }
-
-@media screen and (max-width:850px) {
-    .menu-bar {
-        display: none;
-    }
-}
-
-@media screen and (min-width:850px) {
-    .menu-bar {
-        display: block;
-    }
-}
-
-@media screen and (min-width:850px) {
-
-    .icon-menu,
-    .menu-mobile {
-        display: none;
-    }
-}
-main {
-    max-width: 1080px;
-    height:80vh;
-    background-image: url(imagens/background-drone.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(12, 11, 11, 0.705);
-    background-blend-mode: overlay;
-    padding: 1px;
-    margin-top:80px;
-}
-.container {
-    max-width: 1080px;
-    width: 90vw;
-    height: 90vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    /* border:1px solid black; */
-}
-
-.box {
-    width: 700px;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 1px 1px 1px black;
-    /* border:1px solid black; */
-    /* background-color:blueviolet; */
-}
-
-.box h1 {
-    width: 100%;
-    text-align: center;
-    font-size:35px;
-    margin-bottom:30px;
-}
-
-.box input {
-    border: none;
-    outline: none;
-    background: transparent;
-    /* background-color:blue; */
-    border: 2px solid rgba(190, 185, 185, 0.438);
-    border-radius: 30px;
-    padding: 15px 100px 15px 20px;
-    color: white;
-    caret-color: white;
-
-}
-
-.box label {
-    margin-left: 25px;
-    font-size: 20px;
-    color: white;
-}
-
-.box input::placeholder {
-    font-size: 20px;
-    color:rgba(190, 185, 185, 0.616);
-}
-
-.box-username {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    margin-bottom: 20px;
-    /* border:1px solid black; */
-}
-
-.bxs-user {
-    position: absolute;
-    top: 0;
-    margin-top: 48px;
-    margin-left: 350px;
-    font-size:17px;
-}
-
-.box-password {
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    /* border:1px solid black; */
-}
-
-.bxs-lock-alt {
-    position: absolute;
-    top: 0;
-    margin-top: 48px;
-    margin-left: 350px;
-    font-size:17px;
-}
-
-.lembrar {
-    display: flex;
-    gap: 100px;
-}
-
-.lembrar a {
-    text-decoration: none;
-    color: white;
-    font-size:15px;
-}
-
-.lembrar a:hover {
-    text-decoration: underline rgb(255, 47, 92);
-}
-.lembrar label {
-    font-size:16px;
-}
-.box-btn {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.btn {
-    border: none;
-    outline: none;
-    padding: 10px 50px;
-    background: transparent;
-    /* border: 2px solid gray; */
-    background-color: rgb(255, 47, 92);
-    border-radius: 20px;
-    font-size: 17px;
-    color: white;
-}
-
-.btn:hover {
-    background: transparent;
-    outline: 1px solid rgb(255, 47, 92);
-    cursor: pointer;
-}
-
 /* Estilos para o rodapé (footer) */
 footer {
+    max-width: 1080px;
     width: 100%;
     background-color: rgba(55, 53, 53, 0.77);
     font-size: 15px;
+    color:white;
 }
 
 /* Estilos para os parágrafos dentro do rodapé */
@@ -444,4 +280,14 @@ footer p {
 ::-webkit-scrollbar-thumb {
     background-color: rgb(107, 106, 106);
     border-radius: 20px;
+}
+main {
+    max-width:1080px;
+    width:100vw;
+    height:90vh;
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding:0 50px;
+    background-image:linear-gradient(white, gray);
 }

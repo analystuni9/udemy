@@ -19,11 +19,7 @@
     <!-- Link para o arquivo de estilos CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Ícone exibido na aba do navegador -->
-<<<<<<< HEAD
     <link rel="icon" href="imagens/icone-drone.ico">
-=======
-    <link rel="icon" href="icone-drone.ico">
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
     <!-- Link para a biblioteca de ícones 'boxicons' -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link para o arquivo de script JavaScript com a tag 'defer' -->
@@ -36,42 +32,24 @@
         <nav class="nav-bar">
             <div class="logo">
                 <!-- Logotipo da Drone Drop -->
-<<<<<<< HEAD
                 <img src="imagens/logo.png" alt="Logo Drone Drop">
-=======
-                <img src="logo.png" alt="Logo Drone Drop">
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
             </div>
             <div class="menu-bar">
                 <ul>
                     <!-- Itens do menu de navegação -->
-<<<<<<< HEAD
                     <li><a href="../index/index.html">Início</a></li>
                     <li><a href="">Blog</a></li>
                     <li><a href="../planos/planos.html">Planos</a></li>
                     <li><a href="">Sustentabilidade</a></li>
                     <li><a href="">Configurações</a></li>
-                    <li><a href=""><a href="">Ajuda</a></li>
-                    <button class="btn-enter"><a href="../login/login.html">Entrar</a></button>
-=======
-                    <li>Início</li>
-                    <li>Blog</li>
-                    <li>Planos</li>
-                    <li>Sustentabilidade</li>
-                    <li>Configurações</li>
-                    <li>Ajuda</li>
-                    <button class="btn-entrar" onclick="abrirlink()">Entrar</button>
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
+                    <li><a href="../ajuda/ajuda.html">Ajuda</a></li>
+                    <li class="btn-enter"><a href="../login/login.html">Entrar</a></li>
                 </ul>
             </div>
         </nav>
         <!-- Barra de navegação para dispositivos móveis (menu hamburguer) -->
         <nav class="nav-mobile">
-<<<<<<< HEAD
             <div class="icon-mobile" id="icon-mobile">
-=======
-            <div class="icon-mobile" id="icon-mobile" onclick="alternar()">
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
                 <!-- Ícone do menu hamburguer (três linhas) -->
                 <span></span>
                 <span></span>
@@ -80,22 +58,14 @@
             <div class="menu-mobile" id="menu-mobile">
                 <ul>
                     <!-- Ícones e links para itens de menu -->
-<<<<<<< HEAD
                     <li><i class='bx bx-home'><a href="../index/index.html">Inicio</a></i></li>
-=======
-                    <li><i class='bx bx-home'><a href="">Inicio</a></i></li>
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
                     <li><i class='bx bx-spreadsheet'><a href="">Blog</a></i></li>
                     <li><i class='bx bx-store'><a href="../planos/planos.html">Planos</a></i></li>
                     <li><i class='bx bx-leaf'><a href="">Sustentabilidade</a></i></li>
                     <li><i class='bx bx-cog'><a href="">Configurações</a></i></li>
-                    <li><i class='bx bx-info-circle'><a href="">Ajuda</a></i></li>
+                    <li><i class='bx bx-info-circle'><a href="../ajuda/ajuda.html">Ajuda</a></i></li>
                     <!-- Botão "Entrar" no menu móvel -->
-<<<<<<< HEAD
-                    <button class="btn-enter"><a href="../login/login.html">Entrar</a></button>
-=======
-                    <button class="btn-entrar" onclick="abrirlink()">Entrar</button>
->>>>>>> ccab0356d771c064745243afb00fffc72c67d283
+                    <li class="btn-enter"><a href="../login/login.html">Entrar</a></li>
                 </ul>
             </div>
         </nav>
@@ -209,7 +179,7 @@
                     <p>Os drones, ou veículos aéreos não tripulados (VANTs), utilizam uma variedade de tecnologias para
                         operar de forma autônoma ou serem controlados remotamente. Abaixo estão algumas das principais
                         tecnologias presentes nos drones:</p>
-                    <h3>Propulsão:</h3>
+                    <h3>Sistemas de Propulsão:</h3>
                     <ul>
                         <li>Motores elétricos ou a combustão interna: A maioria dos drones utiliza motores elétricos
                             devido à eficiência e facilidade de controle.</li>
@@ -230,6 +200,29 @@
                         <li>Comunicação de dados: Drones podem enviar dados, vídeo e telemetria para o operador por meio
                             de conexões Wi-Fi, 4G/5G, ou outras tecnologias.</li>
                     </ul>
+                    <div class="texto_2">
+                        <h3>Sensores:</h3>
+                        <li>Câmeras: Drones podem ser equipados com câmeras para capturar imagens e vídeos.</li>
+                        <li>Sensores de obstáculos: Ultrassom, lidar, câmeras e sensores infravermelhos ajudam a evitar colisões.</li>
+                        <li>Sensores de temperatura: Podem ser usados em drones para fins como inspeção térmica.</li>
+                        <li>Sensores de carga útil: Drones usados para fins específicos, como mapeamento ou agricultura, podem ter sensores personalizados.</li>
+                        <h3>Software:</h3>
+                        <li>Controladores de voo: Programas embutidos controlam a estabilidade e os movimentos do drone.</li>
+                        <li>Planejamento de trajetória: Software de planejamento permite a criação de trajetórias de voo específicas.</li>
+                        <li>Processamento de imagem: Para processar dados de câmeras e realizar análise de imagens.</li>
+                        <li>Automação: Algoritmos autônomos podem permitir que drones tomem decisões com base em dados de sensores.</li>
+                        <h3>Baterias:</h3>
+                        <li>Baterias de íon-lítio: São usadas para alimentar os motores e eletrônicos do drone.</li>
+                        <h3>Estrutura:</h3>
+                        <li>Quadro: A estrutura do drone é geralmente feita de materiais leves e resistentes, como plástico reforçado ou fibra de carbono.</li>
+                        <h3>Armazenamento e Transmissão de Dados:</h3>
+                        <li>Cartões de memória: Para armazenar dados de vídeo e imagem.</li>
+                        <li>Tecnologia de transmissão de vídeo: Permite o envio de vídeo ao vivo para o operador.</li>
+                        <h3>Segurança:</h3>
+                        <li>Sistemas de proteção contra queda: Para evitar quedas em caso de falha.</li>
+                        <li>Proteção contra hacking: Medidas de segurança para evitar ataques de hackers.</li>              
+                    </div> 
+                    <button class="btn-lermais_2">Ler mais</button>     
                     <!-- Continue adicionando parágrafos, listas e subitens para outras categorias de tecnologias dos drones -->
                 </div>
             </article>

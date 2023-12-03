@@ -1,5 +1,5 @@
 // Seleciona o elemento HTML com a classe "icon-menu" e armazena-o na variável iconmenu
-let iconmenu = document.querySelector('.icon-menu')
+let iconmenu = document.querySelector('.icon-mobile')
 
 // Seleciona o elemento HTML com a classe "menu-mobile" e armazena-o na variável menumobile
 let menumobile = document.querySelector('.menu-mobile')
@@ -17,12 +17,12 @@ let animation = () => {
         // Remove a classe "animation_x" do elemento iconmenu
         iconmenu.classList.remove('animation_x')
         // Remove a classe "exibir" do elemento menumobile
-        menumobile.classList.remove('exibir')
+        menumobile.classList.remove('visualizar')
     } else {
         // Adiciona a classe "animation_x" ao elemento iconmenu
         iconmenu.classList.add('animation_x')
         // Adiciona a classe "exibir" ao elemento menumobile
-        menumobile.classList.add('exibir')
+        menumobile.classList.add('visualizar')
     }
 }
 

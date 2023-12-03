@@ -1,4 +1,4 @@
-let iconmenu = document.querySelector('.icon-menu')
+let iconmenu = document.querySelector('.icon-mobile')
 let menumobile = document.querySelector('.menu-mobile')
 let animation = () => {
     if (iconmenu.classList.contains('animation_x')) {
