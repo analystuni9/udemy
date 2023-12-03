@@ -1,0 +1,279 @@
+/* Importei uma nova família de fontes do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Estilos gerais para todos os elementos da página */
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para o corpo da página */
+body {
+    max-width: 1080px;
+    height: auto;
+    margin: 0 auto;
+    font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 14px;
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    position: relative;
+    margin: 0 auto 20px;
+    top: 0;
+    z-index: 0;
+    height: 480px;
+    font-size: 15px;
+    /* border: 1px solid black; */
+}
+
+/* Estilos para o logotipo */
+.logo {
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+/* Animação para o logotipo */
+.animation_x span:nth-child(1) {
+    transform: translateY(15px) rotate(-45deg) scaleX(1.1);
+}
+
+.animation_x span:nth-child(2) {
+    opacity: 0;
+}
+
+.animation_x span:nth-child(3) {
+    transform: translateY(-15px) rotate(45deg) scaleX(1.1);
+}
+
+/* Estilos para a imagem do logotipo */
+.logo img {
+    width: 100%;
+}
+
+/* Estilos para a barra de navegação (menu bar) */
+.nav-bar {
+    width: 100%;
+    height:65px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: rgba(55, 53, 53, 0.77);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    /* border:1px solid red; */
+}
+
+/* Estilos para a lista de itens do menu */
+.menu-bar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px ;
+    align-items: center;
+    margin: 0 auto;
+}
+.menu-bar a {
+    text-decoration:none;
+    color:white;
+}
+.menu-bar a:hover {
+    text-decoration: underline rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.btn-entrar {
+    width:90%;
+
+}
+/* Estilos para o ícone de menu mobile */
+.icon-mobile {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 6;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+    margin-right: 5px;
+    box-sizing: content-box;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para as barras do ícone de menu mobile */
+.icon-mobile span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+    transition: all 0.6s ease;
+    outline: 1px solid rgba(255, 255, 255, 0.884);
+}
+
+/* Estilos para o menu mobile */
+.menu-mobile {
+    width: 40vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    color: black;
+    background-color: white;
+    margin-top: 80px;
+    display: none;
+    padding: 20px;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    box-shadow: 1px 1px 3px black;
+}
+
+/* Classe de exibição para o menu mobile */
+.exibir {
+    display: block;
+}
+
+/* Estilos para a lista de itens do menu mobile */
+.menu-mobile ul {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+/* Estilos para os links do menu mobile */
+.menu-mobile a {
+    text-decoration: none;
+    color: black;
+}
+.menu-mobile a:hover {
+    text-decoration: underline rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+/* Estilos para os itens da lista no menu mobile */
+.menu-mobile li {
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.205);
+    padding-bottom: 5px;
+}
+.btn-enter {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Estilos para o botão "Entrar" no menu */
+.btn-enter a {
+    text-align: center;
+    background-color: #ff2f5c;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 7px;
+    padding: 10px 12px;
+    font-weight: bold;
+}
+.btn-enter a:hover {
+    background-color: transparent;
+    outline: 1px solid rgb(255, 47, 92);
+    text-decoration: none;
+    text-shadow:none;
+    color:rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+/* Estilos para o rodapé (footer) */
+footer {
+    width: 100%;
+    background-color: rgba(55, 53, 53, 0.77);
+    font-size: 15px;
+}
+
+/* Estilos para os parágrafos dentro do rodapé */
+footer p {
+    text-align: center;
+    padding: 7px 0;
+}
+
+/* Estilos para a lista de ícones no rodapé (icones-rodape) */
+.icones-rodape ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 30px;
+    padding: 7px 0;
+}
+
+/* Efeito ao passar o mouse sobre os ícones no rodapé */
+.icones-rodape i:hover {
+    text-decoration: underline #ff2f5c;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+/* Estilos para a lista de links no rodapé (links-rodape) */
+.links-rodape ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 30px;
+    padding: 7px 0;
+}
+
+/* Efeito ao passar o mouse sobre os links no rodapé */
+.links-rodape li:hover {
+    text-decoration: underline #ff2f5c;
+    cursor: pointer;
+}
+
+/* Estilos para os ícones no rodapé */
+.icones-rodape i {
+    font-size: 22px;
+}
+
+/* Estilos para a ocultação do menu desktop em telas menores que 850px de largura */
+@media screen and (max-width: 850px) {
+    .menu-bar {
+        display: none;
+    }
+}
+
+/* Estilos para a ocultação do ícone de menu mobile em telas maiores que 850px de largura */
+@media screen and (min-width: 850px) {
+    .icon-mobile, .nav-mobile {
+        display: none;
+    }
+}
+
+/* Estilos para telas menores que 400px de largura */
+@media screen and (max-width: 400px) {
+    .menu-mobile {
+        width: 100%;
+    }
+}
+
+/* Estilos para a barra de rolagem personalizada do navegador Chrome */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 7px;
+}
+
+/* Estilos para o polegar (thumb) da barra de rolagem personalizada do navegador Chrome */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(107, 106, 106);
+    border-radius: 20px;
+}
