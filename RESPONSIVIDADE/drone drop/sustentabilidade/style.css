@@ -30,7 +30,17 @@ header {
     font-size: 15px;
     /* border: 1px solid black; */
 }
+main {
+    width: 100%;
+    max-width: 1080px;
+    background-image: linear-gradient(white, gray);
+    padding:30px;
+    color:black;
 
+}
+h1 {
+    text-align: center;
+}
 /* Estilos para o logotipo */
 .logo {
     width: 100px;
@@ -194,6 +204,68 @@ header {
     cursor: pointer;
     transition: all 1s ease;
 }
+/* Estilos para os botões de rádio e rótulos (labels) */
+input[type='radio'] {
+    display: none;
+}
+
+input[type='radio']:checked+label {
+    background-color: rgb(255, 47, 92);
+}
+/* Estilos para a seção de imagens do carrossel */
+.imagem-carrosel {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
+}
+
+/* Estilos para a seção do carrossel manual */
+.carrosel-manual {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 380px;
+    z-index: 2;
+    text-align: center;
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid yellow; */
+}
+
+/* Estilos para os rótulos do carrossel */
+label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+/* Efeito ao passar o mouse sobre o botão personalizado 2 */
+.btn-personalizado-2:hover {
+    background-color: transparent;
+    outline: 1px solid rgb(255, 47, 92);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+/* Estilos para a classe "menu-mobile" */
+.menu-mobile i {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 /* Estilos para o rodapé (footer) */
 footer {
     width: 100%;
