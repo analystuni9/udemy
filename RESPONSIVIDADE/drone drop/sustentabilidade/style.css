@@ -34,8 +34,9 @@ main {
     width: 100%;
     max-width: 1080px;
     background-image: linear-gradient(white, gray);
-    padding:30px;
+    padding:10px 30px;
     color:black;
+    /* border:1px solid black; */
 
 }
 h1 {
@@ -348,4 +349,109 @@ footer p {
 ::-webkit-scrollbar-thumb {
     background-color: rgb(107, 106, 106);
     border-radius: 20px;
+}
+main h1 {
+    font-size:25px;
+    margin-bottom:20px;
+}
+main h2 {
+    margin:10px;
+}
+main p {
+    margin-bottom:20px;
+    text-indent: 20px;
+}
+.texto {
+    display: none;
+}
+/* Estilos para a caixa "Ler Mais" */
+.lermais {
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom:20px;
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
+}
+
+/* Estilos para o botão "Ler Mais" */
+.btn-lermais {
+    width: fit-content;
+    text-align: center;
+    background-color: #ff2f5c;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 7px;
+    padding: 10px;
+    border: none;
+}
+
+/* Efeito ao passar o mouse sobre o botão "Ler Mais" */
+.btn-lermais:hover {
+    background-color: transparent;
+    outline: 1px solid rgb(255, 47, 92);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px white;
+    color:rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+/* Estilos para a classe "texto" */
+.texto {
+    display: none;
+}
+
+/* Estilos para a classe "adicionar" */
+.adicionar {
+    display: block;
+}
+.texto_2 {
+    display:none;
+}
+.adicionar_2 {
+    display:block;
+}
+/* Estilos para o botão "Ler Mais" */
+.btn-lermais_2 {
+    width: fit-content;
+    text-align: center;
+    background-color: #ff2f5c;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 7px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+/* Estilos para o botão "Ler Mais" */
+.btn-lermais_2 {
+    width: fit-content;
+    text-align: center;
+    background-color: #ff2f5c;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 7px;
+    padding: 10px;
+    border: none;
+    /* margin-top:25px; */
+}
+
+/* Efeito ao passar o mouse sobre o botão "Ler Mais" */
+.btn-lermais_2:hover {
+    background-color: transparent;
+    outline: 1px solid rgb(255, 47, 92);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px white;
+    color:rgb(255, 47, 92);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.imagem-sustentabilidade {
+    width: 95%;
+    overflow: hidden;
+    margin: 0 auto;
 }

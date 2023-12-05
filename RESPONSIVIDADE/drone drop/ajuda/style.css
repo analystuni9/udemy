@@ -16,7 +16,7 @@ body {
     height: auto;
     margin: 0 auto;
     font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+    color: black;
     font-size: 14px;
 }
 
@@ -315,4 +315,11 @@ main {
     align-items: center;
     padding:0 50px;
     background-image:linear-gradient(white, gray);
+}
+section a {
+    text-decoration:none;
+    color:black;
+}
+section a:hover {
+    text-decoration:underline rgb(255, 47, 92);
 }
