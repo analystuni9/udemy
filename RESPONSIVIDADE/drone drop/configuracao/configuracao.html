@@ -60,19 +60,32 @@
         
             <label for="fontColor">Cor da Fonte:</label>
             <input type="color" id="fontColor" name="fontColor"><br>
-        
+
             <label for="fontFamily">Tipo de Fonte:</label>
             <select id="fontFamily" name="fontFamily">
                 <option value="Arial, sans-serif">Arial</option>
                 <option value="Georgia, serif">Georgia</option>
-                <option value="'Times New Roman'">Times New Roman</option>
-                <option value="'Poppins'">Poppins</option>
+                <option value="'Times New Roman', serif">Times New Roman</option>
+                <option value="'Poppins', sans-serif">Poppins</option>
+                <option value="Helvetica, sans-serif">Helvetica</option>
+                <option value="Courier New, monospace">Courier New</option>
+                <option value="'Open Sans', sans-serif">Open Sans</option>
+                <option value="'Roboto', sans-serif">Roboto</option>
+                <option value="'Lato', sans-serif">Lato</option>
+                <option value="'Montserrat', sans-serif">Montserrat</option>
+                <option value="'Cursive', sans-serif">Cursive</option>
                 <!-- Adicione mais opções conforme necessário -->
             </select><br>
+
+            <label for="language">Idioma:</label>
+            <select id="language" name="language">
+                <option value="en">Inglês</option>
+                <option value="pt">Português</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select> <br>
+    
             <button onclick="aplicarConfiguracoes()" class="btn-aplicar">Aplicar</button>
         </div>
-    
-
     </main>
 
     <footer>
