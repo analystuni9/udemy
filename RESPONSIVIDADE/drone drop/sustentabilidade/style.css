@@ -366,8 +366,9 @@ main p {
 }
 /* Estilos para a caixa "Ler Mais" */
 .lermais {
+    display:flex;
+    justify-content: flex-end;
     width: 100%;
-    text-align: left;
     margin-top: 5px;
     margin-bottom:20px;
     /* Comentei a borda que foi originalmente desativada */
@@ -385,6 +386,7 @@ main p {
     border-radius: 7px;
     padding: 10px;
     border: none;
+    margin-right: 50px;
 }
 
 /* Efeito ao passar o mouse sobre o botão "Ler Mais" */
@@ -413,18 +415,14 @@ main p {
 .adicionar_2 {
     display:block;
 }
-/* Estilos para o botão "Ler Mais" */
-.btn-lermais_2 {
-    width: fit-content;
-    text-align: center;
-    background-color: #ff2f5c;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    border-radius: 7px;
-    padding: 10px;
-    border: none;
-    margin-bottom: 20px;
+.lermais_2 {
+    display:flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom:20px;
+    /* Comentei a borda que foi originalmente desativada */
+    /* border: 1px solid black; */
 }
 /* Estilos para o botão "Ler Mais" */
 .btn-lermais_2 {
@@ -437,9 +435,8 @@ main p {
     border-radius: 7px;
     padding: 10px;
     border: none;
-    /* margin-top:25px; */
+    margin-right: 50px;
 }
-
 /* Efeito ao passar o mouse sobre o botão "Ler Mais" */
 .btn-lermais_2:hover {
     background-color: transparent;
@@ -454,4 +451,15 @@ main p {
     width: 95%;
     overflow: hidden;
     margin: 0 auto;
+}
+.box-imagem {
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    max-width:1080px;
+    /* border: 1px solid black; */
+}
+.box-imagem img {
+    width:97%;
+    margin-bottom:10px;
 }

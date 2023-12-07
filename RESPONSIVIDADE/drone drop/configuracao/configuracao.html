@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <title>login</title>
+    <title>Configurações</title>
 </head>
-
 <body>
     <header>
         <!-- Barra de navegação para desktop -->
@@ -55,33 +52,29 @@
         </nav>
     </header>
     <main>
-        <div class="container">
-            <div class="box">
-                <form action="#">
-                    <h1>Login</h1>
-                    <div class="box-username">
-                        <label for="email">Usuário</label>
-                        <input type="email" name="usuario" id="email" value="" placeholder="Digite seu email">
-                        <i class='bx bxs-user'></i>
-                    </div>
-                    <div class="box-password">
-                        <label for="password">Senha</label>
-                        <input type="password" name="senha" id="password" value="" placeholder="Digite sua senha">
-                        <i class='bx bxs-lock-alt'></i>
-                    </div>
-                    <div class="lembrar">
-                        <label for="lembrar">
-                            <input type="checkbox" name="lembrar" id="lembrar">Lembre-me
-                        </label>
-                        <a href="#">Esqueceu a senha?</a>
-                    </div>
-                    <div class="box-btn">
-                        <button class="btn">Login</button>
-                    </div>
-                </form>
-            </div>
+        <div class="box">
+            <h1>Configurações de Aparência</h1>
+        
+            <label for="backgroundColor">Cor de Fundo:</label>
+            <input type="color" id="backgroundColor" name="backgroundColor"><br>
+        
+            <label for="fontColor">Cor da Fonte:</label>
+            <input type="color" id="fontColor" name="fontColor"><br>
+        
+            <label for="fontFamily">Tipo de Fonte:</label>
+            <select id="fontFamily" name="fontFamily">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="'Times New Roman'">Times New Roman</option>
+                <option value="'Poppins'">Poppins</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select><br>
+            <button onclick="aplicarConfiguracoes()" class="btn-aplicar">Aplicar</button>
         </div>
+    
+
     </main>
+
     <footer>
         <!-- Ícones de redes sociais no rodapé -->
         <div class="icones-rodape">
@@ -108,5 +101,7 @@
             Copyright &copy; 2023 Drone Drop. Todos os direitos reservados.
         </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
