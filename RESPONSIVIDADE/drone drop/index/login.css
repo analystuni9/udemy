@@ -224,7 +224,7 @@ header {
 main {
     max-width: 1080px;
     height:80vh;
-    background-image: url(imagens/background-drone.png);
+    background-image: url(login/background-drone.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
