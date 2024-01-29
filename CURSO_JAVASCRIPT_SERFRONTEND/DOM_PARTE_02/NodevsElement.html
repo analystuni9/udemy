@@ -1,0 +1,49 @@
+<!-- Há 12 tipos diferentes de "nós" no DOM HTML (elemento, atributo, texto, comentário, etc)
+Um elemento é só um tipo específico de nó -->
+<!-- querySelectorAll() retorna uma NodeList com nós do tipo elemento -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p>lorem<a href="#">link</a>.</p>
+    </div>
+</body>
+</html>
+<!-- Navegar entre os nós -->
+<!-- Node. parentNode -> Aponta para o pai
+parentElement
+nextSibling -> Aponta para o próximo irmão 
+previousSibling -> Aponta o irmão anterior --> 
+
+<!-- Node. childNodes
+children -> Acessar os filhos 
+firstChild
+firstElementChild
+lastChild
+lastElementChild
+hasChildNodes() -> retorna um boleano se tem filho
+-->
+<!-- Adicionar nós -->
+<!-- 
+ParentNode. prepend()
+append()
+
+Node.appendChild()
+insertBefore()
+CloneNode()
+
+ChildNode.after()
+before() -->
+
+<!-- Element.insertAdjacentElement()
+insertAdjacentHTML()
+insertAdjacentText() -->
+<!-- Remover nós -->
+<!-- Node.replaceChild()
+removeChild()
+ChildNode. remove() -->

@@ -1,0 +1,37 @@
+<!-- HTMLCollection vs NodeList -->
+<!-- document.querySelectorAll retorna uma NodeList é estático uma vez que atribui um valor para ele vai guardar aquele valor para sempre -->
+<!-- document.getElementByClassName() retorna um HTMLCollection é vivo ele vai atualizando os valores conforme vou atualizando -->
+<!-- como assim? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </div>
+    <script>
+        const nodeList = document.querySelectorAll("#list li")
+        const HTMLcollection = document.getElementById("list").getElementsByTagName("li")
+        console.log(nodeList)
+        console.log(HTMLcollection)
+        document.querySelector("#list").innerHTML += "<li>Item 6</li>"
+
+        console.log(nodeList)
+        console.log(HTMLcollection)
+        
+        document.querySelector("#list").innerHTML = ""
+        console.log(nodeList)
+        console.log(HTMLcollection)
+        </script>
+</body>
+</html>
