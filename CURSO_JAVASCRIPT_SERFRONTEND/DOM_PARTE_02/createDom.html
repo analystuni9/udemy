@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>teste DOM</h1>
+    <p>teste 1</p>
+    <p>lorem <a href="#">link</a>.</p>
+    <p>teste 2</p>
+
+    <h2>Lista</h2>
+    <ul>
+        <li>item 1</li>
+        <li>item 2
+            <ul>
+                <li>item 2.a</li>
+                <li>item 2.b</li>
+                <li>item 2.c</li>
+            </ul>
+        </li>
+        <li>item <a href="#">link</a></li>
+    </ul>
+    <script>
+        console.log(document.body)
+        console.log(document.body.parentElement)
+        console.log(document.body.parentNode)
+        console.log(document.body.parentElement === document.body.parentNode)
+        const html = document.body.parentElement
+        console.log(html.parentElement)
+        console.log(html.parentNode)
+
+        const h2 = document.querySelector("h2")
+        console.log(h2.nextSibling)
+        console.log(h2.nextElementSibling)
+        const link = document.querySelector("a")
+        const list = document.querySelector("ul ul")
+        console.log(link)
+        console.log(list)
+        console.log(link.childNodes)
+        console.log(link.children)
+        console.log(list.children)
+        console.log(list.childNodes)
+        console.log(list.parentElement)
+        console.log(list.parentElement.firstElementChild)
+        // children vai retornar HTMLcolection com os nós do tipo elemento
+        // childNodes vai retornar Nodelist com todos os nós do tipo elemento, texto etc ...
+
+        const title = document.createElement("h1")
+        const atributo = document.createAttribute("id")
+        const tagH2 = document.createElement("h2")
+        atributo.value = "title"
+        title.setAttributeNode(atributo)
+        console.log(title)
+        tagH2.setAttribute("id", "title2")
+        tagH2.setAttribute("style", "color:red")
+        tagH2.innerText = "texto dentro do h2"
+        console.log(tagH2)
+    </script>
+</body>
+</html>
+<!-- Na maioria das vezes parentNode e parentElement vão ser a mesma coisa -->
+<!-- html.parentElement não tem um pai do tipo elemento e sim do tipo fragmento por isso
+que ele retorna null parentNode aponta para document porque é do tipo fragmento -->
