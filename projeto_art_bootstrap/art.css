@@ -60,7 +60,7 @@ a, i {
 /* Main image */
 .main-image {
     height:400px;
-    background-image:url(/img/g_1.jpg);
+    background-image:url(img/g_1.jpg);
     margin-bottom:30px;
     position:relative;
 }
@@ -73,20 +73,20 @@ a, i {
 }
 /* Gallery */
 #img2 {
-    background-image:url(/img/g_2.jpg);
+    background-image:url(img/g_2.jpg);
  
 }
 #img3 {
-    background-image:url(/img/g_3.jpg);
+    background-image:url(img/g_3.jpg);
 }
 #img4 {
-    background-image:url(/img/g_4.jpg);
+    background-image:url(img/g_4.jpg);
 }
 #img5 {
-    background-image:url(/img/g_5.jpg);
+    background-image:url(img/g_5.jpg);
 }
 #img6 {
-    background-image:url(/img/g_6.jpg);
+    background-image:url(img/g_6.jpg);
 }
 #gallery-container h1 {
     text-align:center;

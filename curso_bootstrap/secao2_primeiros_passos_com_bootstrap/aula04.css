@@ -1,0 +1,33 @@
+/* XS (Muito pequeno) */
+h1 {
+    color:red;
+}
+/* sm (Pequeno) >= 576px */
+@media screen and (min-width: 576px){
+    h1 {
+        color:blue;
+    }
+}
+/* md (Médio) >= 768px */
+@media screen and (min-width: 768px){
+    h1 {
+        color:green;
+    }
+}
+/* lg (Grande) >= 992px */
+@media screen and (min-width: 992px){
+    h1 {
+        color:purple;
+    }
+}
+/* xl > 1200px */
+@media screen and (min-width: 1200px){
+    h1 {
+        color: yellow;
+    }
+}
+@media screen and (min-width: 1400px){
+    h1 {
+        
+    }
+}
