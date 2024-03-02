@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        body {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-family:"Poppins";
+            
+        }
+        #container{
+            position:relative;
+            width:90vw;
+            height:90vh;
+            background-image:url(goku.jpg);
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+            opacity:0.5;
+
+        }
+        .box-container{
+            position:relative;
+            z-index:1;
+        }
+        h1 {
+            font-size:25px;
+        }
+        fieldset {
+            width:300px;
+            justify-content:center;
+            display:flex;
+            align-items:center;
+            opacity:1.0;
+        }
+
+        input[type="email"]{
+            display:block;
+            margin-bottom:5px;
+        }
+        input[type="password"]{
+            display:block;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Login</h1>
+        <fieldset>
+            <div class="box-container">
+                <box class="user">
+                    <input type="email" id="user" placeholder="Digite seu email">
+                </box>
+                <div class="box-password">
+                    <input type="password" id="pass" placeholder="Digite sua senha">
+                </div>
+                <input type="button" class="btn" value="Entrar">
+            </div>
+        </fieldset>
+    </div>
+    <script>
+        let btn = document.querySelector(".btn")
+        let conferir = () => {
+            let user = document.querySelector("#user")
+            let pass = document.querySelector("#pass")
+            if (user.value === "admin@exemplo.com" && pass.value === "uninove123") {
+                alert("Login feito com sucesso")
+            } else {
+                alert("Login invalido tente novamente")
+            }
+        }
+        btn.addEventListener("click", conferir)
+    </script>
+</body>
+</html>

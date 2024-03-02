@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+    <style>
+        input[type='checkbox'] {
+            display:none;
+        }
+        .switch {
+            background-color:white;
+        }
+        .switch span {
+            display:inline-block;
+            width: 2em;
+            height: 1em;
+            border-radius: 1em;
+            outline: 2px solid rgb(104, 104, 104);
+            position:relative;
+            overflow:hidden;
+        }
+        .switch span::after {
+            content: '';
+            display:block;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background-color:rgb(255, 165, 0);
+            transition: all ease-in-out 0.5s;
+            transform: translateX(0);
+        }
+        .switch input:checked + span::after {
+            transform: translateX(100%);
+        }
+        .switch input:checked + span::before {
+            transform: translateX(0);
+        }
+        .switch span::before {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color:rgb(240, 238, 236);
+            transform:translateX(-100%);
+            transition: all ease 1s;
+            position:absolute;
+            transform:translateX(-100%)
+        }
+    </style>
+</head>
+<body>
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        HTML
+    </label>
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        Javascript
+    </label>
+</body>
+</html>

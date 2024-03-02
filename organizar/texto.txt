@@ -1,0 +1,6 @@
+HTMLColection vs NodeList
+querySelectorAll() - Vai retornar uma NodeList essa NodeList é estática
+getElementsByTagName e getElementsByClassName toda essa sintaxe que começa
+com get ela é viva.
+NodeList uma vez que atribui um valor ele vai guardar aquele valor para sempre
+ele não vai se atualizar a medida que meu dom sofrer alteração

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JS</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+</div>
+    <script>
+    let tagHeader = document.createElement("header")
+    let tagH1 = document.createElement("h1")
+    let tagNav = document.createElement("nav")
+    let tagStyle = document.createElement("style")
+    let tagDiv = document.createElement("div")
+    tagH1.className = "title"
+    tagHeader.className = "Hero"
+    tagNav.className = "nav-bar"
+    document.body.appendChild(tagHeader)
+    tagHeader.appendChild(tagH1)
+    tagHeader.appendChild(tagNav)
+    document.head.appendChild(tagStyle)
+    document.body.appendChild(tagDiv)
+    // tagH1.innerText = "Curso de Javascript"
+    tagH1.style.fontFamily = "Verdana"
+    tagH1.style.color = "blue"
+    tagH1.innerHTML = "Tabuada"
+    function calcularTabuada () {
+        let numdig = parseInt(prompt("Informe um número para calcular uma tabuada: "))
+        for (let k=0; k<=10; k++) {
+            tagDiv.innerHTML += `${numdig} x ${k} = ${numdig*k}<br>`
+        }
+    }
+    calcularTabuada()
+    </script>
+</body>
+
+</html>

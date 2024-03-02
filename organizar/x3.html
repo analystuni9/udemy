@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <script>
+        function calcularTabuada () {
+            let numDig = parseInt(prompt("Informe uma número para que calcular uma tabuada: "))
+            alert(`Resultado do calculo:`)
+            for (let k=0;k<10;k++) {
+                alert(`${numDig} x ${k} = ${numDig*k}`)
+            }
+        }
+        calcularTabuada()
+    </script>
+</body>
+</html>

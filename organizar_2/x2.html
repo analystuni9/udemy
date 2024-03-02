@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão</title>
+</head>
+<body>
+    <!-- NAVERGAR PELO DOM -->
+    <h1>teste DOM</h1>
+    <p>teste 1</p>
+    <p>lorem <a href="#">link</a>.</p>
+    <p>teste 2</p>
+    <h2>Lista</h2>
+    <ul>
+        <li>item 1</li>
+        <li>item 2
+            <ul>
+                <li>item 2.a</li>
+                <li>item 2.b</li>
+                <li>item 2.c</li>
+                <li>texto</li>
+            </ul>
+        </li>
+        <li>item <a href="#">link</a></li>
+    </ul>
+    <script>
+        console.log(document.body)
+        // NAVEGAR ENTRE PAIS
+        console.log(document.body.parentElement)
+        console.log(document.body.parentNode)
+        console.log(document.body.parentElement === document.body.parentNode)
+        const html = (document.body.parentElement)
+        console.log(html.parentElement)
+        console.log(html.parentNode)
+        // NAVEGAR ENTRE IRMÃOS
+        const h2 = document.querySelector("h2")
+        console.log(h2.nextSibling)
+        // PRÓXIMO IRMAO
+        console.log(h2.nextElementSibling)
+        // IRMÃO ANTERIOR
+        console.log(h2.previousElementSibling)
+        const link = document.querySelector("a")
+        const list = document.querySelector("ul ul")
+        console.log(link)
+        // VAI RETORNAR TODOS OS TIPOS DE NOS
+        console.log(list.childNodes)
+        // VAI RETORNAR OS NOS DO TIPO ELEMENTO
+        console.log(list.children)
+        // PRIMEIRO FILHO
+        console.log(link.parentElement.firstChild)
+        console.log(link.parentElement.firstElementChild)
+        // ULTIMO FILHO
+        console.log(link.parentElement.lastChild)
+        console.log(link.parentElement.lastElementChild)
+        // VERIFICA SE TEM ALGUM VALOR RETORNA UM BOOLEAN
+        console.log(list.lastElementChild.hasChildNodes())
+        // CRIAR ELEMENTOS NO DOM 
+    </script>
+</body>
+</html>

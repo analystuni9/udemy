@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div com Imagem Transparente</title>
+    <style>
+        body{
+            margin:0 auto;
+        }
+        /* Estilo para a div com a imagem de fundo transparente */
+        .div-com-imagem {
+            margin:0 auto;
+            position: relative;
+            z-index:0;
+            width: 90vw;
+            height: 90vh;
+            background: url(goku.jpg) no-repeat center center fixed;
+            /* Substitua pelo caminho da sua imagem */
+            background-size: cover;
+            /* Ajuste a altura conforme necessário */
+            opacity:0.5;
+        }
+        .div-alinhar{
+            width:100%;
+            height:auto;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            border:1px solid black;
+        }
+        /* Estilo para a div de conteúdo sem transparência */
+        .div-de-conteudo {
+            width:50vw;
+            position: absolute;
+            top:250px;
+            z-index: 1;
+            backdrop-filter:blur(10px);
+            /* Isso garante que a div de conteúdo fique sobreposta à div com imagem de fundo */
+            border:1px solid black;
+            /* Adapte a cor de fundo conforme necessário, e ajuste o último valor (0.8) para definir a opacidade */
+            padding: 20px;
+            /* Adapte conforme necessário */
+            /* Adapte conforme necessário */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Div com a imagem de fundo transparente -->
+    <div class="div-com-imagem">
+        <!-- Div de conteúdo sem transparência -->
+    </div>
+    <div class="div-alinhar">
+        <div class="div-de-conteudo">
+            <!-- Seu conteúdo vai aqui -->
+            <h1>Conteúdo sem transparência</h1>
+            <p>Seu texto aqui...</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

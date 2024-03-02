@@ -1,0 +1,129 @@
+/* Estilos gerais */
+* {
+    color:#25282e;
+}
+body {
+    margin:10px;
+}
+a, i {
+    transition:0.5s;
+    text-decoration:none;
+}
+.secondary-color {
+    color:#555;
+}
+.center-image {
+    background-size:center;
+    background-position:center;
+}
+.btn {
+    text-decoration:none;
+    background-color:#25282e;
+    color:#fff;
+    padding:7px 18px;
+    border-radius:0;
+}
+.btn:hover {
+    background-color:#333;
+    color:#fff;
+}
+/* Header */
+#header {
+    text-align:center;
+    padding:20px;
+    border-bottom:1px solid #ccc;
+}
+#header p {
+    margin-bottom:0;
+}
+#logo-container {
+    display:flex;
+    justify-content:center;
+}
+#logo {
+    width:30px;
+    margin-right:15px;
+}
+/* Navbar */
+#navbar {
+    padding:10px;
+    margin:10px auto;
+}
+#navbar a {
+    width:80px;
+    color:#333;
+}
+#navbar a:hover {
+    text-decoration:underline;
+    color:blue;
+}
+/* Main image */
+.main-image {
+    height:400px;
+    background-image:url(/img/g_1.jpg);
+    margin-bottom:30px;
+    position:relative;
+}
+.main-image-info {
+    background-color:#fff;
+    padding:25px;
+    position:absolute;
+    left:25px;
+    bottom:25px;
+}
+/* Gallery */
+#img2 {
+    background-image:url(/img/g_2.jpg);
+ 
+}
+#img3 {
+    background-image:url(/img/g_3.jpg);
+}
+#img4 {
+    background-image:url(/img/g_4.jpg);
+}
+#img5 {
+    background-image:url(/img/g_5.jpg);
+}
+#img6 {
+    background-image:url(/img/g_6.jpg);
+}
+#gallery-container h1 {
+    text-align:center;
+}
+#gallery-container h1 {
+    margin-bottom:50px;
+}
+.small-image-container {
+    height:250px;
+    margin-bottom:20px;
+}
+.col-md-6 {
+    /* border:1px dashed blue; */
+    margin-bottom:30px;
+
+}
+.col-1 {
+    /* border:1px dashed black; */
+    display:flex;
+    justify-content:center;
+}
+/* Footer */
+footer {
+    border-top: 1px solid #ccc;
+    height:250px;
+    padding:30px;
+}
+#social-icons-container div {
+    padding:25px;
+}
+footer p {
+    text-align:center;
+    margin:20px;
+}
+a:hover i {
+    color:rgba(0, 0, 255, 0.747);
+}
+.secundary-color {
+    text-align:center;
+}

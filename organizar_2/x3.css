@@ -1,0 +1,16 @@
+h1 {
+    color: red;
+}
+.container {
+    border:1px solid orange;
+    padding:5px;
+    box-sizing:border-box;
+
+}
+.row {
+    border:1px solid violet;
+}
+.col-6, .col-2 {
+    border:1px dashed blue;
+    height:100px;
+}
