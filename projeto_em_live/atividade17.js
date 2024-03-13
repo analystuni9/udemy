@@ -1,4 +1,4 @@
-// posso declarar varias vezes
+1// posso declarar varias vezes
 // posso atribuir um valor varias vezes
 // var variavel = 10
 // var variavel = 20

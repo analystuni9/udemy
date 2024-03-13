@@ -1,0 +1,55 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    padding:10px;
+}
+.box {
+    width:90vw;
+    height:55px;
+    border:3px dashed red;
+    margin:0 auto;
+    padding:1px 0;
+}
+.box2 {
+width:50px;
+height:50px;
+border:2px dashed blue;
+}
+.text {
+    text-align:center;
+}
+.text:hover {
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-name:mover;
+    animation-duration:2s;
+    animation-timing-function:all ease-in 1s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    cursor: pointer;
+}
+@keyframes mover {
+   0% {
+    transform:translateX(0);
+    border:2px dashed red;
+    color:red;
+    background-color:rgba(255, 0, 0, 0.39);
+} 33% {
+    /* transform:translateX(120px); */
+    border:2px dashed green;
+    color:green;
+    background-color:rgba(0, 255, 0, 0.39);
+} 66% {
+    /* transform:translateX(240px); */
+    background-color:rgba(0, 0, 255, 0.39);
+    border:2px dashed blue;
+    color:blue;
+} 100% {
+    color:yellow;
+    border:2px dashed yellow;
+    transform:translateX(360px);
+    background-color:rgba(255, 255, 0, 0.39);
+
+}
+}

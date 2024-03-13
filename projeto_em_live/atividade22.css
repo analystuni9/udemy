@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins";
+}
+body {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+}
+h1 {
+    margin-bottom:20px;
+}
+.box {
+    max-width: 500px;
+    min-width: 300px;
+    width:50vw;
+    /* border:2px dashed black; */
+    padding:20px;
+}
+.box-user, .box-password {
+    position:relative;
+    width:90%;
+    /* border:2px solid black; */
+    margin-bottom:10px;
+}
+.bxs-user, .bxs-lock-alt  {
+    position:absolute;
+    top:7px;
+    right:20px;
+    opacity:0.8;
+}
+input[type="email"], input[type="password"] {
+    position:relative;
+    display:inline-block;
+    width:100%;
+    border:none;
+    border:2px solid rgba(128, 128, 128, 0.712);
+    padding:6px 15px;
+    border-radius:20px;
+    
+}
+input::placeholder {
+    /* font-family:"Poppins"; */
+    font-size:16px;
+}
+/* label[for="checkbox1"] {
+    width:100%;
+    display:block;
+    
+} */
+.box-lembrar {
+    width:90%;
+    height:30px;
+    position:relative;
+    display: flex;
+    /* border:1px solid black; */
+
+}
+input[type="checkbox"]{
+    display: inline-block;
+    margin-left:20px;
+
+}
+span {
+    display: inline-block;
+    margin-left:30px;
+}
+/* label[for="checkbox1"] {
+    position:absolute;
+    left:20px;
+    border:1px solid blue;
+} */
+input[type="sumit"] {
+    width: 90px;
+    text-align: center;
+    display:inline-block;
+    border:none;
+    font-size:16px;
+    margin-top:20px;
+    /* color:blue; */
+    border:2px solid rgba(128, 128, 128, 0.555);
+    border-radius:20px;
+    padding:2px 20px;
+    /* font-family: "Poppins"; */
+    color:white;
+    background-color:rgba(156, 22, 156, 0.815);
+}
+a.link {
+    display: block;
+}
