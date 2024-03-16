@@ -90,6 +90,11 @@ input[type="sumit"] {
     /* font-family: "Poppins"; */
     color:white;
     background-color:rgba(156, 22, 156, 0.815);
+    cursor:pointer;
+}
+input[type="sumit"]:hover {
+    background-color:rgb(90, 4, 90);
+
 }
 a.link {
     display: block;
