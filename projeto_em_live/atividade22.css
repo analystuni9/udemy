@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 * {
     margin:0;
     padding:0;
@@ -12,9 +12,18 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Poppins";
+    background-image:url(jovens-titans.jpeg);
+    background-position:center;
+    background-size:100% 80%;
+    background-repeat: no-repeat;
+    background-color:black;
 }
 h1 {
     margin-bottom:20px;
+    color: rgb(5, 199, 124);
+    text-shadow:2px 2px 1px black;
+    font-weight:800;
+    font-size:35px;
 }
 .box {
     max-width: 500px;
@@ -22,6 +31,8 @@ h1 {
     width:50vw;
     /* border:2px dashed black; */
     padding:20px;
+    backdrop-filter:blur(11px);
+    border-radius:20px;
 }
 .box-user, .box-password {
     position:relative;
@@ -31,7 +42,7 @@ h1 {
 }
 .bxs-user, .bxs-lock-alt  {
     position:absolute;
-    top:7px;
+    top:14px;
     right:20px;
     opacity:0.8;
 }
@@ -41,7 +52,7 @@ input[type="email"], input[type="password"] {
     width:100%;
     border:none;
     border:2px solid rgba(128, 128, 128, 0.712);
-    padding:6px 15px;
+    padding:10px 15px;
     border-radius:20px;
     
 }
@@ -86,14 +97,15 @@ input[type="sumit"] {
     /* color:blue; */
     border:2px solid rgba(128, 128, 128, 0.555);
     border-radius:20px;
-    padding:2px 20px;
+    padding:8px 20px;
     /* font-family: "Poppins"; */
     color:white;
-    background-color:rgba(156, 22, 156, 0.815);
+    background-color:rgba(247, 45, 45, 0.815);
     cursor:pointer;
+    transition:all ease-in 0.3s;
 }
 input[type="sumit"]:hover {
-    background-color:rgb(90, 4, 90);
+    background-color:rgb(218, 20, 6);
 
 }
 a.link {
