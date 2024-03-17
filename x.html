@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evite os Meteoros</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const playerWidth = 15;
+        const playerHeight = 15;
+        let playerX = canvas.width / 2 - playerWidth / 2;
+        const playerY = canvas.height - playerHeight - 10;
+        const playerSpeed = 5;
+
+        let meteors = [];
+        const meteorWidth = 30;
+        const meteorHeight = 30;
+        const meteorSpeed = 2;
+        const meteorSpawnRate = 100; // Agora os meteoros serão gerados com menos frequência
+
+        let gameOver = false;
+
+        function drawPlayer() {
+            ctx.fillStyle = 'orange';
+            ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
+        }
+
+        function drawMeteor(x, y) {
+            ctx.fillStyle = 'red';
+            ctx.fillRect(x, y, meteorWidth, meteorHeight);
+        }
+
+        function spawnMeteor() {
+            const x = Math.random() * (canvas.width - meteorWidth);
+            const y = -meteorHeight;
+            meteors.push({ x, y });
+        }
+
+        function moveMeteors() {
+            for (let i = 0; i < meteors.length; i++) {
+                meteors[i].y += meteorSpeed;
+                if (meteors[i].y > canvas.height) {
+                    meteors.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+
+        function draw() {
+            if (gameOver) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            drawPlayer();
+
+            for (const meteor of meteors) {
+                drawMeteor(meteor.x, meteor.y);
+            }
+        }
+
+        function update() {
+            if (gameOver) return;
+
+            moveMeteors();
+        }
+
+        function gameOverScreen() {
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = 'white';
+            ctx.font = '30px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Game Over', canvas.width / 2, canvas.height / 2);
+        }
+
+        function collisionDetection() {
+            for (const meteor of meteors) {
+                if (
+                    playerX < meteor.x + meteorWidth &&
+                    playerX + playerWidth > meteor.x &&
+                    playerY < meteor.y + meteorHeight &&
+                    playerY + playerHeight > meteor.y
+                ) {
+                    gameOver = true;
+                    return;
+                }
+            }
+        }
+
+        function gameLoop() {
+            draw();
+            update();
+            collisionDetection();
+            if (!gameOver) requestAnimationFrame(gameLoop);
+            else gameOverScreen();
+        }
+
+        function movePlayer(direction) {
+            if (direction === 'left') {
+                playerX -= playerSpeed;
+                if (playerX < 0) playerX = 0;
+            } else if (direction === 'right') {
+                playerX += playerSpeed;
+                if (playerX > canvas.width - playerWidth) playerX = canvas.width - playerWidth;
+            }
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                movePlayer('left');
+            } else if (e.key === 'ArrowRight') {
+                movePlayer('right');
+            }
+        });
+
+        setInterval(spawnMeteor, meteorSpawnRate);
+        gameLoop();
+    </script>
+</body>
+</html>

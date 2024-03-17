@@ -1,4 +1,4 @@
-// posso declarar varias vezes
+1// posso declarar varias vezes
 // posso atribuir um valor varias vezes
 // var variavel = 10
 // var variavel = 20
@@ -84,3 +84,12 @@
 // const multiplicacao = (a, b) => a * b
 // console.log(multiplicacao(3, 5))
 
+class Carro {
+    constructor(modelo, marca, ano){
+        this.modelo = modelo
+        this.marca = marca
+        this.ano = ano
+    }
+}
+let carro1 = new Carro("Uno", "Fiat", 2024)
+console.log(carro1)

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:"Poppins";
+}
+.box-background {
+    width:90vw;
+    height:90vh;
+    background-image:url(hunterxhunter.jpg);
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    /* opacity:0.8; */
+    position:absolute;
+    z-index:0;
+
+}
+.box-container {
+    width:300px;
+    height:auto;
+    position:absolute;
+    z-index:1;
+    /* border:2px dashed red; */
+    
+}
+fieldset {
+    width:100%;
+    height:150px;
+    padding:10px;
+    /* border:1px solid rgba(255, 0, 0, 0.233); */
+    backdrop-filter: blur(20px);
+    /* background-color:rgba(255, 166, 0, 0.507); */
+    border:none;
+
+}
+h1 {
+    font-size:20px;
+    font-weight:400;
+
+}
+.box-container input[type="email"], input[type="password"] {
+    border:none;
+    background:rgba(255, 255, 255, 0.801);
+    border:1px solid rgba(0, 0, 0, 0.452);
+    border-radius:20px;
+    padding:5px 5px;
+    margin-bottom:10px;
+}
+input.btn {
+    padding:3px;
+    font-weight:bold;
+    border:none;
+    border:1px solid rgba(0, 0, 0, 0.452);
+    margin-top:20px;
+}
+.btn:hover {
+    color:blue;
+    background-color:red;
+    font-weight:600;
+    transition:all ease 0.3s;
+}
+input:hover {
+    cursor:pointer;
+}

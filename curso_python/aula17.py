@@ -11,8 +11,13 @@
 # Avaliação de curto circuito
 entrada = input("[e]ntrar [s]air: ")
 if entrada == "e":
+<<<<<<< HEAD:curso_python/exercicio17.py
     senha = input("Digite sua senha: ")
     if senha == "123":
+=======
+    senha = int(input ("Digite sua senha: "))
+    if entrada == "e" and senha == "123" or 123:
+>>>>>>> a80445f77d0b6ea3ba5f82aa25b06df20ec58beb:curso_python/aula17.py
         print("Você entrou no sistema")
     else: 
         print("Senha incorreta tente novamente")
