@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container {
+            width:500px;
+            display:grid;
+            grid-template-rows:repeat(4, 1fr);
+            grid-template-columns:repeat(5, 1fr);
+            background-color:violet;
+            gap:2px 2px;
+        }
+        div.item {
+            background-color:blueviolet;
+            color:blue;
+        }
+        div.item1 {
+            grid-row:1/ span 1;
+            grid-column:1/ 6;
+            display:grid;
+            grid-template-rows:repeat(1, 20px);
+            grid-template-columns:repeat(6, 1fr);
+            align-content:flex-start;
+            justify-content:flex-start;
+            gap:2px 2px;
+        }
+        div.f {
+            color:red;
+            background-color:greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1"><div class="f f1">1</div>
+        <div class="f f2">2</div>
+        <div class="f f3">3</div>
+        <div class="f f4">4</div>
+        <div class="f f5">5</div>
+        </div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+    </div>
+</body>
+</html>

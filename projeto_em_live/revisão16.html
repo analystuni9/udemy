@@ -3,41 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>animação</title>
     <style>
-        @keyframes mover {
-            0% {
-                transform: translateX(-50px);
-                background-color:red;
-            } 
-            50% {
-                background-color:green;
-            }
-            100% {
-                transform: translateX(50px);
-                background-color:blue;
-            }
+        *{
+            margin:0;
+            padding:0;
         }
-        .box {
-            outline:3px solid red;
-            width:400px;
-            overflow:hidden;
+        div.box {
+            margin:10px;
+            width:300px;
+            height:55px;
+            border:2px dashed purple;
+            background-color:rgba(128, 0, 128, 0.349);
+            display:grid;
+            grid-template-rows:50px;
+            grid-template-columns:50px;
+            align-content: center;
+
         }
-        .box div {
-            width:100px;
-            height:50px;
-            background-color:#ccc;
+        div.box2 {
+            /* border:2px dashed blue; */
+            background-color:rgba(0, 0, 255, 0.384);
+            
+        }
+        div.box2:hover {
+            animation: name duration timing-function delay iteration-count direction fill-mode;
             animation-name:mover;
-            animation-duration:3s;
+            animation-duration:1s;
+            animation-timing-function:ease-in;
+            animation-delay:0.5s;
             animation-iteration-count:infinite;
-            animation-timing-function:linear;
-            animation-direction:alternate-reverse;
+            animation-direction:alternate;
+        }
+        p {
+            cursor:pointer;
+        }
+        p:hover {
+            animation:mover 1s ease-in 0.5s infinite alternate;
+        }
+        @keyframes mover{
+            0% {
+                transform:translateX(0);
+                /* border:2px dashed red; */
+                /* background-color:rgba(255, 0, 0, 0.384); */
+                color:red;
+            } 33% {
+                /* border:2px dashed green; */
+                /* background-color:rgba(0, 255, 0, 0.384);  */
+                color:green;
+            } 66% {
+                /* border:2px dashed blue; */
+                /* background-color:rgba(0, 0, 255, 0.384); */
+                color:blue;
+
+            } 100% {
+                transform:translateX(250px);
+                /* border:2px dashed yellow; */
+                /* background-color:rgba(255, 255, 0, 0.384); */
+                color:yellow;
+            }
         }
     </style>
+    <title>Animação</title>
 </head>
 <body>
     <div class="box">
-        <div>1</div>
+        <div class="box2">1</div>
     </div>
+    <p>1</p>
 </body>
 </html>

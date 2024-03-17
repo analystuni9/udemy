@@ -12,7 +12,7 @@
 entrada = input("[e]ntrar [s]air: ")
 if entrada == "e":
     senha = input("Digite sua senha: ")
-    if entrada == "e" and senha == "123":
+    if senha == "123":
         print("Você entrou no sistema")
     else: 
         print("Senha incorreta tente novamente")

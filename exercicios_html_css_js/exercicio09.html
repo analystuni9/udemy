@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburguer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            /* padding:10px; */
+            background-color: white;
+            font-family: "Poppins";
+            font-size: 0.8rem;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 30vw;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            transform: translateX(-500px);
+            transition: all ease 0.5s;
+            margin-top: 140px;
+            
+        }
+        nav.menu {
+            width:30vw;
+            /* border:2px  dashed red; */
+            padding:20px;
+            
+        }
+        nav.menu ul {
+            /* background-color:rgba(50, 90, 163, 0.562); */
+            width:100%;
+            list-style-type:none;
+            padding:10px;
+            /* border:1px solid black; */
+            box-shadow:1px 1px 5px rgb(88, 87, 87);
+        }
+        nav.menu li {
+            width:100%;
+            border-bottom:1px solid rgba(128, 128, 128, 0.205);
+            margin-bottom:10px;
+        }
+        nav.menu a {
+            text-decoration:none;
+            color:black;
+            font-size:14px;
+        }
+        nav.menu a:hover {
+            text-decoration:underline;
+            color:red;
+            transition:all ease 1s;
+        }
+
+
+        .exibir {
+            transform: translateX(0);
+        }
+
+
+        .icon {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            /* border:1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .efeito {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            flex-flow: column nowrap;
+            border: 1px solid transparent;
+            gap: 4px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: transparent;
+            /* border:1px solid black; */
+        }
+
+        .efeito:hover {
+            background-color: rgba(60, 60, 61, 0.363);
+            /* box-shadow: 1px 1px 3px black; */
+        }
+
+        .icon span {
+            width: 20px;
+            height: 3px;
+            background-color: black;
+            border-radius: 20px;
+            transition: all ease 0.5s;
+
+        }
+
+        .animationx span:nth-of-type(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .animationx span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        .animationx span:nth-of-type(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="icon">
+            <div class="efeito ">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="container">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Configurações</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Meu site</h1>
+    </main>
+    <script>
+        let container = document.querySelector(".container")
+        let icon = document.querySelector(".icon");
+        let animation = () => {
+            if (icon.classList.contains("animationx")) {
+                icon.classList.remove("animationx")
+                container.classList.remove("exibir")
+
+            } else {
+                icon.classList.add("animationx")
+                container.classList.add("exibir")
+            }
+        }
+        icon.addEventListener("click", animation)
+    </script>
+</body>
+
+</html>

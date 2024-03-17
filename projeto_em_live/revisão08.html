@@ -1,37 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Ajuda - Drone Drop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+        .container {
+            width:400px;
+            height: 400px;;
+            display: grid;
+            justify-content: center;
+            align-content:center;
+            place-content:center;
+            grid-template-rows: 50px 50px;
+            grid-template-columns: 50px 50px 50px 50px 50px;
+            row-gap: 2px;
+            column-gap: 2px;
+            gap: 2px 2px;
+            gap: 2px;
+            /* width: 300px; */
+            background-color: violet;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            display: grid;
+            place-content: flex-start;
+            background-color: blueviolet;
+        }
+
+        .item1 {}
+
+        .container2 {
+            width: 300px;
+            background-color: violet;
+            display: grid;
+            grid-template-rows: 30px;
+            grid-template-columns: 30px;
+        }
+
+        .item11 {
+            /* animation-name:mover;
+            animation-duration:2s;
+            animation-timing-function:ease;
+            animation-delay:0s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate; */
+            display:Grid;
+            place-content:center;
+            border-radius:50%;
+            animation: Mover-Girar 2s ease 0s infinite alternate;
+        }
+
+        @keyframes Mover-Girar {
+            0% {
+                transform: translateX(0) rotate(0);
+                background-color: red;
+                color: green;
+            }
+
+            33% {
+                color: red;
+                background-color: green;
+            }
+
+            66% {
+                color: yellow;
+                background-color: blue;
+            }
+
+            100% {
+                color: blue;
+                transform: translateX(245px) rotate(380deg);
+                background-color: yellow;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Bem-vindo à Central de Ajuda da Drone Drop</h1>
-
-    <h2>Planos de Entrega</h2>
-    <p>A Drone Drop oferece uma variedade de planos de entrega para atender às suas necessidades. Abaixo estão os nossos planos principais:</p>
-
-    <h3>Plano Básico: "Sky Express"</h3>
-    <p>Entrega rápida dentro da área central da cidade por apenas $50 por mês.</p>
-
-    <h3>Plano Padrão: "Prime Air"</h3>
-    <p>Entrega em uma área mais ampla, incluindo subúrbios, com preços a partir de $100 por mês mais $5 por entrega.</p>
-
-    <h3>Plano Premium: "UltraFly"</h3>
-    <p>Entrega rápida em qualquer lugar da região com preços a partir de $200 por mês mais $7 por entrega.</p>
-
-    <h3>Plano Ecológico: "Green Skies"</h3>
-    <p>Entrega sustentável em áreas urbanas por apenas $70 por mês.</p>
-
-    <h3>Plano Noturno: "Moonlight Express"</h3>
-    <p>Entregas durante a noite ou em horários específicos por $90 por mês.</p>
-
-    <h3>Plano Empresarial: "Corporate Airway"</h3>
-    <p>Programa empresarial personalizado com preços sob consulta para atender às necessidades da sua empresa.</p>
-
-    <h2>Contato</h2>
-    <p>Para obter mais informações ou assistência, entre em contato conosco:</p>
-    <p>Email: info@dronedrop.com</p>
-    <p>Telefone: (123) 456-7890</p>
-
-    <p>Obrigado por escolher a Drone Drop!</p>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+    </div>
+    <div class="container2">
+        <div class="item item11">1</div>
+    </div>
 </body>
+
 </html>

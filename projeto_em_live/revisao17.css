@@ -1,0 +1,17 @@
+.container {
+    border:1px solid black;
+}
+.row {
+    height:50px;
+    border:1px dashed red;
+    margin:3px;
+}
+.col {
+    border:1px dashed blueviolet;
+    margin:2px;
+    height: 100%;
+}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11 {
+    border:1px dashed blueviolet;
+    
+}
