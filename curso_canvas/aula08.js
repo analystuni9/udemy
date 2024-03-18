@@ -33,10 +33,10 @@ function desenha() {
     // Formula para transformar radiando em graus
     // PI/180*angulo em grau
     // Redesenha minha animação constatemente
-    anima = requestAnimationFrame(()=>{desenha()})
+    // anima = requestAnimationFrame(()=>{desenha()})
     
 }
 desenha()
-// setInterval(desenha, 500)
+// setInterval(desenha, 0)
 
 // document.addEventListener("DOMContentLoaded",desenha)

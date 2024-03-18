@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #canvas {
+            border:1px solid gray;
+        }
+    </style>
+    <title>Revisão</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+        let animar
+        let dirX = 0
+        let dirY = 0
+        let posX = 0
+        let posY = 0
+        let largElem = 30
+        let altElem = 30
+        let largArea = 400
+        let altArea = 400
+        let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+        function renderizar(){
+            ctx.clearRect(0,0,400,400)
+            // ctx.fillStyle = 'red'
+            // ctx.fillRect(0,0,30,30)
+            // ctx.rect(0,0,30,30)
+            // ctx.fill()
+            ctx.strokeStyle = 'red'
+            ctx.strokeRect(posX,posY,largElem,altElem)
+            posX += dirX
+            posY += dirY
+            if ((posX<=0) && (posY<=0)){
+                dirX = 1
+                dirY = 0
+            }
+            if ((posX + largElem) >= (largArea)){
+                dirX = 0
+                dirY = 1
+            }
+            if ((posY + altElem) >= (altArea)){
+                dirY = 0
+                dirX = -1
+            } 
+            if ((posX < 0) && (posY + altElem) >= (largArea)){
+                dirX = 0
+                dirY = -1
+            }
+            animar = requestAnimationFrame(renderizar)
+        }
+
+        renderizar()
+    </script>
+</body>
+</html>
