@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburguer</title>
+    <style>
+        .icon {
+            width:50px;
+            height:50px;
+            /* border:1px solid black; */
+            display: grid;
+            place-content: center;
+        }
+        .efect {
+            width:40px;
+            height:40px;
+            /* border:1px solid black; */
+            display:grid;
+            place-content:center;
+            gap:3px;
+            cursor:pointer;
+            border-radius:50%;
+            background:transparent;
+
+        }
+        .efect:hover {
+            background-color:aliceblue;
+        }
+        .icon span {
+            display:block;
+            width:20px;
+            height:4px;
+            background-color:gray;
+            border-radius:10px;
+            transition:all ease 0.5s;
+        }
+        .anmX span:nth-of-type(1){
+            transform:translateY(7px) rotate(45deg)
+        }
+        .anmX span:nth-of-type(2){
+            opacity:0;
+        }
+        .anmX span:nth-of-type(3){
+            transform:translateY(-7px) rotate(-45deg)
+        }
+    </style>
+</head>
+<body>
+    <div class="icon" onclick="anmX()">
+        <div class="efect">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    <script>
+        let icon = document.querySelector('.icon')
+        function anmX(){
+            if(icon.classList.contains('anmX')){
+                icon.classList.remove('anmX')
+            }else{
+                icon.classList.add('anmX')
+            }
+        }
+    </script>
+</body>
+</html>
