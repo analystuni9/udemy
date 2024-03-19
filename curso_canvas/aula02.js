@@ -13,7 +13,9 @@ function desenha(){
     // ctx1.fillRect(0,0,50,50)
     //Apenas desenha um quadradado
     // Definindo posição eixo x e y tamanho largura e altura 
+    // Desenha um elemento mais não preenche
     ctx1.rect(0,0,50,50)
+    // Faz o preenchimento
     ctx1.fill()
     // Limpa meu conteudo posição eixo x e y tamanho largura e altura
     // ctx1.clearRect(0,0,30,30)

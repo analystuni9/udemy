@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         #canvas {
-            border:1px solid gray;
+            border: 1px solid gray;
+            padding: 2px;
         }
     </style>
-    <title>Revisão</title>
+    <title>Exercicio 01</title>
 </head>
+
 <body>
     <canvas id="canvas" width="400" height="400"></canvas>
     <script>
         let animar
-        let dirX = 0
-        let dirY = 0
-        let posX = 0
-        let posY = 0
-        let largElem = 30
-        let altElem = 30
-        let largArea = 400
-        let altArea = 400
+        let x = 0
+        let y = 0
+        let direcaoX = 0
+        let direcaoY = 0
+        let larguraDoElemento = 30
+        let alturaDoElemento = 30
+        let larguraDaArea = 400
+        let alturaDaArea = 400
         let canvas = document.getElementById('canvas')
         let ctx = canvas.getContext('2d')
-        function renderizar(){
-            ctx.clearRect(0,0,400,400)
-            // ctx.fillStyle = 'red'
-            // ctx.fillRect(0,0,30,30)
+        // class Elemento {
+        //     constructor(x, y, larguraDoElemento, alturaDoElemento, corDoElemento) {
+        //         this.x = x
+        //         this.y = y
+        //         this.larguraDoElemento = larguraDoElemento
+        //         this.alturaDoElemento = alturaDoElemento
+        //         this.corDoElemento = corDoElemento
+        //     }
+        //     draw() {
+        //         ctx.fillStyle = this.corDoElemento
+        //         ctx.fillRect(this.x, this.y, this.larguraDoElemento, this.alturaDoElemento)
+
+        //     }
+        // }
+        // let elemento1 = new Elemento(0, 0, 30, 30, 'green')
+        // function draw() {
+        //     elemento1.draw()
+
+        // }
+        // draw()
+        function renderizar() {
+            ctx.clearRect(0, 0, 400, 400)
+            ctx.fillStyle = 'red'
+            ctx.fillRect(x, y, larguraDoElemento, alturaDoElemento)
             // ctx.rect(0,0,30,30)
             // ctx.fill()
-            ctx.strokeStyle = 'red'
-            ctx.strokeRect(posX,posY,largElem,altElem)
-            posX += dirX
-            posY += dirY
-            if ((posX<=0) && (posY<=0)){
-                dirX = 1
-                dirY = 0
+            // ctx.strokeStyle = 'red'
+            // ctx.strokeRect(x, y, larguraDoElemento, alturaDoElemento)
+            x += direcaoX
+            y += direcaoY
+            if ((x <= 0) && (y <= 0)) {
+                direcaoX = 1
+                direcaoY = 0
             }
-            if ((posX + largElem) >= (largArea)){
-                dirX = 0
-                dirY = 1
+            if ((x + larguraDoElemento) >= (larguraDaArea)) {
+                direcaoX = 0
+                direcaoY = 1
             }
-            if ((posY + altElem) >= (altArea)){
-                dirY = 0
-                dirX = -1
-            } 
-            if ((posX < 0) && (posY + altElem) >= (largArea)){
-                dirX = 0
-                dirY = -1
+            if ((y + alturaDoElemento) >= (alturaDaArea)) {
+                direcaoY = 0
+                direcaoX = -1
+            }
+            if ((x < 0) && (y + alturaDaArea) >= (larguraDaArea)) {
+                direcaoX = 0
+                direcaoY = -1
             }
             animar = requestAnimationFrame(renderizar)
         }
@@ -56,4 +79,5 @@
         renderizar()
     </script>
 </body>
+
 </html>
