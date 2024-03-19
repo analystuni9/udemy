@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #canvas {
+            border: 1px solid gray;
+            padding: 2px;
+        }
+    </style>
+    <title>Exercicio 02</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+        let x = 0
+        let y = 0
+        let direcaoX = 1
+        let direcaoY = 1
+        let larguraDoElemento = 30
+        let alturaDoElemento = 30
+        let larguraDaArea = 400
+        let alturaDaArea = 400
+        let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+        class Elemento {
+            constructor(x, y, larguraDoElemento, alturaDoElemento, corDoElemento) {
+                this.x = x
+                this.y = y
+                this.larguraDoElemento = larguraDoElemento
+                this.alturaDoElemento = alturaDoElemento
+                this.corDoElemento = corDoElemento
+            }
+            draw() {
+                ctx.strokeStyle = this.corDoElemento
+                ctx.strokeRect(this.x, this.y, this.larguraDoElemento, this.alturaDoElemento)
+            }
+        }
+        let elemento1 = new Elemento(0, 0, 30, 30, 'green')
+        function draw() {
+            elemento1.draw()
+        }
+        draw()
+        function renderizar() {
+            ctx.clearRect(0, 0, larguraDaArea, alturaDaArea)
+            x += direcaoX
+            y += direcaoY
+            if ((x <= 0) || (x + larguraDoElemento >= larguraDaArea)) {
+                direcaoX *= -1
+            }
+            if ((y <= 0) || (y + alturaDoElemento >= alturaDaArea)) {
+                direcaoY *= -1
+            }
+            animar = requestAnimationFrame(renderizar)
+        }
+
+        renderizar()
+    </script>
+</body>
+
+</html>

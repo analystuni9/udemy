@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script>
+        let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+        let dirX = 0
+        let dirY = 0
+        class Player1 {
+            constructor(x, y, largura, altura, cor) {
+                this.x = x
+                this.y = y
+                this.largura = largura
+                this.altura = altura
+                this.cor = cor
+            }
+            draw() {
+                ctx.fillStyle = this.cor
+                ctx.fillRect(this.x, this.y, this.largura, this.altura, this.cor)
+            }
+        }
+        let player1 = new Player1(0, 0, 30, 30, 'red')
+        function draw() {
+            ctx.clearRect(0, 0, 300, 300)
+            player1.draw()
+        }
+        class Direcao {
+            constructor(x, y) {
+                this.x = x
+                this.y = y
+            }
+        }
+        class Area {
+            constructor(largura, altura) {
+                this.largura = largura
+                this.altura = altura
+            }
+        }
+        let area = new Area(300, 300)
+        let direcao = new Direcao(0, 0)
+        function renderizar() {
+            player1.x += direcao.x
+            player1.y += direcao.y
+            if ((player1.x <= 0) && (player1.y <= 0)) {
+                direcao.x = 1
+                direcao.y = 0
+            }
+            if ((player1.x + player1.largura) >= (area.largura)) {
+                direcao.x = 0
+                direcao.y = 1
+            }
+            if ((player1.y + player1.altura) >= (area.altura)) {
+                direcao.y = 0
+                direcao.x = -1
+            }
+            if ((player1.x < 0) && (player1.y + area.altura) >= (area.largura)) {
+                direcao.x = 0
+                direcao.y = -1
+            }
+        }
+        function main() {
+            draw()
+            renderizar()
+        }
+        main()
+        setInterval(main, 10)
+    </script>
+</body>
+
+</html>
