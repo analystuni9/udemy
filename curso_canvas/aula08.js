@@ -37,6 +37,6 @@ function desenha() {
     
 }
 desenha()
-// setInterval(desenha, 0)
+// setInterval(desenha, 20)
 
 // document.addEventListener("DOMContentLoaded",desenha)
