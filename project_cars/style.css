@@ -1,7 +1,13 @@
 body {
-    font-family: "Verdana";
+    font-family: "arial black";
 
 }
 #canvas {
     border:2px solid black;
+}
+h1, h2, h3 {
+    font-size:30px;
+}
+span {
+    display:block;
 }

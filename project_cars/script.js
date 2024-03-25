@@ -22,7 +22,7 @@ class Car extends Objeto {
         super(x, y, width, height, image, color)
         this.dirX = 0
         this.dirY = 0
-        this.lifes = 10
+        this.lifes = 2
     }
     move() {
         this.x += this.dirX
@@ -45,16 +45,17 @@ class Boot extends Objeto {
     }
     move(speed, limit, position){
         this.y += speed
+    
         if(this.y > limit){
             this.y = position
-            this.x = Math.random() * (600 - 120)
-        }else if(this.x < 100){
-            this.x += this.x 
+            this.x = Math.random() * (550 - 0)
+        }else if(this.x < 0){
+            this.x += Math.random() * (550 - 0)
         }
     }
     raspawn(){
         this.y = -30
-        this.x = Math.random() * (600 - 120)
+        this.x = Math.random() * (550 - 0)
     }
 }
 class Background extends Boot {
@@ -78,15 +79,17 @@ class Text extends Objeto {
         ctx.fillText(`${text}`, x, y)
     }
 }
+let play = true
 let pts = 0
 let t = 0
 let f = 0
-let bg = new Background(0, 0, 800, 800, 'image/background(3).png')
-let bg2 = new Background(0, -800, 800, 800, 'image/background(3).png')
-let car = new Car(500, 600, 110, 110, 'image/car (21).png')
-let boot = new Boot(180, -100, 110, 110, 'image/car (3).png')
-let text = new Text()
-let text2 = new Text()
+let bg = new Background(0, 0, 600, 600, 'image/background.png')
+let bgTwo = new Background(0, -600, 600, 600, 'image/background.png')
+let car = new Car(250, 500, 70, 70, 'image/car (21).png')
+let boot = new Boot(0, 0, 70, 70, 'image/car (3).png')
+let textPoints = new Text()
+let textLifes = new Text()
+let textGameOver = new Text()
 document.addEventListener('keydown', function (event) {
     if (event.key === 'a') {
         car.dirX = -2
@@ -105,6 +108,11 @@ document.addEventListener('keyup', function (event) {
         car.dirY = 0
     }
 })
+function gameover(){
+    if(car.lifes <= 0){
+        play = false
+    }
+}
 function points(){
     t++
     if(t > 30){
@@ -120,24 +128,37 @@ function collides(){
     }
 }
 function draw() {
+  if(play === true){
     bg.draw()
-    bg2.draw()
+    bgTwo.draw()
     car.draw()
     boot.draw()
-    text.draw('20px','arial black', 'red', `Pontos: ${pts}`, 30, 100)
-    text2.draw('20px','arial black', 'red', `Vidas: ${car.lifes}`, 200, 100)
+    textPoints.draw('20px','arial black', 'red', `Pontos: ${pts}`, 30, 100)
+    textLifes.draw('20px','arial black', 'red', `Vidas: ${car.lifes}`, 200, 100)
+  }
 }
 function update() {
-    bg.move(3, 800, 0)
-    bg2.move(3, 0, -800)
+    if(play === true){
+    bg.move(2, 600, 0)
+    bgTwo.move(2, 0, -600)
     car.move()
-    boot.move(4, 800, -100)
+    boot.move(3, 550, -50)
     car.collide(boot)
+    points()
+    collides()
+    gameover()
+    }else{
+        // ctx.clearRect(0, 0, 600, 600)
+        ctx.fillStyle = 'black'
+        ctx.fillRect(0, 0, 600, 600)
+        ctx.fillStyle = 'white'
+        ctx.font = '30px arial black'
+        ctx.fillText('Game Over', 200, 300)
+
+    }
 }
 function main() {
     draw()
     update()
-    collides()
-    points()
 }
 setInterval(main, 10)
