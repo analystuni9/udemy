@@ -88,13 +88,13 @@ function draw() {
         flower.draw()
         flower2.draw()
         flower3.draw()
-        textPoints.draw(`Points: ${bee.points}`, 300, 100, 'Violet', '30px', 'Verdana')
-        textLife.draw(`Lifes: ${bee.lifes}`, 50, 100, 'Violete', '30px', 'Verdana')
+        textPoints.draw(`Pontos: ${bee.points}`, 300, 100, 'Violet', '30px', 'Verdana')
+        textLife.draw(`Vidas: ${bee.lifes}`, 50, 100, 'Violete', '30px', 'Verdana')
     } else {
         ctx.fillRect(0, 0, 600, 600)
         textGameOver.draw(`Sua pontuação: ${bee.points}`, 50, 70, 'White', '25px', 'Verdana')
         textGameOver.draw('Game Over', 200, 300, 'White', '40px', 'Verdana')
-        textCredits.draw('Créditos: Dev. Danilo', 250, 530, 'white', '25px', 'Verdana')
+        // textCredits.draw('', 250, 530, 'white', '25px', 'Verdana')
         ctx.fillStyle = 'black'
 
     }

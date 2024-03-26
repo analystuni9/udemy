@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
 #canvas {
     border:2px solid gray;
+}
+body {
+    font-family:'Poppins';
+}
+p {
+    text-align:right;
+}
+span {
+    font-size:25px;
+    margin-left:10px;
+    font-weight:bold;
 }
