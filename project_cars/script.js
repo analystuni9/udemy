@@ -33,7 +33,7 @@ class Objeto {
 
     }
     raspawn() {
-        this.y = -30
+        this.y = -100
         this.x = Math.random() * (550 - 0)
     }
 
@@ -43,7 +43,11 @@ class Car extends Objeto {
         super(x, y, width, height, image, color)
         this.dirX = 0
         this.dirY = 0
-        this.lifes = 5
+        this.lifes = 999
+        this.total = 0
+        this.pts = 0
+        this.t = 0
+        this.f = 0
     }
     move(limitOne, limitTwo) {
         this.x += this.dirX
@@ -52,9 +56,9 @@ class Car extends Objeto {
             this.x = 3
         } else if (this.x < limitTwo) {
             this.x = 530
-        } else if (this.y > 600){
+        } else if (this.y > 600) {
             this.y = 0
-        } else if (this.y < -10){
+        } else if (this.y < -10) {
             this.y = 600
         }
     }
@@ -67,6 +71,15 @@ class Car extends Objeto {
             return false
         }
 
+    }
+    points(){
+        this.t++
+        if(this.t > 30){
+            this.t = 0
+            this.f++
+            this.pts += this.f
+            this.f = 0
+        }
     }
 
 }
@@ -82,13 +95,13 @@ class Boot1 extends Objeto {
 
         if (this.y > limit) {
             this.b++
-            if(this.b > 500){
+            if (this.b > 500) {
                 this.b = 0
                 this.y = position
-                this.x = Math.random() * (550 - 0)
+                this.x = 200
             }
         } else if (this.x < 0 || this.x > 580) {
-            this.x = Math.random() * (550 - 0)
+            this.x = Math.random() * (500 - 1)
         } else if (this.y < -10) {
             this.j++
             if (this.j > 100) {
@@ -133,13 +146,13 @@ class Plane1 extends Objeto {
     move(speed, limit, position) {
         this.y += speed
         if (this.y > limit) {
-        this.k++ 
-            if(this.k > 900){
+            this.k++
+            if (this.k > 900) {
                 this.k = 0
                 this.y = position
                 this.x = Math.random() * (500 - 1)
             }
-            
+
         }
     }
 }
@@ -151,13 +164,13 @@ class Plane2 extends Objeto {
     move(speed, limit, position) {
         this.y += speed
         if (this.y < limit) {
-            this.z++ 
-            if(this.z > 900){
+            this.z++
+            if (this.z > 900) {
                 this.z = 0
                 this.y = position
                 this.x = Math.random() * (500 - 1)
             }
-            
+
         }
     }
 }
@@ -169,27 +182,44 @@ class Boot2 extends Plane2 {
     move(speed, limit, position) {
         this.y += speed
         if (this.y < limit) {
-            this.w++ 
-            if(this.w > 2000){
+            this.w++
+            if (this.w > 10) {
                 this.w = 0
                 this.y = position
                 this.x = Math.random() * (550 - 1)
             }
-            
+
         }
     }
 }
-let bg = new Background(0, 0, 600, 600, 'image/background.png')
-let bg2 = new Background(0, -600, 600, 600, 'image/background.png')
-let car = new Car(530, 500, 100, 100, 'image/car (5).png')
-let boot = new Boot1(30, 0, 80, 80, 'image/car (3).png')
-let boot2 = new Plane2(200, 600, 100, 100, 'image/car (20).png')
+// Background 1 e 2
+let bg = new Background(0, 0, 600, 600, 'image/background (3).png')
+let bg2 = new Background(0, -600, 600, 600, 'image/background (3).png')
+// Player
+let car = new Car(100, 500, 90, 90, 'image/car (5).png')
+// Car Blue
+let boot1 = new Boot1(30, 0, 80, 80, 'image/car (3).png')
+// Car Taxi
+let boot5 = new Boot1(30, 0, 80, 80, 'image/car (11).png')
+// Commercial Plane
 let boot3 = new Plane1(300, 200, 120, 120, 'image/car (25).png')
+// Samu Car
 let boot4 = new Boot2(300, 200, 80, 80, 'image/car (18).png')
+// Firetruck
+let boot6 = new Boot2(300, 500, 80, 80, 'image/car (12).png')
+// Passenger Plane
+let boot2 = new Plane2(200, 600, 100, 100, 'image/car (20).png')
+// text dots
 let textPoints = new Text()
+// text lives
 let textLifes = new Text()
+// end of game text
 let textGameOver = new Text()
+// text points end of game
 let textPointsGameOver = new Text()
+// text score
+let textScore = new Text()
+// Eventos de Teclado
 document.addEventListener('keydown', function (event) {
     if (event.key === 'a') {
         car.dirX = -2
@@ -213,39 +243,84 @@ function gameover() {
         play = false
     }
 }
-function points() {
-    t++
-    if (t > 15) {
-        t = 0
-        f++
-        pts = f
-    }
-}
+
 function collides() {
-    if (car.collide(boot) === true) {
-        boot.raspawn()
+    if (car.collide(boot1) === true) {
+        boot1.raspawn()
         car.lifes -= 1
-    }else if(boot4.collide(boot) === true){
-        boot.raspawn()
-    }else if(car.collide(boot4) === true){
+    } else if (car.collide(boot5) === true) {
+        boot5.raspawn()
+        car.lifes -= 1
+    } else if (car.collide(boot4) === true) {
         boot4.raspawn()
         car.lifes += 1
+    } else if (car.collide(boot6) === true) {
+        boot6.raspawn()
+        car.pts += 1000
+    }
+    else if (boot4.collide(boot1) === true) {
+        boot1.raspawn()
+    } else if (boot4.collide(boot5) === true) {
+        boot5.raspawn()
+    } else if (boot6.collide(boot1) === true) {
+        boot1.raspawn()
+    } else if (boot6.collide(boot5) === true) {
+        boot5.raspawn()
+    }
 }
+function score(){
+    if(car.pts > 10000){
+        textScore.draw('25px', 'arial black', 'Pink', 'Splendid', 230, 300)
+    }else if(car.pts > 9000){
+        textScore.draw('25px', 'arial black', 'Turquoise', 'Extraordinary', 230, 300)
+
+    }else if(car.pts > 8000){
+        textScore.draw('25px', 'arial black', 'Silver', 'Brilliant', 230, 300)
+
+    }else if(car.pts > 7000){
+        textScore.draw('25px', 'arial black', 'Gold', 'Magnificent', 230, 300)
+
+    }else if(car.pts > 6000){
+        textScore.draw('25px', 'arial black', 'Orange', 'Phenomenal', 230, 300)
+
+    }else if(car.pts > 5000){
+        textScore.draw('25px', 'arial black', 'Red', 'Spectacular', 230, 300)
+    }else if(car.pts > 4000){
+        textScore.draw('25px', 'arial black', 'Purple', 'Amazing', 230, 300)
+
+    }else if(car.pts > 3000){
+        textScore.draw('25px', 'arial black', 'Green', 'Incredible', 230, 300)
+
+    }else if(car.pts > 2000){
+        textScore.draw('25px', 'arial black', 'Yellow', 'Fantastic', 230, 300)
+
+    }else if(car.pts > 1000){
+        textScore.draw('25px', 'arial black', 'Blue', 'Awesome', 230, 300)
+
+    }
 }
+
 function draw() {
     if (play === true) {
         bg.draw()
         bg2.draw()
         car.draw()
-        // car.stroke()
+        car.stroke()
         // carTwo.stroke()
-        boot.draw()
+        boot1.draw()
+        boot1.stroke()
         boot3.draw()
-        boot2.draw()
+        boot3.stroke()
         boot4.draw()
-        // boot.stroke()
-        textPoints.draw('25px', 'arial black', 'cadetblue', `Pontos: ${pts}`, 60, 100)
-        textLifes.draw('25px', 'arial black', 'cadetblue', `Vidas: ${car.lifes}`, 300, 100)
+        boot4.stroke()
+        boot6.draw()
+        boot6.stroke()
+        boot5.draw()
+        boot5.stroke()
+        boot2.draw()
+        boot2.stroke()
+        textPoints.draw('25px', 'arial black', 'cadetblue', `Pontos: ${car.pts}`, 50, 100)
+        textLifes.draw('25px', 'arial black', 'cadetblue', `Vidas: ${car.lifes}`, 400, 100)
     }
 }
 function update() {
@@ -254,13 +329,15 @@ function update() {
         bg2.move(2, 0, -600)
         boot2.move(-1, 0, 600)
         boot3.move(3, 600, -50)
-        boot4.move(-1, 0, 600)
+        boot4.move(-1, -10, 600)
         car.move(580, -50)
-        boot.move(3, 700, -10)
-        car.collide(boot)
-        points()
+        boot1.move(3, 700, -10)
+        boot5.move(3, 700, -10)
+        boot6.move(-0.5, -10, 600)
         collides()
+        car.points()
         gameover()
+        score()
     } else {
         // ctx.clearRect(0, 0, 600, 600)
         ctx.fillStyle = 'black'
